@@ -96,3 +96,13 @@
 
 ## 5. PAUTA DE BÁSCULA & BIOIMPEDANCIA
 * Recordatorio de control: **No pesarse a diario**. La siguiente medición en báscula de bioimpedancia se fijará para dentro de **2 a 3 semanas** (hacia finales de noviembre), en ayunas matutinas, tras orinar y con la digestión descongestionada.
+
+---
+
+## 6. PRÓXIMO CICLO SEMANAL (DOMINGO 8 DE NOVIEMBRE 20:00 H)
+* **Semana Completa (7 días):** Del **Lunes 9 al Domingo 15 de Noviembre**.
+* **Días incorporados:** Se incluyen **Lunes y Martes** (ausentes en el arranque inicial que inició en miércoles).
+* **Hito Médico Clave:** **Martes 10 de Noviembre a las 08:15 h** en CS Prosperidad:
+  * Extracción analítica en ayunas estricto.
+  * **Retrasar la dosis de Eutirox 50 mcg** hasta después del pinchazo.
+  * Llevar desayuno post-analítica preparado (arepa tostada con cottage o sandwich sin gluten con pavo) y café con leche de avena sin gluten.
