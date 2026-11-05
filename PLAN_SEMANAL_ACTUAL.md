@@ -8,28 +8,28 @@
 
 ## 1. TABLA VISUAL DE ENTRENAMIENTO (O2 BOUTIQUE & MANUEL BECERRA)
 
-| Día | Centro | Clase(s) Programada(s) | Hora Exacta | Duración Total | Enfoque Principal |
+| Día | Centro | Clase / Sesión Programada | Hora Exacta | Duración Total | Enfoque Principal |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Miércoles 04/11** | O2 Boutique | **Pilates** | 20:05 h | 50 min | **Reinicio suave:** Descompresión de columna, activación de transverso/suelo pélvico, alivio de cuello y mandíbula. |
-| **Jueves 05/11** | O2 Boutique | **Bodypump** | **14:30 h** | 55 min | **Fuerza al mediodía:** Activación metabólica con peso moderado antes de comer (evitar sobrecargar cuello/trapecio). |
-| **Viernes 06/11** | — | *Descanso Activo / Social* | — | — | Tarde libre de gimnasio para vida social relajada. Paseo NEAT matinal. |
-| **Sábado 07/11** | O2 Boutique | **Barre** | 11:05 h | 50 min | **Día 3 de 3:** Tono postural y glúteos al ritmo de la música, cero impacto articular. |
+| **Miércoles 04/11** | — | *Descanso (No realizado)* | — | — | Descanso no planificado por compra pospuesta. Cena: revuelto de huevos. |
+| **Jueves 05/11** | O2 Manuel Becerra | **Sala de Fuerza (Musculación)** | Tarde | 50-60 min | **Fuerza Día 1:** Máquinas y peso libre moderado. Enfoque tren inferior (prensa, zancadas, glúteo) y empuje suave (cuidar cervical y mandíbula). |
+| **Viernes 06/11** | O2 Manuel Becerra | **Sala de Fuerza (Musculación)** | Mañana / Tarde | 50-60 min | **Fuerza Día 2:** Máquinas de tracción (poleas, remo guiado, hombro medio) y activación de transverso/core profundo. |
+| **Sábado 07/11** | O2 Boutique | **Barre o Recuperación Activa** | 11:05 h | 50 min | **Fuerza Día 3 / Tono:** Trabajo postural y glúteo sin impacto articular (o paseo NEAT libre si el cuerpo pide descarga). |
 | **Domingo 08/11** | — | *Descanso Total & Paseo Libre* | — | — | **Recuperación:** Descanso, sueño reparador y recarga para la nueva semana. |
 
 ---
 
-## 2. TABLA DE MENÚ SEMANAL DE OTOÑO (100% SIN GLUTEN & DIGESTIVO)
+## 2. TABLA DE MENÚ SEMANAL DE OTOÑO (ADAPTADA A TU COMPRA Y DESPENSA)
 
-> **Regla Matinal:** 09:30 h Eutirox con agua -> Desayuno 10:30–11:00 h con café con leche de avena sin gluten.  
+> **Regla Matinal:** 09:30 h Eutirox con agua -> Desayuno 10:30–11:00 h con café con bebida de avena.  
 > **Regla de Suplementación:** Multivitamínico en el almuerzo | 2 Nueces de Brasil en la merienda | Magnesio bisglicinato a las 22:30 h.
 
 | Día | Desayuno | Almuerzo | Merienda Funcional *(con 2 nueces de Brasil)* | Cena (<10-15 min) |
 | :--- | :--- | :--- | :--- | :--- |
-| **Miércoles 04/11** | Arepa de maíz P.A.N. tostada con chía + revuelto cremoso (1 huevo + 2 claras) y **queso cottage** + café con leche de avena. | Salmón sellado a la sartén con piel crujiente + quinoa con calabacín salteado y salsa Lemon-Tahini (tahini de despensa + limón líquido). | Infusión de jengibre y manzanilla en bolsita + 2 nueces de Brasil + 1 tostada de arroz con queso crema light y pavo. | **Crema Dorada de Otoño** (calabaza, zanahoria, puerro asado) licuada con queso feta y pechuga de pollo deshilachada. |
-| **Jueves 05/11** | Waffles/Pancakes de avena sin gluten con compota tibia de manzana a la canela y topping de **queso cottage** + té verde. | Pechuga de pollo marinada con orégano y limón en Airfryer + dados de patata y boniato asados + espárragos trigueros al dente. | Yogur batido (griego o coco) con canela de Ceilán, 2 nueces de Brasil y arándanos frescos (sin kiwi). | Arepas de maíz P.A.N. rellenas de tiras de pollo asado, rodajas de tomate dulce y queso crema light. |
-| **Viernes 06/11** | Arepa P.A.N. con chía + huevos revueltos con un toque de queso feta y orégano + café con leche de avena. | Hélices de lenteja roja con salsa suave de tomate cherry confitado, **espinacas congeladas en porciones** cocinadas a la sartén y camarones salteados con ajo/limón. | Infusión drenante de hibisco, limón líquido y té de jengibre + 2 nueces de Brasil + lonchas de pechuga de pavo. | *Cena Libre Estratégica (Cheat Meal):* Restaurante o cena social, **100% libre de gluten** (ej. risotto limpio, tacos de maíz, hamburguesa sin pan o patatas). |
-| **Sábado 07/11** | Whipped bowl de yogur con semillas de lino hidratadas, canela, manzana salteada templada y frutos secos + café con leche de avena. | Arroz basmati salteado con calabacín, zanahoria y pechuga de pollo al curry suave con leche de coco ligera. | Manzanilla tibia + 2 nueces de Brasil + 2 ciruelas pasas hidratadas en agua caliente. | Sartenada express de camarones dorados en AOVE con tomates cherry reventados, queso feta desmenuzado y orégano. |
-| **Domingo 08/11** | Arepa de maíz P.A.N. con semillas de chía + tortilla esponjosa de 2 huevos con **queso cottage** + té caliente. | Estofado reconfortante de lenteja roja o pardina pelada en la Ninja Foodi con dados de calabaza, zanahoria y taquitos de pavo. | Infusión de manzanilla/jengibre + 2 nueces de Brasil + compota templada de pera y canela. | Crema de calabaza y verduras asadas templada con topping de huevo poché/pasado por agua y semillas de calabaza tostadas. |
+| **Miércoles 04/11 (Ayer)** | Desayuno express con café y huevos. | Almuerzo previo a compra. | Infusión caliente y frutos secos. | **Revuelto de 2 huevos camperos** en AOVE con sal marina y orégano seco + infusión caliente (realizado). |
+| **Jueves 05/11 (Hoy)** | Waffles de avena sin gluten o arepa con chía + 40 g **queso cottage** (comprado hoy) + café con bebida de avena. | **Pechuguitas de pollo** marinadas con **limón exprimido** + dados de **batata y patata** en Airfryer + **espárragos trigueros** al dente. | **Yogur ligero griego** (¡en tu nevera!) batido con canela de Ceilán + **mix de frutos rojos** frescos (comprados hoy) + 2 nueces de Brasil. | **Crema Dorada de Otoño** (calabaza en trozos, zanahoria, puerro cortado comprados hoy) con pechuga de pavo/pollo y dados de **queso feta**. |
+| **Viernes 06/11 (Mañana)** | Arepa dorada con chía + revuelto cremoso de 2 huevos camperos L con **queso cottage** + café con bebida de avena. | **Hélices de lenteja roja 100%** con **gambas peladas** salteadas, dados de **calabacín verde** y tomates cherry confitados con limón. | **Yogur ligero griego** con canela + 2 nueces de Brasil + infusión caliente. | *Cena Libre Estratégica (Cheat Meal):* Restaurante o cena social, **100% libre de gluten** (ej. risotto limpio, tacos de maíz, hamburguesa sin pan o patatas). |
+| **Sábado 07/11** | Pancakes de avena sin gluten con **manzana Golden** en dados salteada con canela y topping de cottage + café con bebida de avena. | **Arroz vaporizado o quinoa** (¡de tu despensa!) salteado con filetes de pavo en tiras, calabacín y zanahoria al curry suave. | Infusión tibia + mix de frutos rojos frescos + 2 nueces de Brasil. | **Sartenada express de garbanzos en lata** (¡de tu despensa!) salteados con gambas peladas, tomate triturado, cherrys y queso feta. |
+| **Domingo 08/11** | Arepa de maíz P.A.N. tostada con chía + tortilla francesa de 2 huevos camperos L con queso cottage + té caliente. | **Lomo de salmón noruego** sellado a la sartén con piel crujiente + **puré de patata de confort** (¡sobrecito de tu despensa!) + espárragos trigueros. | Yogur ligero griego con compota templada de manzana Golden y canela + 2 nueces de Brasil. *(A las 20:00 h se activa la nueva semana)*. | Crema Dorada de Otoño templada con huevo poché/pasado por agua y **semillas mixtas con calabaza** (¡de tu despensa!). |
 
 ---
 

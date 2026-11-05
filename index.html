@@ -112,7 +112,7 @@
             </div>
           </div>
 
-          <!-- Trend Wave Curve (aspect ratio preserves perfect circular dot) -->
+          <!-- Trend Wave Curve -->
           <div class="pt-1.5">
             <div class="h-8 w-full flex items-center justify-center">
               <svg viewBox="0 0 140 32" class="w-full h-8 overflow-visible" preserveAspectRatio="xMidYMid meet">
@@ -160,14 +160,14 @@
           </div>
         </div>
 
-        <!-- CARD 3: GIMNASIO O2 (TODAS LAS BARRAS EN EL MISMO ALTO EXACTO DE 10px) -->
+        <!-- CARD 3: GIMNASIO O2 (REAJUSTADO: JUEVES, VIERNES Y SÁBADO ACTIVOS) -->
         <div class="p-2.5 sm:p-3 rounded-xl bg-slate-50/70 border border-slate-200/70 flex flex-col justify-between min-w-0">
           <div class="flex items-baseline justify-between">
             <span class="text-[9.5px] uppercase font-bold tracking-wider text-emerald-800 truncate">Gimnasio O2</span>
             <span class="text-[9.5px] font-bold text-slate-700">3 días</span>
           </div>
 
-          <!-- Barras de 7 días: TODAS CON EL MISMO ALTO (10px), DÍAS ACTIVOS EN VERDE ESMERALDA -->
+          <!-- Barras de 7 días: TODAS CON EL MISMO ALTO (10px) -->
           <div class="pt-2">
             <div class="flex items-center justify-between gap-1 h-6">
               <div class="flex-1 flex flex-col items-center cursor-pointer" onclick="selectDay('mie')" title="Lunes (Descanso)">
@@ -178,28 +178,36 @@
                 <div class="w-full bg-slate-200 rounded-full" style="height: 10px;"></div>
                 <span class="text-[8.5px] font-semibold text-slate-400 mt-1">M</span>
               </div>
-              <div class="flex-1 flex flex-col items-center cursor-pointer" onclick="selectDay('mie')" title="Miércoles: Pilates 20:05 h">
-                <div class="w-full bg-emerald-600 rounded-full shadow-2xs" style="height: 10px;"></div>
-                <span class="text-[8.5px] font-extrabold text-emerald-700 mt-1">X</span>
-              </div>
-              <div class="flex-1 flex flex-col items-center cursor-pointer" onclick="selectDay('jue')" title="Jueves: Bodypump 14:30 h">
-                <div class="w-full bg-emerald-600 rounded-full shadow-2xs" style="height: 10px;"></div>
-                <span class="text-[8.5px] font-extrabold text-emerald-700 mt-1">J</span>
-              </div>
-              <div class="flex-1 flex flex-col items-center cursor-pointer" onclick="selectDay('vie')" title="Viernes (Descanso activo)">
+              <div class="flex-1 flex flex-col items-center cursor-pointer" onclick="selectDay('mie')" title="Miércoles (Descanso ayer)">
                 <div class="w-full bg-slate-200 rounded-full" style="height: 10px;"></div>
-                <span class="text-[8.5px] font-semibold text-slate-400 mt-1">V</span>
+                <span class="text-[8.5px] font-semibold text-slate-400 mt-1">X</span>
               </div>
+              
+              <!-- JUEVES (HOY - ACTIVO CON GLOW DOT) -->
+              <div class="flex-1 flex flex-col items-center cursor-pointer relative" onclick="selectDay('jue')" title="Jueves: Sala de Fuerza O2">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mb-0.5 animate-pulse" title="Hoy activa"></span>
+                <div class="w-full bg-emerald-600 rounded-full shadow-2xs" style="height: 10px;"></div>
+                <span class="text-[8.5px] font-extrabold text-emerald-700 mt-0.5">J</span>
+              </div>
+
+              <!-- VIERNES (MAÑANA - SALA DE FUERZA) -->
+              <div class="flex-1 flex flex-col items-center cursor-pointer" onclick="selectDay('vie')" title="Viernes: Sala de Fuerza O2">
+                <div class="w-full bg-emerald-600 rounded-full shadow-2xs" style="height: 10px;"></div>
+                <span class="text-[8.5px] font-extrabold text-emerald-700 mt-1">V</span>
+              </div>
+
+              <!-- SÁBADO (BARRE / FUERZA) -->
               <div class="flex-1 flex flex-col items-center cursor-pointer" onclick="selectDay('sab')" title="Sábado: Barre 11:05 h">
                 <div class="w-full bg-emerald-600 rounded-full shadow-2xs" style="height: 10px;"></div>
                 <span class="text-[8.5px] font-extrabold text-emerald-700 mt-1">S</span>
               </div>
+
               <div class="flex-1 flex flex-col items-center cursor-pointer" onclick="selectDay('dom')" title="Domingo (Descanso)">
                 <div class="w-full bg-slate-200 rounded-full" style="height: 10px;"></div>
                 <span class="text-[8.5px] font-semibold text-slate-400 mt-1">D</span>
               </div>
             </div>
-            <span class="text-[8.5px] font-bold text-emerald-700 block text-right mt-1.5 truncate">Mié · Jue · Sáb</span>
+            <span class="text-[8.5px] font-bold text-emerald-700 block text-right mt-1.5 truncate">Jue · Vie · Sáb</span>
           </div>
         </div>
 
@@ -232,26 +240,26 @@
     <!-- ======================================================== -->
     <div id="view-menu-container" class="space-y-3 w-full">
 
-      <!-- DAY SELECTOR -->
+      <!-- DAY SELECTOR DINÁMICO (DETECTA AUTOMÁTICAMENTE EL DÍA DE HOY) -->
       <nav class="grid grid-cols-5 gap-1.5 w-full" id="day-selector-nav">
-        <button type="button" onclick="selectDay('mie')" id="tab-mie" class="day-tab py-2 px-1 rounded-xl text-center border transition-all bg-emerald-800 text-white border-emerald-800 shadow-2xs cursor-pointer min-w-0">
-          <span class="block text-[8.5px] uppercase opacity-85 font-semibold truncate">Hoy</span>
+        <button type="button" onclick="selectDay('mie')" id="tab-mie" class="day-tab py-2 px-1 rounded-xl text-center border transition-all cursor-pointer min-w-0">
+          <span class="block text-[8.5px] uppercase opacity-75 font-semibold truncate">Mié</span>
           <span class="block text-xs font-bold truncate">Mié 4</span>
         </button>
-        <button type="button" onclick="selectDay('jue')" id="tab-jue" class="day-tab py-2 px-1 rounded-xl text-center border transition-all bg-white text-slate-600 border-slate-200 hover:border-slate-300 cursor-pointer min-w-0">
-          <span class="block text-[8.5px] uppercase opacity-85 font-semibold truncate">Mañana</span>
-          <span class="block text-xs font-bold truncate">Jue 5</span>
+        <button type="button" onclick="selectDay('jue')" id="tab-jue" class="day-tab py-2 px-1 rounded-xl text-center border transition-all cursor-pointer min-w-0">
+          <span class="block text-[8.5px] uppercase font-bold tracking-wider truncate text-emerald-700">★ Hoy</span>
+          <span class="block text-xs font-extrabold truncate text-emerald-900">Jue 5</span>
         </button>
-        <button type="button" onclick="selectDay('vie')" id="tab-vie" class="day-tab py-2 px-1 rounded-xl text-center border transition-all bg-white text-slate-600 border-slate-200 hover:border-slate-300 cursor-pointer min-w-0">
-          <span class="block text-[8.5px] uppercase opacity-85 font-semibold truncate">Viernes</span>
+        <button type="button" onclick="selectDay('vie')" id="tab-vie" class="day-tab py-2 px-1 rounded-xl text-center border transition-all cursor-pointer min-w-0">
+          <span class="block text-[8.5px] uppercase opacity-75 font-semibold truncate">Mañana</span>
           <span class="block text-xs font-bold truncate">Vie 6</span>
         </button>
-        <button type="button" onclick="selectDay('sab')" id="tab-sab" class="day-tab py-2 px-1 rounded-xl text-center border transition-all bg-white text-slate-600 border-slate-200 hover:border-slate-300 cursor-pointer min-w-0">
-          <span class="block text-[8.5px] uppercase opacity-85 font-semibold truncate">Sábado</span>
+        <button type="button" onclick="selectDay('sab')" id="tab-sab" class="day-tab py-2 px-1 rounded-xl text-center border transition-all cursor-pointer min-w-0">
+          <span class="block text-[8.5px] uppercase opacity-75 font-semibold truncate">Sáb</span>
           <span class="block text-xs font-bold truncate">Sáb 7</span>
         </button>
-        <button type="button" onclick="selectDay('dom')" id="tab-dom" class="day-tab py-2 px-1 rounded-xl text-center border transition-all bg-white text-slate-600 border-slate-200 hover:border-slate-300 cursor-pointer min-w-0">
-          <span class="block text-[8.5px] uppercase opacity-85 font-semibold truncate">Domingo</span>
+        <button type="button" onclick="selectDay('dom')" id="tab-dom" class="day-tab py-2 px-1 rounded-xl text-center border transition-all cursor-pointer min-w-0">
+          <span class="block text-[8.5px] uppercase opacity-75 font-semibold truncate">Dom</span>
           <span class="block text-xs font-bold truncate">Dom 8</span>
         </button>
       </nav>
@@ -264,14 +272,14 @@
       <!-- MEALS SECTION HEADER -->
       <div class="flex items-center justify-between px-1">
         <h2 id="active-day-heading" class="text-xs sm:text-sm font-extrabold text-slate-800 tracking-tight">
-          Menú de Miércoles 4 de Noviembre
+          Menú de Jueves 5 de Noviembre
         </h2>
         <button type="button" onclick="toggleAllMeals()" id="toggle-all-meals-btn" class="text-[11px] font-semibold text-emerald-700 hover:text-emerald-800 bg-emerald-50 hover:bg-emerald-100/70 px-2.5 py-1 rounded-lg border border-emerald-200/60 transition cursor-pointer">
           Abrir todas ↓
         </button>
       </div>
 
-      <!-- DAILY MEAL CARDS (100% ABIERTOS, INGREDIENTES EN NEGRITA & CHECK INTERACTIVO) -->
+      <!-- DAILY MEAL CARDS (CERRADOS POR DEFECTO PARA VISTA LIMPIA) -->
       <section id="meals-container" class="space-y-3 w-full">
         <!-- Injected by JS -->
       </section>
@@ -295,20 +303,20 @@
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1.5 pb-2.5 border-b border-slate-100">
           <div>
             <div class="flex items-center gap-2 mb-0.5">
-              <span class="text-xs font-bold text-emerald-700 uppercase tracking-wide">Estrategia Modular</span>
+              <span class="text-xs font-bold text-emerald-700 uppercase tracking-wide">Estrategia Modular & Económica</span>
               <span class="text-xs text-slate-400">·</span>
-              <span class="text-xs text-slate-600 font-medium">Cocinar 2 veces y resolver 5 días</span>
+              <span class="text-xs text-slate-600 font-medium">Aprovechar despensa y cocinar express</span>
             </div>
             <h3 class="text-sm sm:text-base font-bold text-slate-900">
-              Guía Visual de Batch Prep & Organización
+              Guía Visual de Batch Prep & Despensa
             </h3>
           </div>
           <span class="text-xs font-semibold text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-lg border border-emerald-100 self-start sm:self-auto">
-            Tiempo: ~40 minutos
+            Tiempo: ~35 minutos
           </span>
         </div>
         <p class="text-xs text-slate-600 mt-2 leading-relaxed">
-          Diseñado para tu Ninja Foodi (Airfryer + Olla a presión) y horno. Estas 3 bases modulares se combinan durante la semana para que cada plato se prepare en 5 a 10 minutos.
+          Diseñado para tu Ninja Foodi y horno. Usando los ingredientes de tu compra y lo que ya tienes en despensa (garbanzos, quinoa, arroz, puré de patata).
         </p>
       </div>
 
@@ -331,17 +339,16 @@
             <div class="p-3 space-y-1.5">
               <h4 class="font-bold text-xs sm:text-sm text-slate-900">Bandeja Dorada de Horno</h4>
               <p class="text-[11px] text-slate-600 leading-relaxed">
-                Asa <strong>1 kg de calabaza</strong> en cubos, <strong>2 zanahorias</strong>, <strong>1 calabacín</strong>, <strong>1 puerro</strong> y <strong>ajos enteros</strong> con AOVE. Tritúralo todo con caldo hasta lograr textura sedosa.
+                Asa la <strong>calabaza en trozos</strong>, <strong>zanahorias</strong>, <strong>calabacín</strong> y <strong>puerro cortado</strong> que compraste hoy con AOVE y sal. Tritúralo todo para crema sedosa.
               </p>
               
               <div class="pt-0.5">
-                <span class="text-[9.5px] uppercase font-bold text-slate-500 block mb-1">Ingredientes base:</span>
+                <span class="text-[9.5px] uppercase font-bold text-slate-500 block mb-1">Ingredientes de hoy:</span>
                 <div class="flex flex-wrap gap-1">
                   <span class="px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 text-[9.5px] font-medium">Calabaza</span>
                   <span class="px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 text-[9.5px] font-medium">Zanahoria</span>
                   <span class="px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 text-[9.5px] font-medium">Puerro</span>
-                  <span class="px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 text-[9.5px] font-medium">Calabacín</span>
-                  <span class="px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 text-[9.5px] font-medium">Ajo</span>
+                  <span class="px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 text-[9.5px] font-medium">Semillas calabaza</span>
                 </div>
               </div>
             </div>
@@ -349,7 +356,7 @@
 
           <div class="p-3 pt-0">
             <div class="p-2 rounded-xl bg-amber-50/80 border border-amber-200/60 text-[10.5px] text-amber-900 font-semibold">
-              Rinde: 3 raciones de crema (Cena Mié, Cena Dom y ración comodín).
+              Rinde: 3 raciones de crema dorada (Cenas confortables).
             </div>
           </div>
         </div>
@@ -368,18 +375,17 @@
             </div>
             
             <div class="p-3 space-y-1.5">
-              <h4 class="font-bold text-xs sm:text-sm text-slate-900">Cubos de Boniato & Patata</h4>
+              <h4 class="font-bold text-xs sm:text-sm text-slate-900">Dados de Batata & Patata</h4>
               <p class="text-[11px] text-slate-600 leading-relaxed">
-                Corta <strong>2 boniatos</strong> y <strong>2 patatas</strong> en dados medianos. Cocínalos en la Ninja Airfryer a <strong>195 °C durante 18 minutos</strong> con sal y romero.
+                Corta la <strong>batata</strong> y las <strong>patatas de guarnición</strong> compradas hoy. Cocínalas en la Ninja Airfryer a <strong>195 °C durante 18 minutos</strong> con sal y romero.
               </p>
               
               <div class="pt-0.5">
-                <span class="text-[9.5px] uppercase font-bold text-slate-500 block mb-1">Ingredientes base:</span>
+                <span class="text-[9.5px] uppercase font-bold text-slate-500 block mb-1">Ingredientes:</span>
                 <div class="flex flex-wrap gap-1">
-                  <span class="px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 text-[9.5px] font-medium">Boniato</span>
+                  <span class="px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 text-[9.5px] font-medium">Batata</span>
                   <span class="px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 text-[9.5px] font-medium">Patata</span>
                   <span class="px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 text-[9.5px] font-medium">AOVE</span>
-                  <span class="px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 text-[9.5px] font-medium">Romero</span>
                 </div>
               </div>
             </div>
@@ -387,7 +393,7 @@
 
           <div class="p-3 pt-0">
             <div class="p-2 rounded-xl bg-emerald-50/80 border border-emerald-200/60 text-[10.5px] text-emerald-900 font-semibold">
-              Rinde: Almuerzo post-Bodypump del jueves y carbohidrato para viernes.
+              Rinde: Carbohidrato limpio post-fuerza para hoy y mañana.
             </div>
           </div>
         </div>
@@ -406,18 +412,18 @@
             </div>
             
             <div class="p-3 space-y-1.5">
-              <h4 class="font-bold text-xs sm:text-sm text-slate-900">Pollo Deshilachado & Discos Arepa</h4>
+              <h4 class="font-bold text-xs sm:text-sm text-slate-900">Pollo Asado & Despensa de Garbanzos</h4>
               <p class="text-[11px] text-slate-600 leading-relaxed">
-                Dora <strong>500 g de pechuga de pollo</strong> y desmenúzala en tiras. Amasa la <strong>harina P.A.N.</strong> con <strong>semillas de chía</strong> hidratadas y ten 4 discos precocidos en nevera.
+                Desmenuza las <strong>pechuguitas de pollo</strong> compradas hoy. Combina con <strong>chía</strong> para las arepas y los <strong>garbanzos en lata</strong> de tu despensa para sartenadas de 5 min.
               </p>
               
               <div class="pt-0.5">
-                <span class="text-[9.5px] uppercase font-bold text-slate-500 block mb-1">Ingredientes base:</span>
+                <span class="text-[9.5px] uppercase font-bold text-slate-500 block mb-1">Ingredientes:</span>
                 <div class="flex flex-wrap gap-1">
-                  <span class="px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 text-[9.5px] font-medium">Pollo 500g</span>
-                  <span class="px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 text-[9.5px] font-medium">Harina P.A.N.</span>
-                  <span class="px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 text-[9.5px] font-medium">Chía</span>
+                  <span class="px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 text-[9.5px] font-medium">Pollo</span>
+                  <span class="px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 text-[9.5px] font-medium">Garbanzos</span>
                   <span class="px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 text-[9.5px] font-medium">Queso Cottage</span>
+                  <span class="px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 text-[9.5px] font-medium">Chía</span>
                 </div>
               </div>
             </div>
@@ -425,7 +431,7 @@
 
           <div class="p-3 pt-0">
             <div class="p-2 rounded-xl bg-slate-100 border border-slate-200 text-[10.5px] text-slate-800 font-semibold">
-              Rinde: Cenas y desayunos ensamblados en 5 minutos (calentar y rellenar).
+              Rinde: Proteína lista para cenas y desayunos en 5 minutos.
             </div>
           </div>
         </div>
@@ -435,8 +441,8 @@
       <!-- Storage guidelines -->
       <div class="card-craft rounded-xl p-3 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 text-xs text-slate-600 w-full">
         <div class="min-w-0">
-          <strong class="text-slate-900 block sm:inline">Conservación:</strong>
-          <span> Guardar las cremas y el pollo en recipientes herméticos de vidrio (hasta 4 días en frío). Los discos de arepa con papel vegetal.</span>
+          <strong class="text-slate-900 block sm:inline">Despensa Activa:</strong>
+          <span> Ya tienes comida completa hasta el domingo (no necesitas gastar nada más esta semana).</span>
         </div>
         <button type="button" onclick="switchView('menu')" class="px-3 py-1.5 rounded-lg bg-emerald-700 text-white font-bold text-xs hover:bg-emerald-800 transition shrink-0 self-start sm:self-auto cursor-pointer">
           Ir al Menú Diario
@@ -446,7 +452,7 @@
     </div>
 
     <!-- ======================================================== -->
-    <!-- VIEW 3: LISTA DEL SÚPER (ADAPTADA 100% A TUS PREFERENCIAS) -->
+    <!-- VIEW 3: LISTA DEL SÚPER (ACTUALIZADA CON TU COMPRA DE HOY) -->
     <!-- ======================================================== -->
     <div id="view-super-container" class="hidden space-y-3 w-full">
       
@@ -455,18 +461,18 @@
         <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-2.5 border-b border-slate-100 gap-2">
           <div class="min-w-0">
             <div class="flex items-center gap-1.5 mb-0.5">
-              <span class="text-xs font-bold text-emerald-700 uppercase tracking-wide">Mercadona</span>
+              <span class="text-xs font-bold text-emerald-700 uppercase tracking-wide">Mercadona & Despensa</span>
               <span class="text-xs text-slate-400">·</span>
-              <span class="text-xs text-slate-500 font-medium">Ajustado a tus gustos y despensa</span>
+              <span class="text-xs text-slate-500 font-medium">Compra de hoy + stock en casa</span>
             </div>
             <h3 class="text-sm sm:text-base font-bold text-slate-900 truncate">
-              Lista del Súper Práctica (31 Productos)
+              Inventario de Comida (29 Productos)
             </h3>
           </div>
           
           <div class="flex items-center gap-2 self-start sm:self-auto shrink-0">
             <span id="grocery-progress-badge" class="px-2 py-1 rounded-md bg-emerald-50 border border-emerald-100 text-emerald-800 text-xs font-bold">
-              0 de 31 listos
+              0 de 29 listos
             </span>
             <button type="button" onclick="copyGroceryToClipboard()" class="px-2.5 py-1 rounded-lg bg-slate-900 text-white text-xs font-semibold hover:bg-slate-800 transition flex items-center gap-1 active:scale-95 cursor-pointer" title="Copiar lista organizada">
               <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
@@ -481,98 +487,89 @@
           <div>
             <div class="flex items-center justify-between mb-1.5">
               <h4 class="text-xs font-bold uppercase tracking-wider text-emerald-800">
-                1. Frutas & Verduras Frescas
+                1. Frutas & Verduras
               </h4>
-              <span class="text-[11px] text-slate-500 font-medium">10 productos</span>
+              <span class="text-[11px] text-slate-500 font-medium">9 productos</span>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 w-full" id="super-produce">
               
         <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-          <input type="checkbox" onchange="toggleItem('1 calabaza cacahuete (aprox. 1 kg)')" data-item="1 calabaza cacahuete (aprox. 1 kg)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
+          <input type="checkbox" onchange="toggleItem('Calabaza en trozos (comprada hoy)')" data-item="Calabaza en trozos (comprada hoy)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
           <div class="flex-1 min-w-0 text-xs">
-            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">1 calabaza cacahuete (aprox. 1 kg)</span>
-            <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Base para 3 raciones de crema dorada asada</span>
+            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Calabaza en trozos (comprada hoy)</span>
+            <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Base para crema dorada asada</span>
           </div>
         </label>
         
 
         <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-          <input type="checkbox" onchange="toggleItem('1 malla de zanahorias frescas')" data-item="1 malla de zanahorias frescas" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
+          <input type="checkbox" onchange="toggleItem('Zanahorias frescas (comprada hoy)')" data-item="Zanahorias frescas (comprada hoy)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
           <div class="flex-1 min-w-0 text-xs">
-            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">1 malla de zanahorias frescas</span>
+            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Zanahorias frescas (comprada hoy)</span>
             <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Crema dorada y salteados con pollo</span>
           </div>
         </label>
         
 
         <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-          <input type="checkbox" onchange="toggleItem('2-3 calabacines medianos')" data-item="2-3 calabacines medianos" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
+          <input type="checkbox" onchange="toggleItem('Calabacín verde (comprado hoy)')" data-item="Calabacín verde (comprado hoy)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
           <div class="flex-1 min-w-0 text-xs">
-            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">2-3 calabacines medianos</span>
-            <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Salteados con quinoa y crema</span>
+            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Calabacín verde (comprado hoy)</span>
+            <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Salteados con quinoa, arroz o pasta</span>
           </div>
         </label>
         
 
         <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-          <input type="checkbox" onchange="toggleItem('1 manojo de puerros')" data-item="1 manojo de puerros" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
+          <input type="checkbox" onchange="toggleItem('Puerro cortado (comprado hoy)')" data-item="Puerro cortado (comprado hoy)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
           <div class="flex-1 min-w-0 text-xs">
-            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">1 manojo de puerros</span>
+            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Puerro cortado (comprado hoy)</span>
             <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Sofrito asado dulce para la crema</span>
           </div>
         </label>
         
 
         <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-          <input type="checkbox" onchange="toggleItem('1 manojo de espárragos trigueros')" data-item="1 manojo de espárragos trigueros" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
+          <input type="checkbox" onchange="toggleItem('Espárragos verdes finos (comprados hoy)')" data-item="Espárragos verdes finos (comprados hoy)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
           <div class="flex-1 min-w-0 text-xs">
-            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">1 manojo de espárragos trigueros</span>
-            <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Acompañamiento post-Bodypump</span>
+            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Espárragos verdes finos (comprados hoy)</span>
+            <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Acompañamiento cena/almuerzo de fuerza</span>
           </div>
         </label>
         
 
         <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-          <input type="checkbox" onchange="toggleItem('2 paquetes de tomates cherry dulces')" data-item="2 paquetes de tomates cherry dulces" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
+          <input type="checkbox" onchange="toggleItem('Tomates cherry dulces 500g (comprados hoy)')" data-item="Tomates cherry dulces 500g (comprados hoy)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
           <div class="flex-1 min-w-0 text-xs">
-            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">2 paquetes de tomates cherry dulces</span>
-            <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Cherrys confitados con feta y camarones</span>
+            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Tomates cherry dulces 500g (comprados hoy)</span>
+            <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Cherrys confitados con gambas y feta</span>
           </div>
         </label>
         
 
         <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-          <input type="checkbox" onchange="toggleItem('1 cabeza de ajos')" data-item="1 cabeza de ajos" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
+          <input type="checkbox" onchange="toggleItem('Manzanas Golden (compradas hoy)')" data-item="Manzanas Golden (compradas hoy)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
           <div class="flex-1 min-w-0 text-xs">
-            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">1 cabeza de ajos</span>
-            <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Ajos dulces asados para la crema y aderezos</span>
+            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Manzanas Golden (compradas hoy)</span>
+            <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Compotas tibias con canela para desayunos</span>
           </div>
         </label>
         
 
         <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-          <input type="checkbox" onchange="toggleItem('1 bolsa de manzanas dulces (Gala o Golden)')" data-item="1 bolsa de manzanas dulces (Gala o Golden)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
+          <input type="checkbox" onchange="toggleItem('Mix de frutos rojos frescos (comprado hoy)')" data-item="Mix de frutos rojos frescos (comprado hoy)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
           <div class="flex-1 min-w-0 text-xs">
-            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">1 bolsa de manzanas dulces (Gala o Golden)</span>
-            <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Compotas tibias con canela para desayunos/meriendas</span>
+            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Mix de frutos rojos frescos (comprado hoy)</span>
+            <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Topping digestivo para yogur griego y waffles</span>
           </div>
         </label>
         
 
         <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-          <input type="checkbox" onchange="toggleItem('1 tarrina de arándanos o frutos rojos frescos')" data-item="1 tarrina de arándanos o frutos rojos frescos" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
+          <input type="checkbox" onchange="toggleItem('Batata micro y patata guarnición (compradas hoy)')" data-item="Batata micro y patata guarnición (compradas hoy)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
           <div class="flex-1 min-w-0 text-xs">
-            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">1 tarrina de arándanos o frutos rojos frescos</span>
-            <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Topping digestivo para yogur y waffles (en vez de kiwi)</span>
-          </div>
-        </label>
-        
-
-        <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-          <input type="checkbox" onchange="toggleItem('2-3 patatas medianas y 2 boniatos')" data-item="2-3 patatas medianas y 2 boniatos" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
-          <div class="flex-1 min-w-0 text-xs">
-            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">2-3 patatas medianas y 2 boniatos</span>
-            <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Asados en Ninja Airfryer o al horno</span>
+            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Batata micro y patata guarnición (compradas hoy)</span>
+            <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Asadas en Ninja Airfryer o al horno</span>
           </div>
         </label>
         
@@ -583,97 +580,97 @@
           <div>
             <div class="flex items-center justify-between mb-1.5">
               <h4 class="text-xs font-bold uppercase tracking-wider text-emerald-800">
-                2. Carnes, Pescados & Lácteos Aptos (Cottage & Feta)
+                2. Carnes, Pescados & Lácteos
               </h4>
               <span class="text-[11px] text-slate-500 font-medium">10 productos</span>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 w-full" id="super-protein">
               
         <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-          <input type="checkbox" onchange="toggleItem('Pechuga de pollo (solomillos o filetes 500g)')" data-item="Pechuga de pollo (solomillos o filetes 500g)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
+          <input type="checkbox" onchange="toggleItem('Pechuguitas de pollo asado x2 (compradas hoy)')" data-item="Pechuguitas de pollo asado x2 (compradas hoy)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
           <div class="flex-1 min-w-0 text-xs">
-            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Pechuga de pollo (solomillos o filetes 500g)</span>
+            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Pechuguitas de pollo asado x2 (compradas hoy)</span>
             <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Batch prep deshilachado y a la plancha</span>
           </div>
         </label>
         
 
         <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-          <input type="checkbox" onchange="toggleItem('Pechuga de pavo de corral (300g)')" data-item="Pechuga de pavo de corral (300g)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
+          <input type="checkbox" onchange="toggleItem('Pechuga de pavo en filetes (comprada hoy)')" data-item="Pechuga de pavo en filetes (comprada hoy)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
           <div class="flex-1 min-w-0 text-xs">
-            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Pechuga de pavo de corral (300g)</span>
-            <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Snacks de merienda y estofados</span>
+            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Pechuga de pavo en filetes (comprada hoy)</span>
+            <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Snacks de merienda y cenas rápidas</span>
           </div>
         </label>
         
 
         <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-          <input type="checkbox" onchange="toggleItem('Colas de camarones o langostinos pelados (300g)')" data-item="Colas de camarones o langostinos pelados (300g)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
+          <input type="checkbox" onchange="toggleItem('Gambas peladas crudas (compradas hoy)')" data-item="Gambas peladas crudas (compradas hoy)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
           <div class="flex-1 min-w-0 text-xs">
-            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Colas de camarones o langostinos pelados (300g)</span>
+            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Gambas peladas crudas (compradas hoy)</span>
             <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Sartenadas rápidas con cherrys y pasta</span>
           </div>
         </label>
         
 
         <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-          <input type="checkbox" onchange="toggleItem('1-2 lomos de salmón fresco')" data-item="1-2 lomos de salmón fresco" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
+          <input type="checkbox" onchange="toggleItem('Lomo de salmón noruego (comprado hoy)')" data-item="Lomo de salmón noruego (comprado hoy)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
           <div class="flex-1 min-w-0 text-xs">
-            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">1-2 lomos de salmón fresco</span>
+            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Lomo de salmón noruego (comprado hoy)</span>
             <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Lomo sellado crujiente con piel</span>
           </div>
         </label>
         
 
         <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-          <input type="checkbox" onchange="toggleItem('1 docena de huevos camperos (categoría 0 o 1)')" data-item="1 docena de huevos camperos (categoría 0 o 1)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
+          <input type="checkbox" onchange="toggleItem('12 Huevos camperos grandes L (comprados hoy)')" data-item="12 Huevos camperos grandes L (comprados hoy)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
           <div class="flex-1 min-w-0 text-xs">
-            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">1 docena de huevos camperos (categoría 0 o 1)</span>
-            <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Revueltos cremosos y tortillas</span>
+            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">12 Huevos camperos grandes L (comprados hoy)</span>
+            <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Revueltos cremosos, tortillas y waffles</span>
           </div>
         </label>
         
 
         <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-          <input type="checkbox" onchange="toggleItem('1 botella de claras pasteurizadas')" data-item="1 botella de claras pasteurizadas" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
+          <input type="checkbox" onchange="toggleItem('Clara líquida pasteurizada (comprada hoy)')" data-item="Clara líquida pasteurizada (comprada hoy)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
           <div class="flex-1 min-w-0 text-xs">
-            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">1 botella de claras pasteurizadas</span>
+            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Clara líquida pasteurizada (comprada hoy)</span>
             <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Aporte de proteína limpia</span>
           </div>
         </label>
         
 
         <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-          <input type="checkbox" onchange="toggleItem('1 bloque de queso feta auténtico')" data-item="1 bloque de queso feta auténtico" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
+          <input type="checkbox" onchange="toggleItem('Queso feta auténtico (comprado hoy)')" data-item="Queso feta auténtico (comprado hoy)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
           <div class="flex-1 min-w-0 text-xs">
-            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">1 bloque de queso feta auténtico</span>
+            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Queso feta auténtico (comprado hoy)</span>
             <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Topping de cremas y revueltos</span>
           </div>
         </label>
         
 
         <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-          <input type="checkbox" onchange="toggleItem('2 tarrinas de queso cottage (tu favorito)')" data-item="2 tarrinas de queso cottage (tu favorito)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
+          <input type="checkbox" onchange="toggleItem('2 tarrinas de queso cottage (compradas hoy)')" data-item="2 tarrinas de queso cottage (compradas hoy)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
           <div class="flex-1 min-w-0 text-xs">
-            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">2 tarrinas de queso cottage (tu favorito)</span>
-            <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Relleno cremoso de arepas, waffles y bowls (reemplaza a Burgos)</span>
+            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">2 tarrinas de queso cottage (compradas hoy)</span>
+            <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Tu favorito para arepas, waffles y bowls</span>
           </div>
         </label>
         
 
         <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-          <input type="checkbox" onchange="toggleItem('1 tarrina de queso crema light')" data-item="1 tarrina de queso crema light" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
+          <input type="checkbox" onchange="toggleItem('Yogur ligero griego (¡en tu nevera!)')" data-item="Yogur ligero griego (¡en tu nevera!)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
           <div class="flex-1 min-w-0 text-xs">
-            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">1 tarrina de queso crema light</span>
-            <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Untable suave para arepas</span>
+            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Yogur ligero griego (¡en tu nevera!)</span>
+            <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Meriendas proteicas con canela y frutos rojos</span>
           </div>
         </label>
         
 
         <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-          <input type="checkbox" onchange="toggleItem('Bebida de avena 100% Sin Gluten')" data-item="Bebida de avena 100% Sin Gluten" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
+          <input type="checkbox" onchange="toggleItem('Bebida de avena con calcio (comprada hoy)')" data-item="Bebida de avena con calcio (comprada hoy)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
           <div class="flex-1 min-w-0 text-xs">
-            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Bebida de avena 100% Sin Gluten</span>
+            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Bebida de avena con calcio (comprada hoy)</span>
             <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Café matutino post-Eutirox</span>
           </div>
         </label>
@@ -685,107 +682,98 @@
           <div>
             <div class="flex items-center justify-between mb-1.5">
               <h4 class="text-xs font-bold uppercase tracking-wider text-emerald-800">
-                3. Despensa, Congelados (Espinacas) & Tés
+                3. Despensa & Stock en Casa
               </h4>
-              <span class="text-[11px] text-slate-500 font-medium">11 productos</span>
+              <span class="text-[11px] text-slate-500 font-medium">10 productos</span>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 w-full" id="super-pantry">
               
         <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-          <input type="checkbox" onchange="toggleItem('Harina de Maíz Blanco precocida P.A.N. (1 paquete)')" data-item="Harina de Maíz Blanco precocida P.A.N. (1 paquete)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
+          <input type="checkbox" onchange="toggleItem('Garbanzos en lata (¡en tu despensa!)')" data-item="Garbanzos en lata (¡en tu despensa!)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
           <div class="flex-1 min-w-0 text-xs">
-            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Harina de Maíz Blanco precocida P.A.N. (1 paquete)</span>
-            <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Arepas con chía para desayunos y cenas</span>
+            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Garbanzos en lata (¡en tu despensa!)</span>
+            <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Proteína y fibra prebiótica económica y digestiva</span>
           </div>
         </label>
         
 
         <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-          <input type="checkbox" onchange="toggleItem('Copos o harina de avena certificada Sin Gluten')" data-item="Copos o harina de avena certificada Sin Gluten" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
+          <input type="checkbox" onchange="toggleItem('Arroz vaporizado & Quinoa (¡en tu despensa!)')" data-item="Arroz vaporizado & Quinoa (¡en tu despensa!)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
           <div class="flex-1 min-w-0 text-xs">
-            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Copos o harina de avena certificada Sin Gluten</span>
-            <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Waffles y pancakes digestivos</span>
+            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Arroz vaporizado & Quinoa (¡en tu despensa!)</span>
+            <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Carbohidratos limpios de base sin gluten</span>
           </div>
         </label>
         
 
         <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-          <input type="checkbox" onchange="toggleItem('Pasta hélices 100% harina de lenteja roja')" data-item="Pasta hélices 100% harina de lenteja roja" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
+          <input type="checkbox" onchange="toggleItem('Semillas mixtas con calabaza (¡en tu despensa!)')" data-item="Semillas mixtas con calabaza (¡en tu despensa!)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
           <div class="flex-1 min-w-0 text-xs">
-            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Pasta hélices 100% harina de lenteja roja</span>
+            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Semillas mixtas con calabaza (¡en tu despensa!)</span>
+            <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Topping crujiente de cremas y revueltos</span>
+          </div>
+        </label>
+        
+
+        <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
+          <input type="checkbox" onchange="toggleItem('Sobrecito de puré de patata (¡en tu despensa!)')" data-item="Sobrecito de puré de patata (¡en tu despensa!)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
+          <div class="flex-1 min-w-0 text-xs">
+            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Sobrecito de puré de patata (¡en tu despensa!)</span>
+            <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Carbohidrato express de confort digestivo</span>
+          </div>
+        </label>
+        
+
+        <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
+          <input type="checkbox" onchange="toggleItem('Pasta hélices 100% lenteja roja (comprada hoy)')" data-item="Pasta hélices 100% lenteja roja (comprada hoy)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
+          <div class="flex-1 min-w-0 text-xs">
+            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Pasta hélices 100% lenteja roja (comprada hoy)</span>
             <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Almuerzos ricos en proteína vegetal</span>
           </div>
         </label>
         
 
         <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-          <input type="checkbox" onchange="toggleItem('Quinoa tricolor o arroz basmati')" data-item="Quinoa tricolor o arroz basmati" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
+          <input type="checkbox" onchange="toggleItem('Semillas de chía (compradas hoy)')" data-item="Semillas de chía (compradas hoy)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
           <div class="flex-1 min-w-0 text-xs">
-            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Quinoa tricolor o arroz basmati</span>
-            <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Carbohidrato limpio de base</span>
+            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Semillas de chía (compradas hoy)</span>
+            <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Mucílagos para arepas y tránsito digestivo</span>
           </div>
         </label>
         
 
         <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-          <input type="checkbox" onchange="toggleItem('1 bolsa de espinacas congeladas en porciones (1 kg)')" data-item="1 bolsa de espinacas congeladas en porciones (1 kg)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
+          <input type="checkbox" onchange="toggleItem('Limón exprimido 100% (comprado hoy)')" data-item="Limón exprimido 100% (comprado hoy)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
           <div class="flex-1 min-w-0 text-xs">
-            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">1 bolsa de espinacas congeladas en porciones (1 kg)</span>
-            <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Congelador: duran siempre, directas a la sartén</span>
+            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Limón exprimido 100% (comprado hoy)</span>
+            <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Aliños rápidos y marinados</span>
           </div>
         </label>
         
 
         <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-          <input type="checkbox" onchange="toggleItem('1 botellita de zumo de limón exprimido 100%')" data-item="1 botellita de zumo de limón exprimido 100%" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
+          <input type="checkbox" onchange="toggleItem('Tomate triturado (comprado hoy)')" data-item="Tomate triturado (comprado hoy)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
           <div class="flex-1 min-w-0 text-xs">
-            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">1 botellita de zumo de limón exprimido 100%</span>
-            <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Limón líquido cómodo para salsas y aliños</span>
+            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Tomate triturado (comprado hoy)</span>
+            <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Base para sartenadas con gambas</span>
           </div>
         </label>
         
 
         <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-          <input type="checkbox" onchange="toggleItem('Cajas de infusión: Jengibre, manzanilla y té de hibisco')" data-item="Cajas de infusión: Jengibre, manzanilla y té de hibisco" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
+          <input type="checkbox" onchange="toggleItem('Aceite de Oliva Virgen Extra (comprado hoy)')" data-item="Aceite de Oliva Virgen Extra (comprado hoy)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
           <div class="flex-1 min-w-0 text-xs">
-            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Cajas de infusión: Jengibre, manzanilla y té de hibisco</span>
-            <span class="text-[11px] text-slate-500 block mt-0.5 break-words">En bolsitas para preparar en 2 minutos (sin raíz fresca)</span>
-          </div>
-        </label>
-        
-
-        <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-          <input type="checkbox" onchange="toggleItem('Semillas de chía y semillas de lino molido')" data-item="Semillas de chía y semillas de lino molido" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
-          <div class="flex-1 min-w-0 text-xs">
-            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Semillas de chía y semillas de lino molido</span>
-            <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Mucílagos hidratados y motilidad digestiva</span>
-          </div>
-        </label>
-        
-
-        <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-          <input type="checkbox" onchange="toggleItem('Nueces de Brasil (1 bolsa)')" data-item="Nueces de Brasil (1 bolsa)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
-          <div class="flex-1 min-w-0 text-xs">
-            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Nueces de Brasil (1 bolsa)</span>
-            <span class="text-[11px] text-slate-500 block mt-0.5 break-words">2 nueces diarias = 100% selenio para tiroides</span>
-          </div>
-        </label>
-        
-
-        <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-          <input type="checkbox" onchange="toggleItem('Especias: Canela de Ceilán, cúrcuma, orégano, nuez moscada')" data-item="Especias: Canela de Ceilán, cúrcuma, orégano, nuez moscada" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
-          <div class="flex-1 min-w-0 text-xs">
-            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Especias: Canela de Ceilán, cúrcuma, orégano, nuez moscada</span>
-            <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Antiinflamatorios naturales</span>
-          </div>
-        </label>
-        
-
-        <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-          <input type="checkbox" onchange="toggleItem('Aceite de Oliva Virgen Extra (AOVE)')" data-item="Aceite de Oliva Virgen Extra (AOVE)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
-          <div class="flex-1 min-w-0 text-xs">
-            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Aceite de Oliva Virgen Extra (AOVE)</span>
+            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Aceite de Oliva Virgen Extra (comprado hoy)</span>
             <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Grasas monoinsaturadas de base</span>
+          </div>
+        </label>
+        
+
+        <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
+          <input type="checkbox" onchange="toggleItem('Nueces de Brasil (en casa)')" data-item="Nueces de Brasil (en casa)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
+          <div class="flex-1 min-w-0 text-xs">
+            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Nueces de Brasil (en casa)</span>
+            <span class="text-[11px] text-slate-500 block mt-0.5 break-words">2 nueces diarias = selenio activo para tiroides</span>
           </div>
         </label>
         
@@ -811,7 +799,6 @@
 
   <!-- DATA & LOGIC -->
   <script>
-    // Safe storage helpers (prevents crashes on Safari / file:// / iframe sandboxes)
     function safeGet(key, fallback = {}) {
       try {
         const raw = localStorage.getItem(key);
@@ -825,7 +812,7 @@
       try {
         localStorage.setItem(key, JSON.stringify(val));
       } catch (e) {
-        // storage quota or sandbox fallback
+        // safe fallback
       }
     }
 
@@ -842,217 +829,210 @@
 
     const daysData = {
       mie: {
-        name: "Miércoles 4 de Noviembre",
+        name: "Miércoles 4 de Noviembre (Ayer)",
         workout: {
           id: "w-mie",
           center: "O2 Boutique",
-          title: "Pilates · 20:05 h (Día 1 de 3)",
-          duration: "50 min",
-          badge: "bg-emerald-50 text-emerald-800 border border-emerald-200/60",
-          note: "Reinicio: Alivio cervical y mandibular, activación de transverso"
+          title: "Descanso (No realizado ayer)",
+          duration: "—",
+          badge: "bg-slate-100 text-slate-600 border border-slate-200",
+          note: "Descanso por compra pospuesta a hoy"
         },
         meals: [
           {
             id: "mie-0",
             type: "Desayuno",
-            time: "10:30 – 11:00 h",
-            title: "Arepas P.A.N. Tostadas con Chía & Revuelto con Cottage",
+            time: "10:30 h",
+            title: "Desayuno Express",
             img: foodImgs.arepas,
-            badges: ["10 min", "100% Sin Gluten", "26g Proteína"],
-            calories: "~380 kcal",
+            badges: ["Completado", "Sin Gluten"],
+            calories: "~350 kcal",
             ingredients: [
-              "<strong>1 arepa de maíz P.A.N.</strong> con <strong>1 cdta de semillas de chía</strong> hidratadas en la masa",
-              "<strong>1 huevo campero entero</strong> + <strong>2 claras pasteurizadas</strong>",
-              "<strong>40 g de queso cottage suave</strong> (tu favorito)",
-              "<strong>Café caliente</strong> con <strong>leche de avena sin gluten</strong> (60 min post-Eutirox)"
+              "Café con bebida vegetal",
+              "Huevos revueltos o tostada"
             ],
-            instructions: "Amasar la harina P.A.N. con agua tibia, sal y chía. <strong>Dorar en sartén</strong> o tostador. Hacer el <strong>revuelto a fuego bajo</strong> para mantenerlo sedoso. Rellenar la arepa con el queso cottage."
+            instructions: "Desayuno del día previo."
           },
           {
             id: "mie-1",
             type: "Almuerzo",
-            time: "14:30 – 15:30 h",
-            title: "Bowl Tibio de Salmón con Quinoa & Lemon-Tahini",
+            time: "14:30 h",
+            title: "Almuerzo previo a compra",
             img: foodImgs.salmon,
-            badges: ["20 min", "Omega-3 IFOS", "32g Proteína"],
-            calories: "~490 kcal",
+            badges: ["Proteína", "Completado"],
+            calories: "~450 kcal",
             ingredients: [
-              "<strong>120–140 g de lomo de salmón fresco</strong> con piel crujiente",
-              "<strong>70 g de quinoa tricolor</strong> cocida",
-              "<strong>1 calabacín mediano</strong> salteado en dados con AOVE",
-              "Salsa rápida: <strong>1 cda de tu tahini de despensa</strong> + <strong>1 chorrito de limón líquido</strong> + pizca de ajo y agua fría",
-              "Suplementación: <strong>Multivitamínico completo</strong> con las grasas saludables del salmón"
+              "Almuerzo previo a la reposición de hoy"
             ],
-            instructions: "<strong>Sellar el salmón</strong> en sartén caliente por la piel <strong>4 minutos</strong> hasta dorar. Emulsionar el tahini con limón líquido y agua hasta salsa sedosa. Montar sobre quinoa y calabacín."
+            instructions: "Día previo."
           },
           {
             id: "mie-2",
-            type: "Merienda Funcional",
-            time: "18:30 – 19:00 h",
-            title: "Té de Jengibre Caliente & Dúo Tiroideo de Selenio",
+            type: "Merienda",
+            time: "18:30 h",
+            title: "Infusión caliente",
             img: foodImgs.te,
-            badges: ["5 min", "Selenio Orgánico", "Calma Digestiva"],
-            calories: "~160 kcal",
+            badges: ["Calma Digestiva"],
+            calories: "~120 kcal",
             ingredients: [
-              "<strong>2 nueces de Brasil fijas</strong> (selenio indispensable para conversión T4 a T3 activa)",
-              "<strong>1 taza de infusión de té de jengibre</strong> (en bolsita)",
-              "<strong>2 lonchas de pechuga de pavo de corral</strong> con <strong>1 cdta de queso crema light</strong>"
+              "Infusión y frutos secos"
             ],
-            instructions: "Consumir las <strong>2 nueces masticando despacio</strong>. Acompañar del té caliente de jengibre para calmar el peristaltismo antes de la clase de Pilates."
+            instructions: "Digestión ligera."
           },
           {
             id: "mie-3",
-            type: "Cena de Confort",
-            time: "21:15 – 21:45 h",
-            title: "Crema Dorada de Otoño con Verduras Asadas, Feta & Pollo",
-            img: foodImgs.crema,
-            badges: ["Batch Cooking", "Confort Digestivo", "30g Proteína"],
-            calories: "~390 kcal",
+            type: "Cena",
+            time: "21:30 h",
+            title: "Revuelto de Huevos en AOVE con Orégano (Realizado)",
+            img: foodImgs.arepas,
+            badges: ["Realizado", "24g Proteína", "Cero Gluten"],
+            calories: "~320 kcal",
             ingredients: [
-              "<strong>1 ración abundante de Crema Dorada</strong> (calabaza asada, zanahoria, puerro, calabacín y ajo)",
-              "<strong>100 g de pechuga de pollo</strong> deshilachada o dorada en tiras",
-              "<strong>25 g de queso feta auténtico</strong> desmenuzado por encima",
-              "Pizca de orégano y un chorrito de <strong>AOVE arbequina en crudo</strong>"
+              "<strong>2 huevos camperos</strong> revueltos cremosos",
+              "<strong>1 chorrito de AOVE</strong> en sartén antiadherente",
+              "Pizca de <strong>orégano seco</strong> y sal marina",
+              "Infusión digestiva tibia"
             ],
-            instructions: "Calentar la crema aterciopelada del batch prep. Servir en cuenco y coronar con el pollo caliente y el queso feta. <strong>A las 22:30 h: toma de Magnesio Bisglicinato</strong> con agua."
+            instructions: "Cena express antiinflamatoria antes de ir al súper hoy."
           }
         ]
       },
       jue: {
-        name: "Jueves 5 de Noviembre",
+        name: "Jueves 5 de Noviembre (Hoy)",
         workout: {
           id: "w-jue",
-          center: "O2 Boutique",
-          title: "Bodypump · 14:30 h (Día 2 de 3)",
-          duration: "55 min",
+          center: "O2 Sala de Fuerza",
+          title: "Sala de Fuerza O2 · Sesión 1 (Hoy)",
+          duration: "50-60 min",
           badge: "bg-emerald-50 text-emerald-800 border border-emerald-200/60",
-          note: "Fuerza al mediodía: Cargas moderadas (cuidar zona cervical)"
+          note: "Fuerza en sala: Enfoque máquinas/peso libre (tren inferior/glúteo y empuje, protegiendo cervical)"
         },
         meals: [
           {
             id: "jue-0",
             type: "Desayuno",
             time: "10:30 – 11:00 h",
-            title: "Waffles de Avena Sin Gluten con Manzana & Cottage",
+            title: "Waffles o Arepas con Cottage & Café",
             img: foodImgs.waffles,
-            badges: ["15 min", "100% Sin Gluten", "22g Proteína"],
-            calories: "~370 kcal",
+            badges: ["15 min", "100% Sin Gluten", "24g Proteína"],
+            calories: "~380 kcal",
             ingredients: [
-              "<strong>40 g de copos de avena certificados sin gluten</strong> triturados con <strong>1 huevo + 1 clara</strong>",
-              "<strong>1/2 manzana</strong> salteada en sartén con una pizca de agua y <strong>canela de Ceilán</strong>",
-              "<strong>2 cdas colmadas de queso cottage suave</strong>",
-              "<strong>Café caliente</strong> con <strong>leche de avena sin gluten</strong>"
+              "<strong>Copos de avena sin gluten</strong> o arepa de maíz P.A.N. con chía",
+              "<strong>1 huevo entero + 2 claras</strong> pasteurizadas",
+              "<strong>40 g de queso cottage</strong> (comprado hoy)",
+              "<strong>Café caliente</strong> con <strong>bebida de avena</strong> (post-Eutirox)"
             ],
-            instructions: "Verter la masa en gofrera o sartén antiadherente. <strong>Saltear la manzana</strong> en dados hasta que quede tierna. Servir con el queso cottage y canela."
+            instructions: "Cocinar en sartén antiadherente o gofrera. Acompañar con queso cottage suave."
           },
           {
             id: "jue-1",
-            type: "Almuerzo (Post-Bodypump)",
-            time: "15:45 – 16:15 h",
-            title: "Pollo al Limón con Tubérculos Asados & Espárragos",
+            type: "Almuerzo (Post-Fuerza)",
+            time: "15:30 – 16:30 h",
+            title: "Pechuguitas de Pollo al Limón con Batata Asada & Espárragos",
             img: foodImgs.pollo,
-            badges: ["Post-Workout", "36g Proteína", "Airfryer"],
+            badges: ["Post-Fuerza", "38g Proteína", "Airfryer"],
             calories: "~510 kcal",
             ingredients: [
-              "<strong>140 g de pechuga de pollo</strong> marinada con <strong>limón líquido</strong>, orégano y sal",
-              "<strong>150 g de dados de boniato y patata</strong> asados en la Ninja Airfryer",
-              "<strong>1 manojo de espárragos trigueros</strong> salteados al dente",
-              "Suplementación: <strong>Multivitamínico completo</strong> con el almuerzo"
+              "<strong>140 g de pechuguitas de pollo</strong> marinadas con <strong>limón exprimido</strong>",
+              "<strong>150 g de dados de batata y patata</strong> asados en la Ninja Airfryer",
+              "<strong>Espárragos verdes finos</strong> salteados al dente con AOVE",
+              "Suplementación: <strong>Multivitamínico completo</strong>"
             ],
-            instructions: "Cocinar los dados de patata y boniato en la Airfryer a <strong>195 °C durante 18 minutos</strong>. Dorar el pollo en sartén. Plato completo de recuperación muscular post-entreno."
+            instructions: "Cocinar los dados de batata y patata a 195 °C durante 18 min. Dorar el pollo y los espárragos en sartén."
           },
           {
             id: "jue-2",
             type: "Merienda Funcional",
             time: "18:30 – 19:00 h",
-            title: "Whipped Yogurt con Canela, Arándanos & 2 Nueces",
+            title: "Yogur Griego Ligero con Frutos Rojos & 2 Nueces",
             img: foodImgs.yogur,
-            badges: ["5 min", "Pectina Digestiva", "Cero Gases"],
-            calories: "~170 kcal",
+            badges: ["5 min", "En tu nevera", "Selenio Activo"],
+            calories: "~180 kcal",
             ingredients: [
-              "<strong>1 yogur natural suave</strong> batido con <strong>canela</strong>",
-              "<strong>2 nueces de Brasil</strong> (aporte diario fijo de selenio)",
-              "<strong>1 puñado de arándanos frescos</strong> o compota tibia de manzana (sin kiwi)",
-              "<strong>Infusión tibia de manzanilla</strong>"
+              "<strong>1 yogur ligero griego</strong> (que ya tienes en casa)",
+              "<strong>1 puñado de mix de frutos rojos</strong> (comprados hoy)",
+              "Pizca de <strong>canela de Ceilán</strong>",
+              "<strong>2 nueces de Brasil fijas</strong> (aporte de selenio tiroideo)"
             ],
-            instructions: "Batir enérgicamente el yogur con la canela para obtener textura cremosa. Disfrutar con los arándanos frescos y las 2 nueces."
+            instructions: "Batir el yogur griego con la canela y coronar con los frutos rojos frescos y las 2 nueces."
           },
           {
             id: "jue-3",
-            type: "Cena",
-            time: "21:00 – 21:30 h",
-            title: "Arepas P.A.N. Rellenas de Pollo & Queso Crema Light",
-            img: foodImgs.arepas,
-            badges: ["10 min", "28g Proteína", "Cero Gluten"],
-            calories: "~380 kcal",
+            type: "Cena de Confort",
+            time: "21:15 – 21:45 h",
+            title: "Crema Dorada de Calabaza Asada, Puerro & Feta",
+            img: foodImgs.crema,
+            badges: ["Batch Cooking", "Confort Digestivo", "30g Proteína"],
+            calories: "~390 kcal",
             ingredients: [
-              "<strong>1 arepa tostada crujiente</strong> con semillas de chía",
-              "<strong>Pollo deshilachado</strong> (aprovechado del batch prep)",
-              "<strong>Rodajas de tomate cherry dulce</strong>",
-              "<strong>1 cda de queso crema light</strong> con orégano"
+              "<strong>Crema Dorada</strong> (calabaza en trozos, zanahorias y puerro cortado comprados hoy)",
+              "<strong>100 g de pechuga de pavo o pollo</strong> deshilachado",
+              "<strong>25 g de queso feta</strong> auténtico desmenuzado",
+              "Topping: <strong>Semillas mixtas con calabaza</strong> (de tu despensa)",
+              "Toma nocturna: <strong>Magnesio Bisglicinato</strong> a las 22:30 h con agua"
             ],
-            instructions: "Abrir la arepa templada. Untar el queso crema y rellenar con pollo y tomate. Tomar el Magnesio bisglicinato antes de acostarse."
+            instructions: "Triturar las verduras asadas hasta lograr textura de terciopelo. Servir con pavo/pollo, queso feta y semillas."
           }
         ]
       },
       vie: {
-        name: "Viernes 6 de Noviembre",
+        name: "Viernes 6 de Noviembre (Mañana)",
         workout: {
           id: "w-vie",
-          center: "Libre",
-          title: "Descanso Activo & Social (Paseo NEAT)",
-          duration: "Libre",
-          badge: "bg-slate-100 text-slate-700 border border-slate-200",
-          note: "Tarde libre de gimnasio para desconexión y vida social"
+          center: "O2 Sala de Fuerza",
+          title: "Sala de Fuerza O2 · Sesión 2 (Mañana)",
+          duration: "50-60 min",
+          badge: "bg-emerald-50 text-emerald-800 border border-emerald-200/60",
+          note: "Fuerza en sala: Enfoque tren superior (tracciones, hombros) y core/suelo pélvico (cero tensión en cuello/mandíbula)"
         },
         meals: [
           {
             id: "vie-0",
             type: "Desayuno",
             time: "10:30 – 11:00 h",
-            title: "Arepa con Chía, Huevo Revuelto & Toque de Feta",
+            title: "Arepa con Chía, Revuelto Cremoso & Queso Cottage",
             img: foodImgs.arepas,
-            badges: ["10 min", "100% Sin Gluten", "24g Proteína"],
+            badges: ["10 min", "100% Sin Gluten", "25g Proteína"],
             calories: "~370 kcal",
             ingredients: [
-              "<strong>1 arepa de maíz P.A.N.</strong> tostada",
-              "<strong>Revuelto cremoso de 2 huevos</strong> con orégano",
-              "<strong>20 g de queso feta desmenuzado</strong>",
-              "<strong>Café con leche de avena sin gluten</strong>"
+              "<strong>1 arepa dorada</strong> con semillas de chía",
+              "<strong>2 huevos camperos L</strong> revueltos a fuego lento con orégano",
+              "<strong>30 g de queso cottage</strong>",
+              "<strong>Café con bebida de avena</strong>"
             ],
-            instructions: "Dorar la arepa. Cocinar los huevos a fuego lento con el feta para que se funda suavemente."
+            instructions: "Dorar la arepa en tostador o sartén. Hacer el revuelto cremoso y rellenar."
           },
           {
             id: "vie-1",
-            type: "Almuerzo",
+            type: "Almuerzo (Post-Fuerza)",
             time: "14:30 – 15:30 h",
-            title: "Pasta de Lenteja Roja con Camarones, Espinacas & Cherrys",
+            title: "Hélices de Lenteja Roja con Gambas, Cherrys & Calabacín",
             img: foodImgs.camarones,
-            badges: ["15 min", "34g Proteína", "Alta Fibra"],
-            calories: "~480 kcal",
+            badges: ["15 min", "36g Proteína", "Comprado hoy"],
+            calories: "~490 kcal",
             ingredients: [
-              "<strong>65 g de hélices de harina de lenteja roja 100%</strong>",
-              "<strong>120 g de camarones o colas de langostinos</strong> pelados",
-              "<strong>2 porciones de espinacas congeladas</strong> descongeladas y salteadas en sartén",
-              "<strong>Tomates cherry reventados</strong> en AOVE con ajo y <strong>limón líquido</strong>",
+              "<strong>65 g de hélices de lenteja roja 100%</strong> (compradas hoy)",
+              "<strong>130 g de gambas peladas</strong> crudas salteadas (compradas hoy)",
+              "<strong>1/2 calabacín verde</strong> en dados y tomates cherry reventados en AOVE",
+              "Chorrito de <strong>limón exprimido</strong>",
               "Suplementación: <strong>Multivitamínico completo</strong>"
             ],
-            instructions: "Cocer la pasta <strong>5-6 minutos al dente</strong>. En sartén amplia, saltear los ajos, los cherrys y las espinacas congeladas directamente hasta que se integren. Añadir los camarones <strong>2 minutos</strong>."
+            instructions: "Cocer la pasta 5 min. En sartén caliente, dorar los cherrys y el calabacín con ajo y AOVE. Añadir las gambas 2 min y mezclar con la pasta."
           },
           {
             id: "vie-2",
             type: "Merienda Funcional",
             time: "18:30 – 19:00 h",
-            title: "Infusión Drenante de Hibisco & 2 Nueces de Brasil",
-            img: foodImgs.te,
-            badges: ["5 min", "Drenaje Natural", "Selenio Diario"],
-            calories: "~160 kcal",
+            title: "Yogur Griego con Canela & 2 Nueces de Brasil",
+            img: foodImgs.yogur,
+            badges: ["5 min", "Selenio Diario"],
+            calories: "~170 kcal",
             ingredients: [
-              "<strong>2 nueces de Brasil</strong>",
-              "<strong>Té de hibisco</strong> con unas gotas de <strong>limón líquido</strong>",
-              "<strong>2 lonchas de pechuga de pavo de corral</strong>"
+              "<strong>1 yogur griego ligero</strong>",
+              "<strong>2 nueces de Brasil</strong> fijas",
+              "Infusión tibia de té digestivo"
             ],
-            instructions: "Infusión reconfortante para descongestionar el abdomen antes del fin de semana."
+            instructions: "Merienda de recarga antes de la noche social."
           },
           {
             id: "vie-3",
@@ -1063,11 +1043,10 @@
             badges: ["Cena Social", "Sin Gluten Estricto", "Flexibilidad"],
             calories: "~500-600 kcal",
             ingredients: [
-              "Elección fuera de casa <strong>100% sin gluten</strong>:",
-              "Opciones seguras: <strong>Risotto limpio de setas o marisco</strong>, tacos de maíz auténticos con carne/pollo, o hamburguesa en plato con patatas.",
-              "Evitar salsas sospechosas de contener harinas de trigo"
+              "Opciones seguras fuera de casa: <strong>Risotto limpio</strong>, tacos de maíz auténticos con carne/pollo, o hamburguesa en plato con patatas.",
+              "Evitar salsas sospechosas con harinas de trigo"
             ],
-            instructions: "Disfruta de la noche social con total tranquilidad gastrointestinal manteniendo la regla de oro: Cero gluten."
+            instructions: "Disfruta de la noche social manteniendo la regla de oro: Cero gluten."
           }
         ]
       },
@@ -1076,75 +1055,73 @@
         workout: {
           id: "w-sab",
           center: "O2 Boutique",
-          title: "Barre · 11:05 h (Día 3 de 3)",
+          title: "Barre o Recuperación Activa · Sesión 3",
           duration: "50 min",
           badge: "bg-emerald-50 text-emerald-800 border border-emerald-200/60",
-          note: "Día 3: Tono postural, glúteo y core, cero impacto articular"
+          note: "Día 3: Tono postural, glúteo y core sin impacto articular"
         },
         meals: [
           {
             id: "sab-0",
             type: "Desayuno",
             time: "09:30 – 10:00 h",
-            title: "Whipped Bowl de Yogur con Semillas de Lino & Canela",
-            img: foodImgs.yogur,
-            badges: ["5 min", "Digestivo", "20g Proteína"],
-            calories: "~340 kcal",
+            title: "Pancakes de Avena con Manzana Golden a la Canela",
+            img: foodImgs.waffles,
+            badges: ["15 min", "Sin Gluten", "22g Proteína"],
+            calories: "~360 kcal",
             ingredients: [
-              "<strong>1 yogur natural suave o griego ligero</strong>",
-              "<strong>1 cda de semillas de lino molidas</strong> hidratadas en agua caliente",
-              "<strong>1/2 manzana dulce</strong> salteada con canela de Ceilán",
-              "<strong>Café con leche de avena sin gluten</strong>"
+              "<strong>40 g de avena sin gluten</strong> triturada con 1 huevo + 2 claras",
+              "<strong>1/2 manzana Golden</strong> en cubos cocinada con canela",
+              "<strong>2 cdas de queso cottage</strong>",
+              "<strong>Café con bebida de avena</strong>"
             ],
-            instructions: "Desayuno ligero y energético 70 minutos antes de la clase de Barre en O2."
+            instructions: "Dorar los pancakes en sartén. Coronar con la manzana tibia y el cottage."
           },
           {
             id: "sab-1",
             type: "Almuerzo",
-            time: "14:00 – 15:00 h",
-            title: "Arroz Basmati con Pollo al Curry Suave & Verduras",
+            title: "Arroz Vaporizado o Quinoa con Pavo & Calabacín al Curry",
             img: foodImgs.pollo,
-            badges: ["20 min", "Antiinflamatorio", "35g Proteína"],
-            calories: "~490 kcal",
+            badges: ["Despensa", "Antiinflamatorio", "35g Proteína"],
+            calories: "~480 kcal",
             ingredients: [
-              "<strong>70 g de arroz basmati</strong> aromático cocido",
-              "<strong>130 g de pechuga de pollo</strong> en dados",
-              "<strong>1/2 calabacín</strong> y <strong>1 zanahoria</strong> en rodajas",
-              "Salsa suave: <strong>cúrcuma, curry suave</strong> y <strong>3 cdas de leche de coco ligera</strong>",
+              "<strong>70 g de arroz vaporizado o quinoa</strong> (¡de tu despensa!)",
+              "<strong>140 g de filetes de pavo</strong> en tiras (comprados hoy)",
+              "<strong>Calabacín verde y zanahoria</strong> en dados con cúrcuma",
               "Suplementación: <strong>Multivitamínico completo</strong>"
             ],
-            instructions: "Dorar el pollo y las verduras. Añadir la leche de coco ligera y las especias. Servir sobre el arroz caliente."
+            instructions: "Saltear el pavo con las verduras y cúrcuma. Servir sobre el arroz vaporizado o quinoa caliente."
           },
           {
             id: "sab-2",
             type: "Merienda Funcional",
             time: "18:00 – 18:30 h",
-            title: "Infusión de Manzanilla con Ciruelas & 2 Nueces",
+            title: "Infusión Caliente con Frutos Rojos & 2 Nueces",
             img: foodImgs.te,
-            badges: ["5 min", "Tránsito Intestinal", "Selenio"],
-            calories: "~150 kcal",
+            badges: ["5 min", "Selenio"],
+            calories: "~160 kcal",
             ingredients: [
               "<strong>2 nueces de Brasil fijas</strong>",
-              "<strong>2 ciruelas pasas</strong> hidratadas en agua tibia",
-              "<strong>Infusión caliente de manzanilla</strong>"
+              "<strong>Mix de frutos rojos frescos</strong>",
+              "Infusión tibia"
             ],
-            instructions: "El agua templada y las ciruelas favorecen la hidratación del colon de forma suave y natural."
+            instructions: "Masticar despacio para favorecer la digestión."
           },
           {
             id: "sab-3",
             type: "Cena",
             time: "21:00 – 21:30 h",
-            title: "Sartenada Express de Camarones, Cherrys & Queso Feta",
+            title: "Sartenada de Garbanzos con Gambas, Tomate & Feta",
             img: foodImgs.camarones,
-            badges: ["10 min", "Cero Inflamación", "28g Proteína"],
-            calories: "~360 kcal",
+            badges: ["10 min", "Despensa Express", "30g Proteína"],
+            calories: "~410 kcal",
             ingredients: [
-              "<strong>140 g de colas de camarones</strong> o langostinos",
-              "<strong>1 taza de tomates cherry</strong> partidos por la mitad",
-              "<strong>30 g de queso feta desmenuzado</strong>",
-              "<strong>1 cdta de orégano</strong> y un chorrito de AOVE"
+              "<strong>150 g de garbanzos en lata</strong> lavados (¡de tu despensa!)",
+              "<strong>100 g de gambas peladas</strong> doradas en sartén",
+              "<strong>Tomate triturado y cherrys</strong> reventados con orégano",
+              "<strong>25 g de queso feta</strong> auténtico desmenuzado por encima"
             ],
-            instructions: "En sartén bien caliente, dorar los cherrys hasta que revienten. Añadir los camarones 2 minutos. Apagar el fuego, espolvorear el queso feta y tapar 1 minuto."
+            instructions: "Rehogar los cherrys con tomate triturado y AOVE. Añadir los garbanzos y las gambas 2 min. Apagar y coronar con feta."
           }
         ]
       },
@@ -1156,77 +1133,84 @@
           title: "Descanso Total & Paseo Relajado",
           duration: "Libre",
           badge: "bg-slate-100 text-slate-700 border border-slate-200",
-          note: "Recuperación profunda, descanso y preparación para la semana"
+          note: "Recuperación profunda, descanso y preparación para la semana completa"
         },
         meals: [
           {
             id: "dom-0",
             type: "Desayuno",
             time: "10:30 – 11:15 h",
-            title: "Arepa de Maíz P.A.N. con Tortilla Esponjosa & Cottage",
+            title: "Arepa Tostada con Tortilla Francesa & Cottage",
             img: foodImgs.arepas,
-            badges: ["15 min", "100% Sin Gluten", "25g Proteína"],
-            calories: "~390 kcal",
+            badges: ["15 min", "24g Proteína"],
+            calories: "~380 kcal",
             ingredients: [
-              "<strong>1 arepa dorada con chía</strong>",
-              "<strong>Tortilla francesa de 2 huevos camperos</strong> con <strong>30 g de queso cottage</strong>",
-              "<strong>Té caliente o café</strong> con leche de avena sin gluten"
+              "<strong>1 arepa dorada</strong> con semillas de chía",
+              "<strong>Tortilla francesa de 2 huevos camperos L</strong>",
+              "<strong>Queso cottage</strong> suave",
+              "Café con bebida de avena"
             ],
-            instructions: "Desayuno sosegado de domingo. Rellenar la arepa caliente con la tortilla cremosa y el queso cottage."
+            instructions: "Desayuno tranquilo de domingo."
           },
           {
             id: "dom-1",
             type: "Almuerzo de Domingo",
             time: "14:30 – 15:30 h",
-            title: "Estofado Digestivo de Lentejas en la Ninja Foodi",
-            img: foodImgs.pollo,
-            badges: ["Ninja Foodi", "Alta Fibra Suave", "34g Proteína"],
-            calories: "~480 kcal",
+            title: "Salmón Noruego Sellado con Puré de Patata & Espárragos",
+            img: foodImgs.salmon,
+            badges: ["Omega-3 IFOS", "Confort", "34g Proteína"],
+            calories: "~510 kcal",
             ingredients: [
-              "<strong>60 g de lenteja pardina o roja pelada</strong>",
-              "<strong>Dados de calabaza dulce</strong> y <strong>zanahorias</strong>",
-              "<strong>120 g de taquitos de pechuga de pavo</strong>",
-              "Caldo suave de verduras con laurel y comino (anti-gases)",
+              "<strong>Lomo de salmón noruego</strong> con piel crujiente (comprado hoy)",
+              "<strong>Puré de patata de confort</strong> (¡sobrecito de tu despensa!)",
+              "<strong>Espárragos verdes finos</strong> a la plancha",
               "Suplementación: <strong>Multivitamínico completo</strong>"
             ],
-            instructions: "Colocar todo en la Ninja Foodi (modo presión <strong>15 minutos</strong> o modo cocción lenta). Plato reconfortante de digestión limpia."
+            instructions: "Sellar el salmón en sartén bien caliente 4 min por la piel. Preparar el puré de patata en 3 minutos. Servir con los espárragos dorados."
           },
           {
             id: "dom-2",
             type: "Merienda Funcional",
             time: "18:30 – 19:00 h",
-            title: "Té de Jengibre Caliente con Compota de Pera & Nueces",
-            img: foodImgs.te,
-            badges: ["5 min", "Antiinflamatorio", "Selenio"],
-            calories: "~160 kcal",
+            title: "Yogur Griego con Compota de Manzana & 2 Nueces",
+            img: foodImgs.yogur,
+            badges: ["5 min", "Selenio"],
+            calories: "~170 kcal",
             ingredients: [
-              "<strong>2 nueces de Brasil fijas</strong>",
-              "<strong>1 pera dulce</strong> en cubos cocinada con canela",
-              "<strong>Té caliente de jengibre en bolsita</strong>"
+              "<strong>1 yogur griego ligero</strong>",
+              "<strong>1/2 manzana Golden cocinada con canela</strong>",
+              "<strong>2 nueces de Brasil fijas</strong>"
             ],
-            instructions: "Masticar despacio. La pera templada con canela aporta confort al estómago."
+            instructions: "A las 20:00 h: La automatización genera la nueva semana completa."
           },
           {
             id: "dom-3",
             type: "Cena",
             time: "21:00 – 21:30 h",
-            title: "Crema Dorada Templada con Huevo Escalfado & Semillas",
+            title: "Crema Dorada de Otoño con Huevo Poché & Semillas Mixtas",
             img: foodImgs.crema,
-            badges: ["Batch Cooking", "Ultra Digestivo", "22g Proteína"],
+            badges: ["Batch Cooking", "Confort Digestivo", "22g Proteína"],
             calories: "~330 kcal",
             ingredients: [
-              "<strong>1 cuenco de Crema Dorada</strong> (aprovechada del batch prep)",
-              "<strong>1 huevo campero pasado por agua o poché</strong> (yema líquida dorada)",
-              "<strong>1 cda de semillas de calabaza tostadas</strong>",
-              "Chorrito de AOVE arbequina"
+              "<strong>1 cuenco de Crema Dorada</strong> (batch prep)",
+              "<strong>1 huevo campero pasado por agua o poché</strong> (yema dorada)",
+              "<strong>Semillas mixtas con calabaza</strong> tostadas",
+              "Toma nocturna: <strong>Magnesio Bisglicinato</strong> a las 22:30 h"
             ],
-            instructions: "Calentar la crema. Colocar el huevo poché en el centro y romper la yema sobre la crema. A las 22:30 h: toma de Magnesio Bisglicinato."
+            instructions: "Calentar la crema. Colocar el huevo poché en el centro y romper la yema."
           }
         ]
       }
     };
 
-    let currentDay = 'mie';
+    function getAutoTodayKey() {
+      const now = new Date();
+      const dow = now.getDay(); // 0: dom, 1: lun, 2: mar, 3: mie, 4: jue, 5: vie, 6: sab
+      const map = { 3: 'mie', 4: 'jue', 5: 'vie', 6: 'sab', 0: 'dom' };
+      return map[dow] || 'jue';
+    }
+
+    let currentDay = getAutoTodayKey();
     let currentView = 'menu';
 
     function initFromLocalStorage() {
@@ -1267,6 +1251,46 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
+    function updateDayTabs(activeKey) {
+      const todayKey = getAutoTodayKey();
+      const dayOrder = ['mie', 'jue', 'vie', 'sab', 'dom'];
+      const dayNames = {
+        mie: { label: 'Mié 4', name: 'Mié' },
+        jue: { label: 'Jue 5', name: 'Jue' },
+        vie: { label: 'Vie 6', name: 'Vie' },
+        sab: { label: 'Sáb 7', name: 'Sáb' },
+        dom: { label: 'Dom 8', name: 'Dom' }
+      };
+
+      const todayIndex = dayOrder.indexOf(todayKey);
+
+      dayOrder.forEach((k, idx) => {
+        const btn = document.getElementById('tab-' + k);
+        if (!btn) return;
+        const isActive = k === activeKey;
+        const isToday = k === todayKey;
+        const isTomorrow = (idx === todayIndex + 1);
+
+        let badgeText = dayNames[k].name;
+        if (isToday) badgeText = 'Hoy';
+        else if (isTomorrow) badgeText = 'Mañana';
+
+        if (isActive) {
+          btn.className = "day-tab py-2 px-1 rounded-xl text-center border transition-all bg-emerald-800 text-white border-emerald-800 shadow-2xs cursor-pointer min-w-0";
+          btn.innerHTML = `
+            <span class="block text-[8.5px] uppercase opacity-95 font-bold tracking-wider truncate">${isToday ? '★ ' + badgeText : badgeText}</span>
+            <span class="block text-xs font-extrabold truncate">${dayNames[k].label}</span>
+          `;
+        } else {
+          btn.className = `day-tab py-2 px-1 rounded-xl text-center border transition-all bg-white text-slate-600 border-slate-200 hover:border-slate-300 cursor-pointer min-w-0 ${isToday ? 'ring-1 ring-emerald-500/50 bg-emerald-50/20' : ''}`;
+          btn.innerHTML = `
+            <span class="block text-[8.5px] uppercase font-bold tracking-wider truncate ${isToday ? 'text-emerald-700' : 'opacity-70'}">${isToday ? '● ' + badgeText : badgeText}</span>
+            <span class="block text-xs font-bold truncate ${isToday ? 'text-emerald-900 font-extrabold' : ''}">${dayNames[k].label}</span>
+          `;
+        }
+      });
+    }
+
     function selectDay(dayKey) {
       currentDay = dayKey;
 
@@ -1274,14 +1298,7 @@
         switchView('menu');
       }
 
-      ['mie', 'jue', 'vie', 'sab', 'dom'].forEach(k => {
-        const btn = document.getElementById('tab-' + k);
-        if (k === dayKey) {
-          btn.className = "day-tab py-2 px-1 rounded-xl text-center border transition-all bg-emerald-800 text-white border-emerald-800 shadow-2xs cursor-pointer min-w-0";
-        } else {
-          btn.className = "day-tab py-2 px-1 rounded-xl text-center border transition-all bg-white text-slate-600 border-slate-200 hover:border-slate-300 cursor-pointer min-w-0";
-        }
-      });
+      updateDayTabs(dayKey);
 
       const heading = document.getElementById('active-day-heading');
       if (heading && daysData[dayKey]) {
@@ -1346,7 +1363,6 @@
 
       container.innerHTML = day.meals.map((meal) => {
         const done = isDone(meal.id);
-        // CERRADO POR DEFECTO para ver todo el día de un vistazo
         const isExpanded = expandedState[meal.id] === true;
 
         const ingHtml = meal.ingredients.map(ing => `
@@ -1505,7 +1521,7 @@
     function updateGroceryBadge() {
       const savedGrocery = safeGet('florencia_grocery', {});
       const count = Object.values(savedGrocery).filter(Boolean).length;
-      const total = 31;
+      const total = 29;
       const badge = document.getElementById('grocery-progress-badge');
       if (badge) {
         badge.innerText = `${count} de ${total} listos`;
@@ -1524,44 +1540,42 @@
     }
 
     function copyGroceryToClipboard() {
-      const text = `🛒 LISTA DE LA COMPRA MERCADONA (FLORENCIA)
+      const text = `🛒 INVENTARIO Y LISTA DE COMIDA (FLORENCIA)
 
 1. FRUTAS & VERDURAS:
-• 1 calabaza cacahuete (1 kg)
-• 1 malla de zanahorias
-• 2-3 calabacines
-• 1 manojo de puerros
-• 1 manojo de espárragos trigueros
-• 2 paquetes tomates cherry dulces
-• 1 cabeza de ajos
-• 1 bolsa manzanas dulces (Gala/Golden)
-• 1 tarrina arándanos frescos (sin kiwi)
-• Patatas y boniatos
+• Calabaza en trozos (comprada hoy)
+• Zanahorias frescas (comprada hoy)
+• Calabacín verde (comprado hoy)
+• Puerro cortado (comprado hoy)
+• Espárragos verdes finos (comprados hoy)
+• Tomates cherry 500g (comprados hoy)
+• Manzanas Golden (compradas hoy)
+• Mix frutos rojos frescos (comprado hoy)
+• Batata y patatas (compradas hoy)
 
 2. CARNES, PESCADOS & LÁCTEOS:
-• Pechuga de pollo (500g)
-• Pechuga de pavo de corral (300g)
-• Colas de camarones o langostinos (300g)
-• 1-2 lomos de salmón fresco
-• 1 docena huevos camperos (0 o 1)
-• 1 botella claras pasteurizadas
-• 1 bloque queso feta auténtico
-• 2 tarrinas queso cottage (tu favorito)
-• 1 tarrina queso crema light
-• Bebida de avena 100% Sin Gluten
+• Pechuguitas de pollo x2 (compradas hoy)
+• Pechuga de pavo filetes (comprada hoy)
+• Gambas peladas crudas (compradas hoy)
+• Lomo salmón noruego (comprado hoy)
+• 12 Huevos grandes L (comprados hoy)
+• Clara líquida pasteurizada (comprada hoy)
+• Queso feta auténtico (comprado hoy)
+• 2 Queso cottage (comprados hoy)
+• Yogur ligero griego (¡en tu nevera!)
+• Bebida de avena (comprada hoy)
 
-3. DESPENSA & CONGELADOS:
-• Harina P.A.N. precocida
-• Avena certificada Sin Gluten
-• Hélices lenteja roja 100%
-• Quinoa tricolor o arroz basmati
-• 1 bolsa espinacas congeladas en porciones (1 kg)
-• 1 botellita zumo limón exprimido 100%
-• Cajas infusión: Jengibre, manzanilla, hibisco
-• Semillas de chía y lino molido
-• Nueces de Brasil (selenio)
-• Canela de Ceilán y especias
-• Aceite de Oliva Virgen Extra (AOVE)`;
+3. DESPENSA & STOCK:
+• Garbanzos en lata (¡en tu despensa!)
+• Arroz vaporizado & Quinoa (¡en tu despensa!)
+• Semillas mixtas con calabaza (¡en tu despensa!)
+• Sobrecito puré patata (¡en tu despensa!)
+• Hélices lenteja roja (compradas hoy)
+• Chía (comprada hoy)
+• Limón exprimido (comprado hoy)
+• Tomate triturado (comprado hoy)
+• AOVE (comprado hoy)
+• Nueces de Brasil (en casa)`;
 
       navigator.clipboard.writeText(text).then(() => {
         const btnText = document.getElementById('copy-btn-text');
@@ -1602,10 +1616,11 @@ Comentarios adicionales: `;
       });
     }
 
-    // Boot
+    // Boot con auto-detección del día actual
     window.addEventListener('DOMContentLoaded', () => {
       initFromLocalStorage();
-      selectDay('mie');
+      const autoDay = getAutoTodayKey();
+      selectDay(autoDay);
     });
   </script>
 </body>
