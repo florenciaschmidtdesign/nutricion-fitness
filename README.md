@@ -226,9 +226,10 @@ Cada propuesta semanal debe suministrarse siguiendo este estándar:
 
 ## 8. REGLAS PERMANENTES DEL SISTEMA (ACTUALIZACIÓN SEMANAL, FOTOS & STOCK EN CASA)
 
-1. **Actualización Semanal Obligatoria de la Lista de Supermercado:**
+1. **Actualización Semanal de la Lista del Supermercado (Solo lo que toca comprar):**
    - La lista de la compra debe regenerarse **TODAS las semanas** en sintonía con el menú semanal activo.
-   - **Considerar SIEMPRE lo que ya tiene en casa:** Antes de incluir cualquier producto como "a comprar", se debe verificar el inventario de casa (carne picada en congelador, gambas, raciones de crema dorada, frutos rojos congelados, manzanas, avena, harina P.A.N., quinoa, arroz, especias y proteínas en polvo).
+   - **Solo lo que toca comprar:** La lista web y de WhatsApp debe contener **únicamente lo que hay que comprar en el supermercado** (mínimo fresco y reposición, 5–8 items) para ir y tachar directamente sin mareos.
+   - El inventario de casa (carne picada en congelador, gambas, crema dorada, frutos rojos, legumbres, avena, etc.) se audita internamente para no hacerla comprar de más, pero no satura la lista del súper.
 2. **Generación y Fidelidad Continua de Fotos de Comida:**
    - Las imágenes de las comidas en el planificador web y en los menús **tienen que generarse y mantenerse actualizadas todo el tiempo** representando de forma fidedigna el plato real (hamburguesas con tortitas de maíz y queso fundido sin panes de gluten, mousse en copa cremosa sin tartas, sushi con sushi, fajitas con fajitas, etc.). Prohibido el uso de imágenes genéricas que desorienten.
 3. **Rotación y Variabilidad Semanal de Menús:**

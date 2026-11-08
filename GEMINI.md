@@ -4,16 +4,11 @@ Este archivo contiene las directrices operativas fijas y obligatorias para cualq
 
 ---
 
-## 1. REGLA OBLIGATORIA: ACTUALIZACIÓN SEMANAL DE LA LISTA DE LA COMPRA
-* **Periodicidad:** La lista de compras y stock **DEBE actualizarse TODAS las semanas** de forma sincronizada con el menú semanal activo.
-* **Inventario previo (Lo que ya tiene en casa):** SIEMPRE se debe auditar y priorizar lo que Florencia ya tiene en su despensa, nevera y congelador antes de sugerir cualquier compra.
-  * **Congelador:** Carne picada de ternera (para hamburguesas caseras limpias), colas de gambas peladas, frutos rojos congelados.
-  * **Despensa:** Harina P.A.N. para arepas, copos de avena sin gluten, arroz basmati, quinoa, garbanzos cocidos en tarro, pasta de lenteja roja 100%, nueces de Brasil, especias (canela, cúrcuma, orégano), AOVE y suplementación (AMIX CFM, Moara Guisante, Magnesio bisglicinato, Multivitamínico).
-  * **Nevera / Batch cooking:** Raciones de Crema Dorada, calabacín verde, huevos camperos.
-  * **Cero desperdicio:** Si se acaba un ingrediente (ej. espárragos), se reemplaza en el menú por stock disponible (ej. calabacín) y se ajusta la lista inmediatamente.
-* **Estructura en la Web:** La lista debe distinguir visualmente entre:
-  1. *🛒 Lo que realmente toca comprar en el supermercado* (fresco, reposición mínima).
-  2. *🏠 Lo que ya tiene en casa* (para que marque y sepa que no debe gastar).
+## 1. REGLA OBLIGATORIA: LISTA DE LA COMPRA SEMANAL LIMPIA & SIN MAREOS
+* **Periodicidad:** La lista de compras **DEBE actualizarse TODAS las semanas** sincronizada con el menú semanal.
+* **Solo lo que toca comprar en la Web:** La lista visual en la web (`index.html`) y el texto de WhatsApp deben contener **ÚNICAMENTE los productos que realmente toca comprar en el supermercado** (generalmente 5 a 8 productos frescos y reposición).
+* **Prohibición de marear con el stock de casa en la lista del súper:** Lo que ya tiene en despensa, nevera y congelador se audita internamente para diseñar el menú y descartar compras innecesarias, pero **NUNCA debe meterse en la lista de compras del súper** para que Florencia pueda ir al supermercado y marcar las cosas de forma ágil y limpia sin marearse.
+* **Cero desperdicio:** Si se acaba un ingrediente (ej. espárragos), se reemplaza en el menú por stock disponible (ej. calabacín) y se ajusta la lista inmediatamente.
 
 ---
 
