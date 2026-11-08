@@ -1594,7 +1594,7 @@
           cb.closest('label').querySelector('.item-title').classList.add('line-through', 'text-slate-400');
         }
       });
-      updateGroceryProgress();
+      updateGroceryBadge();
       updateToggleAllBtn();
     }
 
@@ -2048,6 +2048,127 @@
       }).catch(() => {
         alert('Reporte copiado.');
       });
+    }
+
+    // ==========================================
+    // SEMÁFORO DE ENTRENAMIENTO & GRÁFICA SEMANAL
+    // ==========================================
+    function renderWeeklyTrainingCard() {
+      const barsContainer = document.getElementById('card-training-bars');
+      const countEl = document.getElementById('card-training-count');
+      const subEl = document.getElementById('card-training-subtitle');
+      if (!barsContainer) return;
+
+      const daysOrder = ['lun', 'mar', 'mie', 'jue', 'vie', 'sab', 'dom'];
+      const dayLetters = ['L', 'M', 'X', 'J', 'V', 'S', 'D'];
+      const doneState = safeGet('florencia_workout_done', {});
+
+      let activeCount = 0;
+      let activeNames = [];
+
+      barsContainer.innerHTML = daysOrder.map((key, idx) => {
+        const day = daysData[key];
+        const isWorkout = day && day.workout && !day.workout.title.toLowerCase().startsWith('descanso');
+        const isCompleted = day && day.workout && Boolean(doneState[day.workout.id]);
+        const isSelected = key === currentDay;
+
+        if (isWorkout) {
+          activeCount++;
+          activeNames.push(dayLetters[idx]);
+        }
+
+        let barClass = 'bg-slate-200';
+        if (isCompleted) {
+          barClass = 'bg-emerald-500 ring-2 ring-emerald-300';
+        } else if (isWorkout) {
+          barClass = 'bg-emerald-600 shadow-2xs';
+        }
+
+        return `
+          <div class="flex-1 flex flex-col items-center cursor-pointer relative" onclick="selectDay('${key}')" title="${day ? day.workout.title : ''}">
+            ${isSelected ? '<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mb-0.5 animate-pulse" title="Día seleccionado"></span>' : '<span class="w-1.5 h-1.5 mb-0.5"></span>'}
+            <div class="w-full ${barClass} rounded-full transition-all" style="height: 10px;"></div>
+            <span class="text-[8.5px] font-bold ${isWorkout ? 'text-emerald-700 font-extrabold' : 'text-slate-400'} mt-0.5">${dayLetters[idx]}</span>
+          </div>
+        `;
+      }).join('');
+
+      if (countEl) countEl.innerText = `${activeCount} días`;
+      if (subEl) subEl.innerText = 'Lun · Mar · Jue · Sáb';
+    }
+
+    // ==========================================
+    // PROTOCOLO DE BÁSCULA & REGISTRO DE PESO
+    // ==========================================
+    function toggleWeightGuide() {
+      const panel = document.getElementById('weight-guide-panel');
+      if (!panel) return;
+      panel.classList.toggle('hidden');
+    }
+
+    function getWeightLogs() {
+      return safeGet('florencia_weight_logs', [
+        { date: '29 Sep 2026', weight: 69.0, note: 'Bioimpedancia inicial de partida (32.9% BFM, 46.3 kg FFM)' }
+      ]);
+    }
+
+    function saveWeightLog() {
+      const input = document.getElementById('input-new-weight');
+      const dateInput = document.getElementById('input-new-weight-date');
+      if (!input || !input.value) return;
+
+      const val = parseFloat(input.value.replace(',', '.'));
+      if (isNaN(val) || val < 40 || val > 120) {
+        alert('Por favor introduce un peso válido en kg (ej: 68.5)');
+        return;
+      }
+
+      const todayStr = dateInput && dateInput.value ? dateInput.value : new Date().toLocaleDateString('es-ES', { day: 'numeric', month: 'short', year: 'numeric' });
+      const logs = getWeightLogs();
+      logs.push({ date: todayStr, weight: val, note: 'Control de báscula en ayunas' });
+      safeSet('florencia_weight_logs', logs);
+      input.value = '';
+      if (dateInput) dateInput.value = '';
+      renderWeightLogs();
+    }
+
+    function removeWeightLog(idx) {
+      const logs = getWeightLogs();
+      if (logs.length > 1) {
+        logs.splice(idx, 1);
+        safeSet('florencia_weight_logs', logs);
+        renderWeightLogs();
+      }
+    }
+
+    function renderWeightLogs() {
+      const container = document.getElementById('weight-logs-history');
+      const currentDisplay = document.getElementById('current-weight-display');
+      if (!container) return;
+
+      const logs = getWeightLogs();
+      const latest = logs[logs.length - 1];
+
+      if (currentDisplay && latest) {
+        currentDisplay.innerHTML = `${latest.weight.toFixed(1).replace('.', ',')} <span class="text-[10px] font-medium text-slate-500">kg</span>`;
+      }
+
+      container.innerHTML = logs.map((log, idx) => {
+        const diff = (log.weight - 69.0).toFixed(1);
+        const diffStr = log.weight === 69.0 ? 'Base' : (diff > 0 ? `+${diff} kg` : `${diff} kg`);
+        const diffColor = diff <= 0 ? 'text-emerald-700 bg-emerald-50 border border-emerald-200' : 'text-amber-700 bg-amber-50 border border-amber-200';
+
+        return `
+          <div class="flex items-center justify-between py-1 px-2 bg-white rounded-lg border border-slate-200/70 text-xs">
+            <div class="flex items-center gap-2">
+              <span class="font-extrabold text-slate-800">${log.weight.toFixed(1).replace('.', ',')} kg</span>
+              <span class="text-[10px] text-slate-400 font-medium">${log.date}</span>
+              <span class="text-[9.5px] px-1.5 py-0.2 rounded font-bold ${diffColor}">${diffStr}</span>
+            </div>
+            ${idx > 0 ? `<button type="button" onclick="removeWeightLog(${idx})" class="text-slate-400 hover:text-rose-500 text-xs px-1 cursor-pointer font-bold" title="Eliminar">✕</button>` : '<span class="text-[9px] text-slate-400 font-medium">Inicio</span>'}
+          </div>
+        `;
+      }).join('');
     }
 
     // Boot con auto-detección del día actual
