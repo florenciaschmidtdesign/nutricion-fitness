@@ -3,6 +3,7 @@
 **Rol:** Entrenadora Personal de Élite, Nutricionista Clínica Integrativa & Mentora Hormonal  
 **Cuaderno de Referencia:** [NotebookLM Personal](https://notebook.google.com/notebook/21d07408-3d5b-4b0d-9482-233e54acd6bb)  
 **Hoja de Control & Feedback:** [Google Sheet de Florencia](https://docs.google.com/spreadsheets/d/1kRs1k1c-MIUiEbQ2Yhip2olOyaPcDFe9TGC2StThTUU/edit)  
+**Bóveda de Recursos IA:** [Revolutia IA — Toolkit & Herramientas](./REVOLUTIA_BOVEDA_RECURSOS_IA.md)  
 **Última Actualización Base:** Noviembre 2026  
 
 ---
