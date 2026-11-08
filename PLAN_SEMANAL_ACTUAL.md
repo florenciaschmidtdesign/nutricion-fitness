@@ -104,6 +104,11 @@
 
 ## 6. INVENTARIO ACTUALIZADO & COMPRA MÍNIMA INTELIGENTE
 
+> **📌 REGLAS MAESTRAS FIJAS:**
+> 1. **Actualización Semanal Obligatoria:** Esta lista debe recalcularse cada semana al planificar el nuevo menú.
+> 2. **Priorizar Siempre el Stock de Casa:** Considerar rigurosamente lo que ya tienes en congelador, nevera y despensa para evitar gastos innecesarios y desperdicio de comida.
+> 3. **Fidelidad Total de Fotos:** Las imágenes de la web deben representar en todo momento y de forma exacta el plato real elaborado.
+
 ### ¡Ya tienes en casa en congelador, nevera y despensa! (Cero gasto):
 * **🥩 Carne picada / molida de ternera de Mercadona (congelada, ~250–300 g):** ¡No compres hamburguesas! Descongela una porción el martes por la mañana para hacer 2 hamburguesas caseras limpias a la plancha para la cena en pareja con tu novio.
 * **🍓 Frutos rojos congelados:** ¡No compres frescos! Descongélalos 30 segundos en el microondas para añadir a tu yogur griego o pancakes.

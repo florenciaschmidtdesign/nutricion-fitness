@@ -651,7 +651,7 @@
     <!-- ======================================================== -->
     <!-- VIEW 3: LISTA DEL SÚPER (ACTUALIZADA CON TU COMPRA DE HOY) -->
     <!-- ======================================================== -->
-    <div id="view-super-container" class="hidden space-y-3 w-full">
+        <div id="view-super-container" class="hidden space-y-3 w-full">
       
       <div class="card-craft rounded-2xl p-3 sm:p-5 w-full">
         
@@ -660,16 +660,16 @@
             <div class="flex items-center gap-1.5 mb-0.5">
               <span class="text-xs font-bold text-emerald-700 uppercase tracking-wide">Mercadona & Despensa</span>
               <span class="text-xs text-slate-400">·</span>
-              <span class="text-xs text-slate-500 font-medium">Compra de hoy + stock en casa</span>
+              <span class="text-xs text-slate-500 font-medium">Regla: Considerar siempre lo que hay en casa</span>
             </div>
             <h3 class="text-sm sm:text-base font-bold text-slate-900 truncate">
-              Inventario de Comida (29 Productos)
+              Lista del Súper & Stock en Casa (28 Productos)
             </h3>
           </div>
           
           <div class="flex items-center gap-2 self-start sm:self-auto shrink-0">
             <span id="grocery-progress-badge" class="px-2 py-1 rounded-md bg-emerald-50 border border-emerald-100 text-emerald-800 text-xs font-bold">
-              0 de 29 listos
+              0 de 28 listos
             </span>
             <button type="button" onclick="copyGroceryToClipboard()" class="px-2.5 py-1 rounded-lg bg-slate-900 text-white text-xs font-semibold hover:bg-slate-800 transition flex items-center gap-1 active:scale-95 cursor-pointer" title="Copiar lista organizada">
               <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
@@ -680,300 +680,269 @@
 
         <div class="mt-3 space-y-4 w-full">
           
-          <!-- Pasillo 1 -->
+          <!-- Bloque 1: Por comprar en el supermercado -->
           <div>
             <div class="flex items-center justify-between mb-1.5">
-              <h4 class="text-xs font-bold uppercase tracking-wider text-emerald-800">
-                1. Frutas & Verduras
+              <h4 class="text-xs font-bold uppercase tracking-wider text-emerald-800 flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 inline-block"></span>
+                1. 🛒 Por Comprar en el Súper (Mínimo Fresco)
               </h4>
-              <span class="text-[11px] text-slate-500 font-medium">9 productos</span>
+              <span class="text-[11px] text-emerald-700 font-semibold">8 productos</span>
             </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 w-full" id="super-produce">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 w-full" id="super-fresh">
               
-        <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-          <input type="checkbox" onchange="toggleItem('Calabaza en trozos (comprada hoy)')" data-item="Calabaza en trozos (comprada hoy)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
-          <div class="flex-1 min-w-0 text-xs">
-            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Calabaza en trozos (comprada hoy)</span>
-            <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Base para crema dorada asada</span>
-          </div>
-        </label>
-        
+              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
+                <input type="checkbox" onchange="toggleItem('Lomos de salmón fresco (pescadería)')" data-item="Lomos de salmón fresco (pescadería)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
+                <div class="flex-1 min-w-0 text-xs">
+                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Lomos de salmón fresco (pescadería)</span>
+                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Para cena crujiente del jueves y almuerzo del sábado</span>
+                </div>
+              </label>
 
-        <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-          <input type="checkbox" onchange="toggleItem('Zanahorias frescas (comprada hoy)')" data-item="Zanahorias frescas (comprada hoy)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
-          <div class="flex-1 min-w-0 text-xs">
-            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Zanahorias frescas (comprada hoy)</span>
-            <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Crema dorada y salteados con pollo</span>
-          </div>
-        </label>
-        
+              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
+                <input type="checkbox" onchange="toggleItem('Pechuga de pollo / pavo en filetes')" data-item="Pechuga de pollo / pavo en filetes" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
+                <div class="flex-1 min-w-0 text-xs">
+                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Pechuga de pollo / pavo en filetes</span>
+                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Proteína magra para almuerzos de la semana</span>
+                </div>
+              </label>
 
-        <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-          <input type="checkbox" onchange="toggleItem('Calabacín verde (comprado hoy)')" data-item="Calabacín verde (comprado hoy)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
-          <div class="flex-1 min-w-0 text-xs">
-            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Calabacín verde (comprado hoy)</span>
-            <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Salteados con quinoa, arroz o pasta</span>
-          </div>
-        </label>
-        
+              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
+                <input type="checkbox" onchange="toggleItem('2 tarrinas de queso cottage')" data-item="2 tarrinas de queso cottage" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
+                <div class="flex-1 min-w-0 text-xs">
+                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">2 tarrinas de queso cottage</span>
+                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Relleno proteico de arepas y revueltos</span>
+                </div>
+              </label>
 
-        <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-          <input type="checkbox" onchange="toggleItem('Puerro cortado (comprado hoy)')" data-item="Puerro cortado (comprado hoy)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
-          <div class="flex-1 min-w-0 text-xs">
-            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Puerro cortado (comprado hoy)</span>
-            <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Sofrito asado dulce para la crema</span>
-          </div>
-        </label>
-        
+              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
+                <input type="checkbox" onchange="toggleItem('Queso feta auténtico')" data-item="Queso feta auténtico" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
+                <div class="flex-1 min-w-0 text-xs">
+                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Queso feta auténtico</span>
+                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Topping salado para la Crema Dorada y ensaladas</span>
+                </div>
+              </label>
 
-        <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-          <input type="checkbox" onchange="toggleItem('Calabacín verde en bastones (en tu nevera)')" data-item="Calabacín verde en bastones (en tu nevera)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
-          <div class="flex-1 min-w-0 text-xs">
-            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Calabacín verde en bastones (en tu nevera)</span>
-            <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Sobrante del domingo para el almuerzo del lunes</span>
-          </div>
-        </label>
-        
+              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
+                <input type="checkbox" onchange="toggleItem('Tortillas de maíz 100% sin gluten')" data-item="Tortillas de maíz 100% sin gluten" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
+                <div class="flex-1 min-w-0 text-xs">
+                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Tortillas de maíz 100% sin gluten</span>
+                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Tipo Guanajuato o Nagual (para hamburguesa y fajitas)</span>
+                </div>
+              </label>
 
-        <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-          <input type="checkbox" onchange="toggleItem('Tomates cherry dulces 500g (comprados hoy)')" data-item="Tomates cherry dulces 500g (comprados hoy)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
-          <div class="flex-1 min-w-0 text-xs">
-            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Tomates cherry dulces 500g (comprados hoy)</span>
-            <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Cherrys confitados con gambas y feta</span>
-          </div>
-        </label>
-        
+              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
+                <input type="checkbox" onchange="toggleItem('Canónigos frescos (1 bolsa)')" data-item="Canónigos frescos (1 bolsa)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
+                <div class="flex-1 min-w-0 text-xs">
+                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Canónigos frescos (1 bolsa)</span>
+                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Hojas verdes digestivas para hamburguesa y fajitas</span>
+                </div>
+              </label>
 
-        <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-          <input type="checkbox" onchange="toggleItem('Manzanas Golden (compradas hoy)')" data-item="Manzanas Golden (compradas hoy)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
-          <div class="flex-1 min-w-0 text-xs">
-            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Manzanas Golden (compradas hoy)</span>
-            <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Compotas tibias con canela para desayunos</span>
-          </div>
-        </label>
-        
+              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
+                <input type="checkbox" onchange="toggleItem('Tomates cherry dulces 500g')" data-item="Tomates cherry dulces 500g" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
+                <div class="flex-1 min-w-0 text-xs">
+                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Tomates cherry dulces 500g</span>
+                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Cherrys confitados con gambas y ensaladas</span>
+                </div>
+              </label>
 
-        <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-          <input type="checkbox" onchange="toggleItem('Mix de frutos rojos frescos (comprado hoy)')" data-item="Mix de frutos rojos frescos (comprado hoy)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
-          <div class="flex-1 min-w-0 text-xs">
-            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Mix de frutos rojos frescos (comprado hoy)</span>
-            <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Topping digestivo para yogur griego y waffles</span>
-          </div>
-        </label>
-        
+              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
+                <input type="checkbox" onchange="toggleItem('Bebida de avena con calcio (sin gluten)')" data-item="Bebida de avena con calcio (sin gluten)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
+                <div class="flex-1 min-w-0 text-xs">
+                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Bebida de avena con calcio (sin gluten)</span>
+                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Café matutino post-Eutirox (reponer si queda poca)</span>
+                </div>
+              </label>
 
-        <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-          <input type="checkbox" onchange="toggleItem('Batata micro y patata guarnición (compradas hoy)')" data-item="Batata micro y patata guarnición (compradas hoy)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
-          <div class="flex-1 min-w-0 text-xs">
-            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Batata micro y patata guarnición (compradas hoy)</span>
-            <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Asadas en Ninja Airfryer o al horno</span>
-          </div>
-        </label>
-        
             </div>
           </div>
 
-          <!-- Pasillo 2 -->
+          <!-- Bloque 2: Congelador & Nevera (Ya en casa) -->
           <div>
             <div class="flex items-center justify-between mb-1.5">
-              <h4 class="text-xs font-bold uppercase tracking-wider text-emerald-800">
-                2. Carnes, Pescados & Lácteos
+              <h4 class="text-xs font-bold uppercase tracking-wider text-sky-800 flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-sky-500 inline-block"></span>
+                2. 🏠 Ya en Casa: Congelador & Nevera (¡Cero Gasto!)
               </h4>
-              <span class="text-[11px] text-slate-500 font-medium">10 productos</span>
+              <span class="text-[11px] text-sky-700 font-semibold">8 productos</span>
             </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 w-full" id="super-protein">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 w-full" id="super-fridge">
               
-        <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-          <input type="checkbox" onchange="toggleItem('Pechuguitas de pollo asado x2 (compradas hoy)')" data-item="Pechuguitas de pollo asado x2 (compradas hoy)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
-          <div class="flex-1 min-w-0 text-xs">
-            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Pechuguitas de pollo asado x2 (compradas hoy)</span>
-            <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Batch prep deshilachado y a la plancha</span>
-          </div>
-        </label>
-        
+              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-sky-400 hover:bg-sky-50/20 cursor-pointer transition-all select-none group min-w-0">
+                <input type="checkbox" onchange="toggleItem('Carne picada de ternera (en tu congelador)')" data-item="Carne picada de ternera (en tu congelador)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-sky-600 focus:ring-sky-500 border-slate-300 accent-sky-600 shrink-0" />
+                <div class="flex-1 min-w-0 text-xs">
+                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-sky-800 transition break-words">Carne picada de ternera (en tu congelador)</span>
+                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">~250-300g para 2 hamburguesas caseras limpias del martes</span>
+                </div>
+              </label>
 
-        <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-          <input type="checkbox" onchange="toggleItem('Pechuga de pavo en filetes (comprada hoy)')" data-item="Pechuga de pavo en filetes (comprada hoy)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
-          <div class="flex-1 min-w-0 text-xs">
-            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Pechuga de pavo en filetes (comprada hoy)</span>
-            <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Snacks de merienda y cenas rápidas</span>
-          </div>
-        </label>
-        
+              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-sky-400 hover:bg-sky-50/20 cursor-pointer transition-all select-none group min-w-0">
+                <input type="checkbox" onchange="toggleItem('Colas de gambas peladas (en tu congelador)')" data-item="Colas de gambas peladas (en tu congelador)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-sky-600 focus:ring-sky-500 border-slate-300 accent-sky-600 shrink-0" />
+                <div class="flex-1 min-w-0 text-xs">
+                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-sky-800 transition break-words">Colas de gambas peladas (en tu congelador)</span>
+                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Para sartenadas con pasta de lenteja y con garbanzos</span>
+                </div>
+              </label>
 
-        <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-          <input type="checkbox" onchange="toggleItem('Gambas peladas crudas (compradas hoy)')" data-item="Gambas peladas crudas (compradas hoy)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
-          <div class="flex-1 min-w-0 text-xs">
-            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Gambas peladas crudas (compradas hoy)</span>
-            <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Sartenadas rápidas con cherrys y pasta</span>
-          </div>
-        </label>
-        
+              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-sky-400 hover:bg-sky-50/20 cursor-pointer transition-all select-none group min-w-0">
+                <input type="checkbox" onchange="toggleItem('Frutos rojos congelados (en tu congelador)')" data-item="Frutos rojos congelados (en tu congelador)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-sky-600 focus:ring-sky-500 border-slate-300 accent-sky-600 shrink-0" />
+                <div class="flex-1 min-w-0 text-xs">
+                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-sky-800 transition break-words">Frutos rojos congelados (en tu congelador)</span>
+                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Topping templado para yogur griego y pancakes</span>
+                </div>
+              </label>
 
-        <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-          <input type="checkbox" onchange="toggleItem('Lomo de salmón noruego (comprado hoy)')" data-item="Lomo de salmón noruego (comprado hoy)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
-          <div class="flex-1 min-w-0 text-xs">
-            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Lomo de salmón noruego (comprado hoy)</span>
-            <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Lomo sellado crujiente con piel</span>
-          </div>
-        </label>
-        
+              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-sky-400 hover:bg-sky-50/20 cursor-pointer transition-all select-none group min-w-0">
+                <input type="checkbox" onchange="toggleItem('Crema Dorada de Otoño (batch cooking en nevera)')" data-item="Crema Dorada de Otoño (batch cooking en nevera)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-sky-600 focus:ring-sky-500 border-slate-300 accent-sky-600 shrink-0" />
+                <div class="flex-1 min-w-0 text-xs">
+                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-sky-800 transition break-words">Crema Dorada de Otoño (batch cooking en nevera)</span>
+                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">2-3 raciones listas de calabaza asada, zanahoria y puerro</span>
+                </div>
+              </label>
 
-        <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-          <input type="checkbox" onchange="toggleItem('12 Huevos camperos grandes L (comprados hoy)')" data-item="12 Huevos camperos grandes L (comprados hoy)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
-          <div class="flex-1 min-w-0 text-xs">
-            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">12 Huevos camperos grandes L (comprados hoy)</span>
-            <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Revueltos cremosos, tortillas y waffles</span>
-          </div>
-        </label>
-        
+              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-sky-400 hover:bg-sky-50/20 cursor-pointer transition-all select-none group min-w-0">
+                <input type="checkbox" onchange="toggleItem('Calabacín verde en bastones (en tu nevera)')" data-item="Calabacín verde en bastones (en tu nevera)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-sky-600 focus:ring-sky-500 border-slate-300 accent-sky-600 shrink-0" />
+                <div class="flex-1 min-w-0 text-xs">
+                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-sky-800 transition break-words">Calabacín verde en bastones (en tu nevera)</span>
+                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Reemplazo digestivo para el almuerzo del lunes y salteados</span>
+                </div>
+              </label>
 
-        <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-          <input type="checkbox" onchange="toggleItem('Clara líquida pasteurizada (comprada hoy)')" data-item="Clara líquida pasteurizada (comprada hoy)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
-          <div class="flex-1 min-w-0 text-xs">
-            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Clara líquida pasteurizada (comprada hoy)</span>
-            <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Aporte de proteína limpia</span>
-          </div>
-        </label>
-        
+              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-sky-400 hover:bg-sky-50/20 cursor-pointer transition-all select-none group min-w-0">
+                <input type="checkbox" onchange="toggleItem('12 Huevos camperos grandes L & Claras (en nevera)')" data-item="12 Huevos camperos grandes L & Claras (en nevera)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-sky-600 focus:ring-sky-500 border-slate-300 accent-sky-600 shrink-0" />
+                <div class="flex-1 min-w-0 text-xs">
+                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-sky-800 transition break-words">12 Huevos camperos grandes L & Claras (en nevera)</span>
+                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Huevos poché, revueltos y masas de pancakes</span>
+                </div>
+              </label>
 
-        <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-          <input type="checkbox" onchange="toggleItem('Queso feta auténtico (comprado hoy)')" data-item="Queso feta auténtico (comprado hoy)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
-          <div class="flex-1 min-w-0 text-xs">
-            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Queso feta auténtico (comprado hoy)</span>
-            <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Topping de cremas y revueltos</span>
-          </div>
-        </label>
-        
+              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-sky-400 hover:bg-sky-50/20 cursor-pointer transition-all select-none group min-w-0">
+                <input type="checkbox" onchange="toggleItem('Yogur ligero griego (en tu nevera)')" data-item="Yogur ligero griego (en tu nevera)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-sky-600 focus:ring-sky-500 border-slate-300 accent-sky-600 shrink-0" />
+                <div class="flex-1 min-w-0 text-xs">
+                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-sky-800 transition break-words">Yogur ligero griego (en tu nevera)</span>
+                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Meriendas proteicas y base de mousse de chocolate</span>
+                </div>
+              </label>
 
-        <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-          <input type="checkbox" onchange="toggleItem('2 tarrinas de queso cottage (compradas hoy)')" data-item="2 tarrinas de queso cottage (compradas hoy)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
-          <div class="flex-1 min-w-0 text-xs">
-            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">2 tarrinas de queso cottage (compradas hoy)</span>
-            <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Tu favorito para arepas, waffles y bowls</span>
-          </div>
-        </label>
-        
+              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-sky-400 hover:bg-sky-50/20 cursor-pointer transition-all select-none group min-w-0">
+                <input type="checkbox" onchange="toggleItem('Batata micro y patatas guarnición (en despensa)')" data-item="Batata micro y patatas guarnición (en despensa)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-sky-600 focus:ring-sky-500 border-slate-300 accent-sky-600 shrink-0" />
+                <div class="flex-1 min-w-0 text-xs">
+                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-sky-800 transition break-words">Batata micro y patatas guarnición (en despensa)</span>
+                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Asadas en Ninja Airfryer o al horno</span>
+                </div>
+              </label>
 
-        <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-          <input type="checkbox" onchange="toggleItem('Yogur ligero griego (¡en tu nevera!)')" data-item="Yogur ligero griego (¡en tu nevera!)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
-          <div class="flex-1 min-w-0 text-xs">
-            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Yogur ligero griego (¡en tu nevera!)</span>
-            <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Meriendas proteicas con canela y frutos rojos</span>
-          </div>
-        </label>
-        
-
-        <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-          <input type="checkbox" onchange="toggleItem('Bebida de avena con calcio (comprada hoy)')" data-item="Bebida de avena con calcio (comprada hoy)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
-          <div class="flex-1 min-w-0 text-xs">
-            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Bebida de avena con calcio (comprada hoy)</span>
-            <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Café matutino post-Eutirox</span>
-          </div>
-        </label>
-        
             </div>
           </div>
 
-          <!-- Pasillo 3 -->
+          <!-- Bloque 3: Despensa & Suplementación (Ya en casa) -->
           <div>
             <div class="flex items-center justify-between mb-1.5">
-              <h4 class="text-xs font-bold uppercase tracking-wider text-emerald-800">
-                3. Despensa & Stock en Casa
+              <h4 class="text-xs font-bold uppercase tracking-wider text-amber-800 flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-amber-500 inline-block"></span>
+                3. 🌾 Ya en Casa: Despensa & Suplementación (¡Cero Gasto!)
               </h4>
-              <span class="text-[11px] text-slate-500 font-medium">10 productos</span>
+              <span class="text-[11px] text-amber-700 font-semibold">12 productos</span>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 w-full" id="super-pantry">
               
-        <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-          <input type="checkbox" onchange="toggleItem('Garbanzos en lata (¡en tu despensa!)')" data-item="Garbanzos en lata (¡en tu despensa!)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
-          <div class="flex-1 min-w-0 text-xs">
-            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Garbanzos en lata (¡en tu despensa!)</span>
-            <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Proteína y fibra prebiótica económica y digestiva</span>
-          </div>
-        </label>
-        
+              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-amber-400 hover:bg-amber-50/20 cursor-pointer transition-all select-none group min-w-0">
+                <input type="checkbox" onchange="toggleItem('3 Manzanas Golden (en despensa)')" data-item="3 Manzanas Golden (en despensa)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-amber-600 focus:ring-amber-500 border-slate-300 accent-amber-600 shrink-0" />
+                <div class="flex-1 min-w-0 text-xs">
+                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-amber-800 transition break-words">3 Manzanas Golden (en despensa)</span>
+                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Compotas tibias con canela y para los pancakes</span>
+                </div>
+              </label>
 
-        <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-          <input type="checkbox" onchange="toggleItem('Arroz vaporizado & Quinoa (¡en tu despensa!)')" data-item="Arroz vaporizado & Quinoa (¡en tu despensa!)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
-          <div class="flex-1 min-w-0 text-xs">
-            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Arroz vaporizado & Quinoa (¡en tu despensa!)</span>
-            <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Carbohidratos limpios de base sin gluten</span>
-          </div>
-        </label>
-        
+              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-amber-400 hover:bg-amber-50/20 cursor-pointer transition-all select-none group min-w-0">
+                <input type="checkbox" onchange="toggleItem('Harina de Maíz Blanco P.A.N. (en despensa)')" data-item="Harina de Maíz Blanco P.A.N. (en despensa)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-amber-600 focus:ring-amber-500 border-slate-300 accent-amber-600 shrink-0" />
+                <div class="flex-1 min-w-0 text-xs">
+                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-amber-800 transition break-words">Harina de Maíz Blanco P.A.N. (en despensa)</span>
+                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Base para tus arepas doradas con chía</span>
+                </div>
+              </label>
 
-        <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-          <input type="checkbox" onchange="toggleItem('Semillas mixtas con calabaza (¡en tu despensa!)')" data-item="Semillas mixtas con calabaza (¡en tu despensa!)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
-          <div class="flex-1 min-w-0 text-xs">
-            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Semillas mixtas con calabaza (¡en tu despensa!)</span>
-            <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Topping crujiente de cremas y revueltos</span>
-          </div>
-        </label>
-        
+              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-amber-400 hover:bg-amber-50/20 cursor-pointer transition-all select-none group min-w-0">
+                <input type="checkbox" onchange="toggleItem('Copos de avena certificados sin gluten (en despensa)')" data-item="Copos de avena certificados sin gluten (en despensa)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-amber-600 focus:ring-amber-500 border-slate-300 accent-amber-600 shrink-0" />
+                <div class="flex-1 min-w-0 text-xs">
+                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-amber-800 transition break-words">Copos de avena certificados sin gluten (en despensa)</span>
+                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Pancakes y waffles del fin de semana</span>
+                </div>
+              </label>
 
-        <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-          <input type="checkbox" onchange="toggleItem('Sobrecito de puré de patata (¡en tu despensa!)')" data-item="Sobrecito de puré de patata (¡en tu despensa!)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
-          <div class="flex-1 min-w-0 text-xs">
-            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Sobrecito de puré de patata (¡en tu despensa!)</span>
-            <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Carbohidrato express de confort digestivo</span>
-          </div>
-        </label>
-        
+              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-amber-400 hover:bg-amber-50/20 cursor-pointer transition-all select-none group min-w-0">
+                <input type="checkbox" onchange="toggleItem('Garbanzos en conserva cocidos (en despensa)')" data-item="Garbanzos en conserva cocidos (en despensa)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-amber-600 focus:ring-amber-500 border-slate-300 accent-amber-600 shrink-0" />
+                <div class="flex-1 min-w-0 text-xs">
+                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-amber-800 transition break-words">Garbanzos en conserva cocidos (en despensa)</span>
+                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Fibra prebiótica y sartenada express del jueves</span>
+                </div>
+              </label>
 
-        <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-          <input type="checkbox" onchange="toggleItem('Pasta hélices 100% lenteja roja (comprada hoy)')" data-item="Pasta hélices 100% lenteja roja (comprada hoy)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
-          <div class="flex-1 min-w-0 text-xs">
-            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Pasta hélices 100% lenteja roja (comprada hoy)</span>
-            <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Almuerzos ricos en proteína vegetal</span>
-          </div>
-        </label>
-        
+              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-amber-400 hover:bg-amber-50/20 cursor-pointer transition-all select-none group min-w-0">
+                <input type="checkbox" onchange="toggleItem('Arroz basmati & Quinoa (en despensa)')" data-item="Arroz basmati & Quinoa (en despensa)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-amber-600 focus:ring-amber-500 border-slate-300 accent-amber-600 shrink-0" />
+                <div class="flex-1 min-w-0 text-xs">
+                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-amber-800 transition break-words">Arroz basmati & Quinoa (en despensa)</span>
+                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Carbohidratos limpios de base sin gluten</span>
+                </div>
+              </label>
 
-        <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-          <input type="checkbox" onchange="toggleItem('Semillas de chía (compradas hoy)')" data-item="Semillas de chía (compradas hoy)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
-          <div class="flex-1 min-w-0 text-xs">
-            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Semillas de chía (compradas hoy)</span>
-            <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Mucílagos para arepas y tránsito digestivo</span>
-          </div>
-        </label>
-        
+              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-amber-400 hover:bg-amber-50/20 cursor-pointer transition-all select-none group min-w-0">
+                <input type="checkbox" onchange="toggleItem('Pasta hélices 100% lenteja roja (en despensa)')" data-item="Pasta hélices 100% lenteja roja (en despensa)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-amber-600 focus:ring-amber-500 border-slate-300 accent-amber-600 shrink-0" />
+                <div class="flex-1 min-w-0 text-xs">
+                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-amber-800 transition break-words">Pasta hélices 100% lenteja roja (en despensa)</span>
+                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Almuerzo del martes con gambas y cherrys</span>
+                </div>
+              </label>
 
-        <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-          <input type="checkbox" onchange="toggleItem('Limón exprimido 100% (comprado hoy)')" data-item="Limón exprimido 100% (comprado hoy)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
-          <div class="flex-1 min-w-0 text-xs">
-            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Limón exprimido 100% (comprado hoy)</span>
-            <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Aliños rápidos y marinados</span>
-          </div>
-        </label>
-        
+              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-amber-400 hover:bg-amber-50/20 cursor-pointer transition-all select-none group min-w-0">
+                <input type="checkbox" onchange="toggleItem('Preparato per Dolci Il Pane di Anna (en despensa)')" data-item="Preparato per Dolci Il Pane di Anna (en despensa)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-amber-600 focus:ring-amber-500 border-slate-300 accent-amber-600 shrink-0" />
+                <div class="flex-1 min-w-0 text-xs">
+                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-amber-800 transition break-words">Preparato per Dolci Il Pane di Anna (en despensa)</span>
+                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Harina de repostería sin gluten para crepes y tortitas</span>
+                </div>
+              </label>
 
-        <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-          <input type="checkbox" onchange="toggleItem('Tomate triturado (comprado hoy)')" data-item="Tomate triturado (comprado hoy)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
-          <div class="flex-1 min-w-0 text-xs">
-            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Tomate triturado (comprado hoy)</span>
-            <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Base para sartenadas con gambas</span>
-          </div>
-        </label>
-        
+              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-amber-400 hover:bg-amber-50/20 cursor-pointer transition-all select-none group min-w-0">
+                <input type="checkbox" onchange="toggleItem('Proteína AMIX Black CFM Isolate dulce (en despensa)')" data-item="Proteína AMIX Black CFM Isolate dulce (en despensa)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-amber-600 focus:ring-amber-500 border-slate-300 accent-amber-600 shrink-0" />
+                <div class="flex-1 min-w-0 text-xs">
+                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-amber-800 transition break-words">Proteína AMIX Black CFM Isolate dulce (en despensa)</span>
+                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Aislado CFM de suero para desayunos y mousse de chocolate</span>
+                </div>
+              </label>
 
-        <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-          <input type="checkbox" onchange="toggleItem('Aceite de Oliva Virgen Extra (comprado hoy)')" data-item="Aceite de Oliva Virgen Extra (comprado hoy)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
-          <div class="flex-1 min-w-0 text-xs">
-            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Aceite de Oliva Virgen Extra (comprado hoy)</span>
-            <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Grasas monoinsaturadas de base</span>
-          </div>
-        </label>
-        
+              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-amber-400 hover:bg-amber-50/20 cursor-pointer transition-all select-none group min-w-0">
+                <input type="checkbox" onchange="toggleItem('Proteína Moara Guisante 100% salada (en despensa)')" data-item="Proteína Moara Guisante 100% salada (en despensa)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-amber-600 focus:ring-amber-500 border-slate-300 accent-amber-600 shrink-0" />
+                <div class="flex-1 min-w-0 text-xs">
+                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-amber-800 transition break-words">Proteína Moara Guisante 100% salada (en despensa)</span>
+                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Proteína vegetal neutra para enriquecer las cremas doradas</span>
+                </div>
+              </label>
 
-        <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-          <input type="checkbox" onchange="toggleItem('Nueces de Brasil (en casa)')" data-item="Nueces de Brasil (en casa)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
-          <div class="flex-1 min-w-0 text-xs">
-            <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Nueces de Brasil (en casa)</span>
-            <span class="text-[11px] text-slate-500 block mt-0.5 break-words">2 nueces diarias = selenio activo para tiroides</span>
-          </div>
-        </label>
-        
+              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-amber-400 hover:bg-amber-50/20 cursor-pointer transition-all select-none group min-w-0">
+                <input type="checkbox" onchange="toggleItem('Semillas de chía & Semillas mixtas (en despensa)')" data-item="Semillas de chía & Semillas mixtas (en despensa)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-amber-600 focus:ring-amber-500 border-slate-300 accent-amber-600 shrink-0" />
+                <div class="flex-1 min-w-0 text-xs">
+                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-amber-800 transition break-words">Semillas de chía & Semillas mixtas (en despensa)</span>
+                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Mucílagos para arepas y toppings saciantes</span>
+                </div>
+              </label>
+
+              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-amber-400 hover:bg-amber-50/20 cursor-pointer transition-all select-none group min-w-0">
+                <input type="checkbox" onchange="toggleItem('Nueces de Brasil (2 al día en casa)')" data-item="Nueces de Brasil (2 al día en casa)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-amber-600 focus:ring-amber-500 border-slate-300 accent-amber-600 shrink-0" />
+                <div class="flex-1 min-w-0 text-xs">
+                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-amber-800 transition break-words">Nueces de Brasil (2 al día en casa)</span>
+                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Aporte exacto de selenio para la conversión T4 a T3</span>
+                </div>
+              </label>
+
+              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-amber-400 hover:bg-amber-50/20 cursor-pointer transition-all select-none group min-w-0">
+                <input type="checkbox" onchange="toggleItem('AOVE, Especias & Magnesio Bisglicinato (en casa)')" data-item="AOVE, Especias & Magnesio Bisglicinato (en casa)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-amber-600 focus:ring-amber-500 border-slate-300 accent-amber-600 shrink-0" />
+                <div class="flex-1 min-w-0 text-xs">
+                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-amber-800 transition break-words">AOVE, Especias & Magnesio Bisglicinato (en casa)</span>
+                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Canela de Ceilán, cúrcuma, orégano y descanso nocturno</span>
+                </div>
+              </label>
+
             </div>
           </div>
 
@@ -1913,8 +1882,13 @@
 
     function updateGroceryBadge() {
       const savedGrocery = safeGet('florencia_grocery', {});
-      const count = Object.values(savedGrocery).filter(Boolean).length;
-      const total = 29;
+      const checkboxes = document.querySelectorAll('.grocery-cb');
+      const total = checkboxes.length || 28;
+      let count = 0;
+      checkboxes.forEach(cb => {
+        const key = cb.getAttribute('data-item');
+        if (savedGrocery[key]) count++;
+      });
       const badge = document.getElementById('grocery-progress-badge');
       if (badge) {
         badge.innerText = `${count} de ${total} listos`;
@@ -1933,42 +1907,42 @@
     }
 
     function copyGroceryToClipboard() {
-      const text = `🛒 INVENTARIO Y LISTA DE COMIDA (FLORENCIA)
+      const text = `🛒 LISTA DEL SÚPER Y STOCK EN CASA (FLORENCIA)
+✨ Regla semanal: Comprar solo lo mínimo necesario y aprovechar el stock de casa.
 
-1. FRUTAS & VERDURAS:
-• Calabaza en trozos (comprada hoy)
-• Zanahorias frescas (comprada hoy)
-• Calabacín verde (comprado hoy)
-• Puerro cortado (comprado hoy)
-• Calabacín verde extra (en tu nevera)
-• Tomates cherry 500g (comprados hoy)
-• Manzanas Golden (compradas hoy)
-• Mix frutos rojos frescos (comprado hoy)
-• Batata y patatas (compradas hoy)
+🛒 1. POR COMPRAR EN EL SÚPER (MÍNIMO FRESCO):
+• Lomos de salmón fresco (pescadería - para jueves y sábado)
+• Pechuga de pollo / pavo en filetes (fresca)
+• 2 tarrinas de queso cottage
+• Queso feta auténtico
+• Tortillas de maíz 100% sin gluten
+• Canónigos frescos (1 bolsa)
+• Tomates cherry dulces (500g)
+• Bebida de avena con calcio (sin gluten)
 
-2. CARNES, PESCADOS & LÁCTEOS:
-• Pechuguitas de pollo x2 (compradas hoy)
-• Pechuga de pavo filetes (comprada hoy)
-• Gambas peladas crudas (compradas hoy)
-• Lomo salmón noruego (comprado hoy)
-• 12 Huevos grandes L (comprados hoy)
-• Clara líquida pasteurizada (comprada hoy)
-• Queso feta auténtico (comprado hoy)
-• 2 Queso cottage (comprados hoy)
-• Yogur ligero griego (¡en tu nevera!)
-• Bebida de avena (comprada hoy)
+🏠 2. YA EN CASA - CONGELADOR & NEVERA (¡CERO GASTO!):
+• Carne picada de ternera (en congelador para 2 hamburguesas)
+• Colas de gambas peladas (en congelador)
+• Frutos rojos congelados (en congelador)
+• Crema Dorada de Otoño (batch cooking en nevera)
+• Calabacín verde en bastones (en nevera para salteados)
+• 12 Huevos camperos grandes L y claras (en nevera)
+• Yogur ligero griego (en nevera)
+• Batata micro y patatas guarnición (en despensa)
 
-3. DESPENSA & STOCK:
-• Garbanzos en lata (¡en tu despensa!)
-• Arroz vaporizado & Quinoa (¡en tu despensa!)
-• Semillas mixtas con calabaza (¡en tu despensa!)
-• Sobrecito puré patata (¡en tu despensa!)
-• Hélices lenteja roja (compradas hoy)
-• Chía (comprada hoy)
-• Limón exprimido (comprado hoy)
-• Tomate triturado (comprado hoy)
-• AOVE (comprado hoy)
-• Nueces de Brasil (en casa)`;
+🌾 3. YA EN CASA - DESPENSA & SUPLEMENTACIÓN (¡CERO GASTO!):
+• 3 Manzanas Golden (en despensa)
+• Harina de Maíz Blanco P.A.N. para arepas
+• Copos de avena certificados sin gluten
+• Garbanzos en conserva cocidos
+• Arroz basmati & Quinoa
+• Pasta hélices 100% lenteja roja
+• Preparato per Dolci Il Pane di Anna
+• Proteína AMIX CFM dulce + Moara salada
+• Semillas de chía & Semillas mixtas
+• Nueces de Brasil (2 al día para tiroides)
+• AOVE, limón exprimido y especias (canela, cúrcuma, orégano)
+• Magnesio Bisglicinato, multivitamínico y Eutirox`;
 
       navigator.clipboard.writeText(text).then(() => {
         const btnText = document.getElementById('copy-btn-text');

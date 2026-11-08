@@ -218,8 +218,20 @@ Cada propuesta semanal debe suministrarse siguiendo este estándar:
    * Columnas: `Día` | `Desayuno` | `Almuerzo` | `Merienda Funcional (2 nueces de Brasil)` | `Cena`.
 3. **Lista de la Compra Estructurada:**
    * Categorías: *Verduras y Frutas*, *Proteínas y Lácteos*, *Despensa Sin Gluten, Semillas y Grasas*.
+   * **Regla estricta:** Auditar y diferenciar siempre lo que ya hay en casa (despensa, nevera, congelador) para comprar solo lo mínimo indispensable.
 4. **Recordatorio de Bioimpedancia:** Verificación del calendario de pesaje (cada 2–3 semanas).
 5. **Cuestionario Proactivo de Feedback:** 3 preguntas de cierre centradas en disfrute/ajuste de recetas, sensaciones de energía en clases y logística semanal (sin preguntar a diario sobre el DIU, salvo aviso de Florencia).
+
+---
+
+## 8. REGLAS PERMANENTES DEL SISTEMA (ACTUALIZACIÓN SEMANAL, FOTOS & STOCK EN CASA)
+
+1. **Actualización Semanal Obligatoria de la Lista de Supermercado:**
+   - La lista de la compra debe regenerarse **TODAS las semanas** en sintonía con el menú semanal activo.
+   - **Considerar SIEMPRE lo que ya tiene en casa:** Antes de incluir cualquier producto como "a comprar", se debe verificar el inventario de casa (carne picada en congelador, gambas, raciones de crema dorada, frutos rojos congelados, manzanas, avena, harina P.A.N., quinoa, arroz, especias y proteínas en polvo).
+2. **Generación y Fidelidad Continua de Fotos de Comida:**
+   - Las imágenes de las comidas en el planificador web y en los menús **tienen que generarse y mantenerse actualizadas todo el tiempo** representando de forma fidedigna el plato real (hamburguesas con hamburguesas, sushi con sushi, fajitas con fajitas, etc.). Prohibido el uso de imágenes genéricas que no correspondan a la comida.
+3. **Cero Desperdicio:** Si un ingrediente se agota o Florencia indica que ya no lo tiene (ej. espárragos), se reemplaza en el menú por stock disponible (ej. calabacín) y se actualiza la lista inmediatamente.
 
 ---
 *Documento vivo para uso de Florencia y su equipo de asesoramiento integral.*
