@@ -70,7 +70,7 @@
 
 ---
 
-## 5. GUÍA MAESTRA PASO A PASO: TÉCNICA DE RECETAS CLAVE
+## 5. TÉCNICAS DE COCINA CERO FRICCIÓN & PASO A PASO MAESTRO: CÓMO HACER QUE QUEDEN PERFECTAS
 
 ### 1. Crema Dorada de Otoño + Proteína de Guisante Moara (Textura Seda sin Grumos)
 * **Paso 1:** Calentar tu ración de crema dorada (de tu batch del domingo) en un cazo o bowl.
@@ -78,21 +78,28 @@
 * **Paso 3:** Vierte la pasta en la crema caliente y remueve 30 segundos con una cuchara o varilla. Queda ultrasuave, aterciopelada y espesa, sin ningún grumo y con >16 g de proteína pura.
 * **Paso 4 (Huevo poché express):** En una taza con 1/3 de agua templada y 3 gotas de vinagre, casca 1 huevo campero. Tapa con un platito y mete al microondas 55–65 segundos a potencia media (600W). La clara cuaja y la yema queda líquida y dorada. Colócalo sobre la crema.
 
-### 2. Pancakes Esponjosos de Avena, Manzana y Proteína AMIX CFM
+### 2. Tubérculos en Airfryer: Dados Crujientes & Almidón Resistente
+* **Paso 1:** Lava muy bien las patatas guarnición y la batata. No las peles: la piel limpia aporta fibra prebiótica intacta y evita que se deshagan.
+* **Paso 2:** Corta en dados medianos homogéneos de ~2 cm.
+* **Paso 3:** En un bowl, añade 1 cucharadita de AOVE, sal marina y romero seco. Remueve con las manos para que cada dado quede lustroso pero sin exceso de grasa.
+* **Paso 4:** Cocina en la Ninja Airfryer a 195 °C durante 18–20 minutos, agitando la cesta a mitad de cocción (minuto 10).
+* **Paso 5 (Regla Digestiva de Almidón Resistente):** Al enfriar en la nevera, el almidón de la patata y la batata se retrograda y se convierte en almidón resistente: no eleva la glucosa y alimenta directamente a las bacterias beneficiosas de tu colon.
+
+### 3. Pancakes Esponjosos de Avena, Manzana y Proteína AMIX CFM
 * **Paso 1:** En un bowl o vaso de batidora, mezcla: 40 g de copos de avena sin gluten molidos (o harina Il Pane di Anna) + 1 cazo de Proteína AMIX CFM + 1 huevo campero + 50 ml de bebida de avena sin gluten + 1 pizca de canela.
 * **Paso 2:** Deja reposar la masa 3 minutos para que la avena se hidrate y espese ligeramente.
 * **Paso 3:** Engrasa una sartén antiadherente con 2 gotas de AOVE repartidas con papel de cocina y calienta a fuego medio (fuego 6 de 9).
 * **Paso 4:** Vierte 2 o 3 montoncitos de masa. Cuando empiecen a salir pequeñas burbujas en la superficie (1,5–2 min), dale la vuelta con una espátula de golpe y dora 1 minuto más.
 * **Paso 5:** Saltea la 1/2 manzana en dados en la misma sartén 2 minutos con canela y colócala encima de los pancakes.
 
-### 3. Arepas de Maíz P.A.N. con Chía Hidratada (Crujientes por fuera, tiernas por dentro)
+### 4. Arepas de Maíz P.A.N. con Chía Hidratada (Crujientes por fuera, tiernas por dentro)
 * **Paso 1:** En un bowl mediano, vierte 1/2 taza de agua tibia + 1 cucharadita de semillas de chía + 1 pizca de sal marina. Deja reposar 2 minutos para que la chía suelte sus mucílagos lubricantes.
 * **Paso 2:** Añade poco a poco 1/2 taza de Harina de Maíz Blanco P.A.N. Amasa con la mano 1 minuto hasta conseguir una masa elástica y suave que no se pegue en los dedos ni en el bowl.
 * **Paso 3:** Haz una bola del tamaño de una manzana pequeña y aplánala entre las palmas dando forma de disco de aproximadamente 1,5 cm de grosor.
 * **Paso 4:** En sartén bien caliente con unas gotas de AOVE, cocina la arepa 4–5 minutos por lado a fuego medio-alto hasta que haga una costra dorada que "suene a hueco" al darle toquecitos.
 * **Paso 5:** Abre por la mitad con un cuchillo de sierra y rellena en caliente con el queso cottage cremoso y las lonchas de pavo o jamón.
 
-### 4. Salmón a la Plancha con Piel Hipercrujiente (Técnica de Restaurante)
+### 5. Salmón a la Plancha con Piel Hipercrujiente (Técnica de Restaurante)
 * **Paso 1:** Seca muy bien el lomo de salmón por ambos lados con papel absorbente (la humedad es el enemigo del crujiente). Espolvorea sal marina en la piel.
 * **Paso 2:** Calienta una sartén antiadherente con 1 cucharadita de AOVE a fuego medio-alto.
 * **Paso 3:** Coloca el lomo con la **piel hacia abajo**. Presiona suavemente con una espátula los primeros 10 segundos para que la piel quede completamente plana en contacto con la sartén.
