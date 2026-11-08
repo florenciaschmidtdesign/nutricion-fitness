@@ -288,40 +288,22 @@
     <!-- ======================================================== -->
     <div id="view-menu-container" class="space-y-3 w-full">
 
-      <!-- CARD DE HIDRATACIÓN & DRENAJE (2.0 - 2.5 L) CON TRACKER INTERACTIVO -->
-      <div class="card-craft rounded-2xl p-3 sm:p-4 w-full bg-gradient-to-r from-sky-50/70 via-blue-50/50 to-indigo-50/40 border border-sky-200/80 shadow-2xs">
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1.5 pb-2 border-b border-sky-100">
-          <div class="flex items-center gap-2">
-            <span class="w-6 h-6 rounded-lg bg-sky-500 text-white flex items-center justify-center text-xs shrink-0 shadow-2xs">💧</span>
-            <div>
-              <div class="flex items-center gap-1.5">
-                <span class="text-xs sm:text-sm font-extrabold text-slate-900">Meta de Hidratación Diaria:</span>
-                <span class="text-xs sm:text-sm font-black text-sky-700">2,0 a 2,5 Litros</span>
-              </div>
-              <span class="text-[10.5px] text-slate-500 font-medium">Drenaje de agua extracelular (ECW) & peristaltismo</span>
-            </div>
-          </div>
-          <span id="water-progress-text" class="text-xs font-bold text-sky-800 bg-white/90 px-2.5 py-1 rounded-lg border border-sky-200/60 self-start sm:self-auto shrink-0 shadow-2xs">
-            0 / 8 vasos (0 L)
-          </span>
+      <!-- MINI-BARRA ULTRA-COMPACTA DE HIDRATACIÓN (36px DE ALTO) -->
+      <div class="card-craft rounded-xl px-2.5 py-1.5 w-full bg-gradient-to-r from-sky-50/70 via-blue-50/40 to-slate-50/60 border border-sky-200/70 flex items-center justify-between gap-1.5 shadow-2xs">
+        <div class="flex items-center gap-1 shrink-0">
+          <span class="text-xs">💧</span>
+          <span class="text-[11px] font-extrabold text-slate-800">Agua:</span>
+          <span id="water-progress-text" class="text-[10.5px] font-black text-sky-700">0/8 (0 L)</span>
         </div>
 
-        <div class="mt-2.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
-          <!-- 8 Vasos interactivos clickables -->
-          <div class="flex items-center justify-between sm:justify-start gap-1 sm:gap-2 flex-1" id="water-glasses-container">
-            <!-- 8 glasses injected by JS -->
-          </div>
-
-          <button type="button" onclick="resetWaterToday()" class="text-[10.5px] font-semibold text-slate-400 hover:text-slate-600 transition cursor-pointer self-end sm:self-auto shrink-0">
-            Reiniciar
-          </button>
+        <!-- 8 micro vasos compactos -->
+        <div class="flex items-center gap-1 shrink-0" id="water-glasses-container">
+          <!-- Inyectado por JS -->
         </div>
 
-        <!-- Tip rápido -->
-        <div class="mt-2 pt-1.5 border-t border-sky-100/60 flex items-center justify-between text-[10px] text-slate-500">
-          <span>⏰ 1 vaso al despertar con Eutirox · Beber entre horas fuera de comidas</span>
-          <span class="hidden sm:inline font-semibold text-sky-700">8 vasos = 2 Litros</span>
-        </div>
+        <button type="button" onclick="resetWaterToday()" class="text-[11px] text-slate-400 hover:text-sky-700 p-0.5 cursor-pointer shrink-0 transition" title="Reiniciar vasos">
+          ↺
+        </button>
       </div>
 
 
@@ -2113,12 +2095,12 @@
 
       const liters = (count * 0.25).toFixed(2).replace('.', ',');
       if (badge) {
-        badge.innerHTML = `${count} de 8 vasos <span class="text-sky-600 font-extrabold">(${liters} L)</span>`;
         if (count >= 8) {
-          badge.className = "text-xs font-bold text-emerald-800 bg-emerald-50 px-2.5 py-1 rounded-lg border border-emerald-200 self-start sm:self-auto shrink-0 shadow-2xs";
-          badge.innerHTML = `🎉 ¡Meta cumplida! (${liters} L)`;
+          badge.innerHTML = `🎉 8/8 (${liters} L)`;
+          badge.className = "text-[10px] sm:text-[10.5px] font-extrabold text-emerald-700 bg-emerald-50 px-1.5 py-0.2 rounded border border-emerald-200";
         } else {
-          badge.className = "text-xs font-bold text-sky-800 bg-white/90 px-2.5 py-1 rounded-lg border border-sky-200/60 self-start sm:self-auto shrink-0 shadow-2xs";
+          badge.innerHTML = `${count}/8 <span class="text-slate-500 font-medium">(${liters} L)</span>`;
+          badge.className = "text-[10px] sm:text-[10.5px] font-black text-sky-700";
         }
       }
 
@@ -2126,11 +2108,8 @@
       for (let i = 0; i < 8; i++) {
         const filled = i < count;
         html += `
-          <button type="button" onclick="toggleWaterGlass(${i})" class="flex-1 sm:flex-initial py-1.5 px-1 rounded-xl flex flex-col items-center justify-center transition-all cursor-pointer border ${filled ? 'bg-sky-500 text-white border-sky-600 shadow-2xs scale-102' : 'bg-white/80 text-slate-400 border-sky-200/60 hover:border-sky-400 hover:bg-sky-50/50'}" title="Vaso ${i+1} (250 ml)">
-            <svg class="w-4 h-4 sm:w-4.5 sm:h-4.5 transition-transform" fill="${filled ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
-            </svg>
-            <span class="text-[9px] font-bold mt-0.5">${i+1}</span>
+          <button type="button" onclick="toggleWaterGlass(${i})" class="w-5 h-5 sm:w-6 sm:h-6 rounded-md flex items-center justify-center text-[9px] sm:text-[9.5px] font-black transition-all cursor-pointer border ${filled ? 'bg-sky-500 text-white border-sky-600 shadow-2xs scale-105' : 'bg-white text-slate-400 border-sky-200/80 hover:border-sky-400'}" title="Vaso ${i+1} (250 ml)">
+            ${filled ? '💧' : (i + 1)}
           </button>
         `;
       }
