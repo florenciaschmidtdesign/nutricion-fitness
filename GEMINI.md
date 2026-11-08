@@ -19,16 +19,22 @@ Este archivo contiene las directrices operativas fijas y obligatorias para cualq
 
 ## 2. REGLA OBLIGATORIA: GENERACIÓN Y FIDELIDAD CONTINUA DE FOTOS DE COMIDA
 * **Representación real y precisa en todo momento:** Cada plato del menú semanal DEBE contar con una fotografía específica que represente fielmente la comida indicada.
-* **Prohibición estricta de imágenes genéricas:**
-  * Jamás colocar fotos de sopa o crema para platos como hamburguesas, sushi, fajitas o ensaladas.
-  * Jamás colocar fotos de salmón para platos de pollo, legumbres o pasta.
-  * Desayunos: Pancakes con pancakes, arepas con arepas, waffles con waffles, crepes con crepes.
-  * Meriendas: Mousse con mousse, manzana asada con manzana asada, yogur con yogur, Golden Cocoa con taza de cocoa.
+* **Prohibición estricta de imágenes genéricas o que desorienten:**
+  * **Hamburguesas:** Deben ilustrar hamburguesas caseras con queso fundido y tortitas de maíz / ensalada limpia (NUNCA panes brioche con gluten).
+  * **Mousse de chocolate:** Debe ilustrar una copa o vaso con mousse densa y aireada de chocolate negro batido con cacao en polvo (NUNCA trozos de tarta ni pasteles).
+  * **Desayunos:** Pancakes con pancakes, arepas con arepas, waffles con waffles, crepes con crepes.
+  * **Meriendas:** Manzana asada con manzana asada, yogur con yogur, Golden Cocoa con taza de cocoa.
 * **Formato y Ubicación:** Todas las imágenes deben ser archivos locales optimizados en `images/` con carga instantánea y rutas relativas en `index.html`.
 
 ---
 
-## 3. LÍNEAS ROJAS CLÍNICAS, DIGESTIVAS Y HORMONALES
+## 3. REGLA OBLIGATORIA: ROTACIÓN Y VARIABILIDAD SEMANAL DEL MENÚ
+* **Prohibición de repetición estática:** No poner todas las semanas exactamente el mismo menú.
+* **Variabilidad guiada por feedback:** Cada semana se deben variar los platos, las preparaciones y las fuentes de carbohidratos/proteínas (rotar entre fajitas, hamburguesas limpias, pescados blancos y azules, legumbres en ensalada/sartenada, bowls de quinoa y cremas de temporada), calibrando con el feedback continuo de Florencia sobre lo que le funciona y lo que prefiere rotar.
+
+---
+
+## 4. LÍNEAS ROJAS CLÍNICAS, DIGESTIVAS Y HORMONALES
 * **100% Sin Gluten Estricto:** Absolutamente ningún alimento con gluten o trazas sospechosas.
 * **Línea Roja Calórica:** Jamás planificar por debajo de la Tasa Metabólica Basal (1.427 kcal).
 * **Gestión del Agua:** La hidratación diaria (~2.0 L) contempla líquidos totales (agua pura ~1.2–1.5 L + cremas de verduras + infusiones). No obligar a beber 2 L de agua fría de golpe durante las comidas para proteger la digestión y evitar hinchazón.
