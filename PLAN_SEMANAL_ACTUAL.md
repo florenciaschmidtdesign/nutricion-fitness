@@ -130,3 +130,17 @@
   * Acudir en ayunas estricto. **NO tomar Eutirox antes del pinchazo**.
   * Tomar la pastilla con agua inmediatamente después de salir de la sala de extracción y tomar el desayuno preparado.
 * **Lunes 16 de Noviembre:** Revisión de control ginecológica del DIU Kyleena.
+---
+
+## 8. PROTOCOLO DE HIDRATACIÓN DIARIA & DRENAJE DE AGUA (2,0 A 2,5 LITROS)
+
+* **Meta Diaria Obligatoria:** **2,0 a 2,5 Litros al día** (equivalente a 8–10 vasos de 250 ml o 4–5 botellitas de 500 ml).
+* **Por qué es vital para ti:**
+  1. **Drenaje de Agua Extracelular (ECW 42,9% Rango HIGH):** Tu bioimpedancia muestra retención de líquido extracelular por inflamación subclínica y fase premenstrual. Cuanta más agua limpia bebes, más sodio y retención drena el riñón.
+  2. **Motor contra el Estreñimiento:** En hipotiroidismo, el colon absorbe demasiada agua si no estás bien hidratada, secando las heces. La hidratación hidrata la chía, el lino y la fibra soluble para evacuar suavemente cada mañana.
+* **Cronología de Hidratación:**
+  * **09:30 h (Al despertar):** 1 vaso grande (250–300 ml) de agua tibia con la pastilla de Eutirox 50 mcg (despierta el riñón y el peristaltismo).
+  * **11:00 a 14:00 h (Mañana):** 3 vasos de agua / infusiones (750 ml).
+  * **Regla en Almuerzo y Cena:** Beber como máximo 1/2 vaso durante la comida para **no diluir el ácido clorhídrico estomacal** (evita la pesadez y la hinchazón).
+  * **16:00 a 20:00 h (Tarde):** 3 vasos de agua / té de jengibre o hibisco (750 ml).
+  * **22:00 h (Noche):** 1 vaso / infusión caliente relajante con la toma de **Magnesio Bisglicinato**.
