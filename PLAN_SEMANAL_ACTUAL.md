@@ -100,8 +100,33 @@
 
 ---
 
-## 6. RECORDATORIO MÉDICO CLAVE
+---
+
+## 6. INVENTARIO ACTUALIZADO & COMPRA MÍNIMA INTELIGENTE
+
+### ¡Ya tienes en casa en congelador, nevera y despensa! (Cero gasto):
+* **🥩 Carne picada / molida de ternera de Mercadona (congelada, ~250–300 g):** ¡No compres hamburguesas! Descongela una porción el martes por la mañana para hacer 2 hamburguesas caseras limpias a la plancha para la cena en pareja con tu novio.
+* **🍓 Frutos rojos congelados:** ¡No compres frescos! Descongélalos 30 segundos en el microondas para añadir a tu yogur griego o pancakes.
+* **🍏 3 manzanas en despensa:** Cubren todos los desayunos y antojitos caramelizados de la semana.
+* **🥣 Crema Dorada de Otoño:** 2–3 raciones listas en la nevera.
+* **🦐 1 paquete de colas de gambas peladas** (intacto).
+* **🥚 Huevos camperos y claras.**
+* **🌾 Despensa limpia sin gluten:** Harina de Maíz Blanco P.A.N., copos de avena sin gluten, hélices de lenteja roja 100%, garbanzos en conserva, arroz basmati y quinoa.
+* **💪 Dúo Proteico:** Proteína AMIX Black CFM Isolate (dulce) y Proteína Moara Guisante 100% vegetal (salada).
+* **🧁 Preparato per Dolci "Il Pane di Anna"** (harina de repostería sin gluten).
+* **🥬 Verduras frescas restantes:** 1 calabacín, 250 g de zanahorias, patatas y cherrys.
+* **💊 Suplementos & Especias:** Magnesio bisglicinato, 2 nueces de Brasil fijas, multivitamínico, canela de Ceilán, cúrcuma, orégano y AOVE.
+
+### Lo ÚNICO que podrías necesitar comprar hacia el jueves/viernes:
+* [ ] 1–2 lomos de salmón fresco de pescadería (para el jueves y/o sábado)
+* [ ] 1 paquete de tortillas de maíz 100% (tipo Guanajuato o Nagual)
+* [ ] 1 bolsa de canónigos frescos (para acompañar la hamburguesa y fajitas)
+* [ ] Bebida de avena certificada sin gluten (si te queda poca)
+
+---
+
+## 7. RECORDATORIO MÉDICO CLAVE
 * **Martes 10 de Noviembre a las 08:15 h en CS Prosperidad:**
-  * Acudir en ayunas. **NO tomar Eutirox antes del pinchazo**.
+  * Acudir en ayunas estricto. **NO tomar Eutirox antes del pinchazo**.
   * Tomar la pastilla con agua inmediatamente después de salir de la sala de extracción y tomar el desayuno preparado.
 * **Lunes 16 de Noviembre:** Revisión de control ginecológica del DIU Kyleena.
