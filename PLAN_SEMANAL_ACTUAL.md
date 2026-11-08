@@ -10,10 +10,10 @@
 
 | Día | Centro | Clase / Sesión Programada | Hora Exacta | Duración Total | Enfoque Principal |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Lunes 09/11 (Festivo)** | O2 Boutique / Sala | **Sala de Musculación (Fuerza Tren Inferior)** | Mañana / Mediodía | 45-50 min | **Fuerza Día 1:** Cargas moderadas en máquinas (prensa, zancadas, glúteo) sin sobrecarga cervical ni mandibular. |
+| **Lunes 09/11 (Festivo)** | O2 Boutique / Sala | **Sala de Musculación: Upper Body (Tren Superior & Core)** | Mañana / Mediodía | 45-50 min | **Fuerza Upper Body:** Jalón al pecho, remo guiado en máquina con apoyo esternal, press mancuernas controlado y core profundo sin sobrecarga cervical ni mandibular. |
 | **Martes 10/11** | O2 Manuel Becerra | **Ciclo Indoor / RPM** *(o Sala/Yoga 18:05)* | 18:35 h | 50 min | **Cardio & Drenaje:** Sesión que termina 19:25 h para salir cómodamente a las 20:00 h hacia casa de tu novio. *(Hito 08:15 h: Analítica)*. |
 | **Miércoles 11/11** | En Pareja | *Descanso / Paseo NEAT Suave* | — | — | **Recuperación:** Descanso activo y recarga tras la analítica y noche en pareja. |
-| **Jueves 12/11** | O2 Boutique | **Sala de Musculación (Tracción & Core)** | 19:00 h | 50-60 min | **Fuerza Día 2:** Poleas, remo guiado, deltoides medio y activación de transverso abdominal profundo. |
+| **Jueves 12/11** | O2 Boutique | **Clase Dirigida: Pilates 18:05 h** *(o Bodypump 20:05 h / Ciclo 19:05 h)* | 18:05 h (o 20:05 h) | 50 min | **Clase Dirigida:** Tonificación postural, core profundo, glúteos y descompresión de columna sin impacto. *(Opción fuerza: Bodypump 20:05 h; opción cardio: Ciclo 19:05 h en M. Becerra)*. |
 | **Viernes 13/11** | O2 Boutique | **Pilates / Yoga o Movilidad** | Tarde | 50 min | **Tono Postural:** Descompresión de columna, estiramientos de cadera y relajación pélvica. |
 | **Sábado 14/11** | O2 Boutique | **Barre** | 11:05 h | 50 min | **Fuerza Día 3 / Tono:** Trabajo estrella de glúteo, piernas y postura sin impacto articular. |
 | **Domingo 15/11** | — | *Descanso Total & Paseo Libre al Sol* | — | — | **Regeneración:** Sueño reparador, hidratación y balance semanal. *(20:00 h revisión previa a ginecología)*. |
