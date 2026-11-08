@@ -1793,7 +1793,7 @@
             </div>
 
             <!-- CONTENIDO DESPLEGABLE (CERRADO POR DEFECTO PARA VER TODO EL DÍA) -->
-            <div id="meal-body-${meal.id}" class="${isExpanded ? 'block' : 'hidden'} px-3 sm:px-4 pb-3.5 pt-1 border-t border-slate-100 space-y-2.5 bg-slate-50/40">
+            <div id="meal-body-${meal.id}" class="${isExpanded ? '' : 'hidden'} px-3 sm:px-4 pb-3.5 pt-1 border-t border-slate-100 space-y-2.5 bg-slate-50/40">
               
               <!-- Badges -->
               <div class="flex flex-wrap gap-1 pt-1">
@@ -1824,17 +1824,25 @@
 
     function toggleMealCollapse(mealId) {
       const expandedState = safeGet('florencia_expanded', {});
-      const current = expandedState[mealId] === true;
-      expandedState[mealId] = !current;
+      const isOpen = expandedState[mealId] === true;
+      expandedState[mealId] = !isOpen;
       safeSet('florencia_expanded', expandedState);
       
       const body = document.getElementById('meal-body-' + mealId);
       const chevron = document.getElementById('chevron-' + mealId);
       if (body) {
-        body.classList.toggle('hidden');
+        if (!isOpen) {
+          body.classList.remove('hidden');
+        } else {
+          body.classList.add('hidden');
+        }
       }
       if (chevron) {
-        chevron.classList.toggle('rotate-180');
+        if (!isOpen) {
+          chevron.classList.add('rotate-180');
+        } else {
+          chevron.classList.remove('rotate-180');
+        }
       }
       updateToggleAllBtn();
     }
