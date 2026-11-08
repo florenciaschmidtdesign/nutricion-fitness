@@ -1,6 +1,7 @@
 # PLAN SEMANAL DE REINICIO & RECOMPOSICIÓN CORPORAL (9 AL 15 DE NOVIEMBRE DE 2026)
 
 **Atleta:** Florencia  
+**Hoja Oficial de Control & Feedback:** [Google Sheets de Florencia](https://docs.google.com/spreadsheets/d/1kRs1k1c-MIUiEbQ2Yhip2olOyaPcDFe9TGC2StThTUU/edit)  
 **Fase de Ciclo / Adaptación:** Post-DIU Kyleena | Día 27 del Ciclo (Fase Lútea Tardía / Premenstrual - PMS) | Semana Clave de Analítica Tiroidea | Foco Detox Antiinflamatorio, Cero Gluten y Antojitos PMS Limpios  
 **Enfoque:** Confort digestivo, modulación de dopamina/serotonina en PMS, drenaje de agua extracelular (ECW), aprovechamiento del batch cooking (Crema Dorada) y optimización del dúo proteico (AMIX CFM dulce + Moara Guisante salada).
 
