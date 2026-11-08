@@ -20,17 +20,34 @@
       max-width: 100vw;
     }
     body {
-      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-      background: #F4F8F7;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Plus Jakarta Sans", system-ui, sans-serif;
+      background: #F6F8F7;
       color: #0F172A;
       -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      letter-spacing: -0.01em;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      letter-spacing: -0.02em;
     }
     .no-scrollbar::-webkit-scrollbar { display: none; }
     .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     .card-craft {
       background: #FFFFFF;
-      border: 1px solid rgba(226, 232, 240, 0.85);
-      box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.03), 0 1px 3px rgba(15, 23, 42, 0.02);
+      border: 1px solid rgba(226, 232, 240, 0.75);
+      border-radius: 1.25rem;
+      box-shadow: 0 1px 3px rgba(15, 23, 42, 0.02), 0 8px 24px -4px rgba(15, 23, 42, 0.04);
+      transition: box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1), transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .tap-effect {
+      transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.15s ease;
+    }
+    .tap-effect:active {
+      transform: scale(0.975);
+    }
+    .badge-ios {
+      font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+      letter-spacing: -0.005em;
     }
     .ing-item strong {
       color: #0F172A;
@@ -50,18 +67,18 @@
           <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
           <h1 class="text-xs sm:text-sm font-extrabold text-slate-900 tracking-tight truncate">Florencia Schmidt</h1>
         </div>
-        <p class="text-[10px] sm:text-[11px] text-slate-500 font-medium truncate">Plan Otoño Antiinflamatorio · 4 al 8 Nov</p>
+        <p class="text-[10px] sm:text-[11px] text-slate-500 font-medium truncate">Plan Otoño Antiinflamatorio · 9 al 15 Nov</p>
       </div>
 
       <!-- Navigation Tabs Switcher -->
       <nav class="flex items-center p-0.5 sm:p-1 rounded-xl bg-slate-100/90 border border-slate-200/70 text-[11px] sm:text-xs shrink-0">
-        <button type="button" onclick="switchView('menu')" id="view-btn-menu" class="px-2.5 py-1.5 sm:px-3 sm:py-1.5 rounded-lg font-bold transition-all bg-white text-slate-900 shadow-2xs cursor-pointer">
+        <button type="button" onclick="switchView('menu')" id="view-btn-menu" class="tap-effect px-2.5 py-1.5 sm:px-3 sm:py-1.5 rounded-lg font-bold transition-all bg-white text-slate-900 shadow-2xs cursor-pointer">
           Menú
         </button>
-        <button type="button" onclick="switchView('batch')" id="view-btn-batch" class="px-2.5 py-1.5 sm:px-3 sm:py-1.5 rounded-lg font-semibold text-slate-600 hover:text-slate-900 transition-all cursor-pointer">
+        <button type="button" onclick="switchView('batch')" id="view-btn-batch" class="tap-effect px-2.5 py-1.5 sm:px-3 sm:py-1.5 rounded-lg font-semibold text-slate-600 hover:text-slate-900 transition-all cursor-pointer">
           Batch Prep
         </button>
-        <button type="button" onclick="switchView('super')" id="view-btn-super" class="px-2.5 py-1.5 sm:px-3 sm:py-1.5 rounded-lg font-semibold text-slate-600 hover:text-slate-900 transition-all cursor-pointer">
+        <button type="button" onclick="switchView('super')" id="view-btn-super" class="tap-effect px-2.5 py-1.5 sm:px-3 sm:py-1.5 rounded-lg font-semibold text-slate-600 hover:text-slate-900 transition-all cursor-pointer">
           Súper
         </button>
       </nav>
@@ -1486,13 +1503,13 @@
         else if (isTomorrow) badgeText = 'Mañana';
 
         if (isActive) {
-          btn.className = "day-tab py-2 px-1 rounded-xl text-center border transition-all bg-emerald-800 text-white border-emerald-800 shadow-2xs cursor-pointer min-w-0";
+          btn.className = "day-tab tap-effect py-2 px-1 rounded-xl text-center border transition-all bg-emerald-800 text-white border-emerald-800 shadow-sm cursor-pointer min-w-0";
           btn.innerHTML = `
             <span class="block text-[8.5px] uppercase opacity-95 font-bold tracking-wider truncate">${isToday ? '★ ' + badgeText : badgeText}</span>
             <span class="block text-xs font-extrabold truncate">${dayNames[k].label}</span>
           `;
         } else {
-          btn.className = `day-tab py-2 px-1 rounded-xl text-center border transition-all bg-white text-slate-600 border-slate-200 hover:border-slate-300 cursor-pointer min-w-0 ${isToday ? 'ring-1 ring-emerald-500/50 bg-emerald-50/20' : ''}`;
+          btn.className = `day-tab tap-effect py-2 px-1 rounded-xl text-center border transition-all bg-white text-slate-600 border-slate-200/80 hover:border-slate-300 shadow-2xs cursor-pointer min-w-0 ${isToday ? 'ring-1 ring-emerald-500/50 bg-emerald-50/20' : ''}`;
           btn.innerHTML = `
             <span class="block text-[8.5px] uppercase font-bold tracking-wider truncate ${isToday ? 'text-emerald-700' : 'opacity-70'}">${isToday ? '● ' + badgeText : badgeText}</span>
             <span class="block text-xs font-bold truncate ${isToday ? 'text-emerald-900 font-extrabold' : ''}">${dayNames[k].label}</span>
@@ -1627,7 +1644,7 @@
                   <span>${done ? '✓ Comido' : 'Marcar'}</span>
                 </button>
                 <div class="p-1.5 rounded-lg text-slate-400 hover:text-slate-700 transition">
-                  <svg id="chevron-${meal.id}" class="w-4 h-4 transform transition-transform ${isExpanded ? 'rotate-180' : ''}" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                  <svg id="chevron-${meal.id}" class="w-4 h-4 transform transition-transform duration-200 ease-out ${isExpanded ? 'rotate-180' : ''}" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
                 </div>
               </div>
 
