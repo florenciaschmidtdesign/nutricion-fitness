@@ -241,26 +241,34 @@
     <div id="view-menu-container" class="space-y-3 w-full">
 
       <!-- DAY SELECTOR DINÁMICO (DETECTA AUTOMÁTICAMENTE EL DÍA DE HOY) -->
-      <nav class="grid grid-cols-5 gap-1.5 w-full" id="day-selector-nav">
+      <nav class="grid grid-cols-7 gap-1 sm:gap-1.5 w-full" id="day-selector-nav">
+        <button type="button" onclick="selectDay('lun')" id="tab-lun" class="day-tab py-2 px-1 rounded-xl text-center border transition-all cursor-pointer min-w-0">
+          <span class="block text-[8px] sm:text-[8.5px] uppercase opacity-75 font-semibold truncate">Lun</span>
+          <span class="block text-xs font-bold truncate">Lun 9</span>
+        </button>
+        <button type="button" onclick="selectDay('mar')" id="tab-mar" class="day-tab py-2 px-1 rounded-xl text-center border transition-all cursor-pointer min-w-0">
+          <span class="block text-[8px] sm:text-[8.5px] uppercase opacity-75 font-semibold truncate">Mar</span>
+          <span class="block text-xs font-bold truncate">Mar 10</span>
+        </button>
         <button type="button" onclick="selectDay('mie')" id="tab-mie" class="day-tab py-2 px-1 rounded-xl text-center border transition-all cursor-pointer min-w-0">
-          <span class="block text-[8.5px] uppercase opacity-75 font-semibold truncate">Mié</span>
-          <span class="block text-xs font-bold truncate">Mié 4</span>
+          <span class="block text-[8px] sm:text-[8.5px] uppercase opacity-75 font-semibold truncate">Mié</span>
+          <span class="block text-xs font-bold truncate">Mié 11</span>
         </button>
         <button type="button" onclick="selectDay('jue')" id="tab-jue" class="day-tab py-2 px-1 rounded-xl text-center border transition-all cursor-pointer min-w-0">
-          <span class="block text-[8.5px] uppercase font-bold tracking-wider truncate text-emerald-700">★ Hoy</span>
-          <span class="block text-xs font-extrabold truncate text-emerald-900">Jue 5</span>
+          <span class="block text-[8px] sm:text-[8.5px] uppercase opacity-75 font-semibold truncate">Jue</span>
+          <span class="block text-xs font-bold truncate">Jue 12</span>
         </button>
         <button type="button" onclick="selectDay('vie')" id="tab-vie" class="day-tab py-2 px-1 rounded-xl text-center border transition-all cursor-pointer min-w-0">
-          <span class="block text-[8.5px] uppercase opacity-75 font-semibold truncate">Mañana</span>
-          <span class="block text-xs font-bold truncate">Vie 6</span>
+          <span class="block text-[8px] sm:text-[8.5px] uppercase opacity-75 font-semibold truncate">Vie</span>
+          <span class="block text-xs font-bold truncate">Vie 13</span>
         </button>
         <button type="button" onclick="selectDay('sab')" id="tab-sab" class="day-tab py-2 px-1 rounded-xl text-center border transition-all cursor-pointer min-w-0">
-          <span class="block text-[8.5px] uppercase opacity-75 font-semibold truncate">Sáb</span>
-          <span class="block text-xs font-bold truncate">Sáb 7</span>
+          <span class="block text-[8px] sm:text-[8.5px] uppercase opacity-75 font-semibold truncate">Sáb</span>
+          <span class="block text-xs font-bold truncate">Sáb 14</span>
         </button>
         <button type="button" onclick="selectDay('dom')" id="tab-dom" class="day-tab py-2 px-1 rounded-xl text-center border transition-all cursor-pointer min-w-0">
-          <span class="block text-[8.5px] uppercase opacity-75 font-semibold truncate">Dom</span>
-          <span class="block text-xs font-bold truncate">Dom 8</span>
+          <span class="block text-[8px] sm:text-[8.5px] uppercase opacity-75 font-semibold truncate">Dom</span>
+          <span class="block text-xs font-bold truncate">Dom 15</span>
         </button>
       </nav>
 
@@ -272,7 +280,7 @@
       <!-- MEALS SECTION HEADER -->
       <div class="flex items-center justify-between px-1">
         <h2 id="active-day-heading" class="text-xs sm:text-sm font-extrabold text-slate-800 tracking-tight">
-          Menú de Jueves 5 de Noviembre
+          Menú Semanal (9 al 15 de Noviembre)
         </h2>
         <button type="button" onclick="toggleAllMeals()" id="toggle-all-meals-btn" class="text-[11px] font-semibold text-emerald-700 hover:text-emerald-800 bg-emerald-50 hover:bg-emerald-100/70 px-2.5 py-1 rounded-lg border border-emerald-200/60 transition cursor-pointer">
           Abrir todas ↓
@@ -828,376 +836,551 @@
     };
 
     const daysData = {
+      lun: {
+        name: "Lunes 9 de Noviembre (Festivo - Almudena)",
+        workout: {
+          id: "w-lun",
+          center: "O2 Boutique / Sala",
+          title: "Sala de Musculación (Tren Inferior)",
+          duration: "45-50 min",
+          badge: "bg-emerald-50 text-emerald-800 border border-emerald-200",
+          note: "Fuerza tren inferior moderada (prensa, zancadas, glúteo) sin forzar cuello/mandíbula (festivo)"
+        },
+        meals: [
+          {
+            id: "lun-0",
+            type: "Desayuno",
+            time: "10:30 – 11:00 h",
+            title: "Pancakes Proteicos con Manzana y Proteína AMIX CFM",
+            img: foodImgs.arepas,
+            badges: ["AMIX Dulce", "Sin Gluten", "Fuerza"],
+            calories: "~390 kcal",
+            ingredients: [
+              "<strong>1 scoop de Proteína AMIX CFM Isolate</strong>",
+              "<strong>40 g de copos o harina de avena sin gluten</strong>",
+              "<strong>1 huevo campero entero</strong> + 2 claras",
+              "<strong>1/2 manzana picada</strong> cocinada con canela de Ceilán",
+              "Café con <strong>bebida de avena sin gluten</strong> (tras ventana de Eutirox)"
+            ],
+            instructions: "Batir la avena con la proteína AMIX, huevo y claras. Dorar en sartén con unas gotas de AOVE y coronar con manzana tibia y canela."
+          },
+          {
+            id: "lun-1",
+            type: "Almuerzo",
+            time: "14:30 h",
+            title: "Pechuguitas de Pollo al Limón con Batata y Espárragos",
+            img: foodImgs.salmon,
+            badges: ["Proteína Limpia", "Antiinflamatorio"],
+            calories: "~480 kcal",
+            ingredients: [
+              "<strong>150–180 g de pechuga de pollo</strong> marinada con limón exprimido y orégano",
+              "<strong>1 batata pequeña y 1 patata</strong> en dados en Ninja Airfryer (o asadas)",
+              "<strong>1 manojo de espárragos trigueros</strong> salteados al dente con AOVE",
+              "Toma de <strong>Multivitamínico completo</strong> en el almuerzo"
+            ],
+            instructions: "Dorar las pechuguitas a la plancha con limón. Servir con los dados de batata y espárragos crujientes."
+          },
+          {
+            id: "lun-2",
+            type: "Merienda",
+            time: "18:30 h",
+            title: "Yogur Griego Ligero con Frutos Rojos & Selenio",
+            img: foodImgs.yogur,
+            badges: ["Microbiota", "Selenio"],
+            calories: "~210 kcal",
+            ingredients: [
+              "<strong>1 yogur griego ligero</strong>",
+              "<strong>Mix de frutos rojos frescos</strong> (arándanos/frambuesas)",
+              "<strong>2 nueces de Brasil fijas</strong> (aporte diario de selenio tiroideo)",
+              "Canela de Ceilán + infusión tibia digestiva"
+            ],
+            instructions: "Batir el yogur con canela, añadir los frutos rojos y masticar despacio las 2 nueces de Brasil."
+          },
+          {
+            id: "lun-3",
+            type: "Cena",
+            time: "21:00 – 21:30 h",
+            title: "Crema Dorada de Otoño con Proteína Moara & Huevo Poché",
+            img: foodImgs.crema,
+            badges: ["Batch Cooking", "Proteína Moara", "<10 min"],
+            calories: "~340 kcal",
+            ingredients: [
+              "<strong>1 bowl generoso de Crema Dorada de Otoño</strong> (calabaza, puerro, zanahoria, calabacín)",
+              "<strong>1 cda colmada (15–20 g) de Proteína de Guisante Moara</strong> (100% neutra vegetal, sin azúcar)",
+              "<strong>1 huevo campero pasado por agua o poché</strong> (yema cremosa)",
+              "Semillas de calabaza tostadas + toque de orégano",
+              "Toma nocturna: <strong>Magnesio Bisglicinato</strong> a las 22:30 h"
+            ],
+            instructions: "Calentar la crema dorada e integrar la proteína de guisante Moara batiendo con una varilla o cuchara (se disuelve perfecta y da textura sedosa). Servir con el huevo poché en el centro."
+          }
+        ]
+      },
+      mar: {
+        name: "Martes 10 de Noviembre (Analítica 08:15 h & Noche en Pareja)",
+        workout: {
+          id: "w-mar",
+          center: "O2 Manuel Becerra",
+          title: "Ciclo Indoor / RPM (o Sesión Sala 18:05)",
+          duration: "50 min",
+          badge: "bg-purple-50 text-purple-800 border border-purple-200",
+          note: "Sesión 18:35 h (termina 19:25 h). A las 20:00 h sales duchada hacia casa de tu novio"
+        },
+        meals: [
+          {
+            id: "mar-0",
+            type: "Desayuno",
+            time: "09:00 h (Post-Analítica)",
+            title: "Arepa Dorada con Chía, Pavo y Cottage (Tras Pinchazo)",
+            img: foodImgs.arepas,
+            badges: ["Hito Analítica", "Post-Eutirox", "Sin Gluten"],
+            calories: "~380 kcal",
+            ingredients: [
+              "<strong>08:15 h en CS Prosperidad:</strong> Analítica en ayunas estricto (¡NO tomar Eutirox antes!)",
+              "<strong>08:45 h:</strong> Tomar <strong>Eutirox 50 mcg</strong> con agua nada más salir",
+              "<strong>1 arepa de maíz blanco P.A.N.</strong> tostada con semillas de chía",
+              "<strong>40 g de queso cottage</strong> + 2 lonchas de pechuga de pavo de corral",
+              "Café con bebida de avena sin gluten en termo"
+            ],
+            instructions: "Desayuno reconfortante tras la analítica. La chía hidratada cuida la mucosa digestiva."
+          },
+          {
+            id: "mar-1",
+            type: "Almuerzo",
+            time: "14:30 h",
+            title: "Hélices de Lenteja Roja 100% con Gambas y Cherrys",
+            img: foodImgs.salmon,
+            badges: ["Proteína", "Fibra Soluble"],
+            calories: "~490 kcal",
+            ingredients: [
+              "<strong>60 g de hélices de lenteja roja 100%</strong> (de tu despensa)",
+              "<strong>120 g de colas de gambas peladas</strong> (de tu nevera)",
+              "<strong>1/2 calabacín verde</strong> en dados + tomates cherry confitados",
+              "1 cda de AOVE, sal marina y zumo de limón exprimido",
+              "Toma de <strong>Multivitamínico completo</strong> en el almuerzo"
+            ],
+            instructions: "Hervir la pasta de lenteja 6-7 min al dente. Saltear las gambas con los cherrys y dados de calabacín en AOVE y unir todo."
+          },
+          {
+            id: "mar-2",
+            type: "Merienda",
+            time: "17:30 h (Pre-Gym)",
+            title: "Manzana Dulce con Canela & 2 Nueces de Brasil",
+            img: foodImgs.yogur,
+            badges: ["Pre-Entreno", "Energía"],
+            calories: "~180 kcal",
+            ingredients: [
+              "<strong>1 manzana Golden</strong> en gajos con canela de Ceilán",
+              "<strong>2 nueces de Brasil fijas</strong> (selenio orgánico)",
+              "Infusión tibia de jengibre y manzanilla"
+            ],
+            instructions: "Tomar 60 min antes de la clase de Ciclo/RPM para recargar glucógeno sin pesadez estomacal."
+          },
+          {
+            id: "mar-3",
+            type: "Cena",
+            time: "21:30 h (En casa de tu novio)",
+            title: "Hamburguesa de Ternera con Queso Fundido y Tortillas de Maíz",
+            img: foodImgs.crema,
+            badges: ["En Pareja", "100% Sin Gluten"],
+            calories: "~460 kcal",
+            ingredients: [
+              "<strong>1 hamburguesa de ternera limpia</strong> a la plancha con queso fundido",
+              "<strong>1–2 tortillas de maíz 100%</strong> calientes (sin gluten)",
+              "Ensalada fresca de <strong>canónigos y tomates cherry</strong> con AOVE",
+              "Toma nocturna: <strong>Magnesio Bisglicinato</strong> a las 22:30 h"
+            ],
+            instructions: "Cena modular deliciosa para compartir con él. Plato 100% sin gluten, hiperdigestivo y saciante."
+          }
+        ]
+      },
       mie: {
-        name: "Miércoles 4 de Noviembre (Ayer)",
+        name: "Miércoles 11 de Noviembre (En Pareja -> Casa)",
         workout: {
           id: "w-mie",
-          center: "O2 Boutique",
-          title: "Descanso (No realizado ayer)",
-          duration: "—",
-          badge: "bg-slate-100 text-slate-600 border border-slate-200",
-          note: "Descanso por compra pospuesta a hoy"
+          center: "Descanso Activo",
+          title: "Paseo NEAT & Recuperación",
+          duration: "Libre",
+          badge: "bg-slate-100 text-slate-700 border border-slate-200",
+          note: "Descanso y recuperación muscular tras la analítica y noche en pareja"
         },
         meals: [
           {
             id: "mie-0",
             type: "Desayuno",
-            time: "10:30 h",
-            title: "Desayuno Express",
+            time: "10:30 h (En casa de tu novio)",
+            title: "Revuelto de Huevos Camperos con Queso Cottage & Arepa",
             img: foodImgs.arepas,
-            badges: ["Completado", "Sin Gluten"],
-            calories: "~350 kcal",
+            badges: ["En Pareja", "Alta Proteína"],
+            calories: "~380 kcal",
             ingredients: [
-              "Café con bebida vegetal",
-              "Huevos revueltos o tostada"
+              "<strong>09:30 h: Eutirox 50 mcg</strong> con agua sola",
+              "<strong>2 huevos camperos</strong> revueltos cremosos en AOVE",
+              "<strong>40 g de queso cottage</strong>",
+              "<strong>1 arepa de maíz</strong> tostada o rebanada de pan sin gluten",
+              "Café con bebida de avena"
             ],
-            instructions: "Desayuno del día previo."
+            instructions: "Desayuno en pareja fácil y sin complicaciones antes de arrancar la jornada."
           },
           {
             id: "mie-1",
             type: "Almuerzo",
-            time: "14:30 h",
-            title: "Almuerzo previo a compra",
+            time: "14:30 h (Comida compartida)",
+            title: "Pechuga de Pollo con Salteado de Verduras y Arroz Basmati",
             img: foodImgs.salmon,
-            badges: ["Proteína", "Completado"],
-            calories: "~450 kcal",
+            badges: ["Digestivo", "Modular"],
+            calories: "~480 kcal",
             ingredients: [
-              "Almuerzo previo a la reposición de hoy"
+              "<strong>150 g de pechuga de pollo</strong> fileteada a la plancha",
+              "<strong>1 taza de arroz basmati</strong> cocido",
+              "Salteado de calabacín, pimientos y setas con AOVE",
+              "Toma de <strong>Multivitamínico completo</strong> en el almuerzo"
             ],
-            instructions: "Día previo."
+            instructions: "Plato limpio de base compartida. Regreso a casa a media tarde."
           },
           {
             id: "mie-2",
             type: "Merienda",
-            time: "18:30 h",
-            title: "Infusión caliente",
-            img: foodImgs.te,
-            badges: ["Calma Digestiva"],
-            calories: "~120 kcal",
+            time: "18:30 h (En casa)",
+            title: "Yogur Griego Ligero con Canela & Infusión Digestiva",
+            img: foodImgs.yogur,
+            badges: ["Microbiota", "Selenio"],
+            calories: "~200 kcal",
             ingredients: [
-              "Infusión y frutos secos"
+              "<strong>1 yogur griego ligero</strong> con canela de Ceilán",
+              "<strong>2 nueces de Brasil fijas</strong>",
+              "Infusión caliente de jengibre y manzanilla"
             ],
-            instructions: "Digestión ligera."
+            instructions: "Merienda reconfortante para reactivar la digestión y asentar el estómago."
           },
           {
             id: "mie-3",
             type: "Cena",
-            time: "21:30 h",
-            title: "Revuelto de Huevos en AOVE con Orégano (Realizado)",
-            img: foodImgs.arepas,
-            badges: ["Realizado", "24g Proteína", "Cero Gluten"],
+            time: "21:00 h (En casa)",
+            title: "Crema Dorada de Otoño con Dados de Feta y Orégano",
+            img: foodImgs.crema,
+            badges: ["Batch Cooking", "Confort", "<5 min"],
             calories: "~320 kcal",
             ingredients: [
-              "<strong>2 huevos camperos</strong> revueltos cremosos",
-              "<strong>1 chorrito de AOVE</strong> en sartén antiadherente",
-              "Pizca de <strong>orégano seco</strong> y sal marina",
-              "Infusión digestiva tibia"
+              "<strong>1 bowl caliente de Crema Dorada de Otoño</strong> (tu batch cooking del domingo)",
+              "<strong>30 g de queso feta auténtico</strong> desmenuzado en caliente",
+              "Tiritas de pechuga de pavo o 1 cda de Proteína Moara Guisante",
+              "Semillas mixtas tostadas + toque de pimienta y orégano",
+              "Toma nocturna: <strong>Magnesio Bisglicinato</strong> a las 22:30 h"
             ],
-            instructions: "Cena express antiinflamatoria antes de ir al súper hoy."
+            instructions: "Calentar la crema dorada en cazo o microondas, verter en bowl y añadir el feta por encima para que se funda ligeramente."
           }
         ]
       },
       jue: {
-        name: "Jueves 5 de Noviembre (Hoy)",
+        name: "Jueves 12 de Noviembre (En Casa - Vuelta al Gym)",
         workout: {
           id: "w-jue",
-          center: "O2 Sala de Fuerza",
-          title: "Sala de Fuerza O2 · Sesión 1 (Hoy)",
+          center: "O2 Boutique / Sala",
+          title: "Sala de Musculación (Tracción & Core)",
           duration: "50-60 min",
-          badge: "bg-emerald-50 text-emerald-800 border border-emerald-200/60",
-          note: "Fuerza en sala: Enfoque máquinas/peso libre (tren inferior/glúteo y empuje, protegiendo cervical)"
+          badge: "bg-emerald-50 text-emerald-800 border border-emerald-200",
+          note: "Fuerza Día 2: Poleas, remo guiado, deltoides medio y activación de core profundo"
         },
         meals: [
           {
             id: "jue-0",
             type: "Desayuno",
-            time: "10:30 – 11:00 h",
-            title: "Waffles o Arepas con Cottage & Café",
-            img: foodImgs.waffles,
-            badges: ["15 min", "100% Sin Gluten", "24g Proteína"],
-            calories: "~380 kcal",
+            time: "10:30 h",
+            title: "Arepa Dorada con Chía + Revuelto con Queso Cottage",
+            img: foodImgs.arepas,
+            badges: ["Clásico Favorito", "Sin Gluten"],
+            calories: "~370 kcal",
             ingredients: [
-              "<strong>Copos de avena sin gluten</strong> o arepa de maíz P.A.N. con chía",
-              "<strong>1 huevo entero + 2 claras</strong> pasteurizadas",
-              "<strong>40 g de queso cottage</strong> (comprado hoy)",
-              "<strong>Café caliente</strong> con <strong>bebida de avena</strong> (post-Eutirox)"
+              "<strong>09:30 h: Eutirox 50 mcg</strong> con agua sola",
+              "<strong>1 arepa de maíz P.A.N.</strong> tostada crujiente con semillas de chía",
+              "<strong>Revuelto de 2 huevos camperos L</strong> con 40 g de queso cottage",
+              "Café con bebida de avena sin gluten"
             ],
-            instructions: "Cocinar en sartén antiadherente o gofrera. Acompañar con queso cottage suave."
+            instructions: "Tu desayuno estrella: la chía aporta mucílagos lubricantes para el tránsito intestinal."
           },
           {
             id: "jue-1",
-            type: "Almuerzo (Post-Fuerza)",
-            time: "15:30 – 16:30 h",
-            title: "Pechuguitas de Pollo al Limón con Batata Asada & Espárragos",
-            img: foodImgs.pollo,
-            badges: ["Post-Fuerza", "38g Proteína", "Airfryer"],
-            calories: "~510 kcal",
+            type: "Almuerzo",
+            time: "14:30 h",
+            title: "Sartenada Express de Garbanzos con Gambas y Cherrys",
+            img: foodImgs.salmon,
+            badges: ["Despensa", "Antiinflamatorio", "<10 min"],
+            calories: "~470 kcal",
             ingredients: [
-              "<strong>140 g de pechuguitas de pollo</strong> marinadas con <strong>limón exprimido</strong>",
-              "<strong>150 g de dados de batata y patata</strong> asados en la Ninja Airfryer",
-              "<strong>Espárragos verdes finos</strong> salteados al dente con AOVE",
-              "Suplementación: <strong>Multivitamínico completo</strong>"
+              "<strong>150 g de garbanzos cocidos en conserva</strong> (de tu despensa)",
+              "<strong>100 g de colas de gambas peladas</strong> (de tu nevera)",
+              "<strong>Tomates cherry cortados</strong> + puñado de espinacas tiernas",
+              "AOVE, pizca de comino, cúrcuma y sal marina",
+              "Toma de <strong>Multivitamínico completo</strong> en el almuerzo"
             ],
-            instructions: "Cocinar los dados de batata y patata a 195 °C durante 18 min. Dorar el pollo y los espárragos en sartén."
+            instructions: "Saltear las gambas en sartén caliente con AOVE 2 min. Añadir los cherrys, garbanzos enjuagados y espinacas. Saltear 4 min."
           },
           {
             id: "jue-2",
-            type: "Merienda Funcional",
-            time: "18:30 – 19:00 h",
-            title: "Yogur Griego Ligero con Frutos Rojos & 2 Nueces",
+            type: "Merienda",
+            time: "18:30 h (Pre-Gym)",
+            title: "Yogur Batido con Proteína AMIX CFM & Nueces de Brasil",
             img: foodImgs.yogur,
-            badges: ["5 min", "En tu nevera", "Selenio Activo"],
-            calories: "~180 kcal",
+            badges: ["AMIX Dulce", "Pre-Fuerza"],
+            calories: "~230 kcal",
             ingredients: [
-              "<strong>1 yogur ligero griego</strong> (que ya tienes en casa)",
-              "<strong>1 puñado de mix de frutos rojos</strong> (comprados hoy)",
-              "Pizca de <strong>canela de Ceilán</strong>",
-              "<strong>2 nueces de Brasil fijas</strong> (aporte de selenio tiroideo)"
+              "<strong>1 yogur griego ligero</strong> batido con 1/2 cazo de <strong>AMIX CFM Isolate</strong>",
+              "Canela de Ceilán",
+              "<strong>2 nueces de Brasil fijas</strong> (selenio)",
+              "Vaso de agua o infusión caliente"
             ],
-            instructions: "Batir el yogur griego con la canela y coronar con los frutos rojos frescos y las 2 nueces."
+            instructions: "Batido cremoso de alto valor biológico para nutrir la masa muscular antes de la sesión de fuerza."
           },
           {
             id: "jue-3",
-            type: "Cena de Confort",
-            time: "21:15 – 21:45 h",
-            title: "Crema Dorada de Calabaza Asada, Puerro & Feta",
+            type: "Cena",
+            time: "21:15 h",
+            title: "Lomo de Salmón Crujiente con Puré Suave de Patata",
             img: foodImgs.crema,
-            badges: ["Batch Cooking", "Confort Digestivo", "30g Proteína"],
-            calories: "~390 kcal",
+            badges: ["Omega 3", "Confort", "<15 min"],
+            calories: "~460 kcal",
             ingredients: [
-              "<strong>Crema Dorada</strong> (calabaza en trozos, zanahorias y puerro cortado comprados hoy)",
-              "<strong>100 g de pechuga de pavo o pollo</strong> deshilachado",
-              "<strong>25 g de queso feta</strong> auténtico desmenuzado",
-              "Topping: <strong>Semillas mixtas con calabaza</strong> (de tu despensa)",
-              "Toma nocturna: <strong>Magnesio Bisglicinato</strong> a las 22:30 h con agua"
+              "<strong>1 lomo de salmón fresco</strong> sellado a la plancha con piel crujiente",
+              "<strong>Puré suave de patata</strong> reconfortante (sobrecito de despensa o patata cocida)",
+              "<strong>Zanahorias frescas</strong> en rodajas al vapor con AOVE",
+              "Toma nocturna: <strong>Magnesio Bisglicinato</strong> a las 22:30 h"
             ],
-            instructions: "Triturar las verduras asadas hasta lograr textura de terciopelo. Servir con pavo/pollo, queso feta y semillas."
+            instructions: "Sellar el salmón empezando por la piel 4 min a fuego medio-alto para que quede hipercrujiente. Servir con el puré caliente."
           }
         ]
       },
       vie: {
-        name: "Viernes 6 de Noviembre (Mañana)",
+        name: "Viernes 13 de Noviembre (A Solas en Casa - Cuidado & Limpieza)",
         workout: {
           id: "w-vie",
-          center: "O2 Sala de Fuerza",
-          title: "Sala de Fuerza O2 · Sesión 2 (Mañana)",
-          duration: "50-60 min",
-          badge: "bg-emerald-50 text-emerald-800 border border-emerald-200/60",
-          note: "Fuerza en sala: Enfoque tren superior (tracciones, hombros) y core/suelo pélvico (cero tensión en cuello/mandíbula)"
+          center: "O2 Boutique",
+          title: "Pilates / Yoga o Movilidad",
+          duration: "50 min",
+          badge: "bg-amber-50 text-amber-800 border border-amber-200",
+          note: "Tono postural, descompresión de columna, estiramientos de cadera y relajación pélvica"
         },
         meals: [
           {
             id: "vie-0",
             type: "Desayuno",
-            time: "10:30 – 11:00 h",
-            title: "Arepa con Chía, Revuelto Cremoso & Queso Cottage",
+            time: "10:30 h",
+            title: "Tortitas con Preparato per Dolci 'Il Pane di Anna' & AMIX",
             img: foodImgs.arepas,
-            badges: ["10 min", "100% Sin Gluten", "25g Proteína"],
-            calories: "~370 kcal",
+            badges: ["Repostería Limpia", "Sin Gluten"],
+            calories: "~380 kcal",
             ingredients: [
-              "<strong>1 arepa dorada</strong> con semillas de chía",
-              "<strong>2 huevos camperos L</strong> revueltos a fuego lento con orégano",
-              "<strong>30 g de queso cottage</strong>",
-              "<strong>Café con bebida de avena</strong>"
+              "<strong>09:30 h: Eutirox 50 mcg</strong> con agua sola",
+              "<strong>35 g de harina Preparato per Dolci 'Il Pane di Anna'</strong> (sin gluten)",
+              "<strong>1/2 cazo de Proteína AMIX CFM Isolate</strong>",
+              "<strong>1 huevo campero</strong> + 50 ml de bebida de avena sin gluten",
+              "Canela de Ceilán + café con bebida de avena"
             ],
-            instructions: "Dorar la arepa en tostador o sartén. Hacer el revuelto cremoso y rellenar."
+            instructions: "Mezclar la harina Il Pane di Anna con la proteína AMIX, huevo y leche de avena. Hacer 2-3 tortitas esponjosas en sartén antiadherente."
           },
           {
             id: "vie-1",
-            type: "Almuerzo (Post-Fuerza)",
-            time: "14:30 – 15:30 h",
-            title: "Hélices de Lenteja Roja con Gambas, Cherrys & Calabacín",
-            img: foodImgs.camarones,
-            badges: ["15 min", "36g Proteína", "Comprado hoy"],
-            calories: "~490 kcal",
+            type: "Almuerzo",
+            time: "14:30 h",
+            title: "Quinoa o Arroz con Tiras de Pavo y Calabacín al Curry",
+            img: foodImgs.salmon,
+            badges: ["Antiinflamatorio", "Granos Limpios"],
+            calories: "~470 kcal",
             ingredients: [
-              "<strong>65 g de hélices de lenteja roja 100%</strong> (compradas hoy)",
-              "<strong>130 g de gambas peladas</strong> crudas salteadas (compradas hoy)",
-              "<strong>1/2 calabacín verde</strong> en dados y tomates cherry reventados en AOVE",
-              "Chorrito de <strong>limón exprimido</strong>",
-              "Suplementación: <strong>Multivitamínico completo</strong>"
+              "<strong>150 g de pechuga de pavo</strong> en tiras doradas",
+              "<strong>1 taza de quinoa o arroz basmati</strong> (de tu despensa)",
+              "<strong>1/2 calabacín verde</strong> y 1 zanahoria en cubos salteados",
+              "Pizca de curry suave en polvo y AOVE",
+              "Toma de <strong>Multivitamínico completo</strong> en el almuerzo"
             ],
-            instructions: "Cocer la pasta 5 min. En sartén caliente, dorar los cherrys y el calabacín con ajo y AOVE. Añadir las gambas 2 min y mezclar con la pasta."
+            instructions: "Saltear el pavo con el calabacín y zanahoria al curry. Integrar la quinoa/arroz templado y servir en bowl."
           },
           {
             id: "vie-2",
-            type: "Merienda Funcional",
-            time: "18:30 – 19:00 h",
-            title: "Yogur Griego con Canela & 2 Nueces de Brasil",
+            type: "Merienda",
+            time: "18:30 h",
+            title: "Compota Tibia de Manzana con Canela & 2 Nueces de Brasil",
             img: foodImgs.yogur,
-            badges: ["5 min", "Selenio Diario"],
-            calories: "~170 kcal",
+            badges: ["Digestivo", "Pectina"],
+            calories: "~190 kcal",
             ingredients: [
-              "<strong>1 yogur griego ligero</strong>",
-              "<strong>2 nueces de Brasil</strong> fijas",
-              "Infusión tibia de té digestivo"
+              "<strong>1 manzana Golden</strong> en dados al microondas 2 min con agua y canela",
+              "<strong>2 nueces de Brasil fijas</strong>",
+              "Té caliente de hibisco o jengibre"
             ],
-            instructions: "Merienda de recarga antes de la noche social."
+            instructions: "La pectina de la manzana cocida es el mejor bálsamo antiinflamatorio para regenerar la barrera intestinal."
           },
           {
             id: "vie-3",
             type: "Cena",
-            time: "Libre / Social",
-            title: "Cena Social Estratégica (100% Libre de Gluten)",
-            img: foodImgs.pollo,
-            badges: ["Cena Social", "Sin Gluten Estricto", "Flexibilidad"],
-            calories: "~500-600 kcal",
+            time: "21:00 h",
+            title: "Fajitas de Pollo 100% Sin Gluten con Canónigos & Cottage",
+            img: foodImgs.crema,
+            badges: ["Cena Favorita", "100% Sin Gluten", "<10 min"],
+            calories: "~420 kcal",
             ingredients: [
-              "Opciones seguras fuera de casa: <strong>Risotto limpio</strong>, tacos de maíz auténticos con carne/pollo, o hamburguesa en plato con patatas.",
-              "Evitar salsas sospechosas con harinas de trigo"
+              "<strong>2 tortillas de maíz 100%</strong> calientes en sartén",
+              "<strong>150 g de pechuga de pollo</strong> salteada con pimientos o especias mexicanas",
+              "<strong>40 g de queso cottage</strong> (efecto crema agria suave)",
+              "Hojas frescas de canónigos y gotas de lima/limón",
+              "Toma nocturna: <strong>Magnesio Bisglicinato</strong> a las 22:30 h"
             ],
-            instructions: "Disfruta de la noche social manteniendo la regla de oro: Cero gluten."
+            instructions: "Montar las fajitas de maíz con el pollo templado, cucharada de cottage y canónigos crujientes."
           }
         ]
       },
       sab: {
-        name: "Sábado 7 de Noviembre",
+        name: "Sábado 14 de Noviembre (Barre en O2 & Autocuidado)",
         workout: {
           id: "w-sab",
           center: "O2 Boutique",
-          title: "Barre o Recuperación Activa · Sesión 3",
-          duration: "50 min",
-          badge: "bg-emerald-50 text-emerald-800 border border-emerald-200/60",
-          note: "Día 3: Tono postural, glúteo y core sin impacto articular"
+          title: "Barre",
+          duration: "11:05 h (50 min)",
+          badge: "bg-pink-50 text-pink-800 border border-pink-200",
+          note: "Tonificación muscular profunda, postura y glúteo sin impacto articular (subidón de energía)"
         },
         meals: [
           {
             id: "sab-0",
             type: "Desayuno",
-            time: "09:30 – 10:00 h",
-            title: "Pancakes de Avena con Manzana Golden a la Canela",
-            img: foodImgs.waffles,
-            badges: ["15 min", "Sin Gluten", "22g Proteína"],
+            time: "09:45 h (Pre-Barre)",
+            title: "Arepa Tostada con Queso Cottage & Jamón Serrano",
+            img: foodImgs.arepas,
+            badges: ["Energía", "Sin Gluten"],
             calories: "~360 kcal",
             ingredients: [
-              "<strong>40 g de avena sin gluten</strong> triturada con 1 huevo + 2 claras",
-              "<strong>1/2 manzana Golden</strong> en cubos cocinada con canela",
-              "<strong>2 cdas de queso cottage</strong>",
-              "<strong>Café con bebida de avena</strong>"
+              "<strong>09:00 h: Eutirox 50 mcg</strong> con agua sola",
+              "<strong>1 arepa de maíz P.A.N.</strong> tostada con chía",
+              "<strong>40 g de queso cottage</strong> + 2 lonchas finas de jamón serrano o pavo",
+              "Café con bebida de avena sin gluten"
             ],
-            instructions: "Dorar los pancakes en sartén. Coronar con la manzana tibia y el cottage."
+            instructions: "Desayuno digerido 60 min antes de la clase de Barre para rendir con energía estable."
           },
           {
             id: "sab-1",
             type: "Almuerzo",
-            title: "Arroz Vaporizado o Quinoa con Pavo & Calabacín al Curry",
-            img: foodImgs.pollo,
-            badges: ["Despensa", "Antiinflamatorio", "35g Proteína"],
-            calories: "~480 kcal",
+            time: "14:30 h",
+            title: "Salmón al Horno con Mostaza, Patatas Asadas y Cherrys",
+            img: foodImgs.salmon,
+            badges: ["Omega 3", "Post-Entreno"],
+            calories: "~490 kcal",
             ingredients: [
-              "<strong>70 g de arroz vaporizado o quinoa</strong> (¡de tu despensa!)",
-              "<strong>140 g de filetes de pavo</strong> en tiras (comprados hoy)",
-              "<strong>Calabacín verde y zanahoria</strong> en dados con cúrcuma",
-              "Suplementación: <strong>Multivitamínico completo</strong>"
+              "<strong>1 lomo de salmón noruego</strong> untado con mostaza Dijon suave",
+              "<strong>1–2 patatas medianas</strong> en rodajas al horno o Airfryer",
+              "<strong>Tomates cherry confitados</strong> al horno con AOVE y orégano",
+              "Toma de <strong>Multivitamínico completo</strong> en el almuerzo"
             ],
-            instructions: "Saltear el pavo con las verduras y cúrcuma. Servir sobre el arroz vaporizado o quinoa caliente."
+            instructions: "Hornear todo junto a 190 °C durante 18–20 minutos. El plato reconfortante de fin de semana que te encanta."
           },
           {
             id: "sab-2",
-            type: "Merienda Funcional",
-            time: "18:00 – 18:30 h",
-            title: "Infusión Caliente con Frutos Rojos & 2 Nueces",
-            img: foodImgs.te,
-            badges: ["5 min", "Selenio"],
-            calories: "~160 kcal",
+            type: "Merienda",
+            time: "18:30 h",
+            title: "Yogur Griego Ligero con Frutos Rojos & 2 Nueces de Brasil",
+            img: foodImgs.yogur,
+            badges: ["Antioxidantes", "Selenio"],
+            calories: "~210 kcal",
             ingredients: [
-              "<strong>2 nueces de Brasil fijas</strong>",
+              "<strong>1 yogur griego ligero</strong>",
               "<strong>Mix de frutos rojos frescos</strong>",
-              "Infusión tibia"
+              "<strong>2 nueces de Brasil fijas</strong>",
+              "Infusión relajante de manzanilla"
             ],
-            instructions: "Masticar despacio para favorecer la digestión."
+            instructions: "Snack ligero y rico en polifenoles antioxidantes."
           },
           {
             id: "sab-3",
             type: "Cena",
-            time: "21:00 – 21:30 h",
-            title: "Sartenada de Garbanzos con Gambas, Tomate & Feta",
-            img: foodImgs.camarones,
-            badges: ["10 min", "Despensa Express", "30g Proteína"],
-            calories: "~410 kcal",
+            time: "21:00 h",
+            title: "Cena Libre Limpia: Sushi Variado (100% Sin Gluten)",
+            img: foodImgs.crema,
+            badges: ["Capricho Limpio", "Sin Gluten"],
+            calories: "~520 kcal",
             ingredients: [
-              "<strong>150 g de garbanzos en lata</strong> lavados (¡de tu despensa!)",
-              "<strong>100 g de gambas peladas</strong> doradas en sartén",
-              "<strong>Tomate triturado y cherrys</strong> reventados con orégano",
-              "<strong>25 g de queso feta</strong> auténtico desmenuzado por encima"
+              "<strong>Sushi variado:</strong> Nigiris y makis de salmón o atún con arroz de sushi limpio",
+              "<strong>Edamame al vapor</strong> con sal marina",
+              "Salsa de soja tamari <strong>100% libre de gluten</strong> (o salsa de soja sin trigo)",
+              "Toma nocturna: <strong>Magnesio Bisglicinato</strong> a las 22:30 h"
             ],
-            instructions: "Rehogar los cherrys con tomate triturado y AOVE. Añadir los garbanzos y las gambas 2 min. Apagar y coronar con feta."
+            instructions: "Tu cena libre de fin de semana: disfrute total manteniendo la línea roja de cero gluten para despertar desinflamada."
           }
         ]
       },
       dom: {
-        name: "Domingo 8 de Noviembre",
+        name: "Domingo 15 de Noviembre (Descanso & Detox Regenerador)",
         workout: {
           id: "w-dom",
           center: "Libre",
-          title: "Descanso Total & Paseo Relajado",
+          title: "Descanso Total & Paseo al Sol",
           duration: "Libre",
           badge: "bg-slate-100 text-slate-700 border border-slate-200",
-          note: "Recuperación profunda, descanso y preparación para la semana completa"
+          note: "Descanso profundo, hidratación y recarga para la revisión de ginecología del DIU (lunes 16)"
         },
         meals: [
           {
             id: "dom-0",
             type: "Desayuno",
-            time: "10:30 – 11:15 h",
-            title: "Arepa Tostada con Tortilla Francesa & Cottage",
+            time: "10:30 h",
+            title: "Waffles o Pancakes de Avena con Proteína AMIX CFM",
             img: foodImgs.arepas,
-            badges: ["15 min", "24g Proteína"],
+            badges: ["AMIX Dulce", "Sin Gluten"],
             calories: "~380 kcal",
             ingredients: [
-              "<strong>1 arepa dorada</strong> con semillas de chía",
-              "<strong>Tortilla francesa de 2 huevos camperos L</strong>",
-              "<strong>Queso cottage</strong> suave",
-              "Café con bebida de avena"
+              "<strong>09:30 h: Eutirox 50 mcg</strong> con agua sola",
+              "<strong>40 g de copos de avena sin gluten</strong>",
+              "<strong>1 scoop de Proteína AMIX CFM Isolate</strong>",
+              "<strong>1 huevo campero</strong> + 50 ml de leche de avena",
+              "Topping de manzana asada con canela + café con leche de avena"
             ],
-            instructions: "Desayuno tranquilo de domingo."
+            instructions: "Batir y verter en gofrera o sartén antiadherente. Desayuno reconfortante de domingo."
           },
           {
             id: "dom-1",
-            type: "Almuerzo de Domingo",
-            time: "14:30 – 15:30 h",
-            title: "Salmón Noruego Sellado con Puré de Patata & Espárragos",
+            type: "Almuerzo",
+            time: "14:30 h",
+            title: "Bowl Templado de Quinoa con Pollo Deshilachado y Cherrys",
             img: foodImgs.salmon,
-            badges: ["Omega-3 IFOS", "Confort", "34g Proteína"],
-            calories: "~510 kcal",
+            badges: ["Quinoa", "Proteína Limpia"],
+            calories: "~480 kcal",
             ingredients: [
-              "<strong>Lomo de salmón noruego</strong> con piel crujiente (comprado hoy)",
-              "<strong>Puré de patata de confort</strong> (¡sobrecito de tu despensa!)",
-              "<strong>Espárragos verdes finos</strong> a la plancha",
-              "Suplementación: <strong>Multivitamínico completo</strong>"
+              "<strong>1 taza de quinoa cocida</strong> (de tu despensa)",
+              "<strong>150 g de pechuga de pollo</strong> asada deshilachada",
+              "<strong>Tomates cherry confitados</strong> + dados de calabacín",
+              "1 cda de AOVE, sal marina y limón exprimido",
+              "Toma de <strong>Multivitamínico completo</strong> en el almuerzo"
             ],
-            instructions: "Sellar el salmón en sartén bien caliente 4 min por la piel. Preparar el puré de patata en 3 minutos. Servir con los espárragos dorados."
+            instructions: "Bowl tibio supernutritivo y de fácil asimilación intestinal."
           },
           {
             id: "dom-2",
-            type: "Merienda Funcional",
-            time: "18:30 – 19:00 h",
-            title: "Yogur Griego con Compota de Manzana & 2 Nueces",
+            type: "Merienda",
+            time: "18:30 h",
+            title: "Infusión Digestiva con Chocolate Negro & 2 Nueces de Brasil",
             img: foodImgs.yogur,
-            badges: ["5 min", "Selenio"],
-            calories: "~170 kcal",
+            badges: ["Antioxidantes", "Selenio"],
+            calories: "~160 kcal",
             ingredients: [
-              "<strong>1 yogur griego ligero</strong>",
-              "<strong>1/2 manzana Golden cocinada con canela</strong>",
-              "<strong>2 nueces de Brasil fijas</strong>"
+              "<strong>Infusión caliente de jengibre y manzanilla</strong>",
+              "<strong>2 nueces de Brasil fijas</strong>",
+              "<strong>1 onza de chocolate negro (>85%)</strong>",
+              "<em>A las 20:00 h: Revisión y preparación de la nueva semana.</em>"
             ],
-            instructions: "A las 20:00 h: La automatización genera la nueva semana completa."
+            instructions: "Momento de pausa y recarga de dopamina con el chocolate negro puro."
           },
           {
             id: "dom-3",
             type: "Cena",
-            time: "21:00 – 21:30 h",
-            title: "Crema Dorada de Otoño con Huevo Poché & Semillas Mixtas",
+            time: "21:00 h",
+            title: "Crema Depurativa con Proteína Moara & Revuelto en AOVE",
             img: foodImgs.crema,
-            badges: ["Batch Cooking", "Confort Digestivo", "22g Proteína"],
-            calories: "~330 kcal",
+            badges: ["Proteína Moara", "Cena Ligera", "<10 min"],
+            calories: "~340 kcal",
             ingredients: [
-              "<strong>1 cuenco de Crema Dorada</strong> (batch prep)",
-              "<strong>1 huevo campero pasado por agua o poché</strong> (yema dorada)",
-              "<strong>Semillas mixtas con calabaza</strong> tostadas",
+              "<strong>1 bowl de crema de verduras</strong> templada",
+              "<strong>1 cda colmada de Proteína de Guisante Moara</strong> batida en la crema",
+              "<strong>Revuelto de 2 huevos camperos</strong> en AOVE con sal marina y orégano",
               "Toma nocturna: <strong>Magnesio Bisglicinato</strong> a las 22:30 h"
             ],
-            instructions: "Calentar la crema. Colocar el huevo poché en el centro y romper la yema."
+            instructions: "Cena suave, digestiva y alta en proteína vegetal y huevos para dormir ligera antes de la revisión médica del lunes 16."
           }
         ]
       }
@@ -1206,8 +1389,8 @@
     function getAutoTodayKey() {
       const now = new Date();
       const dow = now.getDay(); // 0: dom, 1: lun, 2: mar, 3: mie, 4: jue, 5: vie, 6: sab
-      const map = { 3: 'mie', 4: 'jue', 5: 'vie', 6: 'sab', 0: 'dom' };
-      return map[dow] || 'jue';
+      const map = { 1: 'lun', 2: 'mar', 3: 'mie', 4: 'jue', 5: 'vie', 6: 'sab', 0: 'dom' };
+      return map[dow] || 'lun';
     }
 
     let currentDay = getAutoTodayKey();
@@ -1222,25 +1405,20 @@
           cb.closest('label').querySelector('.item-title').classList.add('line-through', 'text-slate-400');
         }
       });
-      updateGroceryBadge();
+      updateGroceryProgress();
+      updateToggleAllBtn();
     }
 
     function switchView(view) {
       currentView = view;
-      const progressSec = document.getElementById('progress-summary-section');
-      
-      document.getElementById('view-menu-container').classList.toggle('hidden', view !== 'menu');
-      document.getElementById('view-batch-container').classList.toggle('hidden', view !== 'batch');
-      document.getElementById('view-super-container').classList.toggle('hidden', view !== 'super');
-
-      if (view === 'super' || view === 'batch') {
-        progressSec.classList.add('hidden');
-      } else {
-        progressSec.classList.remove('hidden');
-      }
+      ['menu', 'batch', 'super'].forEach(v => {
+        const el = document.getElementById('view-' + v + '-container');
+        if (el) el.classList.toggle('hidden', v !== view);
+      });
 
       ['menu', 'batch', 'super'].forEach(v => {
-        const btn = document.getElementById('view-btn-' + v);
+        const btn = document.getElementById('btn-nav-' + v);
+        if (!btn) return;
         if (v === view) {
           btn.className = "px-2.5 py-1.5 sm:px-3 sm:py-1.5 rounded-lg font-bold transition-all bg-white text-slate-900 shadow-2xs cursor-pointer";
         } else {
@@ -1253,13 +1431,15 @@
 
     function updateDayTabs(activeKey) {
       const todayKey = getAutoTodayKey();
-      const dayOrder = ['mie', 'jue', 'vie', 'sab', 'dom'];
+      const dayOrder = ['lun', 'mar', 'mie', 'jue', 'vie', 'sab', 'dom'];
       const dayNames = {
-        mie: { label: 'Mié 4', name: 'Mié' },
-        jue: { label: 'Jue 5', name: 'Jue' },
-        vie: { label: 'Vie 6', name: 'Vie' },
-        sab: { label: 'Sáb 7', name: 'Sáb' },
-        dom: { label: 'Dom 8', name: 'Dom' }
+        lun: { label: 'Lun 9', name: 'Lun' },
+        mar: { label: 'Mar 10', name: 'Mar' },
+        mie: { label: 'Mié 11', name: 'Mié' },
+        jue: { label: 'Jue 12', name: 'Jue' },
+        vie: { label: 'Vie 13', name: 'Vie' },
+        sab: { label: 'Sáb 14', name: 'Sáb' },
+        dom: { label: 'Dom 15', name: 'Dom' }
       };
 
       const todayIndex = dayOrder.indexOf(todayKey);
