@@ -101,14 +101,15 @@
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 w-full">
         
         <!-- CARD 1: PESO OBJETIVO & ONDA DE DESCENSO -->
-        <div class="p-2.5 sm:p-3 rounded-xl bg-slate-50/70 border border-slate-200/70 flex flex-col justify-between min-w-0">
+        <div class="p-2.5 sm:p-3 rounded-xl bg-slate-50/70 border border-slate-200/70 flex flex-col justify-between min-w-0 cursor-pointer hover:border-emerald-300 transition-all select-none" onclick="toggleWeightGuide()" title="Toca para ver el protocolo de pesaje y registrar nuevo peso">
           <div>
             <div class="flex items-center justify-between">
               <span class="text-[9.5px] uppercase font-bold tracking-wider text-slate-500 truncate">Peso & Meta</span>
               <span class="text-[9.5px] font-bold text-emerald-700 bg-emerald-50 px-1 py-0.5 rounded border border-emerald-100">→ 60 kg</span>
             </div>
-            <div class="mt-0.5">
-              <span class="text-base sm:text-lg font-extrabold text-slate-900">69,0 <span class="text-[10px] font-medium text-slate-500">kg</span></span>
+            <div class="mt-0.5 flex items-baseline justify-between">
+              <span class="text-base sm:text-lg font-extrabold text-slate-900" id="current-weight-display">69,0 <span class="text-[10px] font-medium text-slate-500">kg</span></span>
+              <span class="text-[8.5px] font-bold text-amber-700 bg-amber-50 px-1 py-0.5 rounded border border-amber-200" title="Próximo pesaje recomendado">17–19 Nov ▾</span>
             </div>
           </div>
 
@@ -131,7 +132,7 @@
                 <circle cx="128" cy="7" r="3.8" fill="#10B981" stroke="#FFFFFF" stroke-width="1.8"/>
               </svg>
             </div>
-            <span class="text-[8.5px] font-semibold text-slate-500 block text-right mt-0.5">Ritmo: −0.4 kg/sem</span>
+            <span class="text-[8.5px] font-semibold text-slate-500 block text-right mt-0.5">Ritmo: −0.4 kg/sem · Pauta ▾</span>
           </div>
         </div>
 
@@ -160,54 +161,19 @@
           </div>
         </div>
 
-        <!-- CARD 3: GIMNASIO O2 (REAJUSTADO: JUEVES, VIERNES Y SÁBADO ACTIVOS) -->
-        <div class="p-2.5 sm:p-3 rounded-xl bg-slate-50/70 border border-slate-200/70 flex flex-col justify-between min-w-0">
+        <!-- CARD 3: ENTRENAMIENTOS SEMANALES (SINCRONIZADO CON EL MENÚ) -->
+        <div class="p-2.5 sm:p-3 rounded-xl bg-slate-50/70 border border-slate-200/70 flex flex-col justify-between min-w-0" id="card-training-stats">
           <div class="flex items-baseline justify-between">
-            <span class="text-[9.5px] uppercase font-bold tracking-wider text-emerald-800 truncate">Gimnasio O2</span>
-            <span class="text-[9.5px] font-bold text-slate-700">3 días</span>
+            <span class="text-[9.5px] uppercase font-bold tracking-wider text-emerald-800 truncate">Entrenamientos</span>
+            <span class="text-[9.5px] font-bold text-slate-700" id="card-training-count">4 días</span>
           </div>
 
           <!-- Barras de 7 días: TODAS CON EL MISMO ALTO (10px) -->
           <div class="pt-2">
-            <div class="flex items-center justify-between gap-1 h-6">
-              <div class="flex-1 flex flex-col items-center cursor-pointer" onclick="selectDay('mie')" title="Lunes (Descanso)">
-                <div class="w-full bg-slate-200 rounded-full" style="height: 10px;"></div>
-                <span class="text-[8.5px] font-semibold text-slate-400 mt-1">L</span>
-              </div>
-              <div class="flex-1 flex flex-col items-center cursor-pointer" onclick="selectDay('mie')" title="Martes (Descanso)">
-                <div class="w-full bg-slate-200 rounded-full" style="height: 10px;"></div>
-                <span class="text-[8.5px] font-semibold text-slate-400 mt-1">M</span>
-              </div>
-              <div class="flex-1 flex flex-col items-center cursor-pointer" onclick="selectDay('mie')" title="Miércoles (Descanso ayer)">
-                <div class="w-full bg-slate-200 rounded-full" style="height: 10px;"></div>
-                <span class="text-[8.5px] font-semibold text-slate-400 mt-1">X</span>
-              </div>
-              
-              <!-- JUEVES (HOY - ACTIVO CON GLOW DOT) -->
-              <div class="flex-1 flex flex-col items-center cursor-pointer relative" onclick="selectDay('jue')" title="Jueves: Sala de Fuerza O2">
-                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mb-0.5 animate-pulse" title="Hoy activa"></span>
-                <div class="w-full bg-emerald-600 rounded-full shadow-2xs" style="height: 10px;"></div>
-                <span class="text-[8.5px] font-extrabold text-emerald-700 mt-0.5">J</span>
-              </div>
-
-              <!-- VIERNES (MAÑANA - SALA DE FUERZA) -->
-              <div class="flex-1 flex flex-col items-center cursor-pointer" onclick="selectDay('vie')" title="Viernes: Sala de Fuerza O2">
-                <div class="w-full bg-emerald-600 rounded-full shadow-2xs" style="height: 10px;"></div>
-                <span class="text-[8.5px] font-extrabold text-emerald-700 mt-1">V</span>
-              </div>
-
-              <!-- SÁBADO (BARRE / FUERZA) -->
-              <div class="flex-1 flex flex-col items-center cursor-pointer" onclick="selectDay('sab')" title="Sábado: Barre 11:05 h">
-                <div class="w-full bg-emerald-600 rounded-full shadow-2xs" style="height: 10px;"></div>
-                <span class="text-[8.5px] font-extrabold text-emerald-700 mt-1">S</span>
-              </div>
-
-              <div class="flex-1 flex flex-col items-center cursor-pointer" onclick="selectDay('dom')" title="Domingo (Descanso)">
-                <div class="w-full bg-slate-200 rounded-full" style="height: 10px;"></div>
-                <span class="text-[8.5px] font-semibold text-slate-400 mt-1">D</span>
-              </div>
+            <div class="flex items-center justify-between gap-1 h-6" id="card-training-bars">
+              <!-- Renderizado dinámicamente por renderWeeklyTrainingCard() -->
             </div>
-            <span class="text-[8.5px] font-bold text-emerald-700 block text-right mt-1.5 truncate">Jue · Vie · Sáb</span>
+            <span class="text-[8.5px] font-bold text-emerald-700 block text-right mt-1.5 truncate" id="card-training-subtitle">Lun · Mar · Jue · Sáb</span>
           </div>
         </div>
 
@@ -231,6 +197,88 @@
           </div>
         </div>
 
+      </div>
+
+      <!-- PANEL DESPLEGABLE: PROTOCOLO DE PESAJE & GUÍA CLÍNICA DE BÁSCULA -->
+      <div id="weight-guide-panel" class="hidden mt-3 pt-3 border-t border-slate-200/70 space-y-3 transition-all">
+        <div class="p-3 sm:p-4 rounded-xl bg-gradient-to-r from-amber-50/90 via-orange-50/60 to-rose-50/40 border border-amber-200 shadow-2xs">
+          <div class="flex items-start justify-between gap-2 pb-2 border-b border-amber-200/60">
+            <div class="flex items-center gap-2">
+              <span class="text-base">⚖️</span>
+              <div>
+                <h4 class="text-xs sm:text-sm font-extrabold text-slate-900">Protocolo de Báscula: ¿Cuándo y Cómo Pesarte?</h4>
+                <p class="text-[11px] text-slate-600">Sincronización con el ciclo hormonal, DIU Kyleena y retención de líquidos</p>
+              </div>
+            </div>
+            <button type="button" onclick="toggleWeightGuide()" class="text-slate-400 hover:text-slate-600 text-sm font-bold p-1 cursor-pointer">✕</button>
+          </div>
+
+          <!-- Alerta de Fase Actual -->
+          <div class="mt-2.5 p-2.5 rounded-lg bg-amber-100/70 border border-amber-200/80 text-xs text-amber-900">
+            <div class="font-extrabold flex items-center gap-1.5">
+              <span>⚠️ ESTA SEMANA (9 AL 15 NOV): NO SUBIRSE A LA BÁSCULA</span>
+            </div>
+            <p class="mt-1 text-[11px] leading-relaxed text-amber-800">
+              Estás en el <strong>Día 27 del ciclo (Fase Lútea / SPM)</strong>. Tras ovular y caer la progesterona, el agua extracelular (ECW 42.9%) se acumula en los tejidos. La báscula mostraría falsamente entre <strong>+1,0 y +2,5 kg de más que son 100% agua</strong>, no grasa.
+            </p>
+          </div>
+
+          <!-- Próxima Fecha Óptima -->
+          <div class="mt-2.5 p-2.5 rounded-lg bg-emerald-50 border border-emerald-200 text-xs text-emerald-950">
+            <div class="flex items-center justify-between">
+              <span class="font-extrabold flex items-center gap-1 text-emerald-900">
+                <span>🎯 Ventana Óptima Recomendada:</span>
+              </span>
+              <span class="font-black bg-emerald-600 text-white px-2 py-0.5 rounded text-[10.5px]">17 – 19 de Noviembre</span>
+            </div>
+            <p class="mt-1 text-[11px] leading-relaxed text-emerald-800">
+              <strong>Fase Folicular (Días 5 a 8 post-regla / reset):</strong> Los estrógenos suben de forma limpia, el riñón drena todo el exceso de sodio y el peso refleja con <strong>máxima fidelidad tu recomposición real</strong>.
+            </p>
+          </div>
+
+          <!-- Las 4 Reglas Clínicas de Oro -->
+          <div class="mt-2.5 grid grid-cols-1 sm:grid-cols-2 gap-2 text-[11px]">
+            <div class="p-2 bg-white/90 rounded-lg border border-slate-200/70 text-slate-700">
+              <strong class="text-slate-900 block font-bold">1. Frecuencia: Cada 2–3 semanas</strong>
+              La grasa baja a un ritmo de 0,3-0,5 kg/semana. Las variaciones diarias son solo agua y tránsito digestivo.
+            </div>
+            <div class="p-2 bg-white/90 rounded-lg border border-slate-200/70 text-slate-700">
+              <strong class="text-slate-900 block font-bold">2. Momento: Al despertar en ayunas</strong>
+              Nada más levantarte, antes de beber agua o Eutirox, e inmediatamente tras haber orinado.
+            </div>
+            <div class="p-2 bg-white/90 rounded-lg border border-slate-200/70 text-slate-700">
+              <strong class="text-slate-900 block font-bold">3. Misma báscula y sin ropa</strong>
+              Descalza, sobre superficie dura (no alfombra) y con la misma ropa interior mínima.
+            </div>
+            <div class="p-2 bg-white/90 rounded-lg border border-slate-200/70 text-slate-700">
+              <strong class="text-slate-900 block font-bold">4. Noche previa sin excesos</strong>
+              Sin cena muy salada, sin alcohol y sin haber hecho agujetas extremas la tarde antes.
+            </div>
+          </div>
+
+          <!-- Historial & Registro de Pesajes Oficiales -->
+          <div class="mt-3 pt-2.5 border-t border-amber-200/60">
+            <div class="flex items-center justify-between mb-1.5">
+              <span class="text-xs font-extrabold text-slate-800">Historial de Pesajes Oficiales</span>
+              <span class="text-[10px] text-slate-500 font-medium">Guardado en tu dispositivo</span>
+            </div>
+            
+            <div id="weight-logs-history" class="space-y-1.5 mb-2.5">
+              <!-- Injected by JS -->
+            </div>
+
+            <!-- Formulario de Nuevo Registro -->
+            <div class="flex items-center gap-1.5">
+              <input type="number" id="input-new-weight" step="0.1" min="40" max="120" placeholder="Ej: 68.5" class="w-24 px-2 py-1.5 rounded-lg border border-slate-300 text-xs bg-white text-slate-800 focus:outline-emerald-600 font-bold text-center" />
+              <span class="text-xs font-bold text-slate-600">kg</span>
+              <input type="text" id="input-new-weight-date" placeholder="Fecha (opcional)" class="flex-1 px-2 py-1.5 rounded-lg border border-slate-300 text-xs bg-white text-slate-800 focus:outline-emerald-600" />
+              <button type="button" onclick="saveWeightLog()" class="px-3 py-1.5 rounded-lg bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-bold transition shadow-2xs cursor-pointer shrink-0">
+                Guardar
+              </button>
+            </div>
+          </div>
+
+        </div>
       </div>
 
     </section>
@@ -1600,6 +1648,7 @@
       }
 
       renderWorkoutBanner();
+      renderWeeklyTrainingCard();
       renderMeals();
     }
 
@@ -1622,6 +1671,7 @@
       doneState[workoutId] = !doneState[workoutId];
       safeSet('florencia_workout_done', doneState);
       renderWorkoutBanner();
+      renderWeeklyTrainingCard();
     }
 
     function renderWorkoutBanner() {
@@ -1930,6 +1980,8 @@ Comentarios adicionales: `;
       state[today] = Math.max(0, Math.min(8, count));
       safeSet('florencia_water_tracker', state);
       renderWaterTracker();
+      renderWeeklyTrainingCard();
+      renderWeightLogs();
     }
 
     function toggleWaterGlass(index) {
@@ -1979,6 +2031,8 @@ Comentarios adicionales: `;
 
     window.addEventListener('DOMContentLoaded', () => {
       renderWaterTracker();
+      renderWeeklyTrainingCard();
+      renderWeightLogs();
       initFromLocalStorage();
       const autoDay = getAutoTodayKey();
       selectDay(autoDay);

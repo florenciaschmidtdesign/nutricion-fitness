@@ -144,3 +144,39 @@
   * **Regla en Almuerzo y Cena:** Beber como máximo 1/2 vaso durante la comida para **no diluir el ácido clorhídrico estomacal** (evita la pesadez y la hinchazón).
   * **16:00 a 20:00 h (Tarde):** 3 vasos de agua / té de jengibre o hibisco (750 ml).
   * **22:00 h (Noche):** 1 vaso / infusión caliente relajante con la toma de **Magnesio Bisglicinato**.
+
+---
+
+## 9. PROTOCOLO DE PESAJE, BÁSCULA & RESPUESTA CLÍNICA: ¿CUÁNDO ES MEJOR PESARME?
+
+### ⚠️ Regla de Oro Inmediata: ESTA SEMANA (9 AL 15 NOV) NO SUBIRSE A LA BÁSCULA
+* **¿Por qué?** Te encuentras en el **Día 27 de tu ciclo menstrual (Fase Lútea Tardía / Premenstrual - PMS)** y en proceso de adaptación al DIU Kyleena.
+* **La trampa fisiológica del agua extracelular:**
+  * Justo antes de que baje la regla, la caída conjunta de progesterona y estrógenos genera una retención transitoria de sodio y líquido en el espacio intersticial.
+  * Tu estudio de bioimpedancia inicial ya reflejó un **Agua Extracelular (ECW) de 42,9% (Rango HIGH)**: tu organismo retiene líquido con muchísima facilidad ante estrés, cambios hormonales o inflamación digestiva.
+  * Si te pesas hoy o estos días, la báscula marcará falsamente entre **+1,0 y +2,5 kg más**. Ese aumento es **100% agua e inflamación transitoria**, jamás grasa corporal ni pérdida muscular.
+  * Pesarte en estos días solo genera frustración innecesaria y distorsiona tu percepción del progreso real.
+
+---
+
+### 🎯 La Ventana Óptima de Pesaje Clínico: DEL 17 AL 19 DE NOVIEMBRE
+* **Fase Folicular Temprana / Media (Días 5 a 8 del ciclo):**
+  * Una vez superado el sangrado menstrual (o completado el reseteo hormonal de este ciclo), los estrógenos suben de manera limpia y fisiológica.
+  * Los riñones eliminan todo el exceso de sodio y agua retenida durante el PMS.
+  * En esta ventana de 3–4 días, tu peso corporal y tu bioimpedancia reflejan con **máxima fidelidad tu recomposición corporal real (grasa vs. músculo magro)**.
+
+---
+
+### 📋 Las 4 Reglas Clínicas Obligatorias para Pesarte con Éxito
+1. **Frecuencia: Cada 2 a 3 semanas únicamente**
+   * Queda terminantemente desaconsejado el pesaje diario o cada 2–3 días. La grasa corporal disminuye a un ritmo biológico saludable de 0,3 a 0,5 kg por semana; cualquier variación de un día para otro responde únicamente a agua, tránsito intestinal o glucógeno.
+2. **Momento Exacto del Día:**
+   * Siempre **por la mañana, inmediatamente al despertar**.
+   * **En ayunas riguroso** (antes de tomar agua, café o el Eutirox).
+   * **Inmediatamente después de haber orinado** (y si es posible, evacuado el intestino).
+3. **Misma Indumentaria & Misma Báscula:**
+   * Descalza, sin ropa o con la misma ropa interior mínima.
+   * Báscula colocada siempre sobre suelo duro y plano (evitar alfombras o desniveles).
+4. **Condición de la Noche Anterior:**
+   * No haber cenado ultraprocesados, comida muy salada ni alcohol.
+   * No haber realizado la tarde previa una sesión de fuerza extenuante que cause inflamación muscular aguda (las microlesiones musculares retienen agua transitoriamente para la reparación).
