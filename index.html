@@ -483,13 +483,13 @@
         </p>
       </div>
 
-      <!-- 5 VISUAL BATCH MODULES WITH REAL PHOTOGRAPHY & EMBEDDED MASTER TECHNIQUES -->
+            <!-- 5 VISUAL BATCH MODULES WITH REAL PHOTOGRAPHY & INTERACTIVE CHEVRONS -->
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 w-full">
 
         <!-- MÓDULO 1: BATCH DE PANCAKES PROTEICOS MULTIDÍA (3 A 4 DÍAS) -->
         <div class="card-craft rounded-2xl overflow-hidden flex flex-col justify-between w-full">
           <div>
-            <div class="relative h-44 sm:h-48 w-full bg-slate-100 overflow-hidden">
+            <div class="relative h-44 sm:h-48 w-full bg-slate-100 overflow-hidden cursor-pointer" onclick="toggleBatchCollapse('pancakes')">
               <img src="images/pancakes_avena.jpg" alt="Pancakes proteicos de avena" class="w-full h-full object-cover" />
               <div class="absolute top-2 left-2 bg-slate-900/80 backdrop-blur-sm text-white px-2.5 py-1 rounded-lg text-[10px] font-bold tracking-wide uppercase">
                 Módulo 1 · Desayunos Express
@@ -499,113 +499,139 @@
               </div>
             </div>
             
-            <div class="p-3.5 space-y-2.5">
+            <div class="p-3.5">
               <div>
                 <div class="flex items-center gap-1.5 mb-0.5">
                   <span class="text-[9.5px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-100">6 a 8 Pancakes</span>
                   <span class="text-[9.5px] font-semibold text-slate-500">· 28g proteína / ración</span>
                 </div>
-                <h4 class="font-bold text-sm text-slate-900">Batch Pancakes AMIX & Avena Esponjosos</h4>
+                <h4 class="font-bold text-sm text-slate-900 cursor-pointer" onclick="toggleBatchCollapse('pancakes')">Batch Pancakes AMIX & Avena Esponjosos</h4>
                 <p class="text-[11px] text-slate-600 leading-relaxed mt-0.5">
-                  Prepara la torre completa en 12 minutos. Guárdalos en tupper hermético y en las mañanas solo tardas 30 segundos en calentarlos en la tostadora.
+                  Haz la torre completa en 12 minutos. Guárdalos en tupper hermético y en las mañanas solo tardas 30 segundos en calentarlos en la tostadora.
                 </p>
               </div>
-              
-              <!-- Cantidades Exactas para Varios Días -->
-              <div class="pt-0.5">
-                <span class="text-[10px] uppercase font-bold text-slate-400 block mb-1">Cantidades Exactas para el Batch (3–4 Días):</span>
-                <div class="grid grid-cols-2 gap-1.5 text-[10.5px] text-slate-700">
-                  <span class="p-1.5 rounded-lg bg-slate-50 border border-slate-100">🌾 <strong>120 g</strong> Avena molida sin gluten</span>
-                  <span class="p-1.5 rounded-lg bg-slate-50 border border-slate-100">💪 <strong>2 cazos (60 g)</strong> AMIX CFM Isolate</span>
-                  <span class="p-1.5 rounded-lg bg-slate-50 border border-slate-100">🥚 <strong>2 huevos + 2 claras</strong> camperos</span>
-                  <span class="p-1.5 rounded-lg bg-slate-50 border border-slate-100">🥛 <strong>160–180 ml</strong> Bebida de avena</span>
-                  <span class="p-1.5 rounded-lg bg-slate-50 border border-slate-100">✨ <strong>1 cdita (4 g)</strong> Levadura química SG</span>
-                  <span class="p-1.5 rounded-lg bg-slate-50 border border-slate-100">🌿 <strong>1 cdita</strong> Canela de Ceilán + pizca sal</span>
+
+              <!-- BOTÓN FLECHA / CHEVRON PARA DESPLEGAR MÁS INFO -->
+              <button type="button" onclick="toggleBatchCollapse('pancakes')" class="tap-effect mt-2.5 w-full flex items-center justify-between p-2 rounded-xl bg-slate-50 hover:bg-emerald-50/70 border border-slate-200/80 text-xs font-semibold text-slate-700 hover:text-emerald-800 transition cursor-pointer">
+                <span class="flex items-center gap-1.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                  <span id="batch-btn-text-pancakes">Ver cantidades y técnica paso a paso</span>
+                </span>
+                <div class="w-6 h-6 rounded-full flex items-center justify-center bg-white border border-slate-200/80 shadow-2xs">
+                  <svg id="chevron-batch-pancakes" class="w-3.5 h-3.5 transform transition-transform duration-200 text-slate-500" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                </div>
+              </button>
+
+              <!-- CONTENIDO DESPLEGABLE CON MÁS INFO -->
+              <div id="batch-body-pancakes" class="hidden mt-3 space-y-2.5 pt-2.5 border-t border-slate-100">
+                <!-- Cantidades Exactas para Varios Días -->
+                <div>
+                  <span class="text-[10px] uppercase font-bold text-slate-400 block mb-1">Cantidades Exactas para el Batch (3–4 Días):</span>
+                  <div class="grid grid-cols-2 gap-1.5 text-[10.5px] text-slate-700">
+                    <span class="p-1.5 rounded-lg bg-slate-50 border border-slate-100">🌾 <strong>120 g</strong> Avena molida sin gluten</span>
+                    <span class="p-1.5 rounded-lg bg-slate-50 border border-slate-100">💪 <strong>2 cazos (60 g)</strong> AMIX CFM Isolate</span>
+                    <span class="p-1.5 rounded-lg bg-slate-50 border border-slate-100">🥚 <strong>2 huevos + 2 claras</strong> camperos</span>
+                    <span class="p-1.5 rounded-lg bg-slate-50 border border-slate-100">🥛 <strong>160–180 ml</strong> Bebida de avena</span>
+                    <span class="p-1.5 rounded-lg bg-slate-50 border border-slate-100">✨ <strong>1 cdita (4 g)</strong> Levadura química SG</span>
+                    <span class="p-1.5 rounded-lg bg-slate-50 border border-slate-100">🌿 <strong>1 cdita</strong> Canela de Ceilán + pizca sal</span>
+                  </div>
+                </div>
+
+                <!-- TÉCNICA CERO FRICCIÓN Y PASO A PASO DENTRO DEL MÓDULO -->
+                <div class="p-3 rounded-xl bg-amber-50/80 border border-amber-200/70 space-y-1.5">
+                  <div class="flex items-center gap-1.5 text-amber-900 font-extrabold text-[10px] uppercase tracking-wide">
+                    <svg class="w-3.5 h-3.5 text-amber-700 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    <span>Técnica Cero Fricción · Paso a Paso Maestro</span>
+                  </div>
+                  <div class="space-y-1 text-[10.5px] text-slate-700 leading-snug">
+                    <p>
+                      <strong>1. Batido express (45 seg):</strong> Pon todo en la batidora o vaso de Minipimer y tritura 45 segundos hasta obtener una crema homogénea y densa.
+                    </p>
+                    <p>
+                      <strong>2. Reposo de 3 minutos (El secreto):</strong> Deja reposar la masa mientras calientas la sartén. La avena y la proteína absorben líquido y la levadura activa microburbujas para que queden gorditas.
+                    </p>
+                    <p>
+                      <strong>3. Vuelta y vuelta (1,5 min por lado):</strong> Sartén a fuego medio (nivel 6/9) con 2 gotas de AOVE. Vierte 2-3 cdas por pancake. Cuando salgan agujeritos en la superficie, gira y dora 45 segundos.
+                    </p>
+                    <p>
+                      <strong>4. Conservación & Desayuno en 30s:</strong> Deja enfriar en un plato y guarda en tupper hermético en la nevera (duran 4–5 días). Cada mañana, saca 2 pancakes y mételos <strong>30 segundos en la tostadora</strong>: quedan crujientes por fuera y tiernos por dentro.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="p-2.5 rounded-xl bg-emerald-50 border border-emerald-200 text-[10.5px] text-emerald-900 font-semibold">
+                  Rinde: 6 a 8 pancakes (3 a 4 desayunos listos sin cocinar entre semana).
                 </div>
               </div>
 
-              <!-- TÉCNICA CERO FRICCIÓN Y PASO A PASO DENTRO DEL MÓDULO -->
-              <div class="p-3 rounded-xl bg-amber-50/80 border border-amber-200/70 space-y-1.5">
-                <div class="flex items-center gap-1.5 text-amber-900 font-extrabold text-[10px] uppercase tracking-wide">
-                  <svg class="w-3.5 h-3.5 text-amber-700 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-                  <span>Técnica Cero Fricción · Paso a Paso Maestro</span>
-                </div>
-                <div class="space-y-1 text-[10.5px] text-slate-700 leading-snug">
-                  <p>
-                    <strong>1. Batido express (45 seg):</strong> Pon todo en la batidora o vaso de Minipimer y tritura 45 segundos hasta obtener una crema homogénea y densa.
-                  </p>
-                  <p>
-                    <strong>2. Reposo de 3 minutos (El secreto):</strong> Deja reposar la masa mientras calientas la sartén. La avena y la proteína absorben líquido y la levadura activa microburbujas para que queden gorditas.
-                  </p>
-                  <p>
-                    <strong>3. Vuelta y vuelta (1,5 min por lado):</strong> Sartén a fuego medio (nivel 6/9) con 2 gotas de AOVE. Vierte 2-3 cdas por pancake. Cuando salgan agujeritos en la superficie, gira y dora 45 segundos.
-                  </p>
-                  <p>
-                    <strong>4. Conservación & Desayuno en 30s:</strong> Deja enfriar en un plato y guarda en tupper hermético en la nevera (duran 4–5 días). Cada mañana, saca 2 pancakes y mételos <strong>30 segundos en la tostadora</strong>: quedan crujientes por fuera y tiernos por dentro.
-                  </p>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-          <div class="p-3.5 pt-0">
-            <div class="p-2.5 rounded-xl bg-emerald-50 border border-emerald-200 text-[10.5px] text-emerald-900 font-semibold">
-              Rinde: 6 a 8 pancakes (3 a 4 desayunos listos sin cocinar entre semana).
             </div>
           </div>
         </div>
 
-        
         <!-- MÓDULO 2: LA BANDEJA DORADA DE HORNO -->
         <div class="card-craft rounded-2xl overflow-hidden flex flex-col justify-between w-full">
           <div>
-            <div class="relative h-40 sm:h-44 w-full bg-slate-100 overflow-hidden">
+            <div class="relative h-44 sm:h-48 w-full bg-slate-100 overflow-hidden cursor-pointer" onclick="toggleBatchCollapse('crema')">
               <img src="images/crema_calabaza.jpg" alt="Crema de verduras asadas" class="w-full h-full object-cover" />
-              <div class="absolute top-2 left-2 bg-slate-900/80 backdrop-blur-sm text-white px-2 py-0.5 rounded text-[9.5px] font-bold tracking-wide uppercase">
+              <div class="absolute top-2 left-2 bg-slate-900/80 backdrop-blur-sm text-white px-2.5 py-1 rounded-lg text-[10px] font-bold tracking-wide uppercase">
                 Módulo 2 · Horno o Ninja
               </div>
-              <div class="absolute bottom-2 right-2 bg-white/90 backdrop-blur-sm text-emerald-800 px-2 py-0.5 rounded text-[9.5px] font-bold">
+              <div class="absolute bottom-2 right-2 bg-white/95 backdrop-blur-sm text-emerald-800 px-2 py-0.5 rounded-md text-[10px] font-bold shadow-2xs">
                 30 min · 200 °C
               </div>
             </div>
             
-            <div class="p-3 space-y-2">
+            <div class="p-3.5">
               <div>
-                <h4 class="font-bold text-xs sm:text-sm text-slate-900">Bandeja Dorada & Crema Sedosa</h4>
+                <h4 class="font-bold text-sm text-slate-900 cursor-pointer" onclick="toggleBatchCollapse('crema')">Bandeja Dorada & Crema Sedosa</h4>
                 <p class="text-[11px] text-slate-600 leading-relaxed mt-0.5">
                   Asa la calabaza, zanahorias, puerro y calabacín en bandeja única con AOVE y sal marina. Tritúralo para tener base de cremas lista.
                 </p>
               </div>
-              
-              <div class="pt-0.5">
-                <span class="text-[9.5px] uppercase font-bold text-slate-500 block mb-1">Ingredientes:</span>
-                <div class="flex flex-wrap gap-1">
-                  <span class="px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 text-[9.5px] font-medium">Calabaza</span>
-                  <span class="px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 text-[9.5px] font-medium">Zanahoria</span>
-                  <span class="px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 text-[9.5px] font-medium">Puerro</span>
-                  <span class="px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 text-[9.5px] font-medium">Proteína Moara</span>
+
+              <!-- BOTÓN FLECHA / CHEVRON PARA DESPLEGAR MÁS INFO -->
+              <button type="button" onclick="toggleBatchCollapse('crema')" class="tap-effect mt-2.5 w-full flex items-center justify-between p-2 rounded-xl bg-slate-50 hover:bg-emerald-50/70 border border-slate-200/80 text-xs font-semibold text-slate-700 hover:text-emerald-800 transition cursor-pointer">
+                <span class="flex items-center gap-1.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                  <span id="batch-btn-text-crema">Ver técnica y paso a paso</span>
+                </span>
+                <div class="w-6 h-6 rounded-full flex items-center justify-center bg-white border border-slate-200/80 shadow-2xs">
+                  <svg id="chevron-batch-crema" class="w-3.5 h-3.5 transform transition-transform duration-200 text-slate-500" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                </div>
+              </button>
+
+              <!-- CONTENIDO DESPLEGABLE CON MÁS INFO -->
+              <div id="batch-body-crema" class="hidden mt-3 space-y-2.5 pt-2.5 border-t border-slate-100">
+                <div>
+                  <span class="text-[10px] uppercase font-bold text-slate-400 block mb-1">Ingredientes:</span>
+                  <div class="flex flex-wrap gap-1">
+                    <span class="px-2 py-0.5 rounded-lg bg-slate-50 border border-slate-100 text-slate-700 text-[10px] font-medium">Calabaza</span>
+                    <span class="px-2 py-0.5 rounded-lg bg-slate-50 border border-slate-100 text-slate-700 text-[10px] font-medium">Zanahoria</span>
+                    <span class="px-2 py-0.5 rounded-lg bg-slate-50 border border-slate-100 text-slate-700 text-[10px] font-medium">Puerro</span>
+                    <span class="px-2 py-0.5 rounded-lg bg-slate-50 border border-slate-100 text-slate-700 text-[10px] font-medium">Proteína Moara Guisante</span>
+                  </div>
+                </div>
+
+                <!-- TÉCNICA CERO FRICCIÓN Y PASO A PASO DENTRO DEL MÓDULO -->
+                <div class="p-3 rounded-xl bg-emerald-50/80 border border-emerald-200/70 space-y-1">
+                  <div class="flex items-center gap-1 text-emerald-900 font-extrabold text-[10px] uppercase tracking-wide">
+                    <svg class="w-3.5 h-3.5 text-emerald-700 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    <span>Técnicas de Cocina Cero Fricción</span>
+                  </div>
+                  <span class="text-[10.5px] font-bold text-slate-900 block">Paso a Paso Maestro: Textura Seda sin Grumos</span>
+                  <p class="text-[10.5px] text-slate-700 leading-snug">
+                    <strong>🥣 Crema Seda + Proteína Moara Guisante:</strong> Para disolverla perfecto, mezcla en una tacita 1 cda de proteína de guisante con 2 cdas de caldo caliente hasta crear una pasta homogénea. Viértela en la crema caliente y remueve 30 seg. ¡Queda espesa, aterciopelada y sin ningún grumo!
+                  </p>
+                  <p class="text-[10.5px] text-slate-700 leading-snug mt-1">
+                    <strong>🥚 Huevo poché express al microondas:</strong> En una taza con 1/3 de agua tibia y unas gotas de vinagre, casca 1 huevo campero. Tapa con un platito y calienta 55-60 seg a 600W. Yema líquida y clara cuajada lista.
+                  </p>
+                </div>
+
+                <div class="p-2.5 rounded-xl bg-amber-50/80 border border-amber-200/60 text-[10.5px] text-amber-900 font-semibold">
+                  Rinde: 3 raciones de crema dorada listas para cenas en &lt;5 minutos.
                 </div>
               </div>
 
-              <!-- TÉCNICA CERO FRICCIÓN Y PASO A PASO DENTRO DEL MÓDULO -->
-              <div class="p-2.5 rounded-xl bg-emerald-50/80 border border-emerald-200/70 space-y-1">
-                <div class="flex items-center gap-1 text-emerald-900 font-extrabold text-[9.5px] uppercase tracking-wide">
-                  <svg class="w-3.5 h-3.5 text-emerald-700 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-                  <span>Técnicas de Cocina Cero Fricción</span>
-                </div>
-                <span class="text-[10.5px] font-bold text-slate-900 block">Paso a Paso Maestro: Cómo hacer que quede perfecta</span>
-                <p class="text-[10.5px] text-slate-700 leading-snug">
-                  <strong>🥣 Crema Seda + Proteína Moara Guisante (Sin Grumos):</strong> Para disolverla perfecto, mezcla en una tacita 1 cda de proteína de guisante con 2 cdas de caldo templado hasta crear una pasta homogénea. Viértela en la crema caliente y remueve 30 seg. ¡Textura seda de restaurante!
-                </p>
-              </div>
-
-            </div>
-          </div>
-
-          <div class="p-3 pt-0">
-            <div class="p-2 rounded-xl bg-amber-50/80 border border-amber-200/60 text-[10.5px] text-amber-900 font-semibold">
-              Rinde: 3 raciones de crema dorada listas para cenas en &lt;5 minutos.
             </div>
           </div>
         </div>
@@ -613,60 +639,72 @@
         <!-- MÓDULO 3: PATATA O BATATA EN AIRFRYER -->
         <div class="card-craft rounded-2xl overflow-hidden flex flex-col justify-between w-full">
           <div>
-            <div class="relative h-40 sm:h-44 w-full bg-slate-100 overflow-hidden">
+            <div class="relative h-44 sm:h-48 w-full bg-slate-100 overflow-hidden cursor-pointer" onclick="toggleBatchCollapse('patata')">
               <img src="images/pollo_boniato.jpg" alt="Dados de batata y patata" class="w-full h-full object-cover" />
-              <div class="absolute top-2 left-2 bg-slate-900/80 backdrop-blur-sm text-white px-2 py-0.5 rounded text-[9.5px] font-bold tracking-wide uppercase">
+              <div class="absolute top-2 left-2 bg-slate-900/80 backdrop-blur-sm text-white px-2.5 py-1 rounded-lg text-[10px] font-bold tracking-wide uppercase">
                 Módulo 3 · Airfryer o Horno
               </div>
-              <div class="absolute bottom-2 right-2 bg-white/90 backdrop-blur-sm text-emerald-800 px-2 py-0.5 rounded text-[9.5px] font-bold">
+              <div class="absolute bottom-2 right-2 bg-white/95 backdrop-blur-sm text-emerald-800 px-2 py-0.5 rounded-md text-[10px] font-bold shadow-2xs">
                 18 min · 195 °C
               </div>
             </div>
             
-            <div class="p-3 space-y-2">
+            <div class="p-3.5">
               <div>
-                <h4 class="font-bold text-xs sm:text-sm text-slate-900">Patata o Batata en Dados Crujientes</h4>
+                <h4 class="font-bold text-sm text-slate-900 cursor-pointer" onclick="toggleBatchCollapse('patata')">Patata o Batata en Dados Crujientes</h4>
                 <p class="text-[11px] text-slate-600 leading-relaxed mt-0.5">
                   Corta la batata o las patatitas en dados medianos (puedes dejar la piel lavada para que queden más crujientes).
                 </p>
               </div>
-              
-              <div class="pt-0.5">
-                <span class="text-[9.5px] uppercase font-bold text-slate-500 block mb-1">Ingredientes:</span>
-                <div class="flex flex-wrap gap-1">
-                  <span class="px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 text-[9.5px] font-medium">Batata</span>
-                  <span class="px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 text-[9.5px] font-medium">Patatas guarnición</span>
-                  <span class="px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 text-[9.5px] font-medium">AOVE</span>
-                  <span class="px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 text-[9.5px] font-medium">Romero y sal</span>
+
+              <!-- BOTÓN FLECHA / CHEVRON PARA DESPLEGAR MÁS INFO -->
+              <button type="button" onclick="toggleBatchCollapse('patata')" class="tap-effect mt-2.5 w-full flex items-center justify-between p-2 rounded-xl bg-slate-50 hover:bg-emerald-50/70 border border-slate-200/80 text-xs font-semibold text-slate-700 hover:text-emerald-800 transition cursor-pointer">
+                <span class="flex items-center gap-1.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                  <span id="batch-btn-text-patata">Ver técnica y paso a paso</span>
+                </span>
+                <div class="w-6 h-6 rounded-full flex items-center justify-center bg-white border border-slate-200/80 shadow-2xs">
+                  <svg id="chevron-batch-patata" class="w-3.5 h-3.5 transform transition-transform duration-200 text-slate-500" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                </div>
+              </button>
+
+              <!-- CONTENIDO DESPLEGABLE CON MÁS INFO -->
+              <div id="batch-body-patata" class="hidden mt-3 space-y-2.5 pt-2.5 border-t border-slate-100">
+                <div>
+                  <span class="text-[10px] uppercase font-bold text-slate-400 block mb-1">Ingredientes:</span>
+                  <div class="flex flex-wrap gap-1">
+                    <span class="px-2 py-0.5 rounded-lg bg-slate-50 border border-slate-100 text-slate-700 text-[10px] font-medium">Batata</span>
+                    <span class="px-2 py-0.5 rounded-lg bg-slate-50 border border-slate-100 text-slate-700 text-[10px] font-medium">Patatas guarnición</span>
+                    <span class="px-2 py-0.5 rounded-lg bg-slate-50 border border-slate-100 text-slate-700 text-[10px] font-medium">AOVE</span>
+                    <span class="px-2 py-0.5 rounded-lg bg-slate-50 border border-slate-100 text-slate-700 text-[10px] font-medium">Romero y sal</span>
+                  </div>
+                </div>
+
+                <!-- TÉCNICA CERO FRICCIÓN Y PASO A PASO DENTRO DEL MÓDULO -->
+                <div class="p-3 rounded-xl bg-amber-50/80 border border-amber-200/70 space-y-1">
+                  <div class="flex items-center gap-1 text-amber-900 font-extrabold text-[10px] uppercase tracking-wide">
+                    <svg class="w-3.5 h-3.5 text-amber-700 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    <span>Técnica de Cocina Cero Fricción</span>
+                  </div>
+                  <span class="text-[10.5px] font-bold text-slate-900 block">Paso a Paso Maestro: Cómo hacer que queden perfectas</span>
+                  <p class="text-[10.5px] text-slate-700 leading-snug">
+                    <strong>🍠 Crujiente fuera, Tierna dentro:</strong> Mezcla los dados en un bowl con 1 cdita de AOVE, sal y romero usando las manos. Airfryer a 195 °C durante 18–20 min agitando la cesta a la mitad. Si las guardas en un tupper en la nevera, duran varios días y sientan genial a la digestión.
+                  </p>
+                </div>
+
+                <div class="p-2.5 rounded-xl bg-slate-100 border border-slate-200 text-[10.5px] text-slate-800 font-semibold">
+                  Rinde: Patata o batata lista para acompañar pollo o salmón en 2 minutos.
                 </div>
               </div>
 
-              <!-- TÉCNICA CERO FRICCIÓN Y PASO A PASO DENTRO DEL MÓDULO -->
-              <div class="p-2.5 rounded-xl bg-amber-50/80 border border-amber-200/70 space-y-1">
-                <div class="flex items-center gap-1 text-amber-900 font-extrabold text-[9.5px] uppercase tracking-wide">
-                  <svg class="w-3.5 h-3.5 text-amber-700 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-                  <span>Técnica de Cocina Cero Fricción</span>
-                </div>
-                <span class="text-[10.5px] font-bold text-slate-900 block">Paso a Paso Maestro: Cómo hacer que queden perfectas</span>
-                <p class="text-[10.5px] text-slate-700 leading-snug">
-                  <strong>🍠 Crujiente fuera, Tierna dentro:</strong> Mezcla los dados en un bowl con 1 cdita de AOVE, sal y romero usando las manos. Airfryer a 195 °C durante 18–20 min agitando la cesta a la mitad. Si las guardas en un tupper en la nevera, duran varios días y sientan genial a la digestión.
-                </p>
-              </div>
-
-            </div>
-          </div>
-
-          <div class="p-3 pt-0">
-            <div class="p-2 rounded-xl bg-slate-100 border border-slate-200 text-[10.5px] text-slate-800 font-semibold">
-              Rinde: Patata o batata lista para acompañar pollo o salmón en 2 minutos.
             </div>
           </div>
         </div>
 
-                <!-- MÓDULO 4: AREPAS DORADAS CON CHÍA HIDRATADA -->
+        <!-- MÓDULO 4: AREPAS DORADAS CON CHÍA HIDRATADA -->
         <div class="card-craft rounded-2xl overflow-hidden flex flex-col justify-between w-full">
           <div>
-            <div class="relative h-44 sm:h-48 w-full bg-slate-100 overflow-hidden">
+            <div class="relative h-44 sm:h-48 w-full bg-slate-100 overflow-hidden cursor-pointer" onclick="toggleBatchCollapse('arepas')">
               <img src="images/arepas_pan.jpg" alt="Arepas doradas con chía" class="w-full h-full object-cover" />
               <div class="absolute top-2 left-2 bg-slate-900/80 backdrop-blur-sm text-white px-2.5 py-1 rounded-lg text-[10px] font-bold tracking-wide uppercase">
                 Módulo 4 · Sartén & Plancha
@@ -676,61 +714,72 @@
               </div>
             </div>
             
-            <div class="p-3.5 space-y-2.5">
+            <div class="p-3.5">
               <div>
                 <div class="flex items-center gap-1.5 mb-0.5">
                   <span class="text-[9.5px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-100">Masa Limpia 100% Maíz</span>
                   <span class="text-[9.5px] font-semibold text-slate-500">· Sin gluten · Fibra soluble</span>
                 </div>
-                <h4 class="font-bold text-sm text-slate-900">Arepas Doradas con Chía Hidratada</h4>
+                <h4 class="font-bold text-sm text-slate-900 cursor-pointer" onclick="toggleBatchCollapse('arepas')">Arepas Doradas con Chía Hidratada</h4>
                 <p class="text-[11px] text-slate-600 leading-relaxed mt-0.5">
                   Masa elástica que nunca se rompe gracias a los mucílagos de la chía. Crujientes por fuera, suaves por dentro y listas para rellenar en caliente.
                 </p>
               </div>
-              
-              <!-- Cantidades Exactas -->
-              <div class="pt-0.5">
-                <span class="text-[10px] uppercase font-bold text-slate-400 block mb-1">Cantidades Exactas (Por Ración / Batch):</span>
-                <div class="grid grid-cols-2 gap-1.5 text-[10.5px] text-slate-700">
-                  <span class="p-1.5 rounded-lg bg-slate-50 border border-slate-100">🌽 <strong>1/2 taza</strong> Harina P.A.N. blanca</span>
-                  <span class="p-1.5 rounded-lg bg-slate-50 border border-slate-100">🌱 <strong>1 cdita</strong> Semillas de chía</span>
-                  <span class="p-1.5 rounded-lg bg-slate-50 border border-slate-100">💧 <strong>1/2 taza</strong> Agua tibia</span>
-                  <span class="p-1.5 rounded-lg bg-slate-50 border border-slate-100">🧂 <strong>1 pizca</strong> Sal marina fina</span>
-                  <span class="p-1.5 rounded-lg bg-slate-50 border border-slate-100 col-span-2">🫒 <strong>1 gota</strong> AOVE para pintar la sartén</span>
+
+              <!-- BOTÓN FLECHA / CHEVRON PARA DESPLEGAR MÁS INFO -->
+              <button type="button" onclick="toggleBatchCollapse('arepas')" class="tap-effect mt-2.5 w-full flex items-center justify-between p-2 rounded-xl bg-slate-50 hover:bg-emerald-50/70 border border-slate-200/80 text-xs font-semibold text-slate-700 hover:text-emerald-800 transition cursor-pointer">
+                <span class="flex items-center gap-1.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                  <span id="batch-btn-text-arepas">Ver cantidades y técnica paso a paso</span>
+                </span>
+                <div class="w-6 h-6 rounded-full flex items-center justify-center bg-white border border-slate-200/80 shadow-2xs">
+                  <svg id="chevron-batch-arepas" class="w-3.5 h-3.5 transform transition-transform duration-200 text-slate-500" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                </div>
+              </button>
+
+              <!-- CONTENIDO DESPLEGABLE CON MÁS INFO -->
+              <div id="batch-body-arepas" class="hidden mt-3 space-y-2.5 pt-2.5 border-t border-slate-100">
+                <div>
+                  <span class="text-[10px] uppercase font-bold text-slate-400 block mb-1">Cantidades Exactas (Por Ración / Batch):</span>
+                  <div class="grid grid-cols-2 gap-1.5 text-[10.5px] text-slate-700">
+                    <span class="p-1.5 rounded-lg bg-slate-50 border border-slate-100">🌽 <strong>1/2 taza</strong> Harina P.A.N. blanca</span>
+                    <span class="p-1.5 rounded-lg bg-slate-50 border border-slate-100">🌱 <strong>1 cdita</strong> Semillas de chía</span>
+                    <span class="p-1.5 rounded-lg bg-slate-50 border border-slate-100">💧 <strong>1/2 taza</strong> Agua tibia</span>
+                    <span class="p-1.5 rounded-lg bg-slate-50 border border-slate-100">🧂 <strong>1 pizca</strong> Sal marina fina</span>
+                    <span class="p-1.5 rounded-lg bg-slate-50 border border-slate-100 col-span-2">🫒 <strong>1 gota</strong> AOVE para pintar la sartén</span>
+                  </div>
+                </div>
+
+                <!-- TÉCNICA CERO FRICCIÓN Y PASO A PASO DENTRO DEL MÓDULO -->
+                <div class="p-3 rounded-xl bg-amber-50/80 border border-amber-200/70 space-y-1.5">
+                  <div class="flex items-center gap-1.5 text-amber-900 font-extrabold text-[10px] uppercase tracking-wide">
+                    <svg class="w-3.5 h-3.5 text-amber-700 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    <span>Técnica Cero Fricción · Paso a Paso Maestro</span>
+                  </div>
+                  <div class="space-y-1 text-[10.5px] text-slate-700 leading-snug">
+                    <p>
+                      <strong>1. Hidratación de la chía (2 min clave):</strong> En un bowl pon el agua tibia con la chía y sal. <em>Espera 2 minutos exactos</em> a que suelte su gel protector. Esto evita que la masa se cuartee.
+                    </p>
+                    <p>
+                      <strong>2. Amasado express (1 min):</strong> Añade la harina P.A.N. y amasa con una mano hasta formar una bola suave y elástica que no se pegue a las manos ni al bowl.
+                    </p>
+                    <p>
+                      <strong>3. Formado del disco:</strong> Aplana la bola entre tus palmas girando suavemente hasta dejar un disco parejo de 1,5 cm de grosor.
+                    </p>
+                    <p>
+                      <strong>4. Plancha dorada (5 min por lado):</strong> Sartén bien caliente a fuego medio con unas gotas de AOVE. Cocina 5 min por lado hasta que al darle toques con los nudillos <em>"suene a hueco"</em>.
+                    </p>
+                    <p>
+                      <strong>5. Relleno & Tostadora:</strong> Abre por la mitad con cuchillo de sierra y rellena con queso cottage cremoso y pollo o pavo. Si te sobran, guárdalas en nevera y caliéntalas en la tostadora 1 minuto.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="p-2.5 rounded-xl bg-emerald-50 border border-emerald-200 text-[10.5px] text-emerald-900 font-semibold">
+                  Rinde: 2 arepas medianas o 1 grande saciante (perfectas para desayuno o cena).
                 </div>
               </div>
 
-              <!-- TÉCNICA CERO FRICCIÓN Y PASO A PASO DENTRO DEL MÓDULO -->
-              <div class="p-3 rounded-xl bg-amber-50/80 border border-amber-200/70 space-y-1.5">
-                <div class="flex items-center gap-1.5 text-amber-900 font-extrabold text-[10px] uppercase tracking-wide">
-                  <svg class="w-3.5 h-3.5 text-amber-700 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-                  <span>Técnica Cero Fricción · Paso a Paso Maestro</span>
-                </div>
-                <div class="space-y-1 text-[10.5px] text-slate-700 leading-snug">
-                  <p>
-                    <strong>1. Hidratación de la chía (2 min clave):</strong> En un bowl pon el agua tibia con la chía y sal. <em>Espera 2 minutos exactos</em> a que suelte su gel protector. Esto evita que la masa se cuartee.
-                  </p>
-                  <p>
-                    <strong>2. Amasado express (1 min):** Añade la harina P.A.N. y amasa con una mano hasta formar una bola suave y elástica que no se pegue a las manos ni al bowl.
-                  </p>
-                  <p>
-                    <strong>3. Formado del disco:</strong> Aplana la bola entre tus palmas girando suavemente hasta dejar un disco parejo de 1,5 cm de grosor.
-                  </p>
-                  <p>
-                    <strong>4. Plancha dorada (5 min por lado):</strong> Sartén bien caliente a fuego medio con unas gotas de AOVE. Cocina 5 min por lado hasta que al darle toques con los nudillos <em>"suene a hueco"</em>.
-                  </p>
-                  <p>
-                    <strong>5. Relleno & Tostadora:</strong> Abre por la mitad con cuchillo de sierra y rellena con queso cottage cremoso y pollo o pavo. Si te sobran, guárdalas en nevera y caliéntalas en la tostadora 1 minuto.
-                  </p>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-          <div class="p-3.5 pt-0">
-            <div class="p-2.5 rounded-xl bg-emerald-50 border border-emerald-200 text-[10.5px] text-emerald-900 font-semibold">
-              Rinde: 2 arepas medianas o 1 grande saciante (perfectas para desayuno o cena).
             </div>
           </div>
         </div>
@@ -738,7 +787,7 @@
         <!-- MÓDULO 5: SALMÓN CON PIEL HIPERCRUJIENTE -->
         <div class="card-craft rounded-2xl overflow-hidden flex flex-col justify-between w-full">
           <div>
-            <div class="relative h-44 sm:h-48 w-full bg-slate-100 overflow-hidden">
+            <div class="relative h-44 sm:h-48 w-full bg-slate-100 overflow-hidden cursor-pointer" onclick="toggleBatchCollapse('salmon')">
               <img src="images/salmon_plancha.jpg" alt="Lomo de salmón crujiente a la plancha" class="w-full h-full object-cover" />
               <div class="absolute top-2 left-2 bg-slate-900/80 backdrop-blur-sm text-white px-2.5 py-1 rounded-lg text-[10px] font-bold tracking-wide uppercase">
                 Módulo 5 · Plancha de Alta Cocina
@@ -748,60 +797,71 @@
               </div>
             </div>
             
-            <div class="p-3.5 space-y-2.5">
+            <div class="p-3.5">
               <div>
                 <div class="flex items-center gap-1.5 mb-0.5">
                   <span class="text-[9.5px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-100">Técnica de Restaurante</span>
                   <span class="text-[9.5px] font-semibold text-slate-500">· Piel crujiente · Centro jugoso</span>
                 </div>
-                <h4 class="font-bold text-sm text-slate-900">Salmón con Piel Hipercrujiente</h4>
+                <h4 class="font-bold text-sm text-slate-900 cursor-pointer" onclick="toggleBatchCollapse('salmon')">Salmón con Piel Hipercrujiente</h4>
                 <p class="text-[11px] text-slate-600 leading-relaxed mt-0.5">
                   El truco profesional para que la piel quede crujiente como una galleta y el interior mantecoso y jugoso sin secarse.
                 </p>
               </div>
-              
-              <!-- Cantidades Exactas -->
-              <div class="pt-0.5">
-                <span class="text-[10px] uppercase font-bold text-slate-400 block mb-1">Ingredientes Clave:</span>
-                <div class="grid grid-cols-2 gap-1.5 text-[10.5px] text-slate-700">
-                  <span class="p-1.5 rounded-lg bg-slate-50 border border-slate-100">🐟 <strong>1 o 2 lomos</strong> Salmón fresco con piel</span>
-                  <span class="p-1.5 rounded-lg bg-slate-50 border border-slate-100">🧂 <strong>1 pizca</strong> Sal marina en escamas</span>
-                  <span class="p-1.5 rounded-lg bg-slate-50 border border-slate-100">🫒 <strong>1 cdita</strong> AOVE virgen extra</span>
-                  <span class="p-1.5 rounded-lg bg-slate-50 border border-slate-100">🍋 <strong>Opcional</strong> Gotas de limón / pimienta</span>
+
+              <!-- BOTÓN FLECHA / CHEVRON PARA DESPLEGAR MÁS INFO -->
+              <button type="button" onclick="toggleBatchCollapse('salmon')" class="tap-effect mt-2.5 w-full flex items-center justify-between p-2 rounded-xl bg-slate-50 hover:bg-emerald-50/70 border border-slate-200/80 text-xs font-semibold text-slate-700 hover:text-emerald-800 transition cursor-pointer">
+                <span class="flex items-center gap-1.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                  <span id="batch-btn-text-salmon">Ver técnica y paso a paso</span>
+                </span>
+                <div class="w-6 h-6 rounded-full flex items-center justify-center bg-white border border-slate-200/80 shadow-2xs">
+                  <svg id="chevron-batch-salmon" class="w-3.5 h-3.5 transform transition-transform duration-200 text-slate-500" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                </div>
+              </button>
+
+              <!-- CONTENIDO DESPLEGABLE CON MÁS INFO -->
+              <div id="batch-body-salmon" class="hidden mt-3 space-y-2.5 pt-2.5 border-t border-slate-100">
+                <div>
+                  <span class="text-[10px] uppercase font-bold text-slate-400 block mb-1">Ingredientes Clave:</span>
+                  <div class="grid grid-cols-2 gap-1.5 text-[10.5px] text-slate-700">
+                    <span class="p-1.5 rounded-lg bg-slate-50 border border-slate-100">🐟 <strong>1 o 2 lomos</strong> Salmón fresco con piel</span>
+                    <span class="p-1.5 rounded-lg bg-slate-50 border border-slate-100">🧂 <strong>1 pizca</strong> Sal marina en escamas</span>
+                    <span class="p-1.5 rounded-lg bg-slate-50 border border-slate-100">🫒 <strong>1 cdita</strong> AOVE virgen extra</span>
+                    <span class="p-1.5 rounded-lg bg-slate-50 border border-slate-100">🍋 <strong>Opcional</strong> Gotas de limón / pimienta</span>
+                  </div>
+                </div>
+
+                <!-- TÉCNICA CERO FRICCIÓN Y PASO A PASO DENTRO DEL MÓDULO -->
+                <div class="p-3 rounded-xl bg-sky-50/80 border border-sky-200/70 space-y-1.5">
+                  <div class="flex items-center gap-1.5 text-sky-900 font-extrabold text-[10px] uppercase tracking-wide">
+                    <svg class="w-3.5 h-3.5 text-sky-700 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    <span>Técnica Cero Fricción · Paso a Paso Maestro</span>
+                  </div>
+                  <div class="space-y-1 text-[10.5px] text-slate-700 leading-snug">
+                    <p>
+                      <strong>1. Secado obsesivo (El secreto):</strong> Seca a fondo la piel y la carne del salmón con papel de cocina absorbente. La humedad es la enemiga número uno del crujiente. Espolvorea sal fina en la piel seca.
+                    </p>
+                    <p>
+                      <strong>2. Sartén humeante:</strong> Calienta la sartén antiadherente a fuego medio-alto (nivel 7 de 9) con 1 cdita de AOVE bien repartido.
+                    </p>
+                    <p>
+                      <strong>3. Presión inicial de 10 seg:</strong> Coloca el lomo con la **piel hacia abajo**. Presiona suavemente con una espátula durante los primeros 10 segundos para que no se arquee y toda la piel quede plana contra el fondo.
+                    </p>
+                    <p>
+                      <strong>4. La Regla de Oro (4–5 min SIN TOCAR):</strong> **NO muevas el salmón durante 4 a 5 minutos**. Verás cómo el color rosado sube por los laterales cocinándose y la piel se vuelve una costra rígida dorada.
+                    </p>
+                    <p>
+                      <strong>5. Vuelta express (solo 1,5 min):</strong> Gira con cuidado y cocina por el lado de la carne solo **1,5 minutos**. Retira de inmediato al plato. El centro queda jugoso y la piel hipercrocante.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="p-2.5 rounded-xl bg-slate-100 border border-slate-200 text-[10.5px] text-slate-800 font-semibold">
+                  Rinde: Cenas antiinflamatorias ricas en Omega-3 listas en 7 minutos.
                 </div>
               </div>
 
-              <!-- TÉCNICA CERO FRICCIÓN Y PASO A PASO DENTRO DEL MÓDULO -->
-              <div class="p-3 rounded-xl bg-sky-50/80 border border-sky-200/70 space-y-1.5">
-                <div class="flex items-center gap-1.5 text-sky-900 font-extrabold text-[10px] uppercase tracking-wide">
-                  <svg class="w-3.5 h-3.5 text-sky-700 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-                  <span>Técnica Cero Fricción · Paso a Paso Maestro</span>
-                </div>
-                <div class="space-y-1 text-[10.5px] text-slate-700 leading-snug">
-                  <p>
-                    <strong>1. Secado obsesivo (El secreto):</strong> Seca a fondo la piel y la carne del salmón con papel de cocina absorbente. La humedad es la enemiga número uno del crujiente. Espolvorea sal fina en la piel seca.
-                  </p>
-                  <p>
-                    <strong>2. Sartén humeante:</strong> Calienta la sartén antiadherente a fuego medio-alto (nivel 7 de 9) con 1 cdita de AOVE bien repartido.
-                  </p>
-                  <p>
-                    <strong>3. Presión inicial de 10 seg:</strong> Coloca el lomo con la **piel hacia abajo**. Presiona suavemente con una espátula durante los primeros 10 segundos para que no se arquee y toda la piel quede plana contra el fondo.
-                  </p>
-                  <p>
-                    <strong>4. La Regla de Oro (4–5 min SIN TOCAR):</strong> **NO muevas el salmón durante 4 a 5 minutos**. Verás cómo el color rosado sube por los laterales cocinándose y la piel se vuelve una costra rígida dorada.
-                  </p>
-                  <p>
-                    <strong>5. Vuelta express (solo 1,5 min):</strong> Gira con cuidado y cocina por el lado de la carne solo **1,5 minutos**. Retira de inmediato al plato. El centro queda jugoso y la piel hipercrocante.
-                  </p>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-          <div class="p-3.5 pt-0">
-            <div class="p-2.5 rounded-xl bg-slate-100 border border-slate-200 text-[10.5px] text-slate-800 font-semibold">
-              Rinde: Cenas antiinflamatorias ricas en Omega-3 listas en 7 minutos.
             </div>
           </div>
         </div>
@@ -1856,6 +1916,24 @@
       }).join('');
 
       updateToggleAllBtn();
+    }
+
+    function toggleBatchCollapse(batchId) {
+      const body = document.getElementById('batch-body-' + batchId);
+      const chevron = document.getElementById('chevron-batch-' + batchId);
+      const text = document.getElementById('batch-btn-text-' + batchId);
+      if (!body) return;
+
+      const isHidden = body.classList.contains('hidden');
+      if (isHidden) {
+        body.classList.remove('hidden');
+        if (chevron) chevron.classList.add('rotate-180');
+        if (text) text.innerText = 'Menos info ▲';
+      } else {
+        body.classList.add('hidden');
+        if (chevron) chevron.classList.remove('rotate-180');
+        if (text) text.innerText = 'Ver más info y técnica ▼';
+      }
     }
 
     function toggleMealCollapse(mealId) {
