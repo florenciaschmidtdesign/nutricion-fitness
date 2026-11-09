@@ -78,12 +78,12 @@
 * **Paso 3:** Vierte la pasta en la crema caliente y remueve 30 segundos con una cuchara o varilla. Queda ultrasuave, aterciopelada y espesa, sin ningún grumo y con >16 g de proteína pura.
 * **Paso 4 (Huevo poché express):** En una taza con 1/3 de agua templada y 3 gotas de vinagre, casca 1 huevo campero. Tapa con un platito y mete al microondas 55–65 segundos a potencia media (600W). La clara cuaja y la yema queda líquida y dorada. Colócalo sobre la crema.
 
-### 2. Tubérculos en Airfryer: Dados Crujientes & Almidón Resistente
-* **Paso 1:** Lava muy bien las patatas guarnición y la batata. No las peles: la piel limpia aporta fibra prebiótica intacta y evita que se deshagan.
+### 2. Patata o Batata en Airfryer: Dados Dorados y Crujientes
+* **Paso 1:** Lava muy bien las patatas guarnición o la batata. Puedes dejar la piel limpia para que queden más crujientes y no se deshagan.
 * **Paso 2:** Corta en dados medianos homogéneos de ~2 cm.
-* **Paso 3:** En un bowl, añade 1 cucharadita de AOVE, sal marina y romero seco. Remueve con las manos para que cada dado quede lustroso pero sin exceso de grasa.
+* **Paso 3:** En un bowl, añade 1 cucharadita de AOVE, sal marina y romero seco. Remueve con las manos para que queden bien impregnados.
 * **Paso 4:** Cocina en la Ninja Airfryer a 195 °C durante 18–20 minutos, agitando la cesta a mitad de cocción (minuto 10).
-* **Paso 5 (Regla Digestiva de Almidón Resistente):** Al enfriar en la nevera, el almidón de la patata y la batata se retrograda y se convierte en almidón resistente: no eleva la glucosa y alimenta directamente a las bacterias beneficiosas de tu colon.
+* **Paso 5:** Si te sobran o las preparas para varios días, guárdalas en la nevera: duran 4–5 días y sientan de maravilla a la digestión.
 
 ### 3. Batch Maestro de Pancakes Proteicos Multidía (6 a 8 Pancakes · Para 3 a 4 Días)
 * **Cantidades Exactas para el Batch Completo (Rinde 6 a 8 pancakes grandes):**
