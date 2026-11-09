@@ -85,12 +85,21 @@
 * **Paso 4:** Cocina en la Ninja Airfryer a 195 °C durante 18–20 minutos, agitando la cesta a mitad de cocción (minuto 10).
 * **Paso 5 (Regla Digestiva de Almidón Resistente):** Al enfriar en la nevera, el almidón de la patata y la batata se retrograda y se convierte en almidón resistente: no eleva la glucosa y alimenta directamente a las bacterias beneficiosas de tu colon.
 
-### 3. Pancakes Esponjosos de Avena, Manzana y Proteína AMIX CFM
-* **Paso 1:** En un bowl o vaso de batidora, mezcla: 40 g de copos de avena sin gluten molidos (o harina Il Pane di Anna) + 1 cazo de Proteína AMIX CFM + 1 huevo campero + 50 ml de bebida de avena sin gluten + 1 pizca de canela.
-* **Paso 2:** Deja reposar la masa 3 minutos para que la avena se hidrate y espese ligeramente.
-* **Paso 3:** Engrasa una sartén antiadherente con 2 gotas de AOVE repartidas con papel de cocina y calienta a fuego medio (fuego 6 de 9).
-* **Paso 4:** Vierte 2 o 3 montoncitos de masa. Cuando empiecen a salir pequeñas burbujas en la superficie (1,5–2 min), dale la vuelta con una espátula de golpe y dora 1 minuto más.
-* **Paso 5:** Saltea la 1/2 manzana en dados en la misma sartén 2 minutos con canela y colócala encima de los pancakes.
+### 3. Batch Maestro de Pancakes Proteicos Multidía (6 a 8 Pancakes · Para 3 a 4 Días)
+* **Cantidades Exactas para el Batch Completo (Rinde 6 a 8 pancakes grandes):**
+  * **120 g** de harina de avena 100% sin gluten (o copos de avena triturados).
+  * **2 cazos completos (60 g)** de Proteína AMIX CFM Isolate (vainilla o neutra).
+  * **2 huevos camperos enteros + 2 claras** (o 60 ml de claras pasteurizadas).
+  * **160 a 180 ml** de bebida de avena sin gluten (ajustar hasta consistencia de crema espesa).
+  * **1 cucharadita (4–5 g)** de levadura química sin gluten / polvo de hornear *(vital para que queden gorditas y esponjosas al recalentar)*.
+  * **1 cucharadita** de canela de Ceilán + 1 pizca de sal marina.
+* **Paso a Paso Maestro Cero Fricción (12 minutos totales):**
+  * **Paso 1 (Batido express en 45 seg):** Colocar todos los ingredientes en la batidora de vaso o en el vaso de la Minipimer y triturar 45 segundos hasta obtener una masa lisa, densa y homogénea.
+  * **Paso 2 (El Secreto del Reposo de 3 min):** Dejar reposar la masa 3 minutos mientras se calienta la sartén. La avena y la proteína absorben líquido y la levadura activa microburbujas de aire para un resultado ultraesponjoso.
+  * **Paso 3 (Cocción en serie):** Engrasar una sartén antiadherente amplia con 2 gotas de AOVE repartidas con papel de cocina a fuego medio (nivel 6 de 9). Verter porciones de 2–3 cucharadas por pancake.
+  * **Paso 4 (Indicador visual de giro):** En cuanto aparezcan agujeritos y burbujas en la superficie (aprox. 1,5 min), voltear con una espátula de golpe y dorar 45–60 segundos más.
+  * **Paso 5 (Conservación & Desayuno express en 30 seg):** Dejar enfriar sobre un plato y guardar apilados en un tupper hermético en la nevera (duran perfectos 4–5 días). Cada mañana, sacar 2 pancakes y meterlos **30 segundos en la tostadora** (quedan crujientes por fuera y tiernos por dentro) o 20 segundos al microondas. Acompañar con fruta fresca, canela o queso cottage.
+* **Macros por ración (2 pancakes):** ~290 kcal | 28 g Proteína | 25 g Carbohidratos complejos | 6 g Grasas saludables.
 
 ### 4. Arepas de Maíz P.A.N. con Chía Hidratada (Crujientes por fuera, tiernas por dentro)
 * **Paso 1:** En un bowl mediano, vierte 1/2 taza de agua tibia + 1 cucharadita de semillas de chía + 1 pizca de sal marina. Deja reposar 2 minutos para que la chía suelte sus mucílagos lubricantes.
