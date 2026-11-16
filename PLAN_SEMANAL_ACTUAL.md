@@ -119,43 +119,65 @@
 
 ---
 
-## 6. LISTA DE LA COMPRA COMPLETA (25 PRODUCTOS · MERCADONA)
+## 6. LISTA DE LA COMPRA ORGANIZADA POR EL RECORRIDO DEL SÚPER (26 PRODUCTOS · MERCADONA)
 
-> **🛒 COMPRA COMPLETA & REPOSICIÓN INTEGRAL (16 AL 22 DE NOVIEMBRE)**
-> Se incluye la lista integral con todos los frescos y la reposición completa de básicos de nevera y despensa sin gluten.
+> **🛒 RECORRIDO FÍSICO OPTIMIZADO (ORDEN EXACTO DE LA TIENDA · 2 PISOS)**
+> Organizado exactamente según tu recorrido para que compres de forma ágil sin ir y venir entre plantas.
 
-### 🌿 1. Frutas, Verduras & Vegetales Frescos (8 productos)
-* [ ] **Canónigos frescos (1 bolsa):** Verde digestivo para ensaladas crunch, fajitas y hamburguesa.
-* [ ] **Tomates cherry dulces (1 tarrina 500g):** Para salteados con gambas, bowls y ensaladas.
-* [ ] **Calabacines verdes frescos (2 piezas):** Para cintas con gambas de Raquel Martin y salteados.
-* [ ] **Peras maduras conferencia o de agua (4 piezas):** Clave para Jammy Pears con cardamomo y aliviar estreñimiento.
-* [ ] **Manzanas dulces Golden o Fuji (1 bolsa / 4 uds):** Pectina caliente con canela para desayunos y meriendas.
-* [ ] **Batatas o boniatos (2 piezas):** Para los fishcakes de salmón y batch de airfryer.
-* [ ] **Bandeja de calabaza limpia + puerro + zanahorias:** Base fresca para la bandeja dorada y crema sedosa.
-* [ ] **Aguacates maduros (2 piezas):** Grasa monoinsaturada y potasio para fajitas y ensaladas.
+---
 
-### 🥩 2. Carnicería, Pescadería & Congelados (4 productos)
-* [ ] **Lomos de salmón fresco con piel (bandeja 2 lomos):** Omega-3 antiinflamatorio para salmón crujiente y fishcakes.
-* [ ] **Pechuga de pollo fresca en filetes (bandeja 400–500g):** Proteína magra para bowl mediterráneo, arepas y fajitas.
-* [ ] **Hamburguesas de vacuno o carne picada limpia (2 uds):** Hierro hemo para la fase premenstrual y tono muscular.
-* [ ] **Gambas peladas frescas o congeladas Hacendado (1 bolsa):** Proteína marina limpia para las cintas de calabacín con lima.
+### 🏢 PLANTA 1: PRIMER PISO (Entrada: Harinas, Aceite, Limón, Leche, Tortillas & Despensa)
 
-### 🥚 3. Huevos, Lácteos & Bebidas Vegetales (6 productos)
-* [ ] **Huevos camperos (docena o pack 6):** Base diaria indispensable para desayunos, arepas y cenas.
-* [ ] **Claras de huevo pasteurizadas (botella Hacendado):** Volumen proteico limpio para revueltos y batch de pancakes.
-* [ ] **2 tarrinas de queso cottage Hacendado:** Relleno proteico cremoso de arepas, revueltos y fajitas.
-* [ ] **Yogur griego natural sin azúcar (pack 4 o tarrina):** Para la mousse de chocolate y meriendas saciantes.
-* [ ] **Lonchas de queso havarti o tierno light:** Para fundir en caliente sobre la hamburguesa o arepa.
-* [ ] **Bebida de avena Hacendado sin azúcares:** Para el café diario y la masa del batch de pancakes.
-
-### 🌾 4. Despensa Sin Gluten & Antojitos Sanos (7 productos)
+#### 🌾 Harinas & Despensa Seca
 * [ ] **Harina P.A.N. blanca o amarilla (1 paquete):** Masa de maíz 100% sin gluten para arepas doradas.
 * [ ] **Copos o harina de avena certificada Sin Gluten:** Para el batch de pancakes esponjosos de varios días.
-* [ ] **Tortitas de maíz 100% Sin Gluten (Old El Paso o Hacendado):** Base crujiente y limpia para fajitas y cenas rápidas.
-* [ ] **Quinoa (vasitos listos o paquete):** Carbohidrato antiinflamatorio para el bowl mediterráneo.
 * [ ] **Semillas de chía:** Mucílagos solubles clave para el tránsito y elasticidad de arepas.
 * [ ] **Chocolate negro >85% (1 tableta):** Magnesio y dopamina para antojitos de fase lútea.
 * [ ] **Tahini (pasta de sésamo) o crema de frutos secos 100%:** Calcio y grasas saludables para saciedad hormonal.
+
+#### 🍋 Aceite & Limón en Botella
+* [ ] **Zumo de limón en botella Hacendado:** Para aliños rápidos de verduras y cintas de calabacín.
+
+#### 🥛 Leche & Bebidas Vegetales
+* [ ] **Bebida de avena Hacendado sin azúcares:** Para el café diario y la masa del batch de pancakes.
+
+#### 🌮 Tortillas Sin Gluten
+* [ ] **Tortitas de maíz 100% Sin Gluten (Old El Paso o Hacendado):** Base crujiente y limpia para fajitas y cenas rápidas.
+
+---
+
+### 🏢 PLANTA 2: ARRIBA (Recorrido Guiado Paso a Paso)
+
+#### 🍽️ 1. Platos Preparados & Frescos Rápidos
+* *(Paso libre: el menú semanal está diseñado 100% casero y antiinflamatorio).*
+
+#### 🍚 2. Pasta, Arroz, Quinoa & Frascos (Lentejas, Tomate)
+* [ ] **Quinoa (vasitos listos o paquete para cocer):** Carbohidrato antiinflamatorio para el bowl mediterráneo.
+
+#### 🥛 3. Lácteos (Yogurt, Kéfir, Queso Cottage & Huevos)
+* [ ] **Yogur griego natural sin azúcar (pack 4 o tarrina):** Para la mousse de chocolate y meriendas saciantes.
+* [ ] **2 tarrinas de queso cottage Hacendado:** Relleno proteico cremoso de arepas, revueltos y fajitas.
+* [ ] **Claras de huevo pasteurizadas (botella Hacendado):** Volumen proteico limpio para revueltos y batch de pancakes.
+* [ ] **Huevos camperos (docena o pack 6):** Base diaria indispensable para desayunos, arepas y cenas.
+
+#### 🥩 4. Carnes, Queso & Pollo (y Pescadería)
+* [ ] **Pechuga de pollo fresca en filetes (bandeja 400–500g):** Proteína magra para bowl mediterráneo, arepas y fajitas.
+* [ ] **Hamburguesas de vacuno o carne picada limpia (2 uds):** Hierro hemo para la fase premenstrual y fuerza muscular.
+* [ ] **Lonchas de queso havarti o tierno light:** Para fundir en caliente sobre la hamburguesa o arepa.
+* [ ] **Lomos de salmón fresco con piel (bandeja 2 lomos):** Omega-3 antiinflamatorio para salmón crujiente y fishcakes.
+
+#### 🧊 5. Congelados
+* [ ] **Gambas peladas congeladas Hacendado (1 bolsa):** Proteína marina limpia para las cintas de calabacín con lima.
+
+#### 🥑 6. Verduras, Fruta & Pan
+* [ ] **Canónigos frescos (1 bolsa):** Verde digestivo para ensaladas crunch, fajitas y hamburguesa.
+* [ ] **Tomates cherry dulces (1 tarrina 500g):** Para salteados con gambas, bowls y ensaladas.
+* [ ] **Calabacines verdes frescos (2 piezas):** Para cintas con gambas de Raquel Martin y salteados.
+* [ ] **Peras maduras conferencia o de agua (4 piezas):** Clave: Jammy Pears con cardamomo para aliviar estreñimiento.
+* [ ] **Manzanas dulces Golden o Fuji (1 bolsa / 4 uds):** Pectina caliente con canela para desayunos y meriendas.
+* [ ] **Batatas o boniatos (2 piezas):** Para los fishcakes de salmón y batch de airfryer.
+* [ ] **Bandeja de calabaza limpia + puerro + zanahorias:** Base fresca para la bandeja dorada y crema sedosa.
+* [ ] **Aguacates maduros (2 piezas):** Grasa saludable y potasio para fajitas y ensaladas.
 
 ---
 
