@@ -4,11 +4,25 @@ Este archivo contiene las directrices operativas fijas y obligatorias para cualq
 
 ---
 
-## 1. REGLA OBLIGATORIA: LISTA DE LA COMPRA SEMANAL LIMPIA & SIN MAREOS
+## 1. REGLA OBLIGATORIA: LISTA DE LA COMPRA SEMANAL LIMPIA, REPOSICIÓN & ORDEN DEL RECORRIDO
 * **Periodicidad:** La lista de compras **DEBE actualizarse TODAS las semanas** sincronizada con el menú semanal.
-* **Solo lo que toca comprar en la Web:** La lista visual en la web (`index.html`) y el texto de WhatsApp deben contener **ÚNICAMENTE los productos que realmente toca comprar en el supermercado** (generalmente 5 a 8 productos frescos y reposición).
-* **Prohibición de marear con el stock de casa en la lista del súper:** Lo que ya tiene en despensa, nevera y congelador se audita internamente para diseñar el menú y descartar compras innecesarias, pero **NUNCA debe meterse en la lista de compras del súper** para que Florencia pueda ir al supermercado y marcar las cosas de forma ágil y limpia sin marearse.
+* **Solo lo que toca comprar en la Web:** La lista visual en la web (`index.html`) y el texto de WhatsApp deben contener **los productos que realmente toca comprar en el supermercado** (frescos de temporada y cualquier reposición necesaria de básicos gastados).
+* **Prohibición de marear con el stock disponible de casa:** Lo que ya tiene en despensa, nevera y congelador se audita internamente para diseñar el menú y descartar compras innecesarias; solo se incorporan a la lista los ingredientes que realmente necesita reponer para que Florencia pueda ir al supermercado y marcar las cosas de forma ágil y limpia.
 * **Cero desperdicio:** Si se acaba un ingrediente (ej. espárragos), se reemplaza en el menú por stock disponible (ej. calabacín) y se ajusta la lista inmediatamente.
+* **ORDEN FÍSICO OBLIGATORIO DEL RECORRIDO (MERCADONA DE 2 PISOS):**
+  Toda lista de compras (en la web `index.html`, en `PLAN_SEMANAL_ACTUAL.md` y en el texto generado para WhatsApp) **DEBE estar organizada obligatoriamente respetando el recorrido físico exacto de la tienda de Florencia**, dividido por plantas y pasillos para no dar vueltas ni subir y bajar plantas:
+  * **🏢 Planta 1 · Primer Piso (Entrada & Despensa):**
+    1. **Harinas & Despensa Seca:** Harina P.A.N., avena sin gluten, chía, chocolate negro >85%, tahini.
+    2. **Aceite & Limón:** Limón en botella, aceite de oliva virgen extra.
+    3. **Leche:** Bebida de avena sin gluten.
+    4. **Tortillas:** Tortitas de maíz 100% sin gluten.
+  * **🏢 Planta 2 · Arriba (Recorrido Guiado Paso a Paso):**
+    1. **Platos preparados:** (Paso libre si todo el menú es casero).
+    2. **Pasta, arroz, quinoa & frascos:** Quinoa, legumbres en conserva, tomate triturado.
+    3. **Lácteos:** Yogurt griego, kéfir, queso cottage, claras y huevos camperos.
+    4. **Carnes, queso y pollo:** Pollo fresco, carne picada/hamburguesas limpias, queso havarti/tierno light, y pescadería/salmón fresco.
+    5. **Congelados:** Gambas peladas, frutos rojos congelados.
+    6. **Verduras, fruta y pan:** Canónigos, calabacines, tomates cherry, peras, manzanas, batatas/patatas, calabaza/puerro/zanahorias, aguacates.
 
 ---
 
