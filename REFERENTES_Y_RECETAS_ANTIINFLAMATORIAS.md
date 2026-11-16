@@ -48,7 +48,8 @@ Buscamos creadoras que compartan platos **visualmente irresistibles, rápidos, a
 
 | Creadora / Canal | Plataforma / Enlace | Estilo Gastronómico y Por Qué Nos Sirve |
 | :--- | :--- | :--- |
-| **Annabelle Cassidy & Tom Eterovic** | Substack: *The Anti-Inflammatory Club* / IG: `@annabelle_cassidy` | **Nuestra referencia número 1.** Cocina modular, ensaladas crujientes con granos limpios, aderezos de tahini, limón y yogur, y sartenadas de cena en 10 minutos. Específicamente diseñadas para deshinchar el vientre. |
+| **Raquel Martin (Raquel's Pantry / Femme & Food)** | Substack: *Pass the Salt* (`raquelspantry.substack.com`) / Linktree: `linktr.ee/Raquels` / IG: `@raquels.pantry` | **Máxima referente en salud femenina y micronutrientes ("A Well-Fed Woman").** Ex-matrona especializada en nutrición para las distintas fases hormonales. Enfoque: *"Serving women's health, one micronutrient at a time"*. Platos visualmente deliciosos con foco en hierro, calcio, magnesio y omega-3, texturas crujientes con semillas y aderezos de tahini y cítricos. Cero sensación de privación. |
+| **Annabelle Cassidy & Tom Eterovic** | Substack: *The Anti-Inflammatory Club* (`theantiinflammatoryclub.substack.com`) / IG: `@annabelle_cassidy` | **Referente número 1 en cocina desinflamatoria express.** Cocina modular, ensaladas crujientes con granos limpios (quinoa, arroz basmati), aderezos digestivos de tahini, limón y yogur, fishcakes de salmón y boniato, y sartenadas de cena en 10 minutos diseñadas para deshinchar el abdomen. |
 | **Mia Rigden** | Substack: *The Well Journal* / IG: `@miarigden` | Nutricionista de Los Ángeles. Especialista en "The Modular Meal System": bowls con bases de verduras asadas, quinoa/arroz, salmón o pollo marinado con hierbas frescas. |
 | **Carissa Stanton (Brocc Your Body)** | IG / Blog: `@broccyourbody` | Creadora de platos hiperfáciles (<20 min) llenos de color y sabor: bowls de camarones salteados con lima y ajo, lomos de salmón glaseados, ensaladas templadas con feta y vinagretas caseras. Muy adaptable a sin gluten. |
 | **Paula Monreal (Paufeel)** | IG: `@paufeel` | Referente en España de cocina 100% sin gluten, antiinflamatoria y ultra digestiva. Famosa por sus sartenadas express de cena (huevos con cherrys, tortillas esponjosas, pancakes salados de calabacín y atún). |
@@ -79,13 +80,13 @@ flowchart TD
 ```
 
 ### Reglas Anti-Hinchazón Inmediatas
-* **Cocción Digestiva de Vegetales:** En lugar de ensaladas crudas duras y gigantes (que distienden el vientre), preferir vegetales cocinados al vapor, salteados con AOVE o asados al horno (calabacín, espárragos, judías verdes, espinacas tiernas, remolacha cocida, tomates cherry confitados).
+* **Cocción Digestiva de Vegetales:** En lugar de ensaladas crudas duras y gigantes (que distienden el vientre), preferir vegetales cocinados al vapor, salteados con AOVE o asados al horno (calabacín, espárragos, espinacas tiernas cocinadas, zanahoria asada, tomates cherry confitados). *(Recordatorio clínico: Remolacha y Berenjena eliminadas 100% de la pauta por aversión/tolerancia de Florencia)*.
 * **El Activador de Digestión:** Antes del almuerzo y la cena, un sorbo de agua templada con 1 cucharadita de vinagre de manzana ecológico (sin filtrar) o unas gotas de limón con jengibre rallado para estimular los jugos gástricos de forma natural.
 * **Separación de Líquidos:** No beber grandes cantidades de agua fría durante la comida para no diluir el ácido gástrico.
 
 ### Reglas Anti-Estreñimiento Inmediatas (Fibra Soluble y Osmosis)
 * **Mucílagos de Chía y Lino:** Dejar 1 cucharadita de semillas de chía o lino molido en remojo (en el whipped yogurt o en la masa de las arepas P.A.N.). Los mucílagos crean un gel protector que lubrica las paredes intestinales sin inflamar.
-* **El Dúo Matinal de Tránsito:** Incluir en el desayuno medio kiwi maduro o 2 ciruelas pasas hidratadas en agua caliente.
+* **El Dúo Matinal de Tránsito:** Incluir en el desayuno manzana tibia cocinada con canela o frutos rojos templados *(Kiwi descartado por aversión de Florencia)*.
 * **Magnesio Nocturno Estratégico:** La toma nocturna de magnesio (a las 22:30 h) relaja el músculo liso intestinal y favorece la evacuación suave a la mañana siguiente.
 * **Paseo Digestivo Suave:** 10–15 minutos de caminata suave después del almuerzo o la cena estimulan mecánicamente el colon.
 
@@ -120,7 +121,7 @@ Para vencer esto, aplicamos un sistema de **cero fricción y recompensa cerebral
 ### Receta 1: "The Glowing Salmon & Quinoa Bowl" (Almuerzo Modular)
 * **Base:** 70–80 g de quinoa tricolor cocida con una pizca de cúrcuma y sal marina.
 * **Proteína:** Lomo de salmón fresco a la plancha con piel crujiente (sellado con AOVE y sal en escamas).
-* **Vegetales Anti-Hinchazón:** Espárragos trigueros salteados al dente, tomates cherry templados y remolacha cocida cortada en cubitos.
+* **Vegetales Anti-Hinchazón:** Espárragos trigueros salteados al dente, tomates cherry templados y dados de zanahoria asada o calabacín.
 * **Emulsión Lemon-Tahini:** 1 cucharada sopera de tahini blanco + zumo de 1/2 limón + 1 cucharada de agua helada + ajo en polvo. Batir hasta obtener una crema sedosa.
 * **Efecto Digestivo:** Grasas antiinflamatorias Omega-3, selenio para el tiroides y fibra soluble suave sin provocar hinchazón.
 
@@ -133,3 +134,76 @@ Para vencer esto, aplicamos un sistema de **cero fricción y recompensa cerebral
 * **Ingredientes:** Harina de maíz precocida P.A.N. blanca o amarilla, agua templada, 1 cucharadita de semillas de chía hidratadas, sal marina. Relleno: Revuelto de 1 huevo campero + 2 claras con 30 g de queso fresco de Burgos o queso cottage.
 * **Acompañamiento:** 1/2 kiwi maduro en rodajas y té verde caliente.
 * **Efecto Digestivo:** La chía activada aporta mucílagos lubricantes, el kiwi aporta actinidina para activar el tránsito, y la proteína sacia durante horas sin gluten.
+
+---
+
+## 6. NUEVO CATÁLOGO DE RECETAS MODULARES: RAQUEL MARTIN & THE ANTI-INFLAMMATORY CLUB
+*(Para rotar en las próximas semanas y evitar la monotonía culinaria con sabores de alta cocina y digestión ultraligera)*
+
+### A. Desayunos & Meriendas Hormonales (Ricos en Magnesio, Calcio & Dopamina)
+
+#### Receta 4 (Raquel Martin): "Warm Jammy Pears con Cardamomo & Crumble de Semillas"
+* **Concepto:** Tratamiento de placer y micronutrientes para la fase lútea o mañanas de confort.
+* **Ingredientes:** 1 pera madura cortada en cuartos finos, 1 cucharadita de ghee o AOVE, 1/4 cdita de cardamomo molido, 1/2 cdita de canela de Ceilán, 150 g de yogur griego ligero natural (o kéfir), 1 cucharada de pipas de calabaza y 2 nueces de Brasil picadas.
+* **Elaboración (5 min):** Saltear las peras en una sartén con el cardamomo y la canela a fuego medio hasta que suelten sus azúcares naturales y queden tiernas y caramelizadas ("jammy"). Servir sobre el yogur frío y coronar con las semillas y nueces crujientes.
+* **Efecto Metabólico:** El cardamomo estimula la vesícula biliar y combate los gases; la pera aporta pectina soluble digestiva; las semillas y nueces aportan selenio y magnesio para la tiroides.
+
+#### Receta 5 (The Anti-Inflammatory Club): "Cherry & Cacao Protein Pancakes"
+* **Concepto:** Versión reconfortante y antioxidante para variar los pancakes del batch cooking.
+* **Ingredientes:** 40 g de harina de avena sin gluten, 1 cazo de proteína AMIX CFM Isolate, 1 cucharada colmada de cacao puro 100% desgrasado, 1 huevo campero + 2 claras, 60 ml de bebida de avena sin gluten, 1 taza de cerezas deshuesadas o frutos rojos (frescos o congelados).
+* **Elaboración (8 min):** Batir la masa y cocinar en sartén antiadherente como los pancakes habituales. En paralelo, templar las cerezas en el microondas 1 minuto con unas gotas de limón hasta que formen un sirope caliente natural. Verter por encima de los pancakes.
+* **Efecto Metabólico:** Polifenoles de alta potencia (antocianinas) que reducen la PCR (proteína C reactiva) y calman la inflamación articular y muscular post-entreno.
+
+---
+
+### B. Almuerzos & Bowls de Alta Saciedad (Hierro, Zinc & Grano Limpio)
+
+#### Receta 6 (The Anti-Inflammatory Club): "Mediterranean Chicken & Quinoa Crunch Bowl"
+* **Concepto:** Almuerzo completo, fresco y crujiente, perfecto para llevar o preparar en 10 minutos.
+* **Ingredientes:** 150 g de pechuga de pollo marinada con orégano seco, ralladura de limón y ajo en polvo; 70 g de quinoa cocida con cúrcuma; 1 puñado generoso de canónigos frescos; 10 tomates cherry dulces confitados en sartén; 1/2 calabacín en bastoncitos dorados.
+* **Aderezo Emulsionado de Tahini & Lima:** 1 cucharada de tahini blanco + zumo de 1/2 lima + 1 pizca de comino + 1 cucharada de agua fría batida con tenedor hasta emulsionar en crema blanca sedosa.
+* **Efecto Metabólico:** Proteína magra limpia sin gluten, carbohidrato de asimilación lenta que no distiende el estómago, y calcio/hierro biodisponible a través del sésamo (tahini).
+
+#### Receta 7 (Raquel Martin): "Bok Choy & Canónigos Calcium Crunch con Salmón al Horno"
+* **Concepto:** Foco en calcio biodisponible no lácteo para apoyar la densidad ósea y la función tiroidea.
+* **Ingredientes:** 1 lomo de salmón fresco con piel; 2 cogollos de bok choy (o espinacas gruesas) cortados en cuartos longitudinales; 1 bolsa de canónigos; semillas de sésamo tostado; AOVE, jengibre rallado y vinagre de manzana.
+* **Elaboración (12 min):** Hornear o sellar el salmón a la plancha con la técnica de piel crujiente. En sartén wok a fuego vivo con 1 cdita de AOVE y jengibre, saltear el bok choy 2–3 minutos (debe quedar al dente, nunca blando ni oxidado). Mezclar con canónigos frescos y servir con el salmón por encima.
+* **Efecto Metabólico:** Máxima retención de folato y vitamina C, fibra soluble que previene el estreñimiento sin fermentar en el colon.
+
+#### Receta 8 (The Anti-Inflammatory Club): "Ensalada Templada de Remolacha Asada, Lentejas Rojas y Feta"
+* **Concepto:** Alternativa vegetal rica en hierro y minerales para variar las fuentes de legumbres.
+* **Ingredientes:** 100 g de lentejas rojas o pardinas cocidas; 1 remolacha cocida cortada en dados; 30 g de queso feta desmenuzado; 1 puñado de canónigos o rúcula suave; vinagreta de limón, AOVE y mostaza suave.
+* **Efecto Metabólico:** El óxido nítrico natural de la remolacha mejora la microcirculación y oxigenación tisular, facilitando la recuperación y el drenaje de líquidos.
+
+---
+
+### C. Cenas Express & Confort Anti-Hinchazón (<12 Minutos)
+
+#### Receta 9 (The Anti-Inflammatory Club): "Pastelitos Dorados de Salmón y Boniato (Salmon & Sweet Potato Fishcakes)"
+* **Concepto:** Una de las recetas insignia más deliciosas y saciantes de Annabelle y Tom.
+* **Ingredientes:** 1 lomo de salmón cocinado a la plancha y desmigado (o salmón al vapor); 1 boniato asado mediano chafado con tenedor (de tu batch); 1 cucharadita de cebollino fresco picado; 1/2 cucharadita de mostaza suave de Dijon; 1 pizca de sal y pimienta.
+* **Elaboración (8 min):** En un bowl, mezclar el salmón desmigado con el puré de boniato, el cebollino y la mostaza hasta formar una masa manejable. Dividir en 2 hamburguesitas gruesas (fishcakes). Dorar en sartén con 1 cucharadita de AOVE 3 minutos por lado hasta que tengan una costra dorada crujiente.
+* **Acompañamiento:** Ensalada limpia de canónigos con limón exprimido.
+* **Efecto Metabólico:** Cero gluten, grasas Omega-3 para calmar la inflamación nocturna y almidón de lenta absorción que garantiza un sueño profundo sin picos de cortisol de madrugada.
+
+#### Receta 10 (Raquel Martin): "Sopa Dorada de Zanahoria, Batata y Jengibre con Topping Crujiente"
+* **Concepto:** El bálsamo digestivo de Raquel Martin para días de frío, hinchazón o digestión lenta.
+* **Ingredientes:** 2 zanahorias y 1 batata asadas (de la bandeja de batch cooking); 200 ml de caldo de verduras o huesos suave; 1 trocito de jengibre fresco rallado (1 cdita); 1/2 cdita de cúrcuma molida; 1 cucharada de semillas de calabaza tostadas con sal marina para coronar.
+* **Elaboración (5 min):** Triturar las verduras asadas calientes con el caldo, el jengibre y la cúrcuma hasta obtener una crema brillante y sedosa. Servir en cuenco hondo y añadir las semillas de calabaza tostadas para aportar el contraste crujiente.
+* **Efecto Metabólico:** El gingerol del jengibre estimula el vaciado gástrico y previene el reflujo; la cúrcuma desinflama el epitelio intestinal.
+
+#### Receta 11 (Raquel Martin): "Sartenada de Cintas de Calabacín con Gambas al Ajillo y Lima"
+* **Concepto:** Cena ultraligera para noches donde Florencia llega cansada y quiere digestión de 0 minutos.
+* **Ingredientes:** 1 calabacín verde cortado en cintas con el pelador de patatas; 150 g de colas de gambas peladas; 1 diente de ajo laminado; AOVE, sal marina y zumo de media lima.
+* **Elaboración (6 min):** Dorar el ajo y las gambas en sartén caliente con AOVE 2 minutos. Añadir las cintas de calabacín y saltear solo 1,5 minutos (deben quedar al dente, tipo pasta fresca). Exprimir la lima al apagar el fuego.
+* **Efecto Metabólico:** Digestión ultra rápida, cero fermentación y alto contenido en zinc y yodo para la síntesis de hormona tiroidea.
+
+---
+
+### D. Antojitos Hormonales Anti-PMS (Magnesio & Serotonina sin Glucosa Disparada)
+
+#### Receta 12 (Raquel Martin): "Bocaditos de Chocolate Negro, Tahini y Flor de Sal"
+* **Concepto:** Freno definitivo al antojo dulce de la fase lútea con magnesio biodisponible y grasas saciantes.
+* **Ingredientes:** 3 onzas de chocolate negro (>85%) derretidas al microondas (45 seg); 1 cucharada colmada de tahini cremoso; ralladura de 1/2 naranja ecológica; 1 pizca de flor de sal marina en escamas.
+* **Elaboración (3 min + enfriar):** Mezclar el chocolate derretido con el tahini y la ralladura de naranja hasta que quede brillante. Verter sobre un platito con papel de horno en pequeños montoncitos y espolvorear unas escamas de sal. Enfriar 15 minutos en el congelador.
+* **Efecto Metabólico:** Cada bocado aporta magnesio relajante muscular (calma cólicos y espasmos del DIU) y teobromina que eleva el estado de ánimo sin provocar la hipoglucemia reactiva que causan los dulces industriales.
