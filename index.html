@@ -939,16 +939,16 @@
             <div class="flex items-center gap-1.5 mb-0.5">
               <span class="text-xs font-bold text-emerald-700 uppercase tracking-wide">Mercadona</span>
               <span class="text-xs text-slate-400">·</span>
-              <span class="text-xs text-slate-500 font-medium">Solo lo que toca comprar</span>
+              <span class="text-xs text-slate-500 font-medium">Frescos + Reposición Completa</span>
             </div>
             <h3 class="text-sm sm:text-base font-bold text-slate-900 truncate">
-              Lista de la Compra (8 Productos)
+              Lista de la Compra Completa (25 Productos)
             </h3>
           </div>
           
           <div class="flex items-center gap-2 self-start sm:self-auto shrink-0">
             <span id="grocery-progress-badge" class="px-2 py-1 rounded-md bg-emerald-50 border border-emerald-100 text-emerald-800 text-xs font-bold">
-              0 de 8 listos
+              0 de 25 listos
             </span>
             <button type="button" onclick="copyGroceryToClipboard()" class="px-2.5 py-1 rounded-lg bg-slate-900 text-white text-xs font-semibold hover:bg-slate-800 transition flex items-center gap-1 active:scale-95 cursor-pointer" title="Copiar lista para ir al súper">
               <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
@@ -966,10 +966,9 @@
                 <span class="w-2 h-2 rounded-full bg-emerald-500 inline-block"></span>
                 1. Frutas, Verduras & Vegetales Frescos
               </h4>
-              <span class="text-[11px] text-emerald-700 font-semibold">5 productos</span>
+              <span class="text-[11px] text-emerald-700 font-semibold">8 productos</span>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 w-full" id="super-fresh">
-              
               <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
                 <input type="checkbox" onchange="toggleItem('Canónigos frescos (1 bolsa)')" data-item="Canónigos frescos (1 bolsa)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
                 <div class="flex-1 min-w-0 text-xs">
@@ -977,15 +976,13 @@
                   <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Verde digestivo para ensaladas crunch, fajitas y hamburguesa</span>
                 </div>
               </label>
-
               <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
                 <input type="checkbox" onchange="toggleItem('Tomates cherry dulces (1 tarrina 500g)')" data-item="Tomates cherry dulces (1 tarrina 500g)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
                 <div class="flex-1 min-w-0 text-xs">
                   <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Tomates cherry dulces (1 tarrina 500g)</span>
-                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Para sartenadas con gambas, bowls y ensaladas</span>
+                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Para salteados con gambas, bowls y ensaladas</span>
                 </div>
               </label>
-
               <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
                 <input type="checkbox" onchange="toggleItem('Calabacines verdes frescos (2 piezas)')" data-item="Calabacines verdes frescos (2 piezas)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
                 <div class="flex-1 min-w-0 text-xs">
@@ -993,15 +990,13 @@
                   <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Para cintas con gambas de Raquel Martin y salteados</span>
                 </div>
               </label>
-
               <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-                <input type="checkbox" onchange="toggleItem('Peras maduras de agua o conferencia (4 piezas)')" data-item="Peras maduras de agua o conferencia (4 piezas)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
+                <input type="checkbox" onchange="toggleItem('Peras maduras conferencia o de agua (4 piezas)')" data-item="Peras maduras conferencia o de agua (4 piezas)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
                 <div class="flex-1 min-w-0 text-xs">
                   <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Peras maduras conferencia o de agua (4 piezas)</span>
                   <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Clave: Jammy Pears con cardamomo para aliviar estreñimiento</span>
                 </div>
               </label>
-
               <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
                 <input type="checkbox" onchange="toggleItem('Manzanas dulces Golden o Fuji (1 bolsa / 4 uds)')" data-item="Manzanas dulces Golden o Fuji (1 bolsa / 4 uds)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
                 <div class="flex-1 min-w-0 text-xs">
@@ -1009,21 +1004,40 @@
                   <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Pectina caliente con canela para desayunos y meriendas</span>
                 </div>
               </label>
-
+              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
+                <input type="checkbox" onchange="toggleItem('Batatas o boniatos (2 piezas)')" data-item="Batatas o boniatos (2 piezas)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
+                <div class="flex-1 min-w-0 text-xs">
+                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Batatas o boniatos (2 piezas)</span>
+                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Para los fishcakes de salmón y batch de airfryer</span>
+                </div>
+              </label>
+              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
+                <input type="checkbox" onchange="toggleItem('Bandeja de calabaza limpia + puerro + zanahorias')" data-item="Bandeja de calabaza limpia + puerro + zanahorias" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
+                <div class="flex-1 min-w-0 text-xs">
+                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Bandeja de calabaza limpia + puerro + zanahorias</span>
+                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Base fresca para la bandeja dorada y crema sedosa</span>
+                </div>
+              </label>
+              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
+                <input type="checkbox" onchange="toggleItem('Aguacates maduros (malla o 2 piezas)')" data-item="Aguacates maduros (malla o 2 piezas)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
+                <div class="flex-1 min-w-0 text-xs">
+                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Aguacates maduros (malla o 2 piezas)</span>
+                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Grasa saludable y potasio para fajitas y ensaladas</span>
+                </div>
+              </label>
             </div>
           </div>
 
-          <!-- Pasillo 2: Carnicería, Pescadería & Lácteos -->
+          <!-- Pasillo 2: Carnicería, Pescadería & Congelados -->
           <div>
             <div class="flex items-center justify-between mb-1.5">
               <h4 class="text-xs font-bold uppercase tracking-wider text-emerald-800 flex items-center gap-1.5">
                 <span class="w-2 h-2 rounded-full bg-emerald-500 inline-block"></span>
-                2. Carnicería, Pescadería & Lácteos Frescos
+                2. Carnicería, Pescadería & Congelados
               </h4>
-              <span class="text-[11px] text-emerald-700 font-semibold">3 productos</span>
+              <span class="text-[11px] text-emerald-700 font-semibold">4 productos</span>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 w-full" id="super-protein">
-              
               <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
                 <input type="checkbox" onchange="toggleItem('Lomos de salmón fresco con piel (bandeja 2 lomos)')" data-item="Lomos de salmón fresco con piel (bandeja 2 lomos)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
                 <div class="flex-1 min-w-0 text-xs">
@@ -1031,15 +1045,54 @@
                   <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Omega-3 antiinflamatorio para salmón crujiente y fishcakes</span>
                 </div>
               </label>
-
               <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-                <input type="checkbox" onchange="toggleItem('Pechuga de pollo fresca en filetes (400-500g)')" data-item="Pechuga de pollo fresca en filetes (400-500g)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
+                <input type="checkbox" onchange="toggleItem('Pechuga de pollo fresca en filetes (400–500g)')" data-item="Pechuga de pollo fresca en filetes (400–500g)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
                 <div class="flex-1 min-w-0 text-xs">
-                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Pechuga de pollo fresca en filetes (400-500g)</span>
-                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Proteína magra para bowl mediterráneo y fajitas</span>
+                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Pechuga de pollo fresca en filetes (400–500g)</span>
+                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Proteína magra para bowl mediterráneo, arepas y fajitas</span>
                 </div>
               </label>
+              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
+                <input type="checkbox" onchange="toggleItem('Hamburguesas de vacuno o carne picada limpia (2 uds)')" data-item="Hamburguesas de vacuno o carne picada limpia (2 uds)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
+                <div class="flex-1 min-w-0 text-xs">
+                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Hamburguesas de vacuno o carne picada limpia (2 uds)</span>
+                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Hierro hemo para la fase premenstrual y fuerza muscular</span>
+                </div>
+              </label>
+              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
+                <input type="checkbox" onchange="toggleItem('Gambas peladas frescas o congeladas Hacendado (1 bolsa)')" data-item="Gambas peladas frescas o congeladas Hacendado (1 bolsa)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
+                <div class="flex-1 min-w-0 text-xs">
+                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Gambas peladas frescas o congeladas Hacendado (1 bolsa)</span>
+                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Proteína marina limpia para las cintas de calabacín con lima</span>
+                </div>
+              </label>
+            </div>
+          </div>
 
+          <!-- Pasillo 3: Huevos, Lácteos & Bebidas Vegetales -->
+          <div>
+            <div class="flex items-center justify-between mb-1.5">
+              <h4 class="text-xs font-bold uppercase tracking-wider text-emerald-800 flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 inline-block"></span>
+                3. Huevos, Lácteos & Bebidas Vegetales
+              </h4>
+              <span class="text-[11px] text-emerald-700 font-semibold">6 productos</span>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 w-full" id="super-dairy">
+              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
+                <input type="checkbox" onchange="toggleItem('Huevos camperos (docena o pack 6)')" data-item="Huevos camperos (docena o pack 6)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
+                <div class="flex-1 min-w-0 text-xs">
+                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Huevos camperos (docena o pack 6)</span>
+                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Base diaria indispensable para desayunos, arepas y cenas</span>
+                </div>
+              </label>
+              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
+                <input type="checkbox" onchange="toggleItem('Claras de huevo pasteurizadas (botella Hacendado)')" data-item="Claras de huevo pasteurizadas (botella Hacendado)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
+                <div class="flex-1 min-w-0 text-xs">
+                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Claras de huevo pasteurizadas (botella Hacendado)</span>
+                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Volumen proteico limpio para revueltos y batch de pancakes</span>
+                </div>
+              </label>
               <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
                 <input type="checkbox" onchange="toggleItem('2 tarrinas de queso cottage Hacendado')" data-item="2 tarrinas de queso cottage Hacendado" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
                 <div class="flex-1 min-w-0 text-xs">
@@ -1047,7 +1100,89 @@
                   <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Relleno proteico cremoso de arepas, revueltos y fajitas</span>
                 </div>
               </label>
+              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
+                <input type="checkbox" onchange="toggleItem('Yogur griego natural sin azúcar (pack 4 o tarrina)')" data-item="Yogur griego natural sin azúcar (pack 4 o tarrina)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
+                <div class="flex-1 min-w-0 text-xs">
+                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Yogur griego natural sin azúcar (pack 4 o tarrina)</span>
+                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Para la mousse de chocolate y meriendas saciantes</span>
+                </div>
+              </label>
+              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
+                <input type="checkbox" onchange="toggleItem('Lonchas de queso havarti o tierno light')" data-item="Lonchas de queso havarti o tierno light" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
+                <div class="flex-1 min-w-0 text-xs">
+                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Lonchas de queso havarti o tierno light</span>
+                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Para fundir en caliente sobre la hamburguesa o arepa</span>
+                </div>
+              </label>
+              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
+                <input type="checkbox" onchange="toggleItem('Bebida de avena Hacendado sin azúcares')" data-item="Bebida de avena Hacendado sin azúcares" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
+                <div class="flex-1 min-w-0 text-xs">
+                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Bebida de avena Hacendado sin azúcares</span>
+                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Para el café diario y la masa del batch de pancakes</span>
+                </div>
+              </label>
+            </div>
+          </div>
 
+          <!-- Pasillo 4: Despensa Sin Gluten & Antojitos Sanos -->
+          <div>
+            <div class="flex items-center justify-between mb-1.5">
+              <h4 class="text-xs font-bold uppercase tracking-wider text-emerald-800 flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 inline-block"></span>
+                4. Despensa Sin Gluten & Antojitos Sanos
+              </h4>
+              <span class="text-[11px] text-emerald-700 font-semibold">7 productos</span>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 w-full" id="super-pantry">
+              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
+                <input type="checkbox" onchange="toggleItem('Harina P.A.N. blanca o amarilla (1 paquete)')" data-item="Harina P.A.N. blanca o amarilla (1 paquete)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
+                <div class="flex-1 min-w-0 text-xs">
+                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Harina P.A.N. blanca o amarilla (1 paquete)</span>
+                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Masa de maíz 100% sin gluten para arepas doradas</span>
+                </div>
+              </label>
+              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
+                <input type="checkbox" onchange="toggleItem('Copos o harina de avena certificada Sin Gluten')" data-item="Copos o harina de avena certificada Sin Gluten" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
+                <div class="flex-1 min-w-0 text-xs">
+                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Copos o harina de avena certificada Sin Gluten</span>
+                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Para el batch de pancakes esponjosos de varios días</span>
+                </div>
+              </label>
+              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
+                <input type="checkbox" onchange="toggleItem('Tortitas de maíz 100% Sin Gluten (Old El Paso o Hacendado)')" data-item="Tortitas de maíz 100% Sin Gluten (Old El Paso o Hacendado)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
+                <div class="flex-1 min-w-0 text-xs">
+                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Tortitas de maíz 100% Sin Gluten (Old El Paso o Hacendado)</span>
+                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Base crujiente y limpia para fajitas y cenas rápidas</span>
+                </div>
+              </label>
+              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
+                <input type="checkbox" onchange="toggleItem('Quinoa (vasitos listos o paquete)')" data-item="Quinoa (vasitos listos o paquete)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
+                <div class="flex-1 min-w-0 text-xs">
+                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Quinoa (vasitos listos o paquete)</span>
+                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Carbohidrato antiinflamatorio para el bowl mediterráneo</span>
+                </div>
+              </label>
+              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
+                <input type="checkbox" onchange="toggleItem('Semillas de chía')" data-item="Semillas de chía" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
+                <div class="flex-1 min-w-0 text-xs">
+                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Semillas de chía</span>
+                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Mucílagos solubles clave para el tránsito y elasticidad de arepas</span>
+                </div>
+              </label>
+              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
+                <input type="checkbox" onchange="toggleItem('Chocolate negro >85% (1 tableta)')" data-item="Chocolate negro >85% (1 tableta)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
+                <div class="flex-1 min-w-0 text-xs">
+                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Chocolate negro >85% (1 tableta)</span>
+                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Magnesio y dopamina para antojitos de fase lútea</span>
+                </div>
+              </label>
+              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
+                <input type="checkbox" onchange="toggleItem('Tahini (pasta de sésamo) o crema de cacahuete 100%')" data-item="Tahini (pasta de sésamo) o crema de cacahuete 100%" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
+                <div class="flex-1 min-w-0 text-xs">
+                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Tahini (pasta de sésamo) o crema de cacahuete 100%</span>
+                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Calcio y grasas saludables para saciedad hormonal</span>
+                </div>
+              </label>
             </div>
           </div>
         </div>
@@ -2028,22 +2163,43 @@
 
     function copyGroceryToClipboard() {
       const items = [
-        "🛒 *LISTA DE LA COMPRA MERCADONA (16–22 NOV)*",
-        "_(Solo lo que toca comprar en el súper · 8 productos)_",
+        "🛒 *LISTA DE LA COMPRA COMPLETA MERCADONA (16–22 NOV)*",
+        "_(Frescos + Reposición Completa · 25 productos)_",
         "",
-        "🌿 *FRUTAS, VERDURAS & FRESCOS:*",
+        "🌿 *1. FRUTAS, VERDURAS & FRESCOS:*",
         "• Canónigos frescos (1 bolsa)",
         "• Tomates cherry dulces (1 tarrina 500g)",
         "• Calabacines verdes frescos (2 piezas)",
-        "• Peras maduras conferencia o de agua (4 piezas - para Jammy Pears anti-estreñimiento)",
-        "• Manzanas dulces Golden o Fuji (1 bolsa / 4 unidades)",
+        "• Peras maduras conferencia o de agua (4 piezas)",
+        "• Manzanas dulces Golden o Fuji (1 bolsa / 4 uds)",
+        "• Batatas o boniatos (2 piezas)",
+        "• Bandeja de calabaza limpia + puerro + zanahorias",
+        "• Aguacates maduros (2 piezas)",
         "",
-        "🥩 *CARNICERÍA, PESCADERÍA & LÁCTEOS:*",
+        "🥩 *2. CARNICERÍA, PESCADERÍA & CONGELADOS:*",
         "• Lomos de salmón fresco con piel (bandeja 2 lomos)",
         "• Pechuga de pollo fresca en filetes (bandeja 400-500g)",
-        "• 2 tarrinas de queso cottage Hacendado",
+        "• Hamburguesas de vacuno o carne picada limpia (2 uds)",
+        "• Gambas peladas frescas o congeladas Hacendado (1 bolsa)",
         "",
-        "✅ _(El resto: ternera picada congelada, gambas, espinacas congeladas, avena, AMIX, harina P.A.N., chía, quinoa y especias están en casa)_"
+        "🥚 *3. HUEVOS, LÁCTEOS & BEBIDAS VEGETALES:*",
+        "• Huevos camperos (docena o pack 6)",
+        "• Claras de huevo pasteurizadas (botella Hacendado)",
+        "• 2 tarrinas de queso cottage Hacendado",
+        "• Yogur griego natural sin azúcar (pack 4 o tarrina)",
+        "• Lonchas de queso havarti o tierno light",
+        "• Bebida de avena Hacendado sin azúcares",
+        "",
+        "🌾 *4. DESPENSA SIN GLUTEN & ANTOJITOS SANOS:*",
+        "• Harina P.A.N. blanca o amarilla (1 paquete)",
+        "• Copos o harina de avena certificada Sin Gluten",
+        "• Tortitas de maíz 100% Sin Gluten (Old El Paso o Hacendado)",
+        "• Quinoa (vasitos listos o paquete)",
+        "• Semillas de chía",
+        "• Chocolate negro >85% (1 tableta)",
+        "• Tahini (pasta de sésamo) o crema de cacahuete 100%",
+        "",
+        "✨ _100% Sin Gluten · Menú Antiinflamatorio Semanal_"
       ].join('\n');
 
       navigator.clipboard.writeText(items).then(() => {

@@ -119,31 +119,43 @@
 
 ---
 
-## 6. INVENTARIO ACTUALIZADO & COMPRA MÍNIMA INTELIGENTE
+## 6. LISTA DE LA COMPRA COMPLETA (25 PRODUCTOS · MERCADONA)
 
-> **📌 REGLAS MAESTRAS FIJAS:**
-> 1. **Actualización Semanal Obligatoria:** Esta lista debe recalcularse cada semana al planificar el nuevo menú.
-> 2. **Priorizar Siempre el Stock de Casa:** Considerar rigurosamente lo que ya tienes en congelador, nevera y despensa para evitar gastos innecesarios y desperdicio de comida.
-> 3. **Fidelidad Total de Fotos:** Las imágenes de la web deben representar en todo momento y de forma exacta el plato real elaborado.
+> **🛒 COMPRA COMPLETA & REPOSICIÓN INTEGRAL (16 AL 22 DE NOVIEMBRE)**
+> Se incluye la lista integral con todos los frescos y la reposición completa de básicos de nevera y despensa sin gluten.
 
-### ¡Ya tienes en casa en congelador, nevera y despensa! (Cero gasto):
-* **🥩 Carne picada / molida de ternera de Mercadona (congelada, ~250–300 g):** ¡No compres hamburguesas! Descongela una porción el viernes por la mañana para hacer 2 hamburguesas caseras limpias a la plancha con queso fundido y tortitas de maíz para la cena del viernes.
-* **🍓 Frutos rojos congelados:** ¡No compres frescos! Descongélalos 30 segundos en el microondas para añadir a tu yogur griego o pancakes.
-* **🍏 3 manzanas en despensa:** Cubren todos los desayunos y antojitos caramelizados de la semana.
-* **🥣 Crema Dorada de Otoño:** 2–3 raciones listas en la nevera.
-* **🦐 1 paquete de colas de gambas peladas** (intacto).
-* **🥚 Huevos camperos y claras.**
-* **🌾 Despensa limpia sin gluten:** Harina de Maíz Blanco P.A.N., copos de avena sin gluten, hélices de lenteja roja 100%, garbanzos en conserva, arroz basmati y quinoa.
-* **💪 Dúo Proteico:** Proteína AMIX Black CFM Isolate (dulce) y Proteína Moara Guisante 100% vegetal (salada).
-* **🧁 Preparato per Dolci "Il Pane di Anna"** (harina de repostería sin gluten).
-* **🥬 Verduras frescas restantes:** 1 calabacín, 250 g de zanahorias, patatas y cherrys.
-* **💊 Suplementos & Especias:** Magnesio bisglicinato, 2 nueces de Brasil fijas, multivitamínico, canela de Ceilán, cúrcuma, orégano y AOVE.
+### 🌿 1. Frutas, Verduras & Vegetales Frescos (8 productos)
+* [ ] **Canónigos frescos (1 bolsa):** Verde digestivo para ensaladas crunch, fajitas y hamburguesa.
+* [ ] **Tomates cherry dulces (1 tarrina 500g):** Para salteados con gambas, bowls y ensaladas.
+* [ ] **Calabacines verdes frescos (2 piezas):** Para cintas con gambas de Raquel Martin y salteados.
+* [ ] **Peras maduras conferencia o de agua (4 piezas):** Clave para Jammy Pears con cardamomo y aliviar estreñimiento.
+* [ ] **Manzanas dulces Golden o Fuji (1 bolsa / 4 uds):** Pectina caliente con canela para desayunos y meriendas.
+* [ ] **Batatas o boniatos (2 piezas):** Para los fishcakes de salmón y batch de airfryer.
+* [ ] **Bandeja de calabaza limpia + puerro + zanahorias:** Base fresca para la bandeja dorada y crema sedosa.
+* [ ] **Aguacates maduros (2 piezas):** Grasa monoinsaturada y potasio para fajitas y ensaladas.
 
-### Lo ÚNICO que podrías necesitar comprar hacia el jueves/viernes:
-* [ ] 1–2 lomos de salmón fresco de pescadería (para el jueves y/o sábado)
-* [ ] 1 paquete de tortillas de maíz 100% (tipo Guanajuato o Nagual)
-* [ ] 1 bolsa de canónigos frescos (para acompañar la hamburguesa y fajitas)
-* [ ] Bebida de avena certificada sin gluten (si te queda poca)
+### 🥩 2. Carnicería, Pescadería & Congelados (4 productos)
+* [ ] **Lomos de salmón fresco con piel (bandeja 2 lomos):** Omega-3 antiinflamatorio para salmón crujiente y fishcakes.
+* [ ] **Pechuga de pollo fresca en filetes (bandeja 400–500g):** Proteína magra para bowl mediterráneo, arepas y fajitas.
+* [ ] **Hamburguesas de vacuno o carne picada limpia (2 uds):** Hierro hemo para la fase premenstrual y tono muscular.
+* [ ] **Gambas peladas frescas o congeladas Hacendado (1 bolsa):** Proteína marina limpia para las cintas de calabacín con lima.
+
+### 🥚 3. Huevos, Lácteos & Bebidas Vegetales (6 productos)
+* [ ] **Huevos camperos (docena o pack 6):** Base diaria indispensable para desayunos, arepas y cenas.
+* [ ] **Claras de huevo pasteurizadas (botella Hacendado):** Volumen proteico limpio para revueltos y batch de pancakes.
+* [ ] **2 tarrinas de queso cottage Hacendado:** Relleno proteico cremoso de arepas, revueltos y fajitas.
+* [ ] **Yogur griego natural sin azúcar (pack 4 o tarrina):** Para la mousse de chocolate y meriendas saciantes.
+* [ ] **Lonchas de queso havarti o tierno light:** Para fundir en caliente sobre la hamburguesa o arepa.
+* [ ] **Bebida de avena Hacendado sin azúcares:** Para el café diario y la masa del batch de pancakes.
+
+### 🌾 4. Despensa Sin Gluten & Antojitos Sanos (7 productos)
+* [ ] **Harina P.A.N. blanca o amarilla (1 paquete):** Masa de maíz 100% sin gluten para arepas doradas.
+* [ ] **Copos o harina de avena certificada Sin Gluten:** Para el batch de pancakes esponjosos de varios días.
+* [ ] **Tortitas de maíz 100% Sin Gluten (Old El Paso o Hacendado):** Base crujiente y limpia para fajitas y cenas rápidas.
+* [ ] **Quinoa (vasitos listos o paquete):** Carbohidrato antiinflamatorio para el bowl mediterráneo.
+* [ ] **Semillas de chía:** Mucílagos solubles clave para el tránsito y elasticidad de arepas.
+* [ ] **Chocolate negro >85% (1 tableta):** Magnesio y dopamina para antojitos de fase lútea.
+* [ ] **Tahini (pasta de sésamo) o crema de frutos secos 100%:** Calcio y grasas saludables para saciedad hormonal.
 
 ---
 
@@ -171,7 +183,7 @@
 
 ## 9. PROTOCOLO DE PESAJE, BÁSCULA & RESPUESTA CLÍNICA: ¿CUÁNDO ES MEJOR PESARME?
 
-### ⚠️ Regla de Oro Inmediata: ESTA SEMANA (9 AL 15 NOV) NO SUBIRSE A LA BÁSCULA
+### ⚠️ Regla de Oro Inmediata: ESTA SEMANA (16 AL 22 NOV) NO SUBIRSE A LA BÁSCULA
 * **¿Por qué?** Te encuentras en el **Día 27 de tu ciclo menstrual (Fase Lútea Tardía / Premenstrual - PMS)** y en proceso de adaptación al DIU Kyleena.
 * **La trampa fisiológica del agua extracelular:**
   * Justo antes de que baje la regla, la caída conjunta de progesterona y estrógenos genera una retención transitoria de sodio y líquido en el espacio intersticial.
@@ -181,7 +193,7 @@
 
 ---
 
-### 🎯 La Ventana Óptima de Pesaje Clínico: DEL 17 AL 19 DE NOVIEMBRE
+### 🎯 La Ventana Óptima de Pesaje Clínico: DEL 24 AL 27 DE NOVIEMBRE (Tras finalizar la menstruación)
 * **Fase Folicular Temprana / Media (Días 5 a 8 del ciclo):**
   * Una vez superado el sangrado menstrual (o completado el reseteo hormonal de este ciclo), los estrógenos suben de manera limpia y fisiológica.
   * Los riñones eliminan todo el exceso de sodio y agua retenida durante el PMS.
