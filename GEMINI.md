@@ -48,3 +48,10 @@ Este archivo contiene las directrices operativas fijas y obligatorias para cualq
 * **Línea Roja Calórica:** Jamás planificar por debajo de la Tasa Metabólica Basal (1.427 kcal).
 * **Gestión del Agua:** La hidratación diaria (~2.0 L) contempla líquidos totales (agua pura ~1.2–1.5 L + cremas de verduras + infusiones). No obligar a beber 2 L de agua fría de golpe durante las comidas para proteger la digestión y evitar hinchazón.
 * **Protocolo de Pesaje:** Jamás pesarse en fase premenstrual / lútea tardía (Días 21–28 del ciclo o con retención de agua extracelular). Pesar en bioimpedancia únicamente en fase folicular limpia (Días 5–8) tras orinar y en ayunas.
+
+---
+
+## 5. REGLA OBLIGATORIA: BANCO DE RECETAS, REUTILIZACIÓN Y USO DIRECTO DE FOTOS DE INTERNET / INSTAGRAM
+* **Uso directo de fotos de creadoras (Cero generación innecesaria de IA):** Cuando se adapte o incorpore una receta de internet, newsletters o Instagram (@erth.and.me, @raquels.pantry, @theantiinflammatoryclub, @ajfoodie, @emilyontoast, @mona.naudts, @nutriaconsejame, etc.), **se deben utilizar directamente las fotografías reales y originales de las publicaciones** o reutilizar el catálogo fotográfico ya existente en `images/`, en lugar de generar imágenes con IA innecesariamente.
+* **Recetario Maestro Centralizado (`RECETARIO_MAESTRO_CON_FOTOS.md`):** Toda receta creada, adaptada o aprobada para Florencia DEBE quedar registrada de forma permanente en `RECETARIO_MAESTRO_CON_FOTOS.md` con su enlace local a `images/`, autor/fuente original, ingredientes exactos del Mercadona, preparación paso a paso y desglose nutricional.
+* **Reutilización prioritaria antes de crear:** Antes de plantear una receta nueva o solicitar una foto, consultar siempre el recetario maestro y la carpeta `images/` para reaprovechar los recursos visuales y las preparaciones que ya han demostrado encajar a nivel digestivo y gustativo.
