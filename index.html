@@ -26,30 +26,49 @@
     }
     body {
       font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      font-size: 16px;
-      line-height: 1.6;
+      font-size: 14px;
+      line-height: 1.5;
       background: #F8FAFC;
       color: #0F172A;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       letter-spacing: -0.01em;
     }
-    h1 { font-size: 2rem !important; font-weight: 700; line-height: 1.25; }
-    h2 { font-size: 1.5rem !important; font-weight: 700; line-height: 1.3; }
-    h3 { font-size: 1.25rem !important; font-weight: 600; line-height: 1.35; }
-    h4 { font-size: 1rem !important; font-weight: 600; line-height: 1.4; }
+    @media (min-width: 640px) {
+      body {
+        font-size: 15px;
+        line-height: 1.6;
+      }
+    }
     h1, h2, h3, h4, h5, h6 {
       font-family: "Outfit", sans-serif;
       letter-spacing: -0.02em;
       color: #0F172A;
       line-height: 1.25;
     }
+    h1 { font-size: 1.25rem; font-weight: 700; }
+    h2 { font-size: 1.1rem; font-weight: 700; }
+    h3 { font-size: 0.95rem; font-weight: 600; }
+    h4 { font-size: 0.85rem; font-weight: 600; }
+    @media (min-width: 640px) {
+      h1 { font-size: 1.65rem; }
+      h2 { font-size: 1.25rem; }
+      h3 { font-size: 1.1rem; }
+      h4 { font-size: 0.95rem; }
+    }
     .card-clean {
       background: #FFFFFF;
       border: 1px solid #E2E8F0;
-      border-radius: 16px;
-      padding: 1.5rem;
-      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+      border-radius: 12px;
+      padding: 0.75rem 0.875rem;
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.03);
+    }
+    @media (min-width: 640px) {
+      .card-clean {
+        border-radius: 16px;
+        padding: 1.25rem;
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+      }
     }
     .tap-effect {
       transition: opacity 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
@@ -64,24 +83,24 @@
 <body class="min-h-screen pb-20 text-slate-900 w-full overflow-x-hidden bg-slate-50">
 
   <!-- TOP APP BAR -->
-  <header class="sticky top-0 z-40 bg-white border-b border-slate-200 px-4 py-3 sm:px-6 w-full">
-    <div class="max-w-4xl mx-auto flex items-center justify-between gap-4">
+  <header class="sticky top-0 z-40 bg-white border-b border-slate-200 px-3 py-2 sm:px-6 sm:py-3 w-full">
+    <div class="max-w-4xl mx-auto flex items-center justify-between gap-3">
       
       <!-- Brand & Date -->
       <div class="min-w-0 flex-1">
-        <h1 class="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight truncate">Florencia Schmidt</h1>
-        <p class="text-sm text-slate-600 font-medium truncate">Plan Semanal de Nutrición · 16 al 22 Nov</p>
+        <h1 class="text-base sm:text-xl font-bold text-slate-900 tracking-tight truncate">Florencia Schmidt</h1>
+        <p class="text-xs sm:text-sm text-slate-500 font-medium truncate">Plan Semanal · 16 al 22 Nov</p>
       </div>
 
       <!-- Navigation Tabs Switcher -->
-      <nav class="flex items-center p-1 rounded-xl bg-slate-100 border border-slate-200 text-sm shrink-0" aria-label="Secciones">
-        <button type="button" onclick="switchView('menu')" id="view-btn-menu" class="tap-effect px-3.5 py-1.5 rounded-lg font-bold bg-white text-slate-900 shadow-sm cursor-pointer">
+      <nav class="flex items-center p-0.5 sm:p-1 rounded-lg sm:rounded-xl bg-slate-100 border border-slate-200 text-xs sm:text-sm shrink-0" aria-label="Secciones">
+        <button type="button" onclick="switchView('menu')" id="view-btn-menu" class="tap-effect px-2.5 py-1 sm:px-3.5 sm:py-1.5 rounded-md sm:rounded-lg font-bold bg-white text-slate-900 shadow-sm cursor-pointer">
           Menú
         </button>
-        <button type="button" onclick="switchView('batch')" id="view-btn-batch" class="tap-effect px-3.5 py-1.5 rounded-lg font-medium text-slate-600 hover:text-slate-900 cursor-pointer">
-          Batch Prep
+        <button type="button" onclick="switchView('batch')" id="view-btn-batch" class="tap-effect px-2.5 py-1 sm:px-3.5 sm:py-1.5 rounded-md sm:rounded-lg font-medium text-slate-600 hover:text-slate-900 cursor-pointer">
+          Batch
         </button>
-        <button type="button" onclick="switchView('super')" id="view-btn-super" class="tap-effect px-3.5 py-1.5 rounded-lg font-medium text-slate-600 hover:text-slate-900 cursor-pointer">
+        <button type="button" onclick="switchView('super')" id="view-btn-super" class="tap-effect px-2.5 py-1 sm:px-3.5 sm:py-1.5 rounded-md sm:rounded-lg font-medium text-slate-600 hover:text-slate-900 cursor-pointer">
           Súper
         </button>
       </nav>
@@ -90,117 +109,117 @@
   </header>
 
   <!-- MAIN WRAPPER -->
-  <main class="max-w-4xl mx-auto px-4 sm:px-6 pt-6 space-y-8 w-full">
+  <main class="max-w-4xl mx-auto px-3 sm:px-6 pt-3 sm:pt-6 space-y-3.5 sm:space-y-6 w-full">
 
     <!-- ======================================================== -->
     <!-- BLOQUE 1: PROGRESO Y MÉTRICAS                            -->
     <!-- ======================================================== -->
-    <section id="progress-summary-section" class="space-y-4 w-full">
+    <section id="progress-summary-section" class="space-y-2.5 sm:space-y-4 w-full">
       
       <!-- Section Header -->
-      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-2 border-b border-slate-200">
-        <div>
-          <h2 class="text-xl sm:text-2xl font-bold text-slate-900">Progreso y Métricas Clínicas</h2>
-          <p class="text-sm text-slate-600">Recomposición corporal, tiroides y sincronización hormonal</p>
+      <div class="flex items-center justify-between gap-2 pb-1.5 border-b border-slate-200">
+        <div class="min-w-0">
+          <h2 class="text-sm sm:text-lg font-bold text-slate-900 truncate">Progreso Clínico</h2>
+          <p class="text-[11px] sm:text-xs text-slate-500 truncate">Recomposición y sincronización hormonal</p>
         </div>
 
-        <div class="flex items-center gap-2 text-sm">
-          <span class="px-2.5 py-1 rounded-md bg-emerald-50 text-emerald-800 border border-emerald-200 font-semibold">
+        <div class="flex items-center gap-1 sm:gap-2 shrink-0">
+          <span class="px-2 py-0.5 rounded-md bg-emerald-50 text-emerald-800 border border-emerald-200 text-[10px] sm:text-xs font-semibold">
             DIU: 16 Nov
           </span>
-          <span class="px-2.5 py-1 rounded-md bg-amber-50 text-amber-900 border border-amber-200 font-semibold">
-            Fase Premenstrual
+          <span class="px-2 py-0.5 rounded-md bg-amber-50 text-amber-900 border border-amber-200 text-[10px] sm:text-xs font-semibold">
+            Fase PMS
           </span>
         </div>
       </div>
 
-      <!-- 2 Unified Cards (No identical 4-box grid, no cards inside cards) -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
+      <!-- 2 Unified Cards: LADO A LADO EN MOBILE (grid-cols-2) -->
+      <div class="grid grid-cols-2 gap-2 sm:gap-4 w-full">
         
         <!-- CARD 1: Composición Corporal -->
-        <div class="card-clean flex flex-col justify-between space-y-4">
+        <div class="card-clean flex flex-col justify-between space-y-2">
           <div>
-            <div class="flex items-baseline justify-between gap-2">
-              <h3 class="text-base font-bold text-slate-900">Composición Corporal</h3>
-              <span class="text-sm font-semibold text-emerald-700">Meta: 60,0 kg</span>
+            <div class="flex items-center justify-between gap-1">
+              <h3 class="text-xs sm:text-sm font-bold text-slate-900 truncate">Composición</h3>
+              <span class="text-[10px] sm:text-xs font-semibold text-emerald-700 shrink-0">Meta 60kg</span>
             </div>
             
-            <div class="mt-2 flex items-baseline gap-4">
+            <div class="mt-1 flex items-baseline justify-between gap-1">
               <div>
-                <span class="text-2xl sm:text-3xl font-extrabold text-slate-900" id="current-weight-display">69,0</span>
-                <span class="text-sm font-semibold text-slate-500">kg peso</span>
+                <span class="text-lg sm:text-2xl font-black text-slate-900" id="current-weight-display">69,0</span>
+                <span class="text-[10px] sm:text-xs font-semibold text-slate-500 block -mt-0.5">kg peso</span>
               </div>
-              <div class="border-l border-slate-200 pl-4">
-                <span class="text-2xl sm:text-3xl font-extrabold text-slate-900">46,3</span>
-                <span class="text-sm font-semibold text-slate-500">kg masa magra</span>
+              <div class="text-right">
+                <span class="text-lg sm:text-2xl font-black text-slate-800">46,3</span>
+                <span class="text-[10px] sm:text-xs font-semibold text-slate-500 block -mt-0.5">kg músculo</span>
               </div>
             </div>
 
-            <p class="mt-3 text-sm text-slate-600 leading-relaxed">
-              El 67% de tu peso corporal es músculo protegido. En esta fase premenstrual la báscula retiene líquido extracelular de forma temporal.
+            <p class="mt-1.5 text-[11px] sm:text-xs text-slate-600 leading-snug line-clamp-2">
+              67% músculo protegido. Líquido retenido por fase premenstrual.
             </p>
           </div>
 
-          <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
-            <span class="text-sm font-medium text-slate-500">Ritmo previsto: −0,4 kg / semana</span>
-            <button type="button" onclick="toggleWeightGuide()" class="text-sm font-bold text-emerald-700 hover:text-emerald-800 cursor-pointer">
-              Protocolo de pesaje ▾
+          <div class="pt-1.5 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-[10px] text-slate-400 hidden sm:inline">−0,4 kg/sem</span>
+            <button type="button" onclick="toggleWeightGuide()" class="text-[11px] sm:text-xs font-bold text-emerald-700 hover:text-emerald-800 cursor-pointer">
+              Protocolo ▾
             </button>
           </div>
         </div>
 
         <!-- CARD 2: Metabolismo y Actividad -->
-        <div class="card-clean flex flex-col justify-between space-y-4">
+        <div class="card-clean flex flex-col justify-between space-y-2">
           <div>
-            <div class="flex items-baseline justify-between gap-2">
-              <h3 class="text-base font-bold text-slate-900">Metabolismo y Entrenamiento</h3>
-              <span class="text-sm font-semibold text-slate-600" id="card-training-count">4 sesiones</span>
+            <div class="flex items-center justify-between gap-1">
+              <h3 class="text-xs sm:text-sm font-bold text-slate-900 truncate">Metabolismo</h3>
+              <span class="text-[10px] sm:text-xs font-semibold text-slate-600 shrink-0" id="card-training-count">4 sesiones</span>
             </div>
 
-            <div class="mt-2 flex items-baseline gap-4">
+            <div class="mt-1 flex items-baseline justify-between gap-1">
               <div>
-                <span class="text-2xl sm:text-3xl font-extrabold text-slate-900">1.427</span>
-                <span class="text-sm font-semibold text-slate-500">kcal BMR</span>
+                <span class="text-lg sm:text-2xl font-black text-slate-900">1.427</span>
+                <span class="text-[10px] sm:text-xs font-semibold text-slate-500 block -mt-0.5">kcal suelo</span>
               </div>
-              <div class="border-l border-slate-200 pl-4">
-                <span class="text-2xl sm:text-3xl font-extrabold text-emerald-700">4</span>
-                <span class="text-sm font-semibold text-slate-500">días fuerza</span>
+              <div class="text-right">
+                <span class="text-lg sm:text-2xl font-black text-emerald-700">4</span>
+                <span class="text-[10px] sm:text-xs font-semibold text-slate-500 block -mt-0.5">días fuerza</span>
               </div>
             </div>
 
-            <p class="mt-3 text-sm text-slate-600 leading-relaxed">
-              Tu tasa metabólica basal (1.427 kcal) es el suelo calórico sagrado para asegurar la conversión de hormona tiroidea T3.
-            </p>
+            <!-- Weekly training indicator -->
+            <div class="mt-1.5 pt-1 border-t border-slate-100">
+              <div class="flex items-center justify-between gap-0.5 h-4 sm:h-5" id="card-training-bars">
+                <!-- Injected by JS -->
+              </div>
+            </div>
           </div>
 
-          <!-- Weekly training indicator (No pulsing dots) -->
-          <div class="pt-3 border-t border-slate-100">
-            <div class="flex items-center justify-between gap-1 h-5" id="card-training-bars">
-              <!-- Injected by JS -->
-            </div>
-            <span class="text-xs font-semibold text-slate-500 block text-right mt-1.5" id="card-training-subtitle">Lun · Mar · Jue · Sáb</span>
+          <div class="pt-1 flex items-center justify-between">
+            <span class="text-[10px] font-semibold text-slate-500 truncate" id="card-training-subtitle">L · M · J · S</span>
+            <span class="text-[10px] text-emerald-700 font-medium">T3 conversión</span>
           </div>
         </div>
 
       </div>
 
       <!-- PANEL DESPLEGABLE: PROTOCOLO DE PESAJE -->
-      <div id="weight-guide-panel" class="hidden card-clean bg-amber-50/50 border-amber-200 space-y-4">
-        <div class="flex items-start justify-between gap-2 pb-2 border-b border-amber-200">
+      <div id="weight-guide-panel" class="hidden card-clean bg-amber-50/50 border-amber-200 space-y-2.5 p-3 sm:p-4">
+        <div class="flex items-start justify-between gap-2 pb-1.5 border-b border-amber-200">
           <div>
-            <h3 class="text-lg font-bold text-slate-900">Protocolo de Báscula: Cuándo y Cómo Pesarte</h3>
-            <p class="text-sm text-slate-700">Sincronización con el ciclo hormonal, DIU Kyleena y retención de líquidos</p>
+            <h3 class="text-xs sm:text-base font-bold text-slate-900">Protocolo de Báscula: Cuándo y Cómo Pesarte</h3>
+            <p class="text-[10px] sm:text-xs text-slate-600">Sincronización con ciclo hormonal, DIU Kyleena y retención</p>
           </div>
-          <button type="button" onclick="toggleWeightGuide()" class="text-slate-500 hover:text-slate-800 text-sm font-bold p-1 cursor-pointer">✕</button>
+          <button type="button" onclick="toggleWeightGuide()" class="text-slate-500 hover:text-slate-800 text-xs font-bold p-1 cursor-pointer">✕</button>
         </div>
 
-        <div class="text-sm text-amber-950 space-y-1 pb-1">
-          <strong>Aviso de fase actual:</strong> Durante los días previos a la menstruación (fase lútea tardía), la progesterona retiene agua extracelular. Pesarte ahora sumaría entre 1,0 y 2,5 kg ficticios de agua.
-          <div class="mt-1 font-semibold text-amber-900">Próxima ventana óptima recomendada: del 24 al 27 de Noviembre (tras la regla).</div>
+        <div class="text-xs text-amber-950 space-y-0.5 pb-0.5">
+          <strong>Aviso de fase actual:</strong> Durante los días previos a la regla (fase lútea tardía), la progesterona retiene agua extracelular (+1,0 a +2,5 kg ficticios).
+          <div class="font-semibold text-amber-900 mt-0.5">Próxima ventana óptima: del 24 al 27 de Noviembre (tras la regla).</div>
         </div>
 
         <!-- 4 Reglas Clínicas (Flattened) -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-slate-700 pt-1">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-700 pt-0.5">
           <div class="space-y-0.5">
             <strong class="text-slate-900 block font-bold">1. Frecuencia: Cada 2 a 3 semanas</strong>
             <p class="text-slate-600">Las fluctuaciones diarias reflejan agua y digestión, no grasa ni músculo.</p>
@@ -215,26 +234,26 @@
           </div>
           <div class="space-y-0.5">
             <strong class="text-slate-900 block font-bold">4. Noche previa tranquila</strong>
-            <p class="text-slate-600">Sin comidas saladas copiosas, sin alcohol y sin microtraumas musculares intensos.</p>
+            <p class="text-slate-600">Sin comidas saladas copiosas, sin alcohol y sin microtraumas musculares.</p>
           </div>
         </div>
 
         <!-- Historial & Registro -->
-        <div class="pt-3 border-t border-amber-200 space-y-3">
+        <div class="pt-2 border-t border-amber-200 space-y-2">
           <div class="flex items-center justify-between">
-            <h4 class="text-sm font-bold text-slate-900">Registro Personal de Peso</h4>
-            <span class="text-xs text-slate-500">Guardado localmente en tu dispositivo</span>
+            <h4 class="text-xs font-bold text-slate-900">Registro Personal de Peso</h4>
+            <span class="text-[10px] text-slate-500">Guardado en tu dispositivo</span>
           </div>
           
-          <div id="weight-logs-history" class="space-y-2">
+          <div id="weight-logs-history" class="space-y-1">
             <!-- Injected by JS -->
           </div>
 
           <div class="flex items-center gap-2">
-            <input type="number" id="input-new-weight" step="0.1" min="40" max="120" placeholder="68.5" class="w-24 px-3 py-2 rounded-lg border border-slate-300 text-base bg-white text-slate-900 font-bold text-center" />
-            <span class="text-base font-bold text-slate-600">kg</span>
-            <input type="text" id="input-new-weight-date" placeholder="Fecha (opcional)" class="flex-1 px-3 py-2 rounded-lg border border-slate-300 text-sm bg-white text-slate-900" />
-            <button type="button" onclick="saveWeightLog()" class="px-4 py-2 rounded-lg bg-emerald-800 hover:bg-emerald-900 text-white text-sm font-bold cursor-pointer">
+            <input type="number" id="input-new-weight" step="0.1" min="40" max="120" placeholder="68.5" class="w-20 px-2 py-1 rounded-md border border-slate-300 text-xs sm:text-sm bg-white text-slate-900 font-bold text-center" />
+            <span class="text-xs font-bold text-slate-600">kg</span>
+            <input type="text" id="input-new-weight-date" placeholder="Fecha (opcional)" class="flex-1 px-2 py-1 rounded-md border border-slate-300 text-xs bg-white text-slate-900" />
+            <button type="button" onclick="saveWeightLog()" class="px-3 py-1 rounded-md bg-emerald-800 hover:bg-emerald-900 text-white text-xs font-bold cursor-pointer">
               Guardar
             </button>
           </div>
@@ -246,101 +265,101 @@
     <!-- ======================================================== -->
     <!-- VIEW 1: MENÚ SEMANAL                                     -->
     <!-- ======================================================== -->
-    <div id="view-menu-container" class="space-y-6 w-full">
+    <div id="view-menu-container" class="space-y-3 sm:space-y-5 w-full">
 
-      <!-- BARRA DE HIDRATACIÓN (Solid, no gradient) -->
-      <div class="card-clean py-3 px-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-        <div class="flex items-center gap-2">
-          <span class="text-base font-bold text-slate-900">Hidratación Diaria:</span>
-          <span id="water-progress-text" class="text-sm font-bold text-emerald-800">0 / 8 vasos (0 L)</span>
+      <!-- BARRA DE HIDRATACIÓN (Compact & Mobile-First) -->
+      <div class="card-clean py-2 px-3 sm:py-3 sm:px-4 flex flex-row items-center justify-between gap-2">
+        <div class="flex items-center gap-1.5 min-w-0">
+          <span class="text-xs sm:text-sm font-bold text-slate-900 truncate">💧 Hidratación:</span>
+          <span id="water-progress-text" class="text-xs sm:text-sm font-bold text-emerald-800 shrink-0">0/8</span>
         </div>
 
-        <div class="flex items-center gap-1.5 flex-wrap" id="water-glasses-container">
+        <div class="flex items-center gap-1 sm:gap-1.5" id="water-glasses-container">
           <!-- Injected by JS -->
         </div>
 
-        <button type="button" onclick="resetWaterToday()" class="text-sm text-slate-500 hover:text-slate-800 font-medium cursor-pointer self-end sm:self-auto" title="Reiniciar vasos">
+        <button type="button" onclick="resetWaterToday()" class="text-xs text-slate-400 hover:text-slate-700 font-medium cursor-pointer shrink-0" title="Reiniciar vasos">
           Reiniciar
         </button>
       </div>
 
       <!-- SELECTOR DE DÍAS -->
-      <nav class="grid grid-cols-7 gap-1.5 sm:gap-2 w-full" id="day-selector-nav" aria-label="Días de la semana">
+      <nav class="grid grid-cols-7 gap-1 sm:gap-2 w-full" id="day-selector-nav" aria-label="Días de la semana">
         <!-- Rendered by JS updateDayTabs -->
       </nav>
 
       <!-- EXERCISE STRIP -->
-      <div id="workout-banner" class="card-clean flex flex-col sm:flex-row sm:items-center justify-between gap-3 w-full">
+      <div id="workout-banner" class="card-clean flex flex-row items-center justify-between gap-2.5 w-full">
         <!-- Injected by JS -->
       </div>
 
       <!-- MEALS SECTION HEADER -->
-      <div class="flex items-center justify-between pt-2">
-        <div>
-          <h2 id="active-day-heading" class="text-xl font-bold text-slate-900">
+      <div class="flex items-center justify-between pt-1">
+        <div class="min-w-0">
+          <h2 id="active-day-heading" class="text-sm sm:text-lg font-bold text-slate-900 truncate">
             Menú del Día
           </h2>
-          <div class="flex items-center gap-2">
-            <p class="text-sm text-slate-600">Semana del 16 al 22 de Noviembre</p>
+          <div class="flex items-center gap-1.5">
+            <p class="text-[11px] sm:text-xs text-slate-500 truncate">16 al 22 Nov</p>
             <span class="text-slate-300">·</span>
-            <button type="button" onclick="resetWeeklyMealMarks()" class="text-xs text-slate-500 hover:text-rose-600 font-medium cursor-pointer" title="Desmarcar todas las comidas completadas de esta semana">Reiniciar marcas semana</button>
+            <button type="button" onclick="resetWeeklyMealMarks()" class="text-[10px] sm:text-xs text-slate-400 hover:text-rose-600 font-medium cursor-pointer" title="Desmarcar todas las comidas completadas de esta semana">Reiniciar marcas</button>
           </div>
         </div>
-        <button type="button" onclick="toggleAllMeals()" id="toggle-all-meals-btn" class="text-sm font-semibold text-emerald-800 bg-emerald-50 hover:bg-emerald-100 px-3 py-1.5 rounded-lg border border-emerald-200 cursor-pointer transition">
+        <button type="button" onclick="toggleAllMeals()" id="toggle-all-meals-btn" class="text-xs font-semibold text-emerald-800 bg-emerald-50 hover:bg-emerald-100 px-2.5 py-1 rounded-md border border-emerald-200 cursor-pointer transition shrink-0">
           Abrir todas ↓
         </button>
       </div>
 
       <!-- DAILY MEAL CARDS -->
-      <section id="meals-container" class="space-y-4 w-full">
+      <section id="meals-container" class="space-y-2.5 sm:space-y-4 w-full">
         <!-- Injected by JS -->
       </section>
 
       <!-- NOTAS DEL DÍA -->
-      <div class="card-clean space-y-4">
-        <div class="flex items-center justify-between pb-2 border-b border-slate-200">
-          <div>
-            <h3 class="text-lg font-bold text-slate-900" id="notes-card-title">Comentarios y Sensaciones</h3>
-            <p class="text-sm text-slate-600">Se guardan automáticamente en tu dispositivo</p>
+      <div class="card-clean space-y-2.5">
+        <div class="flex items-center justify-between pb-1.5 border-b border-slate-200">
+          <div class="min-w-0">
+            <h3 class="text-xs sm:text-base font-bold text-slate-900 truncate" id="notes-card-title">Comentarios y Sensaciones</h3>
+            <p class="text-[10px] sm:text-xs text-slate-500 truncate">Se guardan en tu dispositivo</p>
           </div>
-          <span id="notes-saved-status" class="text-xs text-emerald-800 font-semibold bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-200">
+          <span id="notes-saved-status" class="text-[10px] sm:text-xs text-emerald-800 font-semibold bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-200 shrink-0">
             Auto-guardado
           </span>
         </div>
 
-        <div class="flex items-center gap-2 flex-wrap text-sm">
-          <span class="text-sm font-semibold text-slate-700">Etiquetas rápidas:</span>
-          <button type="button" onclick="appendTagToNote('🌱 Digestión ligera y sin pesadez')" class="px-2.5 py-1 rounded-md bg-slate-100 border border-slate-200 text-slate-700 hover:border-emerald-600 hover:text-emerald-800 cursor-pointer">🌱 Ligera</button>
-          <button type="button" onclick="appendTagToNote('💨 Un poco de hinchazón post-comida')" class="px-2.5 py-1 rounded-md bg-slate-100 border border-slate-200 text-slate-700 hover:border-emerald-600 hover:text-emerald-800 cursor-pointer">💨 Hinchazón</button>
-          <button type="button" onclick="appendTagToNote('💪 Buena energía en el entreno')" class="px-2.5 py-1 rounded-md bg-slate-100 border border-slate-200 text-slate-700 hover:border-emerald-600 hover:text-emerald-800 cursor-pointer">💪 Buena energía</button>
-          <button type="button" onclick="appendTagToNote('😴 Cansancio acumulado')" class="px-2.5 py-1 rounded-md bg-slate-100 border border-slate-200 text-slate-700 hover:border-emerald-600 hover:text-emerald-800 cursor-pointer">😴 Cansancio</button>
-          <button type="button" onclick="appendTagToNote('🩸 Spotting leve / Cólicos')" class="px-2.5 py-1 rounded-md bg-slate-100 border border-slate-200 text-slate-700 hover:border-emerald-600 hover:text-emerald-800 cursor-pointer">🩸 Spotting</button>
-          <button type="button" onclick="appendTagToNote('🍫 Antojo dulce')" class="px-2.5 py-1 rounded-md bg-slate-100 border border-slate-200 text-slate-700 hover:border-emerald-600 hover:text-emerald-800 cursor-pointer">🍫 Antojo dulce</button>
+        <div class="flex items-center gap-1.5 flex-wrap text-xs">
+          <span class="text-[10px] sm:text-xs font-semibold text-slate-600">Rápido:</span>
+          <button type="button" onclick="appendTagToNote('🌱 Digestión ligera')" class="px-2 py-0.5 rounded bg-slate-100 border border-slate-200 text-slate-700 hover:border-emerald-600 hover:text-emerald-800 text-[10px] sm:text-xs cursor-pointer">🌱 Ligera</button>
+          <button type="button" onclick="appendTagToNote('💨 Un poco de hinchazón')" class="px-2 py-0.5 rounded bg-slate-100 border border-slate-200 text-slate-700 hover:border-emerald-600 hover:text-emerald-800 text-[10px] sm:text-xs cursor-pointer">💨 Hinchazón</button>
+          <button type="button" onclick="appendTagToNote('💪 Buena energía')" class="px-2 py-0.5 rounded bg-slate-100 border border-slate-200 text-slate-700 hover:border-emerald-600 hover:text-emerald-800 text-[10px] sm:text-xs cursor-pointer">💪 Energía</button>
+          <button type="button" onclick="appendTagToNote('😴 Cansancio')" class="px-2 py-0.5 rounded bg-slate-100 border border-slate-200 text-slate-700 hover:border-emerald-600 hover:text-emerald-800 text-[10px] sm:text-xs cursor-pointer">😴 Cansancio</button>
+          <button type="button" onclick="appendTagToNote('🩸 Spotting / Cólicos')" class="px-2 py-0.5 rounded bg-slate-100 border border-slate-200 text-slate-700 hover:border-emerald-600 hover:text-emerald-800 text-[10px] sm:text-xs cursor-pointer">🩸 Cólicos</button>
+          <button type="button" onclick="appendTagToNote('🍫 Antojo dulce')" class="px-2 py-0.5 rounded bg-slate-100 border border-slate-200 text-slate-700 hover:border-emerald-600 hover:text-emerald-800 text-[10px] sm:text-xs cursor-pointer">🍫 Antojo</button>
         </div>
 
         <div>
           <textarea
             id="day-user-notes"
-            rows="3"
+            rows="2"
             oninput="saveCurrentDayNotes()"
-            placeholder="Escribe aquí sensaciones de estómago, cambios de comida, dudas o notas..."
-            class="w-full p-3.5 rounded-xl border border-slate-300 text-base bg-white text-slate-900 focus:outline-emerald-600 leading-relaxed placeholder-slate-400"
+            placeholder="Sensaciones, cambios, dudas o notas..."
+            class="w-full p-2.5 rounded-lg border border-slate-300 text-xs sm:text-sm bg-white text-slate-900 focus:outline-emerald-600 leading-relaxed placeholder-slate-400"
           ></textarea>
         </div>
 
-        <div class="flex items-center justify-between gap-3 pt-1">
-          <div class="flex items-center gap-3">
-            <button type="button" onclick="clearCurrentDayNotes()" class="text-sm text-slate-500 hover:text-rose-600 cursor-pointer">
-              Limpiar nota
+        <div class="flex items-center justify-between gap-2 pt-0.5">
+          <div class="flex items-center gap-2">
+            <button type="button" onclick="clearCurrentDayNotes()" class="text-xs text-slate-400 hover:text-rose-600 cursor-pointer">
+              Limpiar
             </button>
             <span class="text-slate-300">·</span>
-            <a href="https://docs.google.com/spreadsheets/d/1kRs1k1c-MIUiEbQ2Yhip2olOyaPcDFe9TGC2StThTUU/edit" target="_blank" rel="noopener" class="text-sm text-emerald-800 hover:text-emerald-950 font-semibold flex items-center gap-1 cursor-pointer">
-              <span>Abrir Google Sheet</span>
+            <a href="https://docs.google.com/spreadsheets/d/1kRs1k1c-MIUiEbQ2Yhip2olOyaPcDFe9TGC2StThTUU/edit" target="_blank" rel="noopener" class="text-xs text-emerald-800 hover:text-emerald-950 font-semibold flex items-center gap-1 cursor-pointer">
+              <span>Google Sheet ↗</span>
             </a>
           </div>
           
-          <button type="button" onclick="sendDirectComment()" class="px-4 py-2 rounded-xl bg-emerald-800 text-white text-sm font-bold hover:bg-emerald-900 transition flex items-center gap-2 cursor-pointer">
-            <span id="chat-report-btn-text">Enviar comentarios</span>
+          <button type="button" onclick="sendDirectComment()" class="px-3 py-1.5 rounded-lg bg-emerald-800 text-white text-xs font-bold hover:bg-emerald-900 transition flex items-center gap-1.5 cursor-pointer shrink-0">
+            <span id="chat-report-btn-text">Copiar para chat</span>
           </button>
         </div>
       </div>
@@ -356,7 +375,7 @@
         <h2 class="text-xl sm:text-2xl font-bold text-slate-900">
           Preparación por Lotes (Batch Cooking)
         </h2>
-        <p class="text-base text-slate-600 leading-relaxed">
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
           Recetas base cocinadas con antelación para tener desayunos, comidas y cenas listas en minutos sin cocinar a diario.
         </p>
       </div>
@@ -367,13 +386,13 @@
         <!-- RECETA 1: PANCAKES DE AVENA Y PROTEÍNA -->
         <article class="card-clean space-y-4">
           <div class="flex flex-col sm:flex-row gap-4 items-start">
-            <img src="images/pancakes_avena.jpg" alt="Pancakes de avena" class="w-full sm:w-44 h-36 object-cover rounded-xl border border-slate-200 shrink-0" />
+            <img src="images/pancakes_avena.jpg" alt="Pancakes de avena" class="w-full sm:w-36 h-28 sm:h-32 object-cover rounded-lg sm:rounded-xl border border-slate-200 shrink-0" />
             <div class="flex-1 space-y-1">
               <div class="flex items-baseline justify-between gap-2">
-                <h3 class="text-lg font-bold text-slate-900">Pancakes de Avena y Proteína AMIX</h3>
+                <h3 class="text-sm sm:text-base font-bold text-slate-900">Pancakes de Avena y Proteína AMIX</h3>
                 <span class="text-sm font-semibold text-emerald-800">Batch para 3 a 4 días</span>
               </div>
-              <p class="text-base text-slate-600 leading-relaxed">
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
                 Cocina la torre completa en 12 minutos y guárdalos en un recipiente hermético en la nevera. Cada mañana se calientan en la tostadora en 30 segundos.
               </p>
               <div class="pt-2">
@@ -387,7 +406,7 @@
           <div id="batch-body-pancakes" class="hidden pt-4 border-t border-slate-200 space-y-3">
             <div>
               <h4 class="text-sm font-bold text-slate-900 mb-2">Ingredientes para 6 a 8 pancakes:</h4>
-              <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-base text-slate-700">
+              <ul class="grid grid-cols-1 sm:grid-cols-2 gap-1.5 text-xs sm:text-sm text-slate-700">
                 <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span> 120 g harina de avena sin gluten</li>
                 <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span> 60 g proteína AMIX CFM Isolate</li>
                 <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span> 2 huevos camperos + 2 claras</li>
@@ -396,7 +415,7 @@
                 <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span> Canela de Ceilán y pizca de sal</li>
               </ul>
             </div>
-            <div class="space-y-1.5 text-base text-slate-700 pt-2">
+            <div class="space-y-1 text-xs sm:text-sm text-slate-700 pt-1.5">
               <h4 class="text-sm font-bold text-slate-900">Instrucciones de cocinado:</h4>
               <p><strong>1. Mezclado:</strong> Bate todos los ingredientes 45 segundos hasta tener una crema homogénea y densa.</p>
               <p><strong>2. Reposo:</strong> Deja reposar 3 minutos para que la avena absorba líquido y queden esponjosos.</p>
@@ -409,13 +428,13 @@
         <!-- RECETA 2: CREMA DORADA DE CALABAZA -->
         <article class="card-clean space-y-4">
           <div class="flex flex-col sm:flex-row gap-4 items-start">
-            <img src="images/crema_calabaza.jpg" alt="Crema de calabaza asada" class="w-full sm:w-44 h-36 object-cover rounded-xl border border-slate-200 shrink-0" />
+            <img src="images/crema_calabaza.jpg" alt="Crema de calabaza asada" class="w-full sm:w-36 h-28 sm:h-32 object-cover rounded-lg sm:rounded-xl border border-slate-200 shrink-0" />
             <div class="flex-1 space-y-1">
               <div class="flex items-baseline justify-between gap-2">
-                <h3 class="text-lg font-bold text-slate-900">Crema Dorada de Calabaza y Puerro</h3>
+                <h3 class="text-sm sm:text-base font-bold text-slate-900">Crema Dorada de Calabaza y Puerro</h3>
                 <span class="text-sm font-semibold text-emerald-800">3 raciones de cena</span>
               </div>
-              <p class="text-base text-slate-600 leading-relaxed">
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
                 Verduras asadas en bandeja única con aceite de oliva virgen extra y trituradas hasta lograr una textura aterciopelada.
               </p>
               <div class="pt-2">
@@ -429,9 +448,9 @@
           <div id="batch-body-crema" class="hidden pt-4 border-t border-slate-200 space-y-3">
             <div>
               <h4 class="text-sm font-bold text-slate-900 mb-2">Ingredientes:</h4>
-              <p class="text-base text-slate-700">Calabaza limpia troceada, puerro, zanahorias, calabacín, aceite de oliva virgen extra y sal marina.</p>
+              <p class="text-xs sm:text-sm text-slate-700">Calabaza limpia troceada, puerro, zanahorias, calabacín, aceite de oliva virgen extra y sal marina.</p>
             </div>
-            <div class="space-y-1.5 text-base text-slate-700 pt-2">
+            <div class="space-y-1 text-xs sm:text-sm text-slate-700 pt-1.5">
               <h4 class="text-sm font-bold text-slate-900">Instrucciones de cocinado:</h4>
               <p><strong>1. Asado:</strong> Horno a 200 °C durante 30 minutos hasta que los bordes doren ligeramente.</p>
               <p><strong>2. Triturado:</strong> Pasa por batidora con caldo caliente o agua hasta obtener una crema sedosa.</p>
@@ -443,13 +462,13 @@
         <!-- RECETA 3: PATATAS O BATATAS ASADAS -->
         <article class="card-clean space-y-4">
           <div class="flex flex-col sm:flex-row gap-4 items-start">
-            <img src="images/pollo_boniato.jpg" alt="Patatas y batatas" class="w-full sm:w-44 h-36 object-cover rounded-xl border border-slate-200 shrink-0" />
+            <img src="images/pollo_boniato.jpg" alt="Patatas y batatas" class="w-full sm:w-36 h-28 sm:h-32 object-cover rounded-lg sm:rounded-xl border border-slate-200 shrink-0" />
             <div class="flex-1 space-y-1">
               <div class="flex items-baseline justify-between gap-2">
-                <h3 class="text-lg font-bold text-slate-900">Patatas o Batatas Asadas</h3>
+                <h3 class="text-sm sm:text-base font-bold text-slate-900">Patatas o Batatas Asadas</h3>
                 <span class="text-sm font-semibold text-emerald-800">Guarnición para 3 comidas</span>
               </div>
-              <p class="text-base text-slate-600 leading-relaxed">
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
                 Asadas en dados con romero y aceite de oliva. Enfriadas en nevera facilitan una digestión suave y ligera.
               </p>
               <div class="pt-2">
@@ -463,9 +482,9 @@
           <div id="batch-body-patata" class="hidden pt-4 border-t border-slate-200 space-y-3">
             <div>
               <h4 class="text-sm font-bold text-slate-900 mb-2">Ingredientes:</h4>
-              <p class="text-base text-slate-700">Batatas o patatas de guarnición, 1 cucharadita de aceite de oliva, romero seco y sal marina fina.</p>
+              <p class="text-xs sm:text-sm text-slate-700">Batatas o patatas de guarnición, 1 cucharadita de aceite de oliva, romero seco y sal marina fina.</p>
             </div>
-            <div class="space-y-1.5 text-base text-slate-700 pt-2">
+            <div class="space-y-1 text-xs sm:text-sm text-slate-700 pt-1.5">
               <h4 class="text-sm font-bold text-slate-900">Instrucciones de cocinado:</h4>
               <p><strong>1. Corte y aliño:</strong> Corta en dados de 2 cm y mezcla en un bol con el aceite y el romero.</p>
               <p><strong>2. Cocinado:</strong> Airfryer a 195 °C durante 18–20 minutos agitando a mitad de tiempo (u horno a 200 °C 30 min).</p>
@@ -476,13 +495,13 @@
         <!-- RECETA 4: AREPAS DE MAÍZ CON CHÍA -->
         <article class="card-clean space-y-4">
           <div class="flex flex-col sm:flex-row gap-4 items-start">
-            <img src="images/arepas_pan.jpg" alt="Arepas doradas" class="w-full sm:w-44 h-36 object-cover rounded-xl border border-slate-200 shrink-0" />
+            <img src="images/arepas_pan.jpg" alt="Arepas doradas" class="w-full sm:w-36 h-28 sm:h-32 object-cover rounded-lg sm:rounded-xl border border-slate-200 shrink-0" />
             <div class="flex-1 space-y-1">
               <div class="flex items-baseline justify-between gap-2">
-                <h3 class="text-lg font-bold text-slate-900">Arepas Doradas con Chía Hidratada</h3>
+                <h3 class="text-sm sm:text-base font-bold text-slate-900">Arepas Doradas con Chía Hidratada</h3>
                 <span class="text-sm font-semibold text-emerald-800">100% Maíz sin gluten</span>
               </div>
-              <p class="text-base text-slate-600 leading-relaxed">
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
                 El mucílago de la chía aporta elasticidad natural a la masa para que no se cuartee y mejora el tránsito intestinal.
               </p>
               <div class="pt-2">
@@ -496,9 +515,9 @@
           <div id="batch-body-arepas" class="hidden pt-4 border-t border-slate-200 space-y-3">
             <div>
               <h4 class="text-sm font-bold text-slate-900 mb-2">Ingredientes por ración:</h4>
-              <p class="text-base text-slate-700">1/2 taza harina P.A.N., 1 cdita semillas de chía, 1/2 taza agua tibia, sal marina y gotas de aceite.</p>
+              <p class="text-xs sm:text-sm text-slate-700">1/2 taza harina P.A.N., 1 cdita semillas de chía, 1/2 taza agua tibia, sal marina y gotas de aceite.</p>
             </div>
-            <div class="space-y-1.5 text-base text-slate-700 pt-2">
+            <div class="space-y-1 text-xs sm:text-sm text-slate-700 pt-1.5">
               <h4 class="text-sm font-bold text-slate-900">Instrucciones de cocinado:</h4>
               <p><strong>1. Hidratación:</strong> En un bol mezcla el agua tibia con la chía y la sal. Espera 2 minutos a que suelte su gel protector.</p>
               <p><strong>2. Amasado y formado:</strong> Añade la harina P.A.N. y amasa 1 minuto. Forma un disco parejo de 1,5 cm de grosor.</p>
@@ -510,13 +529,13 @@
         <!-- RECETA 5: SALMÓN CRUJIENTE A LA PLANCHA -->
         <article class="card-clean space-y-4">
           <div class="flex flex-col sm:flex-row gap-4 items-start">
-            <img src="images/salmon_plancha.jpg" alt="Lomo de salmón" class="w-full sm:w-44 h-36 object-cover rounded-xl border border-slate-200 shrink-0" />
+            <img src="images/salmon_plancha.jpg" alt="Lomo de salmón" class="w-full sm:w-36 h-28 sm:h-32 object-cover rounded-lg sm:rounded-xl border border-slate-200 shrink-0" />
             <div class="flex-1 space-y-1">
               <div class="flex items-baseline justify-between gap-2">
-                <h3 class="text-lg font-bold text-slate-900">Lomos de Salmón con Piel Crujiente</h3>
+                <h3 class="text-sm sm:text-base font-bold text-slate-900">Lomos de Salmón con Piel Crujiente</h3>
                 <span class="text-sm font-semibold text-emerald-800">Omega-3 antiinflamatorio</span>
               </div>
-              <p class="text-base text-slate-600 leading-relaxed">
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
                 Técnica para que la piel quede crujiente y el interior tierno y jugoso en apenas 6 minutos.
               </p>
               <div class="pt-2">
@@ -530,9 +549,9 @@
           <div id="batch-body-salmon" class="hidden pt-4 border-t border-slate-200 space-y-3">
             <div>
               <h4 class="text-sm font-bold text-slate-900 mb-2">Ingredientes:</h4>
-              <p class="text-base text-slate-700">1 o 2 lomos de salmón fresco con piel, sal marina en escamas y 1 cucharadita de aceite de oliva.</p>
+              <p class="text-xs sm:text-sm text-slate-700">1 o 2 lomos de salmón fresco con piel, sal marina en escamas y 1 cucharadita de aceite de oliva.</p>
             </div>
-            <div class="space-y-1.5 text-base text-slate-700 pt-2">
+            <div class="space-y-1 text-xs sm:text-sm text-slate-700 pt-1.5">
               <h4 class="text-sm font-bold text-slate-900">Instrucciones de cocinado:</h4>
               <p><strong>1. Secado:</strong> Seca muy bien la piel y carne con papel absorbente. La humedad impide que dore crujiente.</p>
               <p><strong>2. Plancha:</strong> Sartén a fuego medio-alto. Pon el lomo con la piel hacia abajo y presiona 10 segundos con espátula.</p>
@@ -583,101 +602,101 @@
       
       <div class="space-y-6">
         
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-3 border-b border-slate-200 gap-3">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-2 border-b border-slate-200 gap-2">
           <div>
-            <h2 class="text-xl sm:text-2xl font-bold text-slate-900">
+            <h2 class="text-base sm:text-xl font-bold text-slate-900">
               Lista del Súper por Recorrido
             </h2>
-            <p class="text-sm text-slate-600">Organizada según el orden de pasillos de tu Mercadona</p>
+            <p class="text-xs sm:text-sm text-slate-500">Organizada según el orden de pasillos de tu Mercadona</p>
           </div>
           
-          <div class="flex items-center gap-3">
-            <span id="grocery-progress-badge" class="px-3 py-1.5 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-800 text-sm font-bold">
+          <div class="flex items-center gap-2">
+            <span id="grocery-progress-badge" class="px-2.5 py-1 rounded-md bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs sm:text-sm font-bold">
               0 de 26 listos
             </span>
-            <button type="button" onclick="copyGroceryToClipboard()" class="px-3.5 py-1.5 rounded-lg bg-slate-900 text-white text-sm font-semibold hover:bg-slate-800 transition cursor-pointer">
+            <button type="button" onclick="copyGroceryToClipboard()" class="px-3 py-1 rounded-lg bg-slate-900 text-white text-xs sm:text-sm font-semibold hover:bg-slate-800 transition cursor-pointer">
               <span id="copy-btn-text">Copiar para WhatsApp</span>
             </button>
           </div>
         </div>
 
         <!-- RECORRIDO FÍSICO MERCADONA (2 PISOS) -->
-        <div class="space-y-6 w-full">
+        <div class="space-y-4 w-full">
           
           <!-- PLANTA 1: PRIMER PISO -->
-          <div class="space-y-4">
-            <div class="p-3.5 rounded-xl bg-slate-100 border border-slate-200 flex items-center justify-between">
+          <div class="space-y-2.5">
+            <div class="p-2.5 sm:p-3.5 rounded-lg sm:rounded-xl bg-slate-100 border border-slate-200 flex items-center justify-between">
               <div>
-                <h3 class="text-base font-bold text-slate-900">Planta Baja · Primer Piso</h3>
-                <p class="text-sm text-slate-600">Harinas, Aceite, Limón, Leche, Tortillas & Despensa</p>
+                <h3 class="text-xs sm:text-base font-bold text-slate-900">Planta 1 · Entrada & Despensa</h3>
+                <p class="text-[10px] sm:text-xs text-slate-500">Harinas, Aceite, Limón, Leche, Tortillas</p>
               </div>
-              <span class="text-sm font-bold text-slate-700">8 productos</span>
+              <span class="text-xs sm:text-sm font-bold text-slate-700">8 productos</span>
             </div>
 
             <!-- Pasillos Piso 1 -->
             <div class="space-y-3">
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                <label class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
+                <label class="flex items-start gap-2.5 p-2 sm:p-3 rounded-lg sm:rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
                   <input type="checkbox" onchange="toggleItem('Harina P.A.N. blanca o amarilla (1 paquete)')" data-item="Harina P.A.N. blanca o amarilla (1 paquete)" class="grocery-cb mt-1 w-4 h-4 rounded text-emerald-600 border-slate-300 accent-emerald-600 shrink-0" />
                   <div class="flex-1 min-w-0">
-                    <span class="item-title font-semibold text-base text-slate-900 block">Harina P.A.N. blanca o amarilla (1 paquete)</span>
-                    <span class="text-sm text-slate-600 block mt-0.5">Masa de maíz 100% sin gluten para arepas</span>
+                    <span class="item-title font-semibold text-xs sm:text-sm text-slate-900 block">Harina P.A.N. blanca o amarilla (1 paquete)</span>
+                    <span class="text-[10px] sm:text-xs text-slate-500 block mt-0.5">Masa de maíz 100% sin gluten para arepas</span>
                   </div>
                 </label>
 
-                <label class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
+                <label class="flex items-start gap-2.5 p-2 sm:p-3 rounded-lg sm:rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
                   <input type="checkbox" onchange="toggleItem('Copos o harina de avena certificada Sin Gluten')" data-item="Copos o harina de avena certificada Sin Gluten" class="grocery-cb mt-1 w-4 h-4 rounded text-emerald-600 border-slate-300 accent-emerald-600 shrink-0" />
                   <div class="flex-1 min-w-0">
-                    <span class="item-title font-semibold text-base text-slate-900 block">Copos o harina de avena certificada Sin Gluten</span>
-                    <span class="text-sm text-slate-600 block mt-0.5">Para el batch de pancakes esponjosos</span>
+                    <span class="item-title font-semibold text-xs sm:text-sm text-slate-900 block">Copos o harina de avena certificada Sin Gluten</span>
+                    <span class="text-[10px] sm:text-xs text-slate-500 block mt-0.5">Para el batch de pancakes esponjosos</span>
                   </div>
                 </label>
 
-                <label class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
+                <label class="flex items-start gap-2.5 p-2 sm:p-3 rounded-lg sm:rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
                   <input type="checkbox" onchange="toggleItem('Semillas de chía')" data-item="Semillas de chía" class="grocery-cb mt-1 w-4 h-4 rounded text-emerald-600 border-slate-300 accent-emerald-600 shrink-0" />
                   <div class="flex-1 min-w-0">
-                    <span class="item-title font-semibold text-base text-slate-900 block">Semillas de chía</span>
-                    <span class="text-sm text-slate-600 block mt-0.5">Mucílagos solubles para motilidad y arepas</span>
+                    <span class="item-title font-semibold text-xs sm:text-sm text-slate-900 block">Semillas de chía</span>
+                    <span class="text-[10px] sm:text-xs text-slate-500 block mt-0.5">Mucílagos solubles para motilidad y arepas</span>
                   </div>
                 </label>
 
-                <label class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
+                <label class="flex items-start gap-2.5 p-2 sm:p-3 rounded-lg sm:rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
                   <input type="checkbox" onchange="toggleItem('Chocolate negro >85% (1 tableta)')" data-item="Chocolate negro >85% (1 tableta)" class="grocery-cb mt-1 w-4 h-4 rounded text-emerald-600 border-slate-300 accent-emerald-600 shrink-0" />
                   <div class="flex-1 min-w-0">
-                    <span class="item-title font-semibold text-base text-slate-900 block">Chocolate negro >85% (1 tableta)</span>
-                    <span class="text-sm text-slate-600 block mt-0.5">Magnesio para antojitos premenstruales</span>
+                    <span class="item-title font-semibold text-xs sm:text-sm text-slate-900 block">Chocolate negro >85% (1 tableta)</span>
+                    <span class="text-[10px] sm:text-xs text-slate-500 block mt-0.5">Magnesio para antojitos premenstruales</span>
                   </div>
                 </label>
 
-                <label class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
+                <label class="flex items-start gap-2.5 p-2 sm:p-3 rounded-lg sm:rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
                   <input type="checkbox" onchange="toggleItem('Tahini (pasta de sésamo) o crema de frutos secos 100%')" data-item="Tahini (pasta de sésamo) o crema de frutos secos 100%" class="grocery-cb mt-1 w-4 h-4 rounded text-emerald-600 border-slate-300 accent-emerald-600 shrink-0" />
                   <div class="flex-1 min-w-0">
-                    <span class="item-title font-semibold text-base text-slate-900 block">Tahini o crema de frutos secos 100%</span>
-                    <span class="text-sm text-slate-600 block mt-0.5">Grasas saludables y saciedad</span>
+                    <span class="item-title font-semibold text-xs sm:text-sm text-slate-900 block">Tahini o crema de frutos secos 100%</span>
+                    <span class="text-[10px] sm:text-xs text-slate-500 block mt-0.5">Grasas saludables y saciedad</span>
                   </div>
                 </label>
 
-                <label class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
+                <label class="flex items-start gap-2.5 p-2 sm:p-3 rounded-lg sm:rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
                   <input type="checkbox" onchange="toggleItem('Zumo de limón en botella Hacendado')" data-item="Zumo de limón en botella Hacendado" class="grocery-cb mt-1 w-4 h-4 rounded text-emerald-600 border-slate-300 accent-emerald-600 shrink-0" />
                   <div class="flex-1 min-w-0">
-                    <span class="item-title font-semibold text-base text-slate-900 block">Zumo de limón en botella Hacendado</span>
-                    <span class="text-sm text-slate-600 block mt-0.5">Para aliños de verduras y cintas de calabacín</span>
+                    <span class="item-title font-semibold text-xs sm:text-sm text-slate-900 block">Zumo de limón en botella Hacendado</span>
+                    <span class="text-[10px] sm:text-xs text-slate-500 block mt-0.5">Para aliños de verduras y cintas de calabacín</span>
                   </div>
                 </label>
 
-                <label class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
+                <label class="flex items-start gap-2.5 p-2 sm:p-3 rounded-lg sm:rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
                   <input type="checkbox" onchange="toggleItem('Bebida de avena Hacendado sin azúcares')" data-item="Bebida de avena Hacendado sin azúcares" class="grocery-cb mt-1 w-4 h-4 rounded text-emerald-600 border-slate-300 accent-emerald-600 shrink-0" />
                   <div class="flex-1 min-w-0">
-                    <span class="item-title font-semibold text-base text-slate-900 block">Bebida de avena Hacendado sin azúcares</span>
-                    <span class="text-sm text-slate-600 block mt-0.5">Para café matutino y masa de pancakes</span>
+                    <span class="item-title font-semibold text-xs sm:text-sm text-slate-900 block">Bebida de avena Hacendado sin azúcares</span>
+                    <span class="text-[10px] sm:text-xs text-slate-500 block mt-0.5">Para café matutino y masa de pancakes</span>
                   </div>
                 </label>
 
-                <label class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
+                <label class="flex items-start gap-2.5 p-2 sm:p-3 rounded-lg sm:rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
                   <input type="checkbox" onchange="toggleItem('Tortitas de maíz 100% Sin Gluten (Old El Paso o Hacendado)')" data-item="Tortitas de maíz 100% Sin Gluten (Old El Paso o Hacendado)" class="grocery-cb mt-1 w-4 h-4 rounded text-emerald-600 border-slate-300 accent-emerald-600 shrink-0" />
                   <div class="flex-1 min-w-0">
-                    <span class="item-title font-semibold text-base text-slate-900 block">Tortitas de maíz 100% Sin Gluten</span>
-                    <span class="text-sm text-slate-600 block mt-0.5">Para fajitas crujientes</span>
+                    <span class="item-title font-semibold text-xs sm:text-sm text-slate-900 block">Tortitas de maíz 100% Sin Gluten</span>
+                    <span class="text-[10px] sm:text-xs text-slate-500 block mt-0.5">Para fajitas crujientes</span>
                   </div>
                 </label>
               </div>
@@ -685,13 +704,13 @@
           </div>
 
           <!-- PLANTA 2: ARRIBA -->
-          <div class="space-y-4 pt-4 border-t border-slate-200">
-            <div class="p-3.5 rounded-xl bg-slate-100 border border-slate-200 flex items-center justify-between">
+          <div class="space-y-2.5 pt-3 border-t border-slate-200">
+            <div class="p-2.5 sm:p-3.5 rounded-lg sm:rounded-xl bg-slate-100 border border-slate-200 flex items-center justify-between">
               <div>
-                <h3 class="text-base font-bold text-slate-900">Planta Alta · Arriba</h3>
-                <p class="text-sm text-slate-600">Quinoa, Lácteos, Carnes, Congelados y Verduras</p>
+                <h3 class="text-xs sm:text-base font-bold text-slate-900">Planta 2 · Arriba</h3>
+                <p class="text-[10px] sm:text-xs text-slate-500">Quinoa, Lácteos, Carnes, Congelados y Verduras</p>
               </div>
-              <span class="text-sm font-bold text-slate-700">18 productos</span>
+              <span class="text-xs sm:text-sm font-bold text-slate-700">18 productos</span>
             </div>
 
             <!-- Recorrido planta alta -->
@@ -699,152 +718,152 @@
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                 
                 <!-- Granos -->
-                <label class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
+                <label class="flex items-start gap-2.5 p-2 sm:p-3 rounded-lg sm:rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
                   <input type="checkbox" onchange="toggleItem('Quinoa (vasitos listos o paquete para cocer)')" data-item="Quinoa (vasitos listos o paquete para cocer)" class="grocery-cb mt-1 w-4 h-4 rounded text-emerald-600 border-slate-300 accent-emerald-600 shrink-0" />
                   <div class="flex-1 min-w-0">
-                    <span class="item-title font-semibold text-base text-slate-900 block">Quinoa (vasitos o paquete)</span>
-                    <span class="text-sm text-slate-600 block mt-0.5">Para el bowl mediterráneo</span>
+                    <span class="item-title font-semibold text-xs sm:text-sm text-slate-900 block">Quinoa (vasitos o paquete)</span>
+                    <span class="text-[10px] sm:text-xs text-slate-500 block mt-0.5">Para el bowl mediterráneo</span>
                   </div>
                 </label>
 
                 <!-- Lácteos & Huevos -->
-                <label class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
+                <label class="flex items-start gap-2.5 p-2 sm:p-3 rounded-lg sm:rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
                   <input type="checkbox" onchange="toggleItem('Yogur griego natural sin azúcar (pack 4 o tarrina)')" data-item="Yogur griego natural sin azúcar (pack 4 o tarrina)" class="grocery-cb mt-1 w-4 h-4 rounded text-emerald-600 border-slate-300 accent-emerald-600 shrink-0" />
                   <div class="flex-1 min-w-0">
-                    <span class="item-title font-semibold text-base text-slate-900 block">Yogur griego natural sin azúcar</span>
-                    <span class="text-sm text-slate-600 block mt-0.5">Para mousse de chocolate y meriendas</span>
+                    <span class="item-title font-semibold text-xs sm:text-sm text-slate-900 block">Yogur griego natural sin azúcar</span>
+                    <span class="text-[10px] sm:text-xs text-slate-500 block mt-0.5">Para mousse de chocolate y meriendas</span>
                   </div>
                 </label>
 
-                <label class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
+                <label class="flex items-start gap-2.5 p-2 sm:p-3 rounded-lg sm:rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
                   <input type="checkbox" onchange="toggleItem('2 tarrinas de queso cottage Hacendado')" data-item="2 tarrinas de queso cottage Hacendado" class="grocery-cb mt-1 w-4 h-4 rounded text-emerald-600 border-slate-300 accent-emerald-600 shrink-0" />
                   <div class="flex-1 min-w-0">
-                    <span class="item-title font-semibold text-base text-slate-900 block">2 tarrinas de queso cottage Hacendado</span>
-                    <span class="text-sm text-slate-600 block mt-0.5">Relleno proteico de arepas y fajitas</span>
+                    <span class="item-title font-semibold text-xs sm:text-sm text-slate-900 block">2 tarrinas de queso cottage Hacendado</span>
+                    <span class="text-[10px] sm:text-xs text-slate-500 block mt-0.5">Relleno proteico de arepas y fajitas</span>
                   </div>
                 </label>
 
-                <label class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
+                <label class="flex items-start gap-2.5 p-2 sm:p-3 rounded-lg sm:rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
                   <input type="checkbox" onchange="toggleItem('Claras de huevo pasteurizadas (botella Hacendado)')" data-item="Claras de huevo pasteurizadas (botella Hacendado)" class="grocery-cb mt-1 w-4 h-4 rounded text-emerald-600 border-slate-300 accent-emerald-600 shrink-0" />
                   <div class="flex-1 min-w-0">
-                    <span class="item-title font-semibold text-base text-slate-900 block">Claras de huevo pasteurizadas</span>
-                    <span class="text-sm text-slate-600 block mt-0.5">Para revueltos y masa de pancakes</span>
+                    <span class="item-title font-semibold text-xs sm:text-sm text-slate-900 block">Claras de huevo pasteurizadas</span>
+                    <span class="text-[10px] sm:text-xs text-slate-500 block mt-0.5">Para revueltos y masa de pancakes</span>
                   </div>
                 </label>
 
-                <label class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
+                <label class="flex items-start gap-2.5 p-2 sm:p-3 rounded-lg sm:rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
                   <input type="checkbox" onchange="toggleItem('Huevos camperos (docena o pack 6)')" data-item="Huevos camperos (docena o pack 6)" class="grocery-cb mt-1 w-4 h-4 rounded text-emerald-600 border-slate-300 accent-emerald-600 shrink-0" />
                   <div class="flex-1 min-w-0">
-                    <span class="item-title font-semibold text-base text-slate-900 block">Huevos camperos (docena o pack 6)</span>
-                    <span class="text-sm text-slate-600 block mt-0.5">Base diaria indispensable</span>
+                    <span class="item-title font-semibold text-xs sm:text-sm text-slate-900 block">Huevos camperos (docena o pack 6)</span>
+                    <span class="text-[10px] sm:text-xs text-slate-500 block mt-0.5">Base diaria indispensable</span>
                   </div>
                 </label>
 
                 <!-- Carnes, Queso & Pescado -->
-                <label class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
+                <label class="flex items-start gap-2.5 p-2 sm:p-3 rounded-lg sm:rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
                   <input type="checkbox" onchange="toggleItem('Pechuga de pollo fresca en filetes (bandeja 400–500g)')" data-item="Pechuga de pollo fresca en filetes (bandeja 400–500g)" class="grocery-cb mt-1 w-4 h-4 rounded text-emerald-600 border-slate-300 accent-emerald-600 shrink-0" />
                   <div class="flex-1 min-w-0">
-                    <span class="item-title font-semibold text-base text-slate-900 block">Pechuga de pollo en filetes (400–500g)</span>
-                    <span class="text-sm text-slate-600 block mt-0.5">Para bowls, arepas y fajitas</span>
+                    <span class="item-title font-semibold text-xs sm:text-sm text-slate-900 block">Pechuga de pollo en filetes (400–500g)</span>
+                    <span class="text-[10px] sm:text-xs text-slate-500 block mt-0.5">Para bowls, arepas y fajitas</span>
                   </div>
                 </label>
 
-                <label class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
+                <label class="flex items-start gap-2.5 p-2 sm:p-3 rounded-lg sm:rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
                   <input type="checkbox" onchange="toggleItem('Hamburguesas de vacuno o carne picada limpia (2 uds)')" data-item="Hamburguesas de vacuno o carne picada limpia (2 uds)" class="grocery-cb mt-1 w-4 h-4 rounded text-emerald-600 border-slate-300 accent-emerald-600 shrink-0" />
                   <div class="flex-1 min-w-0">
-                    <span class="item-title font-semibold text-base text-slate-900 block">Hamburguesas o carne picada de vacuno limpia</span>
-                    <span class="text-sm text-slate-600 block mt-0.5">Hierro hemo premenstrual</span>
+                    <span class="item-title font-semibold text-xs sm:text-sm text-slate-900 block">Hamburguesas o carne picada de vacuno limpia</span>
+                    <span class="text-[10px] sm:text-xs text-slate-500 block mt-0.5">Hierro hemo premenstrual</span>
                   </div>
                 </label>
 
-                <label class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
+                <label class="flex items-start gap-2.5 p-2 sm:p-3 rounded-lg sm:rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
                   <input type="checkbox" onchange="toggleItem('Lonchas de queso havarti o tierno light')" data-item="Lonchas de queso havarti o tierno light" class="grocery-cb mt-1 w-4 h-4 rounded text-emerald-600 border-slate-300 accent-emerald-600 shrink-0" />
                   <div class="flex-1 min-w-0">
-                    <span class="item-title font-semibold text-base text-slate-900 block">Lonchas de queso havarti o tierno light</span>
-                    <span class="text-sm text-slate-600 block mt-0.5">Para fundir sobre la hamburguesa o arepa</span>
+                    <span class="item-title font-semibold text-xs sm:text-sm text-slate-900 block">Lonchas de queso havarti o tierno light</span>
+                    <span class="text-[10px] sm:text-xs text-slate-500 block mt-0.5">Para fundir sobre la hamburguesa o arepa</span>
                   </div>
                 </label>
 
                 <!-- Pescado (Opcional si se activa en el selector de cambio) -->
-                <label class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-dashed border-slate-300 hover:border-slate-400 cursor-pointer select-none">
+                <label class="flex items-start gap-2.5 p-2 sm:p-3 rounded-lg sm:rounded-xl bg-white border border-dashed border-slate-300 hover:border-slate-400 cursor-pointer select-none">
                   <input type="checkbox" onchange="toggleItem('Lomos de salmón fresco con piel (opcional swapper)')" data-item="Lomos de salmón fresco con piel (opcional swapper)" class="grocery-cb mt-1 w-4 h-4 rounded text-emerald-600 border-slate-300 accent-emerald-600 shrink-0" />
                   <div class="flex-1 min-w-0">
-                    <span class="item-title font-semibold text-base text-slate-900 block">Lomos de salmón fresco con piel (Opcional)</span>
-                    <span class="text-sm text-slate-600 block mt-0.5">Solo si decides cambiar alguna comida por salmón en el botón 🔄</span>
+                    <span class="item-title font-semibold text-xs sm:text-sm text-slate-900 block">Lomos de salmón fresco con piel (Opcional)</span>
+                    <span class="text-[10px] sm:text-xs text-slate-500 block mt-0.5">Solo si decides cambiar alguna comida por salmón en el botón 🔄</span>
                   </div>
                 </label>
 
                 <!-- Congelados -->
-                <label class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-dashed border-slate-300 hover:border-slate-400 cursor-pointer select-none">
+                <label class="flex items-start gap-2.5 p-2 sm:p-3 rounded-lg sm:rounded-xl bg-white border border-dashed border-slate-300 hover:border-slate-400 cursor-pointer select-none">
                   <input type="checkbox" onchange="toggleItem('Gambas peladas congeladas (opcional swapper)')" data-item="Gambas peladas congeladas (opcional swapper)" class="grocery-cb mt-1 w-4 h-4 rounded text-emerald-600 border-slate-300 accent-emerald-600 shrink-0" />
                   <div class="flex-1 min-w-0">
-                    <span class="item-title font-semibold text-base text-slate-900 block">Gambas peladas congeladas (Opcional)</span>
-                    <span class="text-sm text-slate-600 block mt-0.5">Solo si decides cambiar a la receta de cintas con gambas</span>
+                    <span class="item-title font-semibold text-xs sm:text-sm text-slate-900 block">Gambas peladas congeladas (Opcional)</span>
+                    <span class="text-[10px] sm:text-xs text-slate-500 block mt-0.5">Solo si decides cambiar a la receta de cintas con gambas</span>
                   </div>
                 </label>
 
                 <!-- Verduras & Fruta -->
-                <label class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
+                <label class="flex items-start gap-2.5 p-2 sm:p-3 rounded-lg sm:rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
                   <input type="checkbox" onchange="toggleItem('Canónigos frescos (1 bolsa)')" data-item="Canónigos frescos (1 bolsa)" class="grocery-cb mt-1 w-4 h-4 rounded text-emerald-600 border-slate-300 accent-emerald-600 shrink-0" />
                   <div class="flex-1 min-w-0">
-                    <span class="item-title font-semibold text-base text-slate-900 block">Canónigos frescos (1 bolsa)</span>
-                    <span class="text-sm text-slate-600 block mt-0.5">Base digestiva para ensaladas y fajitas</span>
+                    <span class="item-title font-semibold text-xs sm:text-sm text-slate-900 block">Canónigos frescos (1 bolsa)</span>
+                    <span class="text-[10px] sm:text-xs text-slate-500 block mt-0.5">Base digestiva para ensaladas y fajitas</span>
                   </div>
                 </label>
 
-                <label class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
+                <label class="flex items-start gap-2.5 p-2 sm:p-3 rounded-lg sm:rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
                   <input type="checkbox" onchange="toggleItem('Tomates cherry dulces (1 tarrina 500g)')" data-item="Tomates cherry dulces (1 tarrina 500g)" class="grocery-cb mt-1 w-4 h-4 rounded text-emerald-600 border-slate-300 accent-emerald-600 shrink-0" />
                   <div class="flex-1 min-w-0">
-                    <span class="item-title font-semibold text-base text-slate-900 block">Tomates cherry dulces (500g)</span>
-                    <span class="text-sm text-slate-600 block mt-0.5">Para salteados y ensaladas</span>
+                    <span class="item-title font-semibold text-xs sm:text-sm text-slate-900 block">Tomates cherry dulces (500g)</span>
+                    <span class="text-[10px] sm:text-xs text-slate-500 block mt-0.5">Para salteados y ensaladas</span>
                   </div>
                 </label>
 
-                <label class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
+                <label class="flex items-start gap-2.5 p-2 sm:p-3 rounded-lg sm:rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
                   <input type="checkbox" onchange="toggleItem('Calabacines verdes frescos (2 piezas)')" data-item="Calabacines verdes frescos (2 piezas)" class="grocery-cb mt-1 w-4 h-4 rounded text-emerald-600 border-slate-300 accent-emerald-600 shrink-0" />
                   <div class="flex-1 min-w-0">
-                    <span class="item-title font-semibold text-base text-slate-900 block">Calabacines verdes frescos (2 piezas)</span>
-                    <span class="text-sm text-slate-600 block mt-0.5">Para wok, salteados y shakshuka</span>
+                    <span class="item-title font-semibold text-xs sm:text-sm text-slate-900 block">Calabacines verdes frescos (2 piezas)</span>
+                    <span class="text-[10px] sm:text-xs text-slate-500 block mt-0.5">Para wok, salteados y shakshuka</span>
                   </div>
                 </label>
 
-                <label class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
+                <label class="flex items-start gap-2.5 p-2 sm:p-3 rounded-lg sm:rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
                   <input type="checkbox" onchange="toggleItem('Peras maduras conferencia o de agua (4 piezas)')" data-item="Peras maduras conferencia o de agua (4 piezas)" class="grocery-cb mt-1 w-4 h-4 rounded text-emerald-600 border-slate-300 accent-emerald-600 shrink-0" />
                   <div class="flex-1 min-w-0">
-                    <span class="item-title font-semibold text-base text-slate-900 block">Peras maduras (4 piezas)</span>
-                    <span class="text-sm text-slate-600 block mt-0.5">Pectina y cardamomo contra el estreñimiento</span>
+                    <span class="item-title font-semibold text-xs sm:text-sm text-slate-900 block">Peras maduras (4 piezas)</span>
+                    <span class="text-[10px] sm:text-xs text-slate-500 block mt-0.5">Pectina y cardamomo contra el estreñimiento</span>
                   </div>
                 </label>
 
-                <label class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
+                <label class="flex items-start gap-2.5 p-2 sm:p-3 rounded-lg sm:rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
                   <input type="checkbox" onchange="toggleItem('Manzanas dulces Golden o Fuji (1 bolsa / 4 uds)')" data-item="Manzanas dulces Golden o Fuji (1 bolsa / 4 uds)" class="grocery-cb mt-1 w-4 h-4 rounded text-emerald-600 border-slate-300 accent-emerald-600 shrink-0" />
                   <div class="flex-1 min-w-0">
-                    <span class="item-title font-semibold text-base text-slate-900 block">Manzanas dulces Golden o Fuji (4 piezas)</span>
-                    <span class="text-sm text-slate-600 block mt-0.5">Pectina cocinada con canela</span>
+                    <span class="item-title font-semibold text-xs sm:text-sm text-slate-900 block">Manzanas dulces Golden o Fuji (4 piezas)</span>
+                    <span class="text-[10px] sm:text-xs text-slate-500 block mt-0.5">Pectina cocinada con canela</span>
                   </div>
                 </label>
 
-                <label class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
+                <label class="flex items-start gap-2.5 p-2 sm:p-3 rounded-lg sm:rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
                   <input type="checkbox" onchange="toggleItem('Batatas o boniatos (2 piezas)')" data-item="Batatas o boniatos (2 piezas)" class="grocery-cb mt-1 w-4 h-4 rounded text-emerald-600 border-slate-300 accent-emerald-600 shrink-0" />
                   <div class="flex-1 min-w-0">
-                    <span class="item-title font-semibold text-base text-slate-900 block">Batatas o boniatos (2 piezas)</span>
-                    <span class="text-sm text-slate-600 block mt-0.5">Para solomillo con boniato asado y guarniciones</span>
+                    <span class="item-title font-semibold text-xs sm:text-sm text-slate-900 block">Batatas o boniatos (2 piezas)</span>
+                    <span class="text-[10px] sm:text-xs text-slate-500 block mt-0.5">Para solomillo con boniato asado y guarniciones</span>
                   </div>
                 </label>
 
-                <label class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
+                <label class="flex items-start gap-2.5 p-2 sm:p-3 rounded-lg sm:rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
                   <input type="checkbox" onchange="toggleItem('Bandeja de calabaza limpia + puerro + zanahorias')" data-item="Bandeja de calabaza limpia + puerro + zanahorias" class="grocery-cb mt-1 w-4 h-4 rounded text-emerald-600 border-slate-300 accent-emerald-600 shrink-0" />
                   <div class="flex-1 min-w-0">
-                    <span class="item-title font-semibold text-base text-slate-900 block">Bandeja calabaza + puerro + zanahorias</span>
-                    <span class="text-sm text-slate-600 block mt-0.5">Base fresca para crema dorada</span>
+                    <span class="item-title font-semibold text-xs sm:text-sm text-slate-900 block">Bandeja calabaza + puerro + zanahorias</span>
+                    <span class="text-[10px] sm:text-xs text-slate-500 block mt-0.5">Base fresca para crema dorada</span>
                   </div>
                 </label>
 
-                <label class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
+                <label class="flex items-start gap-2.5 p-2 sm:p-3 rounded-lg sm:rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
                   <input type="checkbox" onchange="toggleItem('Aguacates maduros (2 piezas)')" data-item="Aguacates maduros (2 piezas)" class="grocery-cb mt-1 w-4 h-4 rounded text-emerald-600 border-slate-300 accent-emerald-600 shrink-0" />
                   <div class="flex-1 min-w-0">
-                    <span class="item-title font-semibold text-base text-slate-900 block">Aguacates maduros (2 piezas)</span>
-                    <span class="text-sm text-slate-600 block mt-0.5">Grasas monoinsaturadas y potasio</span>
+                    <span class="item-title font-semibold text-xs sm:text-sm text-slate-900 block">Aguacates maduros (2 piezas)</span>
+                    <span class="text-[10px] sm:text-xs text-slate-500 block mt-0.5">Grasas monoinsaturadas y potasio</span>
                   </div>
                 </label>
 
@@ -854,11 +873,11 @@
 
         </div>
 
-        <div class="mt-4 pt-3 border-t border-slate-200 flex justify-between items-center">
-          <button type="button" onclick="clearCheckedGrocery()" class="text-sm text-slate-500 hover:text-rose-600 font-medium cursor-pointer">
+        <div class="mt-3 pt-2.5 border-t border-slate-200 flex justify-between items-center">
+          <button type="button" onclick="clearCheckedGrocery()" class="text-xs text-slate-400 hover:text-rose-600 font-medium cursor-pointer">
             Desmarcar todo
           </button>
-          <button type="button" onclick="switchView('menu')" class="px-4 py-2 rounded-lg bg-emerald-800 text-white font-semibold text-sm hover:bg-emerald-900 cursor-pointer">
+          <button type="button" onclick="switchView('menu')" class="px-3 py-1.5 rounded-lg bg-emerald-800 text-white font-semibold text-xs hover:bg-emerald-900 cursor-pointer">
             Volver al Menú
           </button>
         </div>
@@ -1498,9 +1517,9 @@
         const btn = document.getElementById('view-btn-' + v);
         if (btn) {
           if (v === view) {
-            btn.className = "tap-effect px-3.5 py-1.5 rounded-lg font-bold bg-white text-slate-900 shadow-sm cursor-pointer";
+            btn.className = "tap-effect px-2.5 py-1 sm:px-3.5 sm:py-1.5 rounded-md sm:rounded-lg font-bold bg-white text-slate-900 shadow-sm cursor-pointer";
           } else {
-            btn.className = "tap-effect px-3.5 py-1.5 rounded-lg font-medium text-slate-600 hover:text-slate-900 cursor-pointer";
+            btn.className = "tap-effect px-2.5 py-1 sm:px-3.5 sm:py-1.5 rounded-md sm:rounded-lg font-medium text-slate-600 hover:text-slate-900 cursor-pointer";
           }
         }
       });
@@ -1530,21 +1549,21 @@
 
         if (isActive) {
           return `
-            <button type="button" onclick="selectDay('${k}')" id="tab-${k}" class="day-tab tap-effect py-2.5 px-1 sm:py-3 rounded-xl text-center transition bg-slate-900 text-white border border-slate-900 cursor-pointer min-w-0">
-              <span class="block text-xs font-bold uppercase tracking-wider text-slate-300">${dayConfig[k].short}</span>
-              <span class="block text-base font-bold text-white mt-0.5 tracking-tight">${dayConfig[k].num}</span>
-              <div class="h-1 flex items-center justify-center mt-1">
-                ${isToday ? '<span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>' : ''}
+            <button type="button" onclick="selectDay('${k}')" id="tab-${k}" class="day-tab tap-effect py-1 px-0.5 sm:py-2.5 sm:px-1 rounded-lg sm:rounded-xl text-center transition bg-slate-900 text-white border border-slate-900 cursor-pointer min-w-0 shadow-sm">
+              <span class="block text-[9px] sm:text-xs font-bold uppercase tracking-wider text-slate-300 leading-none">${dayConfig[k].short}</span>
+              <span class="block text-xs sm:text-base font-bold text-white mt-0.5 tracking-tight leading-none">${dayConfig[k].num}</span>
+              <div class="h-1 flex items-center justify-center mt-0.5">
+                ${isToday ? '<span class="w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-emerald-400"></span>' : ''}
               </div>
             </button>
           `;
         } else {
           return `
-            <button type="button" onclick="selectDay('${k}')" id="tab-${k}" class="day-tab tap-effect py-2.5 px-1 sm:py-3 rounded-xl text-center transition bg-white text-slate-800 border border-slate-200 hover:border-slate-300 hover:bg-slate-50 cursor-pointer min-w-0 ${isToday ? 'ring-2 ring-emerald-500/30' : ''}">
-              <span class="block text-xs font-semibold uppercase tracking-wider text-slate-500">${dayConfig[k].short}</span>
-              <span class="block text-base font-bold text-slate-900 mt-0.5 tracking-tight">${dayConfig[k].num}</span>
-              <div class="h-1 flex items-center justify-center mt-1">
-                ${isToday ? '<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>' : ''}
+            <button type="button" onclick="selectDay('${k}')" id="tab-${k}" class="day-tab tap-effect py-1 px-0.5 sm:py-2.5 sm:px-1 rounded-lg sm:rounded-xl text-center transition bg-white text-slate-800 border border-slate-200 hover:border-slate-300 hover:bg-slate-50 cursor-pointer min-w-0 ${isToday ? 'ring-1.5 ring-emerald-500/40' : ''}">
+              <span class="block text-[9px] sm:text-xs font-semibold uppercase tracking-wider text-slate-500 leading-none">${dayConfig[k].short}</span>
+              <span class="block text-xs sm:text-base font-bold text-slate-900 mt-0.5 tracking-tight leading-none">${dayConfig[k].num}</span>
+              <div class="h-1 flex items-center justify-center mt-0.5">
+                ${isToday ? '<span class="w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-emerald-600"></span>' : ''}
               </div>
             </button>
           `;
@@ -1981,19 +2000,19 @@
 
       const options = alternativeRecipes[category] || [];
       container.innerHTML = options.map(opt => `
-        <div class="card-clean space-y-3">
-          <div class="flex flex-col sm:flex-row gap-3.5 items-start">
-            <img src="${opt.img}" alt="${opt.title}" class="w-full sm:w-28 h-28 object-cover rounded-xl border border-slate-200 shrink-0" />
-            <div class="flex-1 space-y-1">
-              <span class="text-xs font-semibold text-emerald-800">${opt.calories}</span>
-              <h4 class="text-base font-bold text-slate-900 leading-snug">${opt.title}</h4>
-              <p class="text-sm text-slate-600">${opt.instructions}</p>
+        <div class="card-clean space-y-2 p-2.5 sm:p-4">
+          <div class="flex gap-2.5 sm:gap-3.5 items-start">
+            <img src="${opt.img}" alt="${opt.title}" class="w-16 h-16 sm:w-24 sm:h-24 object-cover rounded-lg sm:rounded-xl border border-slate-200 shrink-0" />
+            <div class="flex-1 min-w-0 space-y-0.5">
+              <span class="text-[10px] sm:text-xs font-semibold text-emerald-800">${opt.calories}</span>
+              <h4 class="text-xs sm:text-sm font-bold text-slate-900 leading-snug line-clamp-2">${opt.title}</h4>
+              <p class="text-[11px] sm:text-xs text-slate-600 line-clamp-2 leading-relaxed">${opt.instructions}</p>
             </div>
           </div>
-          <div class="pt-2 border-t border-slate-100 flex items-center justify-between">
-            <span class="text-xs font-medium text-slate-500">${opt.badges.join(' · ')}</span>
-            <button type="button" onclick="applySwappedMeal('${opt.id}')" class="px-3.5 py-1.5 rounded-lg bg-emerald-800 text-white text-sm font-bold hover:bg-emerald-900 cursor-pointer">
-              Elegir esta receta
+          <div class="pt-1.5 border-t border-slate-100 flex items-center justify-between gap-2">
+            <span class="text-[10px] sm:text-xs text-slate-500 truncate">${opt.badges.join(' · ')}</span>
+            <button type="button" onclick="applySwappedMeal('${opt.id}')" class="px-2.5 py-1 rounded-md sm:rounded-lg bg-emerald-800 text-white text-xs font-bold hover:bg-emerald-900 cursor-pointer shrink-0">
+              Elegir
             </button>
           </div>
         </div>
@@ -2075,21 +2094,21 @@
       if (!banner) return;
 
       banner.innerHTML = `
-        <div class="flex items-center gap-3 min-w-0">
-          <div class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 ${done ? 'bg-emerald-600 text-white' : 'bg-emerald-100 text-emerald-800'}">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        <div class="flex items-center gap-2.5 min-w-0">
+          <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl flex items-center justify-center shrink-0 ${done ? 'bg-emerald-600 text-white' : 'bg-emerald-100 text-emerald-800'}">
+            <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
           </div>
           <div class="min-w-0">
-            <div class="flex items-center gap-2 flex-wrap">
-              <span class="font-bold text-base text-slate-900 truncate">${w.title}</span>
-              <span class="px-2 py-0.5 rounded text-xs font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200">${w.duration}</span>
-              <span class="text-sm text-slate-600 font-medium">${w.center}</span>
+            <div class="flex items-center gap-1.5 flex-wrap">
+              <span class="font-bold text-xs sm:text-base text-slate-900 truncate">${w.title}</span>
+              <span class="px-1.5 py-0.2 rounded text-[10px] sm:text-xs font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200">${w.duration}</span>
+              <span class="text-[11px] sm:text-xs text-slate-500 font-medium truncate hidden sm:inline">${w.center}</span>
             </div>
-            <p class="text-sm text-slate-600 truncate mt-0.5">${w.note}</p>
+            <p class="text-[11px] sm:text-xs text-slate-500 truncate mt-0.5">${w.note}</p>
           </div>
         </div>
-        <button type="button" onclick="toggleWorkoutDone('${w.id}', event)" class="px-4 py-2 rounded-lg text-sm font-bold transition flex items-center justify-center gap-1.5 shrink-0 ${done ? 'bg-emerald-700 text-white' : 'bg-white border border-slate-300 text-slate-800 hover:border-emerald-600 hover:text-emerald-800'} cursor-pointer">
-          <span>${done ? '✓ Completado' : 'Marcar realizado'}</span>
+        <button type="button" onclick="toggleWorkoutDone('${w.id}', event)" class="px-2.5 py-1.5 sm:px-3.5 sm:py-2 rounded-md sm:rounded-lg text-xs font-bold transition flex items-center justify-center gap-1 shrink-0 ${done ? 'bg-emerald-700 text-white' : 'bg-white border border-slate-300 text-slate-800 hover:border-emerald-600 hover:text-emerald-800'} cursor-pointer">
+          <span>${done ? '✓ Hecho' : 'Completar'}</span>
         </button>
       `;
     }
@@ -2109,14 +2128,14 @@
         const mealCat = getMealCategory(baseMeal.type);
 
         const ingHtml = meal.ingredients.map(ing => `
-          <li class="flex items-start gap-2 text-base text-slate-700 leading-snug">
+          <li class="flex items-start gap-1.5 text-xs sm:text-sm text-slate-700 leading-snug">
             <span class="text-emerald-700 font-bold shrink-0 mt-0.5">•</span>
             <span>${ing}</span>
           </li>
         `).join('');
 
         const badgesHtml = meal.badges.map(b => `
-          <span class="px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-700 font-medium text-xs border border-slate-200">
+          <span class="px-2 py-0.5 rounded text-[10px] sm:text-xs font-medium bg-slate-100 text-slate-700 border border-slate-200">
             ${b}
           </span>
         `).join('');
@@ -2124,66 +2143,66 @@
         return `
           <article class="card-clean transition ${done ? 'border-emerald-300 bg-emerald-50/20' : 'bg-white'}">
             
-            <div onclick="toggleMealCollapse('${baseMeal.id}')" class="flex items-center gap-4 cursor-pointer select-none">
+            <div onclick="toggleMealCollapse('${baseMeal.id}')" class="flex items-center gap-2.5 sm:gap-4 cursor-pointer select-none">
               
-              <div class="relative w-20 h-20 rounded-xl overflow-hidden bg-slate-100 shrink-0 border border-slate-200">
-                <img src="${meal.img}" alt="${meal.title}" class="w-full h-full object-cover aspect-square ${done ? 'opacity-60' : ''}" loading="lazy" />
-                ${done ? '<div class="absolute inset-0 bg-emerald-900/50 flex items-center justify-center text-white font-extrabold text-lg">✓</div>' : ''}
+              <div class="relative w-14 h-14 sm:w-16 sm:h-16 rounded-lg sm:rounded-xl overflow-hidden bg-slate-100 shrink-0 border border-slate-200">
+                <img src="${meal.img}" alt="${meal.title}" class="w-full h-full object-cover aspect-square ${done ? 'opacity-50' : ''}" loading="lazy" />
+                ${done ? '<div class="absolute inset-0 bg-emerald-800/60 flex items-center justify-center text-white font-extrabold text-sm sm:text-base">✓</div>' : ''}
               </div>
 
-              <div class="min-w-0 flex-1 space-y-1">
-                <div class="flex items-center gap-2 flex-wrap">
-                  <span class="text-xs font-bold uppercase tracking-wider text-emerald-800">
+              <div class="min-w-0 flex-1 space-y-0.5">
+                <div class="flex items-center gap-1.5 flex-wrap">
+                  <span class="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-emerald-800 leading-none">
                     ${meal.type}
                   </span>
-                  <span class="text-xs text-slate-500">·</span>
-                  <span class="text-xs text-slate-600 font-medium">
+                  <span class="text-[10px] sm:text-xs text-slate-400">·</span>
+                  <span class="text-[10px] sm:text-xs text-slate-500 font-medium leading-none">
                     ${meal.time}
                   </span>
-                  <span class="text-xs text-slate-500">·</span>
-                  <span class="text-xs font-semibold text-slate-700">
+                  <span class="text-[10px] sm:text-xs text-slate-400">·</span>
+                  <span class="text-[10px] sm:text-xs font-semibold text-slate-600 leading-none">
                     ${meal.calories}
                   </span>
-                  ${isCustom ? '<span class="text-xs font-semibold text-emerald-800 bg-emerald-50 px-2 py-0.2 rounded border border-emerald-200">Receta elegida</span>' : ''}
+                  ${isCustom ? '<span class="text-[9px] sm:text-[10px] font-semibold text-emerald-800 bg-emerald-50 px-1.5 py-0.2 rounded border border-emerald-200">Elegida</span>' : ''}
                 </div>
 
-                <h3 class="text-base sm:text-lg font-bold text-slate-900 leading-snug break-words ${done ? 'line-through text-slate-400' : ''}">
+                <h3 class="text-xs sm:text-sm md:text-base font-bold text-slate-900 leading-snug line-clamp-2 ${done ? 'line-through text-slate-400' : ''}">
                   ${meal.title}
                 </h3>
               </div>
 
-              <div class="flex items-center gap-2 shrink-0">
-                <button type="button" onclick="openMealSwapper('${baseMeal.id}', '${mealCat}', event)" class="px-2.5 py-1.5 rounded-lg text-xs font-semibold text-slate-700 hover:text-emerald-800 bg-slate-100 hover:bg-emerald-50 border border-slate-200 transition flex items-center gap-1 cursor-pointer" title="Cambiar por otra receta">
-                  <span>🔄</span>
-                  <span class="hidden sm:inline">Cambiar</span>
+              <div class="flex items-center gap-1 sm:gap-2 shrink-0">
+                <button type="button" onclick="openMealSwapper('${baseMeal.id}', '${mealCat}', event)" class="p-1 sm:px-2 sm:py-1 rounded-md sm:rounded-lg text-xs font-semibold text-slate-700 hover:text-emerald-800 bg-slate-100 hover:bg-emerald-50 border border-slate-200 transition flex items-center gap-1 cursor-pointer" title="Cambiar por otra receta">
+                  <span class="text-xs">🔄</span>
+                  <span class="hidden sm:inline text-xs">Cambiar</span>
                 </button>
-                <button type="button" onclick="toggleMealDone('${baseMeal.id}', event)" class="w-9 h-9 rounded-full flex items-center justify-center transition cursor-pointer ${done ? 'bg-emerald-600 text-white' : 'border-2 border-slate-300 hover:border-emerald-600 text-slate-400 hover:text-emerald-600 bg-white'}" title="${done ? 'Marcar como pendiente' : 'Marcar como completado'}">
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                <button type="button" onclick="toggleMealDone('${baseMeal.id}', event)" class="w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center transition cursor-pointer ${done ? 'bg-emerald-600 text-white' : 'border border-slate-300 hover:border-emerald-600 text-slate-400 hover:text-emerald-600 bg-white'}" title="${done ? 'Marcar como pendiente' : 'Marcar como completado'}">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
                 </button>
-                <div class="w-7 h-7 flex items-center justify-center text-slate-500 hover:text-slate-900 transition">
-                  <svg id="chevron-${baseMeal.id}" class="w-4 h-4 transform transition-transform duration-200 ${isExpanded ? 'rotate-180' : ''}" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                <div class="w-4 h-4 sm:w-5 sm:h-5 flex items-center justify-center text-slate-400">
+                  <svg id="chevron-${baseMeal.id}" class="w-3.5 h-3.5 transform transition-transform duration-200 ${isExpanded ? 'rotate-180' : ''}" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
                 </div>
               </div>
 
             </div>
 
-            <div id="meal-body-${baseMeal.id}" class="${isExpanded ? '' : 'hidden'} mt-4 pt-4 border-t border-slate-200 space-y-4">
+            <div id="meal-body-${baseMeal.id}" class="${isExpanded ? '' : 'hidden'} mt-3 pt-3 border-t border-slate-200 space-y-2.5">
               
-              <div class="flex items-center justify-between flex-wrap gap-2">
-                <div class="flex flex-wrap gap-1.5">
+              <div class="flex items-center justify-between flex-wrap gap-1.5">
+                <div class="flex flex-wrap gap-1">
                   ${badgesHtml}
                 </div>
-                ${isCustom ? `<button type="button" onclick="resetMealToOriginal('${baseMeal.id}', event)" class="text-xs text-slate-500 hover:text-rose-600 font-medium">Restablecer original</button>` : ''}
+                ${isCustom ? `<button type="button" onclick="resetMealToOriginal('${baseMeal.id}', event)" class="text-[11px] text-slate-500 hover:text-rose-600 font-medium">Restablecer original</button>` : ''}
               </div>
 
-              <div class="space-y-1.5">
-                <h4 class="text-xs font-bold uppercase tracking-wider text-slate-500">Ingredientes:</h4>
-                <ul class="space-y-1">
+              <div class="space-y-1">
+                <h4 class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-slate-500">Ingredientes:</h4>
+                <ul class="space-y-0.5 text-xs sm:text-sm">
                   ${ingHtml}
                 </ul>
               </div>
 
-              <div class="pt-2 text-base text-slate-700 leading-relaxed border-t border-slate-100">
+              <div class="pt-1.5 text-xs sm:text-sm text-slate-700 leading-relaxed border-t border-slate-100">
                 <strong class="text-slate-900">Preparación express:</strong> ${meal.instructions}
               </div>
 
@@ -2484,9 +2503,9 @@
 
         return `
           <div class="flex-1 flex flex-col items-center cursor-pointer relative" onclick="selectDay('${key}')" title="${day ? day.workout.title : ''}">
-            ${isSelected ? '<span class="w-1.5 h-1.5 rounded-full bg-emerald-600 mb-0.5" title="Día seleccionado"></span>' : '<span class="w-1.5 h-1.5 mb-0.5"></span>'}
-            <div class="w-full ${barClass} rounded-full transition-all" style="height: 10px;"></div>
-            <span class="text-xs font-bold ${isWorkout ? 'text-emerald-800' : 'text-slate-400'} mt-0.5">${dayLetters[idx]}</span>
+            ${isSelected ? '<span class="w-1 h-1 rounded-full bg-emerald-600 mb-0.5" title="Día seleccionado"></span>' : '<span class="w-1 h-1 mb-0.5"></span>'}
+            <div class="w-full ${barClass} rounded-full transition-all" style="height: 5px;"></div>
+            <span class="text-[8px] sm:text-[10px] font-bold ${isWorkout ? 'text-emerald-800' : 'text-slate-400'} mt-0.5 leading-none">${dayLetters[idx]}</span>
           </div>
         `;
       }).join('');
@@ -2609,15 +2628,15 @@
 
       const liters = (count * 0.25).toFixed(2).replace('.', ',');
       if (badge) {
-        badge.innerText = `${count} / 8 vasos (${liters} L)`;
+        badge.innerText = `${count}/8 (${liters}L)`;
       }
 
       let html = '';
       for (let i = 1; i <= 8; i++) {
         const isFilled = i <= count;
         html += `
-          <button type="button" onclick="toggleWaterGlass(${i})" class="tap-effect px-2.5 py-1 rounded-lg text-sm font-semibold transition cursor-pointer ${isFilled ? 'bg-emerald-700 text-white shadow-sm' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}" title="Vaso ${i} (250 ml)">
-            💧 ${i}
+          <button type="button" onclick="toggleWaterGlass(${i})" class="tap-effect w-6 h-6 sm:w-7 sm:h-7 rounded-md text-[11px] sm:text-xs font-bold flex items-center justify-center transition cursor-pointer ${isFilled ? 'bg-emerald-700 text-white shadow-sm' : 'bg-slate-100 text-slate-400 hover:bg-slate-200'}" title="Vaso ${i} (250 ml)">
+            ${isFilled ? '💧' : i}
           </button>
         `;
       }
@@ -2632,22 +2651,22 @@
   </script>
   <!-- MODAL SELECTOR DE RECETAS ALTERNATIVAS (SWAPPER) -->
   <div id="meal-swapper-modal" class="hidden fixed inset-0 z-50 bg-slate-900/60 flex items-end sm:items-center justify-center p-0 sm:p-4 transition-opacity">
-    <div class="bg-white w-full sm:max-w-2xl max-h-[85vh] sm:rounded-2xl rounded-t-2xl shadow-xl flex flex-col overflow-hidden">
+    <div class="bg-white w-full sm:max-w-xl max-h-[88vh] sm:rounded-2xl rounded-t-2xl shadow-xl flex flex-col overflow-hidden">
       
-      <div class="p-4 sm:p-5 border-b border-slate-200 flex items-center justify-between">
+      <div class="p-3 sm:p-4 border-b border-slate-200 flex items-center justify-between">
         <div>
-          <h3 id="swapper-modal-title" class="text-lg font-bold text-slate-900">Recetas alternativas</h3>
-          <p id="swapper-modal-subtitle" class="text-sm text-slate-600">Sustituye este plato por otra opción adaptada</p>
+          <h3 id="swapper-modal-title" class="text-sm sm:text-base font-bold text-slate-900">Recetas alternativas</h3>
+          <p id="swapper-modal-subtitle" class="text-[11px] sm:text-xs text-slate-500">Sustituye este plato por otra opción adaptada</p>
         </div>
-        <button type="button" onclick="closeMealSwapper()" class="text-slate-400 hover:text-slate-700 text-lg font-bold p-1 cursor-pointer">✕</button>
+        <button type="button" onclick="closeMealSwapper()" class="text-slate-400 hover:text-slate-700 text-base font-bold p-1 cursor-pointer">✕</button>
       </div>
 
-      <div class="p-4 sm:p-5 overflow-y-auto space-y-4" id="swapper-options-container">
+      <div class="p-3 sm:p-4 overflow-y-auto space-y-2.5" id="swapper-options-container">
         <!-- Injected by JS openMealSwapper -->
       </div>
 
-      <div class="p-3 border-t border-slate-200 bg-slate-50 flex justify-end">
-        <button type="button" onclick="closeMealSwapper()" class="px-4 py-2 rounded-lg bg-slate-200 hover:bg-slate-300 text-slate-800 text-sm font-semibold cursor-pointer">
+      <div class="p-2.5 border-t border-slate-200 bg-slate-50 flex justify-end">
+        <button type="button" onclick="closeMealSwapper()" class="px-3.5 py-1.5 rounded-lg bg-slate-200 hover:bg-slate-300 text-slate-800 text-xs font-semibold cursor-pointer">
           Cerrar
         </button>
       </div>
