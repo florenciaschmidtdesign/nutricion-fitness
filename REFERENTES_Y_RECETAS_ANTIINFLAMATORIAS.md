@@ -55,6 +55,11 @@ Buscamos creadoras que compartan platos **visualmente irresistibles, rápidos, a
 | **Paula Monreal (Paufeel)** | IG: `@paufeel` | Referente en España de cocina 100% sin gluten, antiinflamatoria y ultra digestiva. Famosa por sus sartenadas express de cena (huevos con cherrys, tortillas esponjosas, pancakes salados de calabacín y atún). |
 | **Elena y María (Futurlife21)** | IG: `@futurlife21` | Bioquímicas y nutricionistas. Expertas en batch cooking antiinflamatorio para la semana, con preparaciones ricas en fibra soluble para combatir el estreñimiento sin generar gases. |
 | **Alex Snodgrass (The Defined Dish)** | Blog / IG: `@thedefineddish` | Autora superventas de cocina libre de gluten y antiinflamatoria. Sus marinados para pechuga de pollo y salsas satay de cacahuete con tamari son perfectas para comidas compartidas en pareja. |
+| **AJ Foodie** | IG: `@ajfoodie` | Platos limpios y coloridos de inspiración mediterránea y global. Enfoque en aves tiernas (pavo, pollo), carnes magras limpias, verduras crujientes al dente y aliños cítricos sin salsas industriales ni gluten. |
+| **Mona Naudts** | IG: `@mona.naudts` | Desayunos y comidas reconfortantes de alta densidad nutricional: shakshukas suaves, huevos poché sobre bases vegetales y bowls coloridos que combinan texturas cremosas y crujientes. |
+| **Nutri Aconséjame** | IG: `@nutriaconsejame` | Divulgación de nutrición clínica aplicada, recetas fáciles para desinflamar el intestino, ideas para digestiones lentas y alternativas saciantes ricas en proteína magra. |
+| **Erth & Me** | IG: `@erth.and.me` | Creadora de los virales *Snickers Overnight Oats* con capa crujiente de chocolate negro y caramelo de cacahuete, desayunos con avena sin gluten, semillas activadas y proteína limpia. |
+| **Emily on Toast** | Substack: `emilyontoast.substack.com` | Especialista en snacks artesanales antiinflamatorios con chocolate negro, frutos secos y semillas tostadas (*Fruit, Nut & Seed Dark Chocolate Bark*), ricos en magnesio y polifenoles. |
 
 ---
 
@@ -170,10 +175,10 @@ Para vencer esto, aplicamos un sistema de **cero fricción y recompensa cerebral
 * **Elaboración (12 min):** Hornear o sellar el salmón a la plancha con la técnica de piel crujiente. En sartén wok a fuego vivo con 1 cdita de AOVE y jengibre, saltear el bok choy 2–3 minutos (debe quedar al dente, nunca blando ni oxidado). Mezclar con canónigos frescos y servir con el salmón por encima.
 * **Efecto Metabólico:** Máxima retención de folato y vitamina C, fibra soluble que previene el estreñimiento sin fermentar en el colon.
 
-#### Receta 8 (The Anti-Inflammatory Club): "Ensalada Templada de Remolacha Asada, Lentejas Rojas y Feta"
-* **Concepto:** Alternativa vegetal rica en hierro y minerales para variar las fuentes de legumbres.
-* **Ingredientes:** 100 g de lentejas rojas o pardinas cocidas; 1 remolacha cocida cortada en dados; 30 g de queso feta desmenuzado; 1 puñado de canónigos o rúcula suave; vinagreta de limón, AOVE y mostaza suave.
-* **Efecto Metabólico:** El óxido nítrico natural de la remolacha mejora la microcirculación y oxigenación tisular, facilitando la recuperación y el drenaje de líquidos.
+#### Receta 8 (The Anti-Inflammatory Club): "Ensalada Templada de Calabaza Asada, Lentejas Rojas y Queso de Cabra Tierno"
+* **Concepto:** Alternativa vegetal rica en hierro y minerales para variar las fuentes de legumbres sin hinchazón. *(Recordatorio clínico: Remolacha eliminada 100% de la pauta por aversión)*.
+* **Ingredientes:** 100 g de lentejas rojas o pardinas cocidas; 100 g de calabaza asada en dados (del batch); 30 g de queso tierno light o havarti; 1 puñado de canónigos; vinagreta suave de limón, AOVE y orégano.
+* **Efecto Metabólico:** Carbohidrato de absorción lenta que nutre la microbiota sin fermentar en el colon, aportando saciedad duradera.
 
 ---
 
@@ -207,3 +212,46 @@ Para vencer esto, aplicamos un sistema de **cero fricción y recompensa cerebral
 * **Ingredientes:** 3 onzas de chocolate negro (>85%) derretidas al microondas (45 seg); 1 cucharada colmada de tahini cremoso; ralladura de 1/2 naranja ecológica; 1 pizca de flor de sal marina en escamas.
 * **Elaboración (3 min + enfriar):** Mezclar el chocolate derretido con el tahini y la ralladura de naranja hasta que quede brillante. Verter sobre un platito con papel de horno en pequeños montoncitos y espolvorear unas escamas de sal. Enfriar 15 minutos en el congelador.
 * **Efecto Metabólico:** Cada bocado aporta magnesio relajante muscular (calma cólicos y espasmos del DIU) y teobromina que eleva el estado de ánimo sin provocar la hipoglucemia reactiva que causan los dulces industriales.
+
+---
+
+### E. Nuevas Recetas de Creadoras (Sin Pescado ni Marisco para la Rotación Semanal)
+
+#### Receta 13 (Erth & Me): "Snickers Overnight Oats con Cobertura Crujiente de Chocolate y Caramelo de Cacahuete"
+* **Concepto:** Desayuno de fin de semana o batch que sabe a tarta de Snickers pero nutre la tiroides y el tránsito intestinal.
+* **Ingredientes:**
+  * Base de avena: 50 g de harina o copos finos de avena sin gluten, 30 g de proteína en polvo (AMIX CFM Isolate vainilla o proteína vegetal), 100 g de yogur griego natural sin azúcar, 5 g de semillas de chía o lino molido, 10 g de crema de cacahuete en polvo o 1 cdita de crema 100%, 90 ml de bebida de avena sin gluten.
+  * Capa de caramelo: 10 g de crema de cacahuete 100% mezclada con 1 cdita (5-10 g) de sirope de arce o miel pura.
+  * Cobertura crujiente: 20 g de chocolate negro (>85%) derretido + cacahuetes tostados picados con escamas de sal.
+* **Elaboración (5 min + reposo):** Mezclar todos los ingredientes de la base en un tarro de cristal o ramequín. Dejar espesar en nevera 1 hora. Extender la capa de caramelo de cacahuete por encima. Fundir el chocolate negro, verterlo encima formando una capa fina y decorar con los cacahuetes. Dejar en la nevera toda la noche. Al romper la capa crujiente con la cuchara por la mañana se encuentra la textura cremosa.
+* **Macros Estimados:** ~440 kcal | 38 g Proteína | 42 g Carbohidratos | 12 g Grasas.
+
+#### Receta 14 (Emily on Toast): "Fruit, Nut & Seed Dark Chocolate Bark"
+* **Concepto:** Tableta rota artesanal de chocolate negro con semillas activadas y frutos secos para picoteos saludables de tarde.
+* **Ingredientes:** 100 g de chocolate negro (>85%) fundido; 20 g de almendras tostadas troceadas; 15 g de semillas de calabaza; 10 g de semillas de sésamo o chía; 15 g de arándanos secos o trocitos de manzana deshidratada; escamas de flor de sal.
+* **Elaboración (8 min + enfriar):** Extender el chocolate fundido sobre papel de horno formando una plancha de 0,5 cm de grosor. Esparcir por encima los frutos secos, semillas y fruta seca presionando suavemente con la yema de los dedos. Espolvorear sal marina y enfriar 30 minutos en nevera. Romper con las manos en trozos irregulares y guardar en bote de cristal.
+* **Efecto Metabólico:** Magnesio puro para calmar el útero y la retención premenstrual, con grasas saciantes que no elevan la glucosa.
+
+#### Receta 15 (AJ Foodie): "Solomillitos de Pavo al Limón, Romero y Boniato Dorado"
+* **Concepto:** Almuerzo limpio de alta proteína magra para días donde quieres digestión ligera y cero pesadez.
+* **Ingredientes:** 180 g de solomillo de pavo cortado en medallones; 150 g de boniato asado en dados (del batch prep); 1 diente de ajo picado; zumo de 1/2 limón; romero fresco picado; 1 cdita de AOVE virgen extra; ensalada de canónigos frescos.
+* **Elaboración (10 min):** Dorar los medallones de pavo en sartén caliente con el AOVE, ajo y romero 3 minutos por lado. Añadir el zumo de limón para desglasar la sartén. Servir con los dados de boniato caliente y los canónigos con aliño de limón.
+* **Macros Estimados:** ~420 kcal | 44 g Proteína | 38 g Carbohidratos | 8 g Grasas.
+
+#### Receta 16 (AJ Foodie / Nutri Aconséjame): "Wok Rápido de Tiras de Ternera Limpia con Calabacín, Zanahoria y Arroz Basmati"
+* **Concepto:** Hierro hemo de máxima absorción para la fase premenstrual en un formato rápido estilo salteado asiático sin gluten.
+* **Ingredientes:** 150 g de filetes de ternera magra cortados en tiras finas; 1 calabacín verde en medias lunas; 1 zanahoria en bastones finos; 120 g de arroz basmati cocido (o quinoa); 1 cucharada de tamari (salsa de soja 100% sin gluten); 1 cdita de semillas de sésamo; 1 cdita de AOVE.
+* **Elaboración (8 min):** En sartén bien caliente o wok con el AOVE, saltear las verduras a fuego vivo 3 minutos (al dente). Retirar las verduras, saltear las tiras de ternera 1,5 minutos. Reincorporar las verduras, añadir el tamari y remover 30 segundos. Servir sobre el arroz basmati y coronar con sésamo.
+* **Macros Estimados:** ~450 kcal | 42 g Proteína | 44 g Carbohidratos | 11 g Grasas.
+
+#### Receta 17 (Mona Naudts): "Shakshuka Suave de Huevos Camperos con Tomate Confitado, Albahaca y Tortitas de Maíz"
+* **Concepto:** Cena tibia de confort digestivo, sin digestiones pesadas y con yema líquida para mojar tortitas de maíz crujientes.
+* **Ingredientes:** 2 huevos camperos enteros + 2 cucharadas de claras; 150 g de tomate triturado dulce natural; 1/2 calabacín en dados pequeños; 1 cdita de orégano y albahaca fresca; sal marina y 1 cdita de AOVE; 2 tortitas de maíz 100% sin gluten tostadas.
+* **Elaboración (10 min):** Sofreír el calabacín en una sartén pequeña con AOVE 3 minutos. Añadir el tomate triturado, sal y orégano, y cocinar 3 minutos a fuego medio. Hacer dos huecos con la espátula y cascar los huevos dentro. Tapar y dejar cuajar a fuego suave 3–4 minutos (claras cuajadas, yemas líquidas). Espolvorear albahaca y servir con las tortitas calientes.
+* **Macros Estimados:** ~390 kcal | 26 g Proteína | 32 g Carbohidratos | 15 g Grasas.
+
+#### Receta 18 (Nutri Aconséjame): "Pollo Salteado al Curry Suave y Leche de Coco Ligera con Quinoa"
+* **Concepto:** Cena antiinflamatoria donde la cúrcuma calma el epitelio intestinal y el pollo aporta proteína magra saciante.
+* **Ingredientes:** 160 g de pechuga de pollo en dados; 60 ml de leche de coco ligera (sin espesantes químicos); 1/2 cdita de curry en polvo suave; 1/2 cdita de cúrcuma; 1 calabacín pequeño en dados; 100 g de quinoa cocida.
+* **Elaboración (10 min):** Dorar el pollo en sartén con unas gotas de AOVE 4 minutos. Añadir el calabacín y saltear 2 minutos. Verter la leche de coco ligera y las especias, reduciendo a fuego lento 3 minutos hasta que la salsa quede cremosa. Servir junto a la quinoa tibia.
+* **Macros Estimados:** ~440 kcal | 43 g Proteína | 36 g Carbohidratos | 12 g Grasas.

@@ -280,7 +280,11 @@
           <h2 id="active-day-heading" class="text-xl font-bold text-slate-900">
             Menú del Día
           </h2>
-          <p class="text-sm text-slate-600">Semana del 16 al 22 de Noviembre</p>
+          <div class="flex items-center gap-2">
+            <p class="text-sm text-slate-600">Semana del 16 al 22 de Noviembre</p>
+            <span class="text-slate-300">·</span>
+            <button type="button" onclick="resetWeeklyMealMarks()" class="text-xs text-slate-500 hover:text-rose-600 font-medium cursor-pointer" title="Desmarcar todas las comidas completadas de esta semana">Reiniciar marcas semana</button>
+          </div>
         </div>
         <button type="button" onclick="toggleAllMeals()" id="toggle-all-meals-btn" class="text-sm font-semibold text-emerald-800 bg-emerald-50 hover:bg-emerald-100 px-3 py-1.5 rounded-lg border border-emerald-200 cursor-pointer transition">
           Abrir todas ↓
@@ -761,20 +765,21 @@
                   </div>
                 </label>
 
-                <label class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
-                  <input type="checkbox" onchange="toggleItem('Lomos de salmón fresco con piel (bandeja 2 lomos)')" data-item="Lomos de salmón fresco con piel (bandeja 2 lomos)" class="grocery-cb mt-1 w-4 h-4 rounded text-emerald-600 border-slate-300 accent-emerald-600 shrink-0" />
+                <!-- Pescado (Opcional si se activa en el selector de cambio) -->
+                <label class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-dashed border-slate-300 hover:border-slate-400 cursor-pointer select-none">
+                  <input type="checkbox" onchange="toggleItem('Lomos de salmón fresco con piel (opcional swapper)')" data-item="Lomos de salmón fresco con piel (opcional swapper)" class="grocery-cb mt-1 w-4 h-4 rounded text-emerald-600 border-slate-300 accent-emerald-600 shrink-0" />
                   <div class="flex-1 min-w-0">
-                    <span class="item-title font-semibold text-base text-slate-900 block">Lomos de salmón fresco con piel (2 lomos)</span>
-                    <span class="text-sm text-slate-600 block mt-0.5">Omega-3 antiinflamatorio</span>
+                    <span class="item-title font-semibold text-base text-slate-900 block">Lomos de salmón fresco con piel (Opcional)</span>
+                    <span class="text-sm text-slate-600 block mt-0.5">Solo si decides cambiar alguna comida por salmón en el botón 🔄</span>
                   </div>
                 </label>
 
                 <!-- Congelados -->
-                <label class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
-                  <input type="checkbox" onchange="toggleItem('Gambas peladas congeladas Hacendado (1 bolsa)')" data-item="Gambas peladas congeladas Hacendado (1 bolsa)" class="grocery-cb mt-1 w-4 h-4 rounded text-emerald-600 border-slate-300 accent-emerald-600 shrink-0" />
+                <label class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-dashed border-slate-300 hover:border-slate-400 cursor-pointer select-none">
+                  <input type="checkbox" onchange="toggleItem('Gambas peladas congeladas (opcional swapper)')" data-item="Gambas peladas congeladas (opcional swapper)" class="grocery-cb mt-1 w-4 h-4 rounded text-emerald-600 border-slate-300 accent-emerald-600 shrink-0" />
                   <div class="flex-1 min-w-0">
-                    <span class="item-title font-semibold text-base text-slate-900 block">Gambas peladas congeladas (1 bolsa)</span>
-                    <span class="text-sm text-slate-600 block mt-0.5">Para cintas de calabacín con lima</span>
+                    <span class="item-title font-semibold text-base text-slate-900 block">Gambas peladas congeladas (Opcional)</span>
+                    <span class="text-sm text-slate-600 block mt-0.5">Solo si decides cambiar a la receta de cintas con gambas</span>
                   </div>
                 </label>
 
@@ -799,7 +804,7 @@
                   <input type="checkbox" onchange="toggleItem('Calabacines verdes frescos (2 piezas)')" data-item="Calabacines verdes frescos (2 piezas)" class="grocery-cb mt-1 w-4 h-4 rounded text-emerald-600 border-slate-300 accent-emerald-600 shrink-0" />
                   <div class="flex-1 min-w-0">
                     <span class="item-title font-semibold text-base text-slate-900 block">Calabacines verdes frescos (2 piezas)</span>
-                    <span class="text-sm text-slate-600 block mt-0.5">Para cintas con gambas y salteados</span>
+                    <span class="text-sm text-slate-600 block mt-0.5">Para wok, salteados y shakshuka</span>
                   </div>
                 </label>
 
@@ -823,7 +828,7 @@
                   <input type="checkbox" onchange="toggleItem('Batatas o boniatos (2 piezas)')" data-item="Batatas o boniatos (2 piezas)" class="grocery-cb mt-1 w-4 h-4 rounded text-emerald-600 border-slate-300 accent-emerald-600 shrink-0" />
                   <div class="flex-1 min-w-0">
                     <span class="item-title font-semibold text-base text-slate-900 block">Batatas o boniatos (2 piezas)</span>
-                    <span class="text-sm text-slate-600 block mt-0.5">Para fishcakes de salmón y guarniciones</span>
+                    <span class="text-sm text-slate-600 block mt-0.5">Para solomillo con boniato asado y guarniciones</span>
                   </div>
                 </label>
 
@@ -887,30 +892,28 @@
       } catch (e) {}
     }
 
-    const foodImgs = {
-      pancakes: "images/pancakes_avena.jpg",
-      pollo_batata: "images/pollo_boniato.jpg",
-      yogur: "images/yogur_frutos_rojos.jpg",
-      crema: "images/crema_calabaza.jpg",
+        const foodImgs = {
       arepas: "images/arepas_pan.jpg",
-      pasta_gambas: "images/camarones_cherrys.jpg",
-      manzana: "images/manzana_asada.jpg",
+      pancakes: "images/pancakes_avena.jpg",
+      snickers_oats: "images/snickers_oats.jpg",
+      chocolate_bark: "images/chocolate_bark.jpg",
+      pavo_asado: "images/pavo_asado.jpg",
+      shakshuka_huevos: "images/shakshuka_huevos.jpg",
       hamburguesa: "images/hamburguesa.jpg",
+      pollo_boniato: "images/pollo_boniato.jpg",
       pollo_arroz: "images/pollo_arroz.jpg",
-      mousse: "images/mousse_chocolate.jpg",
-      garbanzos_gambas: "images/garbanzos_gambas.jpg",
+      quinoa_bowl: "images/quinoa_bowl.jpg",
+      fajitas_pollo: "images/fajitas_pollo.jpg",
+      crema: "images/crema_calabaza.jpg",
       salmon: "images/salmon_plancha.jpg",
-      crepes: "images/crepes_dulces.jpg",
-      fajitas: "images/fajitas_pollo.jpg",
-      sushi: "images/sushi_variado.jpg",
-      waffles: "images/waffles_avena.jpg",
-      quinoa: "images/quinoa_bowl.jpg",
-      golden_cocoa: "images/golden_cocoa.jpg",
-      pollo: "images/pollo_boniato.jpg",
+      fishcakes: "images/fishcakes_salmon.jpg",
       camarones: "images/camarones_cherrys.jpg",
       peras: "images/peras_cardamomo.jpg",
-      fishcakes: "images/fishcakes_salmon.jpg",
-      te: "images/golden_cocoa.jpg"
+      mousse: "images/mousse_chocolate.jpg",
+      manzana: "images/manzana_asada.jpg",
+      golden_cocoa: "images/golden_cocoa.jpg",
+      waffles: "images/waffles_avena.jpg",
+      yogur_rojos: "images/yogur_frutos_rojos.jpg"
     };
 
     const daysData = {
@@ -945,17 +948,17 @@
             id: "lun-1",
             type: "Almuerzo",
             time: "14:30 h",
-            title: "Bok Choy & Canónigos Crunch con Lomo de Salmón (Raquel Martin)",
-            img: foodImgs.salmon,
-            badges: ["Omega-3", "42g Proteína", "Calcio Biodisponible"],
-            calories: "~510 kcal",
+            title: "Solomillitos de Pavo al Limón y Romero con Boniato Asado (AJ Foodie)",
+            img: foodImgs.pavo_asado,
+            badges: ["Proteína Magra", "Fácil Digestión", "Sin Pescado"],
+            calories: "~460 kcal",
             ingredients: [
-              "<strong>1 lomo de salmón fresco con piel</strong> sellado hipercrujiente a la plancha",
-              "<strong>Hojas de canónigos y calabacín al dente</strong> salteados 2 min con jengibre rallado",
-              "<strong>Aliño emulsionado de Tahini & Lima:</strong> 1 cda de tahini blanco + zumo de lima + agua fría batida",
+              "<strong>180 g de solomillo de pavo fresco</strong> en medallones a la plancha con romero y ajo laminado",
+              "<strong>150 g de boniato asado en dados</strong> (del batch de Airfryer)",
+              "<strong>Canónigos frescos</strong> con zumo de limón y AOVE",
               "Toma de <strong>Multivitamínico completo</strong> en el almuerzo"
             ],
-            instructions: "Sella el salmón con la técnica de 4-5 min piel abajo sin mover. Sirve sobre los verdes templados con el aliño cremoso de tahini."
+            instructions: "Sella los solomillitos de pavo 3 min por lado en sartén caliente con ajo y romero. Desglasa con el limón. Sirve con el boniato caliente y los canónigos."
           },
           {
             id: "lun-2",
@@ -1099,17 +1102,17 @@
             id: "mie-1",
             type: "Almuerzo",
             time: "14:30 h",
-            title: "Hélices de Lenteja Roja 100% con Colas de Gambas y Cherrys",
-            img: foodImgs.pasta_gambas,
-            badges: ["36g Proteína", "Hierro Vegetal", "Digestión Ligera"],
+            title: "Hélices de Lenteja Roja 100% con Tiras de Pollo Dorado y Cherrys",
+            img: foodImgs.pollo_arroz,
+            badges: ["40g Proteína", "Hierro & Fibra", "100% Sin Gluten"],
             calories: "~480 kcal",
             ingredients: [
               "<strong>70 g de pasta de lenteja roja 100%</strong> cocida 6-7 min al dente",
-              "<strong>120 g de colas de gambas peladas</strong> (de tu congelador) salteadas con ajo y AOVE",
-              "<strong>Tomates cherry dulces y dados de calabacín</strong> confitados en la sartén",
+              "<strong>150 g de pechuga de pollo</strong> en tiras doradas con orégano y AOVE",
+              "<strong>Tomates cherry dulces y dados de calabacín</strong> salteados en sartén",
               "Pizca de orégano y escamas de sal marina"
             ],
-            instructions: "Pasta sin gluten de altísima digestibilidad rica en fibra soluble. Mezcla la pasta caliente con las gambas y los cherrys."
+            instructions: "Pasta de legumbre rica en fibra soluble combinada con pollo tierno a la plancha. Mezcla la pasta caliente con el salteado de verduras y pollo."
           },
           {
             id: "mie-2",
@@ -1131,17 +1134,17 @@
             id: "mie-3",
             type: "Cena",
             time: "21:00 h",
-            title: "Pastelitos Dorados de Salmón y Boniato (Fishcakes - Anti-Inflammatory Club)",
-            img: foodImgs.fishcakes,
-            badges: ["Omega-3", "35g Proteína", "The Anti-Inflammatory Club"],
-            calories: "~440 kcal",
+            title: "Shakshuka Suave de Huevos Camperos con Tomate y Tortitas de Maíz (Mona Naudts)",
+            img: foodImgs.shakshuka_huevos,
+            badges: ["Cena Confort", "26g Proteína", "Fácil Digestión", "Mona Naudts"],
+            calories: "~390 kcal",
             ingredients: [
-              "<strong>1 lomo de salmón fresco</strong> cocinado y desmigado mezclado con <strong>1 boniato asado</strong> chafado",
-              "<strong>Cebollino fresco picado</strong> y 1/2 cdita de mostaza suave de Dijon",
-              "Formar 2 hamburguesitas y dorar 3 min por lado en sartén con AOVE",
-              "Acompañar con ensalada de <strong>canónigos frescos con limón exprimido</strong>"
+              "<strong>2 huevos camperos + 2 cdas de claras</strong> cuajados en salsa",
+              "<strong>150 g de tomate triturado natural dulce</strong> cocinado con calabacín en dados y orégano",
+              "<strong>2 tortillas de maíz 100% sin gluten</strong> bien tostadas para mojar",
+              "Albahaca fresca y chorrito de AOVE virgen extra"
             ],
-            instructions: "Una de las recetas estrella de Annabelle y Tom: costra crujiente por fuera y textura suave por dentro. Digestión nocturna perfecta."
+            instructions: "Sofríe el calabacín 3 min con AOVE. Añade el tomate triturado y orégano. Haz 2 huecos, casca los huevos y tapa a fuego suave 4 minutos hasta cuajar las claras con yema líquida."
           }
         ]
       },
@@ -1159,66 +1162,67 @@
           {
             id: "jue-0",
             type: "Desayuno",
-            time: "10:30 – 11:00 h",
-            title: "Batch Pancakes AMIX con Pera Caramelizada y Cardamomo",
-            img: foodImgs.pancakes,
-            badges: ["Pectina Caliente", "30g Proteína", "Tostadora 30s"],
-            calories: "~380 kcal",
+            time: "09:30 – 10:00 h",
+            title: "Snickers Overnight Oats con Cobertura Crujiente de Chocolate (Erth & Me)",
+            img: foodImgs.snickers_oats,
+            badges: ["Snickers for Breakfast", "38g Proteína", "Magnesio", "Erth & Me"],
+            calories: "~440 kcal",
             ingredients: [
-              "<strong>2 pancakes de avena del batch</strong> tostados 30 seg",
-              "<strong>1/2 pera madura</strong> salteada 3 min con cardamomo y canela",
-              "<strong>1 cda de queso cottage</strong> cremoso",
-              "Café con bebida de avena sin gluten"
+              "<strong>50 g harina o copos de avena certificados sin gluten</strong>",
+              "<strong>30 g proteína AMIX CFM Isolate vainilla</strong> + 100 g yogur griego natural",
+              "<strong>5 g semillas de chía o lino molido</strong> (mucílagos para el tránsito)",
+              "<strong>Capa de caramelo:</strong> 10 g crema de cacahuete 100% con 1 cdita de sirope de arce o miel",
+              "<strong>Cáscara crujiente:</strong> 20 g chocolate negro >85% fundido + cacahuetes tostados picados"
             ],
-            instructions: "La combinación de cardamomo y pera caliente estimula el tránsito estomacal y activa el vaciado digestivo matutino."
+            instructions: "Mezcla la avena, proteína, yogur y chía en un bol. Refrigera 1 hora. Extiende la capa de caramelo de cacahuete y vierte el chocolate fundido encima. Deja enfriar toda la noche. Por la mañana rompe la capa crujiente con la cuchara."
           },
           {
             id: "jue-1",
             type: "Almuerzo",
             time: "14:30 h",
-            title: "Sartenada Express de Garbanzos con Gambas y Espinacas",
-            img: foodImgs.garbanzos_gambas,
-            badges: ["35g Proteína", "Fibra Soluble", "Zinc & Yodo"],
-            calories: "~470 kcal",
+            title: "Sartenada Express de Garbanzos con Ternera y Espinacas a la Cúrcuma",
+            img: foodImgs.hamburguesa,
+            badges: ["40g Proteína", "Hierro Hemo", "Fibra Soluble", "Sin Pescado"],
+            calories: "~480 kcal",
             ingredients: [
-              "<strong>150 g de garbanzos cocidos en conserva</strong> lavados y escurridos",
-              "<strong>100 g de gambas peladas</strong> salteadas con ajo laminado y cúrcuma",
-              "<strong>Espinacas tiernas cocinadas</strong> (de porciones congeladas en sartén)",
-              "Tomates cherry dulces y chorro de AOVE virgen extra"
+              "<strong>150 g de garbanzos cocidos en conserva</strong> bien lavados y escurridos",
+              "<strong>140 g de filetes de ternera magra en tiras</strong> doradas en sartén",
+              "<strong>Espinacas tiernas cocinadas</strong> salteadas con ajo laminado y cúrcuma",
+              "Tomates cherry dulces y chorrito de AOVE virgen extra"
             ],
-            instructions: "Saltea las gambas con ajo y cúrcuma, añade los garbanzos y las espinacas. Plato completo y saciante en menos de 8 minutos."
+            instructions: "Saltea la ternera en tiras con ajo 2 minutos. Añade los garbanzos, las espinacas y la cúrcuma. Saltea 3 minutos a fuego vivo. Plato completo antiinflamatorio en menos de 8 minutos."
           },
           {
             id: "jue-2",
             type: "Merienda",
             time: "18:00 h",
-            title: "Manzana Caramelizada al Microondas con Canela y Chocolate",
-            img: foodImgs.manzana,
-            badges: ["Pectina", "Magnesio", "Serotonina"],
+            title: "Fruit, Nut & Seed Dark Chocolate Bark con Infusión Tibia (Emily on Toast)",
+            img: foodImgs.chocolate_bark,
+            badges: ["Emily on Toast", "Magnesio Puro", "Anti-PMS", "Antioxidantes"],
             calories: "~220 kcal",
             ingredients: [
-              "<strong>1 manzana Golden cortada en cubitos</strong>",
-              "<strong>1 cdita de canela de Ceilán</strong> + 1 cda de agua (microondas 2,5 min)",
-              "<strong>1 onza de chocolate negro (>85%)</strong> fundida sobre la manzana caliente",
-              "<strong>2 nueces de Brasil</strong>"
+              "<strong>30 g de chocolate negro artesanal >85%</strong> en trozos crujientes",
+              "<strong>15 g de almendras tostadas y semillas de calabaza</strong>",
+              "<strong>1 cdita de semillas de sésamo y escamas de flor de sal</strong>",
+              "Infusión digestiva tibia de manzanilla o té verde"
             ],
-            instructions: "Al tapar el bowl caliente, el chocolate se funde solo con el vapor. Pectina desinflamante y magnesio directo."
+            instructions: "Disfruta de 2 o 3 trozos de la tableta artesanal de chocolate negro con frutos secos y semillas crujientes, acompañada de infusión tibia."
           },
           {
             id: "jue-3",
             type: "Cena",
             time: "21:00 h",
-            title: "Sartenada de Cintas de Calabacín con Gambas al Ajillo y Lima (Raquel Martin)",
-            img: foodImgs.camarones,
-            badges: ["Digestión Express", "34g Proteína", "Raquel Martin"],
-            calories: "~410 kcal",
+            title: "Hamburguesa Casera de Ternera con Queso Havarti y Tortitas de Maíz",
+            img: foodImgs.hamburguesa,
+            badges: ["Hierro Hemo", "42g Proteína", "Fase Premenstrual", "Sin Pescado"],
+            calories: "~490 kcal",
             ingredients: [
-              "<strong>1 calabacín verde</strong> cortado en cintas tipo tagliatelle con pelador",
-              "<strong>140 g de colas de gambas peladas</strong> salteadas con 1 diente de ajo y AOVE",
-              "<strong>Zumo de 1/2 lima recién exprimida</strong> y perejil picado",
-              "Acompañamiento: <strong>Dados de batata asada</strong> (de tu batch de Airfryer)"
+              "<strong>180 g de carne picada limpia de vacuno</strong> hecha hamburguesa casera",
+              "<strong>1 loncha de queso havarti o tierno light fundido</strong> encima en el último minuto",
+              "<strong>2 tortillas de maíz 100% sin gluten</strong> doradas en sartén seca",
+              "Ensalada fresca de <strong>canónigos y tomates cherry con AOVE</strong>"
             ],
-            instructions: "Saltea el calabacín solo 1,5 minutos para que quede al dente. Cena ultraligera que se digiere en minutos y no hincha."
+            instructions: "Cocina la hamburguesa 3 min por lado a fuego medio-alto. Funde el queso havarti tapando la sartén el último minuto. Sirve con las tortillas de maíz calientes y ensalada."
           }
         ]
       },
@@ -1253,17 +1257,17 @@
             id: "vie-1",
             type: "Almuerzo",
             time: "14:30 h",
-            title: "Arroz Basmati con Tiras de Pavo y Calabacín al Curry Suave",
+            title: "Wok Rápido de Tiras de Ternera con Calabacín y Arroz Basmati (AJ Foodie)",
             img: foodImgs.pollo_arroz,
-            badges: ["38g Proteína", "Cúrcuma Antiinflamatoria"],
+            badges: ["Hierro Hemo", "42g Proteína", "AJ Foodie", "Wok Rápido"],
             calories: "~480 kcal",
             ingredients: [
-              "<strong>70 g de arroz basmati cocido</strong> salteado con cúrcuma",
-              "<strong>150 g de pechuga de pavo</strong> en tiras doradas a la plancha",
-              "<strong>Calabacín verde y zanahoria</strong> en cubitos al curry suave con AOVE",
-              "Toma de Multivitamínico en el almuerzo"
+              "<strong>150 g de ternera magra en tiras finas</strong> dorada a fuego vivo",
+              "<strong>70 g de arroz basmati cocido</strong> con cúrcuma y sal marina",
+              "<strong>Calabacín en medias lunas y zanahoria</strong> salteados al dente",
+              "1 cda de tamari (salsa de soja 100% sin gluten) y semillas de sésamo"
             ],
-            instructions: "El arroz basmati cocido y salteado con cúrcuma aporta digestión fácil y acción antiinflamatoria sistémica."
+            instructions: "Saltea el calabacín y la zanahoria 3 min en wok con AOVE. Retira. Saltea la ternera 2 min. Junta todo con el tamari y sirve sobre el arroz basmati con sésamo."
           },
           {
             id: "vie-2",
@@ -1285,17 +1289,17 @@
             id: "vie-3",
             type: "Cena",
             time: "21:00 h",
-            title: "Hamburguesa Casera de Ternera con Queso Fundido y Tortitas de Maíz",
-            img: foodImgs.hamburguesa,
-            badges: ["Cena de Confort", "44g Proteína", "Hierro Hemínico"],
-            calories: "~520 kcal",
+            title: "Pollo Salteado al Curry Suave y Leche de Coco con Quinoa (Nutri Aconséjame)",
+            img: foodImgs.pollo_boniato,
+            badges: ["Antiinflamatorio", "38g Proteína", "Cúrcuma", "Nutri Aconséjame"],
+            calories: "~440 kcal",
             ingredients: [
-              "<strong>180 g de carne picada de ternera limpia</strong> (de tu congelador) hecha hamburguesa a la plancha",
-              "<strong>Queso fundido encima</strong> en el último minuto de sartén",
-              "<strong>2 tortillas de maíz 100%</strong> calientes para acompañar",
-              "Ensalada fresca crujiente de <strong>canónigos y cherrys con AOVE y sal</strong>"
+              "<strong>160 g de pechuga de pollo en dados</strong> dorados a la plancha",
+              "<strong>60 ml de leche de coco ligera</strong> con 1/2 cdita de curry suave y cúrcuma",
+              "<strong>1 calabacín pequeño en dados</strong> cocinado en la salsa de coco",
+              "<strong>80 g de quinoa cocida</strong> esponjosa para acompañar"
             ],
-            instructions: "Cena estrella de viernes: hierro hemínico de máxima absorción previo a la regla con queso fundido y tortitas de maíz limpias."
+            instructions: "Dora el pollo en sartén 4 minutos. Añade el calabacín y vierte la leche de coco con curry y cúrcuma. Deja reducir 3 minutos hasta espesar y sirve junto a la quinoa."
           }
         ]
       },
@@ -1330,17 +1334,17 @@
             id: "sab-1",
             type: "Almuerzo",
             time: "14:30 h",
-            title: "Lomo de Salmón Noruego a la Plancha con Dados de Patata",
-            img: foodImgs.salmon,
-            badges: ["Omega-3", "42g Proteína", "Piel Hipercrujiente"],
-            calories: "~530 kcal",
+            title: "Solomillitos de Pavo al Limón con Dados de Patata Dorada (AJ Foodie)",
+            img: foodImgs.pavo_asado,
+            badges: ["Proteína Magra", "40g Proteína", "Recuperación Post-Barre", "Sin Pescado"],
+            calories: "~490 kcal",
             ingredients: [
-              "<strong>1 lomo de salmón fresco</strong> con piel bien seca sellado 4-5 min piel abajo",
-              "<strong>Dados de patata dorados en Airfryer</strong> con romero y sal marina",
-              "<strong>Bastones de calabacín</strong> dorados a la plancha con unas gotas de limón",
+              "<strong>180 g de solomillo de pavo fresco</strong> dorado en sartén con ajo laminado y romero",
+              "<strong>Dados de patata dorados en Airfryer</strong> con sal marina y AOVE",
+              "<strong>Canónigos frescos y dados de calabacín</strong> al dente",
               "Toma de Multivitamínico en el almuerzo"
             ],
-            instructions: "El salmón noruego rico en astaxantina y Omega-3 acelera la recuperación muscular tras la clase de Barre."
+            instructions: "Cocina el pavo jugoso a la plancha 3 min por lado con ajo y romero. Acompaña con las patatas crujientes de Airfryer y canónigos."
           },
           {
             id: "sab-2",
@@ -1362,17 +1366,18 @@
             id: "sab-3",
             type: "Cena",
             time: "21:30 h",
-            title: "Capricho Limpio: Sushi Variado 100% Sin Gluten (Salmón, Atún y Edamame)",
-            img: foodImgs.sushi,
-            badges: ["Cena Libre Limpia", "36g Proteína", "Sin Gluten"],
-            calories: "~490 kcal",
+            title: "Fajitas Caseras de Ternera con Pimientos Dulces, Guacamole y Maíz",
+            img: foodImgs.fajitas,
+            badges: ["Cena Gourmet Limpia", "38g Proteína", "100% Sin Gluten", "Sin Atún"],
+            calories: "~480 kcal",
             ingredients: [
-              "<strong>Nigiris y makis de salmón fresco y atún</strong> con arroz de sushi limpio",
-              "<strong>Edamame cocido con sal en escamas</strong>",
-              "<strong>Tamari (salsa de soja 100% sin gluten)</strong>",
+              "<strong>160 g de tiras de ternera magra</strong> salteadas con orégano y pimentón dulce",
+              "<strong>Pimientos dulces y calabacín</strong> salteados en juliana",
+              "<strong>2 tortillas de maíz 100% sin gluten</strong> bien tostadas",
+              "<strong>1/4 de aguacate triturado con lima</strong> (guacamole casero express)",
               "Toma nocturna: Magnesio Bisglicinato con agua tibia"
             ],
-            instructions: "Cena gourmet de sábado noche: disfrute total sin gluten, digestión rápida y descanso nocturno profundo."
+            instructions: "Saltea la ternera con las verduras 4 minutos a fuego vivo. Calienta las tortillas de maíz en la sartén y rellena con el guacamole casero. Cero pesadez, cero atún y cero inflamación."
           }
         ]
       },
@@ -1563,18 +1568,494 @@
       renderWeeklyTrainingCard();
     }
 
+    // ==========================================
+    // CATÁLOGO DE RECETAS ALTERNATIVAS (SWAPPER)
+    // ==========================================
+    const alternativeRecipes = {
+      breakfast: [
+        {
+          id: "alt_snickers_oats",
+          type: "Desayuno",
+          time: "09:30 – 10:00 h",
+          calories: "440 kcal · 38g Prot · 42g Carb · 12g Grasas",
+          title: "Snickers Overnight Oats con Cobertura Crujiente (Erth & Me)",
+          img: "images/snickers_oats.jpg",
+          badges: ["100% Sin Gluten", "Alta Proteína", "Rico en Magnesio", "Tránsito"],
+          ingredients: [
+            "50 g harina o copos de avena certificados sin gluten",
+            "30 g proteína AMIX CFM Isolate vainilla (o proteína vegana)",
+            "100 g yogur griego natural sin azúcar",
+            "5 g semillas de chía o lino molido (mucílagos para el tránsito)",
+            "10 g crema de cacahuete 100% en polvo o cremosa",
+            "90 ml bebida de avena sin gluten",
+            "Capa caramelo: 10 g crema cacahuete + 1 cdita sirope de arce o miel",
+            "Cobertura: 20 g chocolate negro >85% derretido + cacahuetes tostados con sal"
+          ],
+          instructions: "Mezcla la avena, proteína, yogur, chía y bebida de avena en un bol. Deja espesar 1 hora en nevera. Unta la capa de caramelo de cacahuete. Vierte el chocolate fundido y cacahuetes picados. Refrigera toda la noche. Por la mañana rompe la capa crujiente con la cuchara."
+        },
+        {
+          id: "alt_arepas_desayuno",
+          type: "Desayuno",
+          time: "09:30 – 10:00 h",
+          calories: "432 kcal · 45g Prot · 40g Carb · 12g Grasas",
+          title: "Arepas Doradas de Maíz con Huevos, Claras, Pollo y Queso Cottage",
+          img: "images/arepas_pan.jpg",
+          badges: ["100% Sin Gluten", "45g Proteína", "Chía Hidratada", "Cero Gases"],
+          ingredients: [
+            "1 arepa dorada casera (harina P.A.N. con chía hidratada)",
+            "2 huevos camperos enteros + 2 claras pasteurizadas",
+            "60 g queso cottage Hacendado",
+            "40 g pollo desmigado cocinado",
+            "Café o infusión con bebida de avena sin azúcar"
+          ],
+          instructions: "Abre la arepa caliente por la mitad. Prepara un revuelto suave en sartén con los huevos, claras y pollo desmigado. Rellena la arepa añadiendo el queso cottage cremoso dentro."
+        },
+        {
+          id: "alt_pancakes_amix",
+          type: "Desayuno",
+          time: "09:30 – 10:00 h",
+          calories: "440 kcal · 42g Prot · 45g Carb · 10g Grasas",
+          title: "Pancakes Esponjosos de Avena & AMIX CFM con Crema de Cacahuete",
+          img: "images/pancakes_avena.jpg",
+          badges: ["100% Sin Gluten", "Batch Prep", "Alta Proteína", "Rápido"],
+          ingredients: [
+            "2 pancakes de avena sin gluten (de tu batch semanal)",
+            "2 huevos revueltos al lado en sartén con gotas de AOVE",
+            "1 cucharadita de crema de cacahuete 100% o tahini",
+            "Café con bebida de avena"
+          ],
+          instructions: "Calienta los 2 pancakes 30 segundos en la tostadora. Unta con la crema de cacahuete y acompaña con los huevos revueltos recién hechos."
+        },
+        {
+          id: "alt_jammy_pears",
+          type: "Desayuno",
+          time: "09:30 – 10:00 h",
+          calories: "410 kcal · 32g Prot · 44g Carb · 11g Grasas",
+          title: "Warm Jammy Pears con Cardamomo & Yogur Griego (Raquel Martin)",
+          img: "images/peras_cardamomo.jpg",
+          badges: ["100% Sin Gluten", "Pectina Caliente", "Alivio Estreñimiento", "Tiroides"],
+          ingredients: [
+            "1 pera conferencia madura cortada en dados",
+            "1 cdita de cardamomo molido y 1 cdita de canela de Ceilán",
+            "120 g yogur griego natural sin azúcar",
+            "1 cazo de proteína AMIX CFM Isolate",
+            "1 cdita de semillas de chía hidratadas"
+          ],
+          instructions: "Cocina los dados de pera en un cazo con 2 cdas de agua, cardamomo y canela 5 minutos hasta que caramelice. Vierte caliente sobre el yogur batido con la proteína."
+        },
+        {
+          id: "alt_waffles_avena",
+          type: "Desayuno",
+          time: "09:30 – 10:00 h",
+          calories: "425 kcal · 36g Prot · 44g Carb · 11g Grasas",
+          title: "Waffles Esponjosos de Avena y Claras con Frutos Rojos Templados",
+          img: "images/waffles_avena.jpg",
+          badges: ["100% Sin Gluten", "Rico en Fibra", "Antioxidantes", "Cero Azúcar"],
+          ingredients: [
+            "50 g avena molida sin gluten y 3 claras de huevo + 1 huevo",
+            "1 cazo de proteína AMIX vainilla",
+            "80 g frutos rojos descongelados al microondas 30 seg",
+            "1 cucharada de yogur griego para coronar"
+          ],
+          instructions: "Bate la masa y cocina en gofrera o sartén 3 minutos. Sirve con los frutos rojos templados con su propio almíbar natural y una cucharada de yogur griego."
+        }
+      ],
+      lunch: [
+        {
+          id: "alt_pavo_asado",
+          type: "Almuerzo",
+          time: "14:00 – 14:30 h",
+          calories: "430 kcal · 44g Prot · 38g Carb · 9g Grasas",
+          title: "Solomillitos de Pavo al Limón y Romero con Boniato Asado (AJ Foodie)",
+          img: "images/pavo_asado.jpg",
+          badges: ["100% Sin Gluten", "Proteína Magra", "Fácil Digestión", "Sin Pescado"],
+          ingredients: [
+            "180 g solomillo de pavo fresco cortado en medallones",
+            "150 g boniato asado en dados (del batch prep)",
+            "1 diente de ajo laminado y romero fresco",
+            "Zumo de 1/2 limón y 1 cdita de AOVE",
+            "Ensalada de canónigos frescos con sal marina"
+          ],
+          instructions: "Sella los medallones de pavo en sartén con AOVE, ajo y romero 3 minutos por lado. Desglasa con el zumo de limón. Sirve con el boniato caliente y los canónigos."
+        },
+        {
+          id: "alt_hamburguesa_ternera",
+          type: "Almuerzo",
+          time: "14:00 – 14:30 h",
+          calories: "460 kcal · 42g Prot · 32g Carb · 18g Grasas",
+          title: "Hamburguesa Casera de Ternera con Queso Havarti y Ensalada Crunch",
+          img: "images/hamburguesa.jpg",
+          badges: ["100% Sin Gluten", "Hierro Hemo", "Fase Premenstrual", "Sin Pescado"],
+          ingredients: [
+            "180 g carne picada limpia de vacuno (hamburguesa casera)",
+            "1 loncha de queso havarti o tierno light fundido",
+            "1 tortita de maíz 100% sin gluten tostada",
+            "1 cuenco generoso de canónigos y tomates cherry",
+            "1 cdita mostaza de Dijon y AOVE"
+          ],
+          instructions: "Cocina la hamburguesa en sartén a fuego vivo 3 minutos por lado. Funde el queso encima el último minuto. Sirve sobre la tortita crujiente con la ensalada de canónigos y cherrys."
+        },
+        {
+          id: "alt_wok_ternera",
+          type: "Almuerzo",
+          time: "14:00 – 14:30 h",
+          calories: "450 kcal · 42g Prot · 44g Carb · 11g Grasas",
+          title: "Wok Rápido de Tiras de Ternera con Calabacín y Arroz Basmati (AJ Foodie)",
+          img: "images/pollo_arroz.jpg",
+          badges: ["100% Sin Gluten", "Hierro Hemo", "Energía Limpia", "Wok Rápido"],
+          ingredients: [
+            "150 g filetes de ternera magra cortados en tiras finas",
+            "1 calabacín verde en medias lunas y 1 zanahoria",
+            "120 g arroz basmati o quinoa cocida",
+            "1 cucharada de tamari (soja sin gluten)",
+            "Semillas de sésamo y 1 cdita de AOVE"
+          ],
+          instructions: "Saltea el calabacín y la zanahoria a fuego vivo 3 minutos en wok con AOVE. Retira. Saltea la ternera 2 minutos. Mezcla todo con el tamari y sirve sobre el arroz con sésamo."
+        },
+        {
+          id: "alt_quinoa_pollo",
+          type: "Almuerzo",
+          time: "14:00 – 14:30 h",
+          calories: "440 kcal · 42g Prot · 40g Carb · 12g Grasas",
+          title: "Mediterranean Quinoa Crunch Bowl con Pollo y Tahini (Annabelle & Tom)",
+          img: "images/quinoa_bowl.jpg",
+          badges: ["100% Sin Gluten", "Antiinflamatorio", "Fibra Soluble", "Sin Pescado"],
+          ingredients: [
+            "160 g pechuga de pollo fileteada a la plancha",
+            "100 g quinoa cocida esponjosa",
+            "1 puñado de canónigos y tomates cherry partidos",
+            "1 cucharada de tahini emulsionada con zumo de limón y agua",
+            "Pizca de sal marina y orégano"
+          ],
+          instructions: "Coloca la quinoa templada en la base del bol. Añade el pollo en tiras doradas, canónigos y cherrys. Emulsiona el tahini con limón y sal, y aliña generosamente."
+        },
+        {
+          id: "alt_salmon_plancha",
+          type: "Almuerzo",
+          time: "14:00 – 14:30 h",
+          calories: "460 kcal · 38g Prot · 32g Carb · 20g Grasas",
+          title: "Lomo de Salmón con Piel Crujiente y Boniato Asado (Opción Omega-3)",
+          img: "images/salmon_plancha.jpg",
+          badges: ["100% Sin Gluten", "Omega-3 Puro", "Piel Hipercrujiente", "Pescado Azul"],
+          ingredients: [
+            "1 lomo de salmón fresco con piel (160 g)",
+            "150 g boniato asado en dados (del batch)",
+            "Canónigos frescos y zumo de limón",
+            "Sal en escamas y 1 cdita de AOVE"
+          ],
+          instructions: "Seca la piel del salmón. Sartén caliente con AOVE. Cocina 4-5 minutos con la piel abajo sin tocar para que quede crujiente. Voltea solo 1,5 minutos. Sirve con boniato y canónigos."
+        },
+        {
+          id: "alt_fishcakes_salmon",
+          type: "Almuerzo",
+          time: "14:00 – 14:30 h",
+          calories: "440 kcal · 36g Prot · 38g Carb · 16g Grasas",
+          title: "Pastelitos Dorados de Salmón y Boniato (Fishcakes de Annabelle & Tom)",
+          img: "images/fishcakes_salmon.jpg",
+          badges: ["100% Sin Gluten", "Antiinflamatorio", "Opción Pescado", "Confort"],
+          ingredients: [
+            "1 lomo de salmón desmigado cocinado",
+            "1 boniato asado mediano chafado con tenedor",
+            "1 cdita cebollino fresco y 1/2 cdita mostaza Dijon",
+            "Canónigos frescos con zumo de lima"
+          ],
+          instructions: "Mezcla el salmón desmigado con el boniato, cebollino y mostaza. Forma 2 hamburguesitas y dora en sartén con AOVE 3 minutos por lado hasta que hagan costra crujiente."
+        },
+        {
+          id: "alt_gambas_calabacin",
+          type: "Almuerzo",
+          time: "14:00 – 14:30 h",
+          calories: "410 kcal · 38g Prot · 32g Carb · 12g Grasas",
+          title: "Sartenada de Cintas de Calabacín con Gambas al Ajillo y Lima (Raquel Martin)",
+          img: "images/camarones_cherrys.jpg",
+          badges: ["100% Sin Gluten", "Opción Marisco", "Cero Hinchazón", "Ultra Ligera"],
+          ingredients: [
+            "150 g gambas peladas",
+            "1 calabacín verde cortado en cintas con pelador",
+            "1 diente de ajo laminado y zumo de 1/2 lima",
+            "100 g arroz basmati o batata cocida",
+            "AOVE virgen extra y sal marina"
+          ],
+          instructions: "Dora el ajo y las gambas en sartén 2 minutos. Añade las cintas de calabacín y saltea solo 1,5 minutos al dente. Apaga el fuego, exprime la lima y sirve con arroz basmati."
+        }
+      ],
+      snack: [
+        {
+          id: "alt_chocolate_bark",
+          type: "Merienda",
+          time: "18:00 – 18:30 h",
+          calories: "220 kcal · 6g Prot · 18g Carb · 14g Grasas",
+          title: "Fruit, Nut & Seed Dark Chocolate Bark (Emily on Toast)",
+          img: "images/chocolate_bark.jpg",
+          badges: ["100% Sin Gluten", "Magnesio Puro", "Anti-PMS", "Antioxidantes"],
+          ingredients: [
+            "30 g chocolate negro artesanal >85% en trozos",
+            "15 g almendras tostadas y semillas de calabaza",
+            "1 cdita de semillas de sésamo y escamas de sal",
+            "Infusión digestiva tibia de manzanilla o té verde"
+          ],
+          instructions: "Disfruta de 2-3 trozos de la tableta artesanal de chocolate negro con semillas y almendras crujientes acompañada de una infusión tibia para calmar la tensión uterina."
+        },
+        {
+          id: "alt_mousse_amix",
+          type: "Merienda",
+          time: "18:00 – 18:30 h",
+          calories: "240 kcal · 26g Prot · 16g Carb · 7g Grasas",
+          title: "Mousse de Chocolate Belga & AMIX CFM Isolate",
+          img: "images/mousse_chocolate.jpg",
+          badges: ["100% Sin Gluten", "26g Proteína", "Textura Seda", "Antojo Dulce"],
+          ingredients: [
+            "1 yogur griego natural sin azúcar (125 g)",
+            "1/2 cazo (15 g) proteína AMIX CFM Isolate chocolate",
+            "1 cucharadita de cacao puro desgrasado",
+            "1 onza de chocolate negro rallado por encima"
+          ],
+          instructions: "Bate enérgicamente el yogur griego con la proteína AMIX y el cacao puro 1 minuto hasta emulsionar en mousse esponjosa. Enfría 10 minutos y corona con chocolate rallado."
+        },
+        {
+          id: "alt_manzana_asada",
+          type: "Merienda",
+          time: "18:00 – 18:30 h",
+          calories: "210 kcal · 4g Prot · 34g Carb · 7g Grasas",
+          title: "Manzana Asada con Canela de Ceilán y Chocolate Negro",
+          img: "images/manzana_asada.jpg",
+          badges: ["100% Sin Gluten", "Pectina Soluble", "Digestiva", "Sin Lácteos"],
+          ingredients: [
+            "1 manzana Golden grande en dados",
+            "1 cdita generosa de canela de Ceilán",
+            "1 onza (10 g) de chocolate negro >85%",
+            "Infusión de jengibre y manzanilla"
+          ],
+          instructions: "Coloca los dados de manzana en un bol con canela y 1 cda de agua. Microondas 2,5 minutos. Coloca la onza de chocolate negro encima; se fundirá sola con el vapor."
+        },
+        {
+          id: "alt_golden_cocoa",
+          type: "Merienda",
+          time: "18:00 – 18:30 h",
+          calories: "180 kcal · 5g Prot · 22g Carb · 6g Grasas",
+          title: "Golden Cocoa Tibio con Bebida de Avena, Cúrcuma y Cacao Puro",
+          img: "images/golden_cocoa.jpg",
+          badges: ["100% Sin Gluten", "Antiinflamatorio", "Relajante", "Cero Azúcar"],
+          ingredients: [
+            "200 ml bebida de avena sin gluten templada",
+            "1 cdita colmada de cacao puro 100%",
+            "1/2 cdita de cúrcuma en polvo y pizca de canela",
+            "2 nueces de Brasil (selenio para la tiroides)"
+          ],
+          instructions: "Calienta la bebida de avena y bate con espumador o varilla junto al cacao y la cúrcuma. Tómala despacio acompañada de las 2 nueces de Brasil."
+        }
+      ],
+      dinner: [
+        {
+          id: "alt_shakshuka_huevos",
+          type: "Cena",
+          time: "21:00 – 21:30 h",
+          calories: "390 kcal · 26g Prot · 32g Carb · 15g Grasas",
+          title: "Shakshuka Suave de Huevos Camperos con Tomate y Tortitas de Maíz (Mona Naudts)",
+          img: "images/shakshuka_huevos.jpg",
+          badges: ["100% Sin Gluten", "Cena Confort", "Fácil Digestión", "Sin Pescado"],
+          ingredients: [
+            "2 huevos camperos + 2 cdas de claras",
+            "150 g tomate triturado dulce natural",
+            "1/2 calabacín en dados y orégano",
+            "2 tortitas de maíz 100% sin gluten tostadas",
+            "Albahaca fresca y 1 cdita de AOVE"
+          ],
+          instructions: "Saltea el calabacín con AOVE 3 min. Añade el tomate triturado y orégano. Haz 2 huecos, casca los huevos y tapa 4 minutos a fuego suave hasta cuajar las claras con yema líquida. Moja con las tortitas."
+        },
+        {
+          id: "alt_crema_dorada",
+          type: "Cena",
+          time: "21:00 – 21:30 h",
+          calories: "380 kcal · 28g Prot · 32g Carb · 14g Grasas",
+          title: "Crema Dorada de Calabaza y Puerro con Huevo Poché Express y Proteína Moara",
+          img: "images/crema_calabaza.jpg",
+          badges: ["100% Sin Gluten", "Anti-Hinchazón", "Proteína Vegetal", "Cena Ligera"],
+          ingredients: [
+            "1 cuenco generoso de crema dorada de calabaza asada (del batch)",
+            "1 huevo poché express al microondas (55 seg en taza)",
+            "1 cucharada de proteína Moara Guisante disuelta en caldo tibio",
+            "1 cdita de semillas de calabaza tostadas"
+          ],
+          instructions: "Calienta la crema. Mezcla la proteína Moara con 2 cdas de caldo en una tacita y remueve dentro de la crema caliente para dar textura seda. Corona con el huevo poché y semillas."
+        },
+        {
+          id: "alt_fajitas_pollo",
+          type: "Cena",
+          time: "21:00 – 21:30 h",
+          calories: "410 kcal · 38g Prot · 30g Carb · 14g Grasas",
+          title: "Fajitas de Pollo Salteado con Pimientos Dulces y Aguacate",
+          img: "images/fajitas_pollo.jpg",
+          badges: ["100% Sin Gluten", "Saciante", "Grasas Saludables", "Sin Pescado"],
+          ingredients: [
+            "150 g pechuga de pollo en tiras doradas",
+            "1/2 pimiento dulce y 1/2 calabacín en juliana",
+            "2 tortitas de maíz 100% sin gluten",
+            "1/4 aguacate maduro en láminas y limón"
+          ],
+          instructions: "Saltea el pollo con el pimiento y calabacín a fuego vivo con unas gotas de AOVE y orégano 5 minutos. Calienta las tortitas de maíz en sartén seca. Rellena con el salteado y aguacate."
+        },
+        {
+          id: "alt_pollo_curry",
+          type: "Cena",
+          time: "21:00 – 21:30 h",
+          calories: "420 kcal · 42g Prot · 34g Carb · 12g Grasas",
+          title: "Pollo Salteado al Curry Suave y Leche de Coco Ligera con Quinoa (Nutri Aconséjame)",
+          img: "images/pollo_boniato.jpg",
+          badges: ["100% Sin Gluten", "Antiinflamatorio", "Cúrcuma Digestiva", "Sin Pescado"],
+          ingredients: [
+            "160 g pechuga de pollo en dados",
+            "60 ml leche de coco ligera (sin aditivos)",
+            "1/2 cdita curry suave y 1/2 cdita cúrcuma",
+            "1 calabacín pequeño en dados y 100 g quinoa cocida"
+          ],
+          instructions: "Dora el pollo en sartén 4 minutos. Añade el calabacín 2 minutos. Vierte la leche de coco y especias, dejando espesar 3 minutos a fuego suave. Sirve junto a la quinoa tibia."
+        },
+        {
+          id: "alt_gambas_cena",
+          type: "Cena",
+          time: "21:00 – 21:30 h",
+          calories: "380 kcal · 36g Prot · 26g Carb · 12g Grasas",
+          title: "Cintas de Calabacín con Gambas al Ajillo y Lima (Opción Marisco Ligero)",
+          img: "images/camarones_cherrys.jpg",
+          badges: ["100% Sin Gluten", "Opción Marisco", "Digestión 0 Min", "Zinc & Yodo"],
+          ingredients: [
+            "150 g gambas peladas",
+            "1 calabacín verde en cintas con pelador",
+            "1 diente de ajo laminado y media lima",
+            "1 tortita de maíz sin gluten tostada y AOVE"
+          ],
+          instructions: "Dora el ajo y las gambas en sartén con AOVE 2 minutos. Añade las cintas de calabacín y saltea 1,5 minutos al dente. Exprime la lima y acompaña con la tortita de maíz crujiente."
+        },
+        {
+          id: "alt_salmon_cena",
+          type: "Cena",
+          time: "21:00 – 21:30 h",
+          calories: "430 kcal · 36g Prot · 18g Carb · 22g Grasas",
+          title: "Lomo de Salmón con Ensalada Crujiente de Canónigos y Tahini (Opción Omega-3)",
+          img: "images/salmon_plancha.jpg",
+          badges: ["100% Sin Gluten", "Opción Salmón", "Omega-3 Antiinflamatorio", "Cena Ligera"],
+          ingredients: [
+            "1 lomo de salmón fresco con piel",
+            "1 cuenco generoso de canónigos y cherrys",
+            "1 cdita de tahini con limón para aliñar",
+            "Sal marina en escamas"
+          ],
+          instructions: "Cocina el salmón a la plancha con la piel hacia abajo 4 minutos sin mover para dorar crujiente. Voltea 1,5 minutos. Sirve sobre una cama abundante de canónigos y cherrys con tahini."
+        }
+      ]
+    };
+
+    function getMealCategory(mealType) {
+      const t = (mealType || '').toLowerCase();
+      if (t.includes('desayuno')) return 'breakfast';
+      if (t.includes('almuerzo') || t.includes('comida')) return 'lunch';
+      if (t.includes('merienda')) return 'snack';
+      if (t.includes('cena')) return 'dinner';
+      return 'lunch';
+    }
+
+    let activeSwapperMealId = null;
+    let activeSwapperCategory = null;
+
+    function openMealSwapper(mealId, category, e) {
+      if (e) e.stopPropagation();
+      activeSwapperMealId = mealId;
+      activeSwapperCategory = category;
+
+      const modal = document.getElementById('meal-swapper-modal');
+      const container = document.getElementById('swapper-options-container');
+      const titleEl = document.getElementById('swapper-modal-title');
+      const subtitleEl = document.getElementById('swapper-modal-subtitle');
+      if (!modal || !container) return;
+
+      const categoryNames = {
+        breakfast: "Desayuno",
+        lunch: "Almuerzo",
+        snack: "Merienda",
+        dinner: "Cena"
+      };
+
+      if (titleEl) titleEl.innerText = `Recetas alternativas para ${categoryNames[category] || 'esta comida'}`;
+      if (subtitleEl) subtitleEl.innerText = `Elige una opción para sustituir este plato en el día ${daysData[currentDay]?.dayName || ''}`;
+
+      const options = alternativeRecipes[category] || [];
+      container.innerHTML = options.map(opt => `
+        <div class="card-clean space-y-3">
+          <div class="flex flex-col sm:flex-row gap-3.5 items-start">
+            <img src="${opt.img}" alt="${opt.title}" class="w-full sm:w-28 h-28 object-cover rounded-xl border border-slate-200 shrink-0" />
+            <div class="flex-1 space-y-1">
+              <span class="text-xs font-semibold text-emerald-800">${opt.calories}</span>
+              <h4 class="text-base font-bold text-slate-900 leading-snug">${opt.title}</h4>
+              <p class="text-sm text-slate-600">${opt.instructions}</p>
+            </div>
+          </div>
+          <div class="pt-2 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xs font-medium text-slate-500">${opt.badges.join(' · ')}</span>
+            <button type="button" onclick="applySwappedMeal('${opt.id}')" class="px-3.5 py-1.5 rounded-lg bg-emerald-800 text-white text-sm font-bold hover:bg-emerald-900 cursor-pointer">
+              Elegir esta receta
+            </button>
+          </div>
+        </div>
+      `).join('');
+
+      modal.classList.remove('hidden');
+    }
+
+    function closeMealSwapper() {
+      const modal = document.getElementById('meal-swapper-modal');
+      if (modal) modal.classList.add('hidden');
+      activeSwapperMealId = null;
+      activeSwapperCategory = null;
+    }
+
+    function applySwappedMeal(altRecipeId) {
+      if (!activeSwapperMealId || !activeSwapperCategory) return;
+      const options = alternativeRecipes[activeSwapperCategory] || [];
+      const chosen = options.find(o => o.id === altRecipeId);
+      if (!chosen) return;
+
+      const customMeals = safeGet('florencia_custom_meals', {});
+      const mealKey = currentDay + '_' + activeSwapperMealId;
+      customMeals[mealKey] = chosen;
+      safeSet('florencia_custom_meals', customMeals);
+
+      closeMealSwapper();
+      renderMeals();
+    }
+
+    function resetMealToOriginal(mealId, e) {
+      if (e) e.stopPropagation();
+      const customMeals = safeGet('florencia_custom_meals', {});
+      const mealKey = currentDay + '_' + mealId;
+      delete customMeals[mealKey];
+      safeSet('florencia_custom_meals', customMeals);
+      renderMeals();
+    }
+
+    // Bug fix: Scope checkmarks by week so previous weeks never bleed through!
+    const CURRENT_WEEK_KEY = 'sem_2026_w47';
+
     function isDone(mealId) {
-      const doneState = safeGet('florencia_meals_done', {});
+      const doneState = safeGet('florencia_meals_done_' + CURRENT_WEEK_KEY, {});
       return Boolean(doneState[mealId]);
     }
 
     function toggleMealDone(mealId, e) {
       if (e) e.stopPropagation();
-      const doneState = safeGet('florencia_meals_done', {});
+      const doneState = safeGet('florencia_meals_done_' + CURRENT_WEEK_KEY, {});
       doneState[mealId] = !doneState[mealId];
-      safeSet('florencia_meals_done', doneState);
+      safeSet('florencia_meals_done_' + CURRENT_WEEK_KEY, doneState);
       renderMeals();
     }
+
+    function resetWeeklyMealMarks() {
+      if (confirm('¿Reiniciar todas las marcas de comidas completadas de esta semana?')) {
+        try { localStorage.removeItem('florencia_meals_done_' + CURRENT_WEEK_KEY); } catch(e) {}
+        renderMeals();
+      }
+    }
+
 
     function toggleWorkoutDone(workoutId, e) {
       if (e) e.stopPropagation();
@@ -1613,14 +2094,19 @@
       `;
     }
 
-    function renderMeals() {
+        function renderMeals() {
       const day = daysData[currentDay];
       const container = document.getElementById('meals-container');
       const expandedState = safeGet('florencia_expanded', {});
+      const customMeals = safeGet('florencia_custom_meals', {});
 
-      container.innerHTML = day.meals.map((meal) => {
-        const done = isDone(meal.id);
-        const isExpanded = expandedState[meal.id] === true;
+      container.innerHTML = day.meals.map((baseMeal) => {
+        const mealKey = currentDay + '_' + baseMeal.id;
+        const meal = customMeals[mealKey] || baseMeal;
+        const isCustom = Boolean(customMeals[mealKey]);
+        const done = isDone(baseMeal.id);
+        const isExpanded = expandedState[baseMeal.id] === true;
+        const mealCat = getMealCategory(baseMeal.type);
 
         const ingHtml = meal.ingredients.map(ing => `
           <li class="flex items-start gap-2 text-base text-slate-700 leading-snug">
@@ -1638,7 +2124,7 @@
         return `
           <article class="card-clean transition ${done ? 'border-emerald-300 bg-emerald-50/20' : 'bg-white'}">
             
-            <div onclick="toggleMealCollapse('${meal.id}')" class="flex items-center gap-4 cursor-pointer select-none">
+            <div onclick="toggleMealCollapse('${baseMeal.id}')" class="flex items-center gap-4 cursor-pointer select-none">
               
               <div class="relative w-20 h-20 rounded-xl overflow-hidden bg-slate-100 shrink-0 border border-slate-200">
                 <img src="${meal.img}" alt="${meal.title}" class="w-full h-full object-cover aspect-square ${done ? 'opacity-60' : ''}" loading="lazy" />
@@ -1658,6 +2144,7 @@
                   <span class="text-xs font-semibold text-slate-700">
                     ${meal.calories}
                   </span>
+                  ${isCustom ? '<span class="text-xs font-semibold text-emerald-800 bg-emerald-50 px-2 py-0.2 rounded border border-emerald-200">Receta elegida</span>' : ''}
                 </div>
 
                 <h3 class="text-base sm:text-lg font-bold text-slate-900 leading-snug break-words ${done ? 'line-through text-slate-400' : ''}">
@@ -1666,20 +2153,27 @@
               </div>
 
               <div class="flex items-center gap-2 shrink-0">
-                <button type="button" onclick="toggleMealDone('${meal.id}', event)" class="w-9 h-9 rounded-full flex items-center justify-center transition cursor-pointer ${done ? 'bg-emerald-600 text-white' : 'border-2 border-slate-300 hover:border-emerald-600 text-slate-400 hover:text-emerald-600 bg-white'}" title="${done ? 'Marcar como pendiente' : 'Marcar como completado'}">
+                <button type="button" onclick="openMealSwapper('${baseMeal.id}', '${mealCat}', event)" class="px-2.5 py-1.5 rounded-lg text-xs font-semibold text-slate-700 hover:text-emerald-800 bg-slate-100 hover:bg-emerald-50 border border-slate-200 transition flex items-center gap-1 cursor-pointer" title="Cambiar por otra receta">
+                  <span>🔄</span>
+                  <span class="hidden sm:inline">Cambiar</span>
+                </button>
+                <button type="button" onclick="toggleMealDone('${baseMeal.id}', event)" class="w-9 h-9 rounded-full flex items-center justify-center transition cursor-pointer ${done ? 'bg-emerald-600 text-white' : 'border-2 border-slate-300 hover:border-emerald-600 text-slate-400 hover:text-emerald-600 bg-white'}" title="${done ? 'Marcar como pendiente' : 'Marcar como completado'}">
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
                 </button>
                 <div class="w-7 h-7 flex items-center justify-center text-slate-500 hover:text-slate-900 transition">
-                  <svg id="chevron-${meal.id}" class="w-4 h-4 transform transition-transform duration-200 ${isExpanded ? 'rotate-180' : ''}" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                  <svg id="chevron-${baseMeal.id}" class="w-4 h-4 transform transition-transform duration-200 ${isExpanded ? 'rotate-180' : ''}" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
                 </div>
               </div>
 
             </div>
 
-            <div id="meal-body-${meal.id}" class="${isExpanded ? '' : 'hidden'} mt-4 pt-4 border-t border-slate-200 space-y-4">
+            <div id="meal-body-${baseMeal.id}" class="${isExpanded ? '' : 'hidden'} mt-4 pt-4 border-t border-slate-200 space-y-4">
               
-              <div class="flex flex-wrap gap-1.5">
-                ${badgesHtml}
+              <div class="flex items-center justify-between flex-wrap gap-2">
+                <div class="flex flex-wrap gap-1.5">
+                  ${badgesHtml}
+                </div>
+                ${isCustom ? `<button type="button" onclick="resetMealToOriginal('${baseMeal.id}', event)" class="text-xs text-slate-500 hover:text-rose-600 font-medium">Restablecer original</button>` : ''}
               </div>
 
               <div class="space-y-1.5">
@@ -2136,5 +2630,30 @@
       initFromLocalStorage();
     });
   </script>
+  <!-- MODAL SELECTOR DE RECETAS ALTERNATIVAS (SWAPPER) -->
+  <div id="meal-swapper-modal" class="hidden fixed inset-0 z-50 bg-slate-900/60 flex items-end sm:items-center justify-center p-0 sm:p-4 transition-opacity">
+    <div class="bg-white w-full sm:max-w-2xl max-h-[85vh] sm:rounded-2xl rounded-t-2xl shadow-xl flex flex-col overflow-hidden">
+      
+      <div class="p-4 sm:p-5 border-b border-slate-200 flex items-center justify-between">
+        <div>
+          <h3 id="swapper-modal-title" class="text-lg font-bold text-slate-900">Recetas alternativas</h3>
+          <p id="swapper-modal-subtitle" class="text-sm text-slate-600">Sustituye este plato por otra opción adaptada</p>
+        </div>
+        <button type="button" onclick="closeMealSwapper()" class="text-slate-400 hover:text-slate-700 text-lg font-bold p-1 cursor-pointer">✕</button>
+      </div>
+
+      <div class="p-4 sm:p-5 overflow-y-auto space-y-4" id="swapper-options-container">
+        <!-- Injected by JS openMealSwapper -->
+      </div>
+
+      <div class="p-3 border-t border-slate-200 bg-slate-50 flex justify-end">
+        <button type="button" onclick="closeMealSwapper()" class="px-4 py-2 rounded-lg bg-slate-200 hover:bg-slate-300 text-slate-800 text-sm font-semibold cursor-pointer">
+          Cerrar
+        </button>
+      </div>
+
+    </div>
+  </div>
+
 </body>
 </html>
