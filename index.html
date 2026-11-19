@@ -2,7 +2,7 @@
 <html lang="es" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -12,7 +12,7 @@
   <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     * {
       box-sizing: border-box;
@@ -25,72 +25,63 @@
       max-width: 100vw;
     }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Plus Jakarta Sans", system-ui, sans-serif;
-      background: #F2F2F7;
-      color: #1C1C1E;
+      font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      background: #F8FAFC;
+      color: #0F172A;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       letter-spacing: -0.01em;
     }
+    h1 { font-size: 2rem !important; font-weight: 700; line-height: 1.25; }
+    h2 { font-size: 1.5rem !important; font-weight: 700; line-height: 1.3; }
+    h3 { font-size: 1.25rem !important; font-weight: 600; line-height: 1.35; }
+    h4 { font-size: 1rem !important; font-weight: 600; line-height: 1.4; }
     h1, h2, h3, h4, h5, h6 {
+      font-family: "Outfit", sans-serif;
       letter-spacing: -0.02em;
+      color: #0F172A;
+      line-height: 1.25;
+    }
+    .card-clean {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 16px;
+      padding: 1.5rem;
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+    }
+    .tap-effect {
+      transition: opacity 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
+    }
+    .tap-effect:active {
+      opacity: 0.85;
     }
     .no-scrollbar::-webkit-scrollbar { display: none; }
     .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-    .card-craft {
-      background: #FFFFFF;
-      border: 1px solid rgba(0, 0, 0, 0.05);
-      border-radius: 1.35rem;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02), 0 6px 20px -3px rgba(0, 0, 0, 0.04);
-      transition: box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1), transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .tap-effect {
-      transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.15s ease;
-    }
-    .tap-effect:active {
-      transform: scale(0.975);
-    }
-    .badge-ios {
-      font-feature-settings: "cv02", "cv03", "cv04", "cv11";
-      letter-spacing: -0.005em;
-    }
-    .ing-item strong {
-      color: #1C1C1E;
-      font-weight: 700;
-    }
   </style>
 </head>
-<body class="min-h-screen pb-20 text-slate-900 w-full overflow-x-hidden">
+<body class="min-h-screen pb-20 text-slate-900 w-full overflow-x-hidden bg-slate-50">
 
-  <!-- TOP APP BAR (iOS Translucent Large Title Bar) -->
-  <header class="sticky top-0 z-40 bg-white/80 backdrop-blur-2xl border-b border-black/[0.07] px-3.5 py-2.5 sm:px-6 w-full shadow-2xs">
-    <div class="max-w-4xl mx-auto flex items-center justify-between gap-2.5">
+  <!-- TOP APP BAR -->
+  <header class="sticky top-0 z-40 bg-white border-b border-slate-200 px-4 py-3 sm:px-6 w-full">
+    <div class="max-w-4xl mx-auto flex items-center justify-between gap-4">
       
-      <!-- User Brand & Date (Apple Large Title) -->
+      <!-- Brand & Date -->
       <div class="min-w-0 flex-1">
-        <div class="flex items-center gap-2">
-          <div class="w-7 h-7 rounded-full bg-emerald-600 text-white font-extrabold text-xs flex items-center justify-center shrink-0 shadow-2xs">
-            FS
-          </div>
-          <div class="min-w-0">
-            <div class="flex items-center gap-1.5">
-              <h1 class="text-xs sm:text-sm font-bold text-[#1C1C1E] tracking-tight truncate">Florencia Schmidt</h1>
-              <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></span>
-            </div>
-            <p class="text-[10px] sm:text-[10.5px] text-slate-500 font-medium truncate">Plan Otoño · 16 al 22 Nov</p>
-          </div>
-        </div>
+        <h1 class="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight truncate">Florencia Schmidt</h1>
+        <p class="text-sm text-slate-600 font-medium truncate">Plan Semanal de Nutrición · 16 al 22 Nov</p>
       </div>
 
-      <!-- Navigation Tabs Switcher (iOS Segmented Control UISegmentedControl) -->
-      <nav class="flex items-center p-1 rounded-2xl bg-black/[0.06] border border-black/[0.03] text-[11px] sm:text-xs shrink-0">
-        <button type="button" onclick="switchView('menu')" id="view-btn-menu" class="tap-effect px-3 py-1.5 rounded-xl font-bold transition-all bg-white text-slate-900 shadow-[0_2px_8px_rgba(0,0,0,0.12),0_1px_2px_rgba(0,0,0,0.06)] cursor-pointer">
+      <!-- Navigation Tabs Switcher -->
+      <nav class="flex items-center p-1 rounded-xl bg-slate-100 border border-slate-200 text-sm shrink-0" aria-label="Secciones">
+        <button type="button" onclick="switchView('menu')" id="view-btn-menu" class="tap-effect px-3.5 py-1.5 rounded-lg font-bold bg-white text-slate-900 shadow-sm cursor-pointer">
           Menú
         </button>
-        <button type="button" onclick="switchView('batch')" id="view-btn-batch" class="tap-effect px-3 py-1.5 rounded-xl font-medium text-slate-500 hover:text-slate-900 transition-all cursor-pointer">
+        <button type="button" onclick="switchView('batch')" id="view-btn-batch" class="tap-effect px-3.5 py-1.5 rounded-lg font-medium text-slate-600 hover:text-slate-900 cursor-pointer">
           Batch Prep
         </button>
-        <button type="button" onclick="switchView('super')" id="view-btn-super" class="tap-effect px-3 py-1.5 rounded-xl font-medium text-slate-500 hover:text-slate-900 transition-all cursor-pointer">
+        <button type="button" onclick="switchView('super')" id="view-btn-super" class="tap-effect px-3.5 py-1.5 rounded-lg font-medium text-slate-600 hover:text-slate-900 cursor-pointer">
           Súper
         </button>
       </nav>
@@ -99,214 +90,154 @@
   </header>
 
   <!-- MAIN WRAPPER -->
-  <main class="max-w-4xl mx-auto px-3 sm:px-6 pt-3 space-y-3 w-full">
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 pt-6 space-y-8 w-full">
 
     <!-- ======================================================== -->
-    <!-- BLOQUE 1: RESUMEN DE AVANCES (OCULTO EN SÚPER & BATCH)   -->
+    <!-- BLOQUE 1: PROGRESO Y MÉTRICAS                            -->
     <!-- ======================================================== -->
-    <section id="progress-summary-section" class="card-craft rounded-2xl p-3 sm:p-4 w-full">
+    <section id="progress-summary-section" class="space-y-4 w-full">
       
-      <!-- Micro-Bar: Estado + Citas Médicas -->
-      <div class="flex items-center justify-between gap-2 pb-2 mb-2.5 border-b border-slate-100 text-[10px] sm:text-[11px]">
-        <div class="flex items-center gap-1.5 min-w-0">
-          <span class="font-extrabold text-slate-900 tracking-tight truncate">Avances & Métricas</span>
-          <span class="text-slate-300">·</span>
-          <span class="font-semibold text-emerald-800 bg-emerald-50 px-1.5 py-0.5 rounded-md border border-emerald-200/60 truncate">
-            Alivio Digestivo & Tiroides
-          </span>
+      <!-- Section Header -->
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-2 border-b border-slate-200">
+        <div>
+          <h2 class="text-xl sm:text-2xl font-bold text-slate-900">Progreso y Métricas Clínicas</h2>
+          <p class="text-sm text-slate-600">Recomposición corporal, tiroides y sincronización hormonal</p>
         </div>
 
-        <div class="flex items-center gap-1.5 shrink-0 text-slate-600">
-          <span class="px-1.5 py-0.5 rounded-md bg-emerald-50 border border-emerald-200 font-medium text-emerald-800">
-            <strong class="text-emerald-900">DIU:</strong> Hoy 16 Nov
+        <div class="flex items-center gap-2 text-sm">
+          <span class="px-2.5 py-1 rounded-md bg-emerald-50 text-emerald-800 border border-emerald-200 font-semibold">
+            DIU: 16 Nov
           </span>
-          <span class="px-1.5 py-0.5 rounded-md bg-amber-50 border border-amber-200 font-medium text-amber-800">
-            <strong class="text-amber-900">Fase:</strong> Premenstrual (Lútea)
+          <span class="px-2.5 py-1 rounded-md bg-amber-50 text-amber-900 border border-amber-200 font-semibold">
+            Fase Premenstrual
           </span>
         </div>
       </div>
 
-      <!-- EXACTAMENTE 2 COLUMNAS EN MÓVIL (grid-cols-2) Y 4 EN ESCRITORIO (sm:grid-cols-4) -->
-      <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 w-full">
+      <!-- 2 Unified Cards (No identical 4-box grid, no cards inside cards) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
         
-        <!-- CARD 1: PESO OBJETIVO & ONDA DE DESCENSO -->
-        <div class="p-2.5 sm:p-3 rounded-xl bg-slate-50/70 border border-slate-200/70 flex flex-col justify-between min-w-0 cursor-pointer hover:border-emerald-300 transition-all select-none" onclick="toggleWeightGuide()" title="Toca para ver el protocolo de pesaje y registrar nuevo peso">
+        <!-- CARD 1: Composición Corporal -->
+        <div class="card-clean flex flex-col justify-between space-y-4">
           <div>
-            <div class="flex items-center justify-between">
-              <span class="text-[9.5px] uppercase font-bold tracking-wider text-slate-500 truncate">Peso & Meta</span>
-              <span class="text-[9.5px] font-bold text-emerald-700 bg-emerald-50 px-1 py-0.5 rounded border border-emerald-100">→ 60 kg</span>
-            </div>
-            <div class="mt-0.5 flex items-baseline justify-between">
-              <span class="text-base sm:text-lg font-extrabold text-slate-900" id="current-weight-display">69,0 <span class="text-[10px] font-medium text-slate-500">kg</span></span>
-              <span class="text-[8.5px] font-bold text-amber-700 bg-amber-50 px-1 py-0.5 rounded border border-amber-200" title="Próximo pesaje recomendado">17–19 Nov ▾</span>
-            </div>
-          </div>
-
-          <!-- Trend Wave Curve -->
-          <div class="pt-1.5">
-            <div class="h-8 w-full flex items-center justify-center">
-              <svg viewBox="0 0 140 32" class="w-full h-8 overflow-visible" preserveAspectRatio="xMidYMid meet">
-                <defs>
-                  <linearGradient id="weightGradMobile" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" stop-color="#059669" stop-opacity="0.9" />
-                    <stop offset="100%" stop-color="#10B981" stop-opacity="1" />
-                  </linearGradient>
-                  <linearGradient id="weightAreaGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" stop-color="#10B981" stop-opacity="0.25" />
-                    <stop offset="100%" stop-color="#10B981" stop-opacity="0.0" />
-                  </linearGradient>
-                </defs>
-                <path d="M 4 24 Q 35 25, 65 16 T 110 11 T 128 7 L 128 32 L 4 32 Z" fill="url(#weightAreaGrad)"/>
-                <path d="M 4 24 Q 35 25, 65 16 T 110 11 T 128 7" fill="none" stroke="url(#weightGradMobile)" stroke-width="2.5" stroke-linecap="round"/>
-                <circle cx="128" cy="7" r="3.8" fill="#10B981" stroke="#FFFFFF" stroke-width="1.8"/>
-              </svg>
-            </div>
-            <span class="text-[8.5px] font-semibold text-slate-500 block text-right mt-0.5">Ritmo: −0.4 kg/sem · Pauta ▾</span>
-          </div>
-        </div>
-
-        <!-- CARD 2: MASA MUSCULAR MAGRA & ARCO PORCENTUAL REAL (67%) -->
-        <div class="p-2.5 sm:p-3 rounded-xl bg-slate-50/70 border border-slate-200/70 flex flex-col justify-between min-w-0">
-          <div>
-            <div class="flex items-center justify-between">
-              <span class="text-[9.5px] uppercase font-bold tracking-wider text-slate-500 truncate">Masa Magra</span>
-              <span class="text-[9.5px] font-bold text-sky-700 bg-sky-50 px-1 py-0.5 rounded border border-sky-100">Protegida</span>
-            </div>
-            <div class="mt-0.5">
-              <span class="text-base sm:text-lg font-extrabold text-slate-900">46,3 <span class="text-[10px] font-medium text-slate-500">kg</span></span>
-            </div>
-          </div>
-
-          <!-- Circular Arc Gauge -->
-          <div class="flex items-center justify-between pt-1">
-            <div class="relative w-8 h-8 shrink-0 flex items-center justify-center">
-              <svg class="w-8 h-8 transform -rotate-90" viewBox="0 0 36 36">
-                <circle cx="18" cy="18" r="14" stroke="#E2E8F0" stroke-width="3.5" fill="none" />
-                <circle cx="18" cy="18" r="14" stroke="#0EA5E9" stroke-width="3.5" fill="none" stroke-dasharray="87.96" stroke-dashoffset="29" stroke-linecap="round" />
-              </svg>
-              <span class="absolute text-[8px] font-extrabold text-sky-900">67%</span>
-            </div>
-            <span class="text-[8.5px] font-semibold text-slate-500 text-right leading-tight">Suelo protegido<br><strong class="text-slate-700">≥ 46 kg</strong></span>
-          </div>
-        </div>
-
-        <!-- CARD 3: ENTRENAMIENTOS SEMANALES (SINCRONIZADO CON EL MENÚ) -->
-        <div class="p-2.5 sm:p-3 rounded-xl bg-slate-50/70 border border-slate-200/70 flex flex-col justify-between min-w-0" id="card-training-stats">
-          <div class="flex items-baseline justify-between">
-            <span class="text-[9.5px] uppercase font-bold tracking-wider text-emerald-800 truncate">Entrenamientos</span>
-            <span class="text-[9.5px] font-bold text-slate-700" id="card-training-count">4 días</span>
-          </div>
-
-          <!-- Barras de 7 días: TODAS CON EL MISMO ALTO (10px) -->
-          <div class="pt-2">
-            <div class="flex items-center justify-between gap-1 h-6" id="card-training-bars">
-              <!-- Renderizado dinámicamente por renderWeeklyTrainingCard() -->
-            </div>
-            <span class="text-[8.5px] font-bold text-emerald-700 block text-right mt-1.5 truncate" id="card-training-subtitle">Lun · Mar · Jue · Sáb</span>
-          </div>
-        </div>
-
-        <!-- CARD 4: SUELO METABÓLICO BMR -->
-        <div class="p-2.5 sm:p-3 rounded-xl bg-slate-50/70 border border-slate-200/70 flex flex-col justify-between min-w-0">
-          <div>
-            <div class="flex items-center justify-between">
-              <span class="text-[9.5px] uppercase font-bold tracking-wider text-slate-500 truncate">Suelo BMR</span>
-              <span class="text-[9.5px] font-bold text-amber-800 bg-amber-50 px-1 py-0.5 rounded border border-amber-200/60">Línea base</span>
-            </div>
-            <div class="mt-0.5">
-              <span class="text-base sm:text-lg font-extrabold text-slate-900">1.427 <span class="text-[10px] font-medium text-slate-500">kcal</span></span>
-            </div>
-          </div>
-
-          <div class="pt-1.5">
-            <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden flex">
-              <div class="bg-amber-500 h-full rounded-full" style="width: 82%;"></div>
-            </div>
-            <span class="text-[8.5px] font-semibold text-slate-500 block text-right mt-1 truncate">Blindaje Tiroideo</span>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- PANEL DESPLEGABLE: PROTOCOLO DE PESAJE & GUÍA CLÍNICA DE BÁSCULA -->
-      <div id="weight-guide-panel" class="hidden mt-3 pt-3 border-t border-slate-200/70 space-y-3 transition-all">
-        <div class="p-3 sm:p-4 rounded-xl bg-gradient-to-r from-amber-50/90 via-orange-50/60 to-rose-50/40 border border-amber-200 shadow-2xs">
-          <div class="flex items-start justify-between gap-2 pb-2 border-b border-amber-200/60">
-            <div class="flex items-center gap-2">
-              <span class="text-base">⚖️</span>
-              <div>
-                <h4 class="text-xs sm:text-sm font-extrabold text-slate-900">Protocolo de Báscula: ¿Cuándo y Cómo Pesarte?</h4>
-                <p class="text-[11px] text-slate-600">Sincronización con el ciclo hormonal, DIU Kyleena y retención de líquidos</p>
-              </div>
-            </div>
-            <button type="button" onclick="toggleWeightGuide()" class="text-slate-400 hover:text-slate-600 text-sm font-bold p-1 cursor-pointer">✕</button>
-          </div>
-
-          <!-- Alerta de Fase Actual -->
-          <div class="mt-2.5 p-2.5 rounded-lg bg-amber-100/70 border border-amber-200/80 text-xs text-amber-900">
-            <div class="font-extrabold flex items-center gap-1.5">
-              <span>⚠️ ESTA SEMANA (9 AL 15 NOV): NO SUBIRSE A LA BÁSCULA</span>
-            </div>
-            <p class="mt-1 text-[11px] leading-relaxed text-amber-800">
-              Estás en el <strong>Día 27 del ciclo (Fase Lútea / SPM)</strong>. Tras ovular y caer la progesterona, el agua extracelular (ECW 42.9%) se acumula en los tejidos. La báscula mostraría falsamente entre <strong>+1,0 y +2,5 kg de más que son 100% agua</strong>, no grasa.
-            </p>
-          </div>
-
-          <!-- Próxima Fecha Óptima -->
-          <div class="mt-2.5 p-2.5 rounded-lg bg-emerald-50 border border-emerald-200 text-xs text-emerald-950">
-            <div class="flex items-center justify-between">
-              <span class="font-extrabold flex items-center gap-1 text-emerald-900">
-                <span>🎯 Ventana Óptima Recomendada:</span>
-              </span>
-              <span class="font-black bg-emerald-600 text-white px-2 py-0.5 rounded text-[10.5px]">17 – 19 de Noviembre</span>
-            </div>
-            <p class="mt-1 text-[11px] leading-relaxed text-emerald-800">
-              <strong>Fase Folicular (Días 5 a 8 post-regla / reset):</strong> Los estrógenos suben de forma limpia, el riñón drena todo el exceso de sodio y el peso refleja con <strong>máxima fidelidad tu recomposición real</strong>.
-            </p>
-          </div>
-
-          <!-- Las 4 Reglas Clínicas de Oro -->
-          <div class="mt-2.5 grid grid-cols-1 sm:grid-cols-2 gap-2 text-[11px]">
-            <div class="p-2 bg-white/90 rounded-lg border border-slate-200/70 text-slate-700">
-              <strong class="text-slate-900 block font-bold">1. Frecuencia: Cada 2–3 semanas</strong>
-              La grasa baja a un ritmo de 0,3-0,5 kg/semana. Las variaciones diarias son solo agua y tránsito digestivo.
-            </div>
-            <div class="p-2 bg-white/90 rounded-lg border border-slate-200/70 text-slate-700">
-              <strong class="text-slate-900 block font-bold">2. Momento: Al despertar en ayunas</strong>
-              Nada más levantarte, antes de beber agua o Eutirox, e inmediatamente tras haber orinado.
-            </div>
-            <div class="p-2 bg-white/90 rounded-lg border border-slate-200/70 text-slate-700">
-              <strong class="text-slate-900 block font-bold">3. Misma báscula y sin ropa</strong>
-              Descalza, sobre superficie dura (no alfombra) y con la misma ropa interior mínima.
-            </div>
-            <div class="p-2 bg-white/90 rounded-lg border border-slate-200/70 text-slate-700">
-              <strong class="text-slate-900 block font-bold">4. Noche previa sin excesos</strong>
-              Sin cena muy salada, sin alcohol y sin haber hecho agujetas extremas la tarde antes.
-            </div>
-          </div>
-
-          <!-- Historial & Registro de Pesajes Oficiales -->
-          <div class="mt-3 pt-2.5 border-t border-amber-200/60">
-            <div class="flex items-center justify-between mb-1.5">
-              <span class="text-xs font-extrabold text-slate-800">Historial de Pesajes Oficiales</span>
-              <span class="text-[10px] text-slate-500 font-medium">Guardado en tu dispositivo</span>
+            <div class="flex items-baseline justify-between gap-2">
+              <h3 class="text-base font-bold text-slate-900">Composición Corporal</h3>
+              <span class="text-sm font-semibold text-emerald-700">Meta: 60,0 kg</span>
             </div>
             
-            <div id="weight-logs-history" class="space-y-1.5 mb-2.5">
-              <!-- Injected by JS -->
+            <div class="mt-2 flex items-baseline gap-4">
+              <div>
+                <span class="text-2xl sm:text-3xl font-extrabold text-slate-900" id="current-weight-display">69,0</span>
+                <span class="text-sm font-semibold text-slate-500">kg peso</span>
+              </div>
+              <div class="border-l border-slate-200 pl-4">
+                <span class="text-2xl sm:text-3xl font-extrabold text-slate-900">46,3</span>
+                <span class="text-sm font-semibold text-slate-500">kg masa magra</span>
+              </div>
             </div>
 
-            <!-- Formulario de Nuevo Registro -->
-            <div class="flex items-center gap-1.5">
-              <input type="number" id="input-new-weight" step="0.1" min="40" max="120" placeholder="Ej: 68.5" class="w-24 px-2 py-1.5 rounded-lg border border-slate-300 text-xs bg-white text-slate-800 focus:outline-emerald-600 font-bold text-center" />
-              <span class="text-xs font-bold text-slate-600">kg</span>
-              <input type="text" id="input-new-weight-date" placeholder="Fecha (opcional)" class="flex-1 px-2 py-1.5 rounded-lg border border-slate-300 text-xs bg-white text-slate-800 focus:outline-emerald-600" />
-              <button type="button" onclick="saveWeightLog()" class="px-3 py-1.5 rounded-lg bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-bold transition shadow-2xs cursor-pointer shrink-0">
-                Guardar
-              </button>
-            </div>
+            <p class="mt-3 text-sm text-slate-600 leading-relaxed">
+              El 67% de tu peso corporal es músculo protegido. En esta fase premenstrual la báscula retiene líquido extracelular de forma temporal.
+            </p>
           </div>
 
+          <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-sm font-medium text-slate-500">Ritmo previsto: −0,4 kg / semana</span>
+            <button type="button" onclick="toggleWeightGuide()" class="text-sm font-bold text-emerald-700 hover:text-emerald-800 cursor-pointer">
+              Protocolo de pesaje ▾
+            </button>
+          </div>
+        </div>
+
+        <!-- CARD 2: Metabolismo y Actividad -->
+        <div class="card-clean flex flex-col justify-between space-y-4">
+          <div>
+            <div class="flex items-baseline justify-between gap-2">
+              <h3 class="text-base font-bold text-slate-900">Metabolismo y Entrenamiento</h3>
+              <span class="text-sm font-semibold text-slate-600" id="card-training-count">4 sesiones</span>
+            </div>
+
+            <div class="mt-2 flex items-baseline gap-4">
+              <div>
+                <span class="text-2xl sm:text-3xl font-extrabold text-slate-900">1.427</span>
+                <span class="text-sm font-semibold text-slate-500">kcal BMR</span>
+              </div>
+              <div class="border-l border-slate-200 pl-4">
+                <span class="text-2xl sm:text-3xl font-extrabold text-emerald-700">4</span>
+                <span class="text-sm font-semibold text-slate-500">días fuerza</span>
+              </div>
+            </div>
+
+            <p class="mt-3 text-sm text-slate-600 leading-relaxed">
+              Tu tasa metabólica basal (1.427 kcal) es el suelo calórico sagrado para asegurar la conversión de hormona tiroidea T3.
+            </p>
+          </div>
+
+          <!-- Weekly training indicator (No pulsing dots) -->
+          <div class="pt-3 border-t border-slate-100">
+            <div class="flex items-center justify-between gap-1 h-5" id="card-training-bars">
+              <!-- Injected by JS -->
+            </div>
+            <span class="text-xs font-semibold text-slate-500 block text-right mt-1.5" id="card-training-subtitle">Lun · Mar · Jue · Sáb</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- PANEL DESPLEGABLE: PROTOCOLO DE PESAJE -->
+      <div id="weight-guide-panel" class="hidden card-clean bg-amber-50/50 border-amber-200 space-y-4">
+        <div class="flex items-start justify-between gap-2 pb-2 border-b border-amber-200">
+          <div>
+            <h3 class="text-lg font-bold text-slate-900">Protocolo de Báscula: Cuándo y Cómo Pesarte</h3>
+            <p class="text-sm text-slate-700">Sincronización con el ciclo hormonal, DIU Kyleena y retención de líquidos</p>
+          </div>
+          <button type="button" onclick="toggleWeightGuide()" class="text-slate-500 hover:text-slate-800 text-sm font-bold p-1 cursor-pointer">✕</button>
+        </div>
+
+        <div class="text-sm text-amber-950 space-y-1 pb-1">
+          <strong>Aviso de fase actual:</strong> Durante los días previos a la menstruación (fase lútea tardía), la progesterona retiene agua extracelular. Pesarte ahora sumaría entre 1,0 y 2,5 kg ficticios de agua.
+          <div class="mt-1 font-semibold text-amber-900">Próxima ventana óptima recomendada: del 24 al 27 de Noviembre (tras la regla).</div>
+        </div>
+
+        <!-- 4 Reglas Clínicas (Flattened) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-slate-700 pt-1">
+          <div class="space-y-0.5">
+            <strong class="text-slate-900 block font-bold">1. Frecuencia: Cada 2 a 3 semanas</strong>
+            <p class="text-slate-600">Las fluctuaciones diarias reflejan agua y digestión, no grasa ni músculo.</p>
+          </div>
+          <div class="space-y-0.5">
+            <strong class="text-slate-900 block font-bold">2. Momento: Al despertar en ayunas</strong>
+            <p class="text-slate-600">Inmediatamente al levantarte, tras orinar y antes del agua o Eutirox.</p>
+          </div>
+          <div class="space-y-0.5">
+            <strong class="text-slate-900 block font-bold">3. Misma báscula y sin ropa</strong>
+            <p class="text-slate-600">Sobre suelo duro y plano, descalza y sin variaciones de prendas.</p>
+          </div>
+          <div class="space-y-0.5">
+            <strong class="text-slate-900 block font-bold">4. Noche previa tranquila</strong>
+            <p class="text-slate-600">Sin comidas saladas copiosas, sin alcohol y sin microtraumas musculares intensos.</p>
+          </div>
+        </div>
+
+        <!-- Historial & Registro -->
+        <div class="pt-3 border-t border-amber-200 space-y-3">
+          <div class="flex items-center justify-between">
+            <h4 class="text-sm font-bold text-slate-900">Registro Personal de Peso</h4>
+            <span class="text-xs text-slate-500">Guardado localmente en tu dispositivo</span>
+          </div>
+          
+          <div id="weight-logs-history" class="space-y-2">
+            <!-- Injected by JS -->
+          </div>
+
+          <div class="flex items-center gap-2">
+            <input type="number" id="input-new-weight" step="0.1" min="40" max="120" placeholder="68.5" class="w-24 px-3 py-2 rounded-lg border border-slate-300 text-base bg-white text-slate-900 font-bold text-center" />
+            <span class="text-base font-bold text-slate-600">kg</span>
+            <input type="text" id="input-new-weight-date" placeholder="Fecha (opcional)" class="flex-1 px-3 py-2 rounded-lg border border-slate-300 text-sm bg-white text-slate-900" />
+            <button type="button" onclick="saveWeightLog()" class="px-4 py-2 rounded-lg bg-emerald-800 hover:bg-emerald-900 text-white text-sm font-bold cursor-pointer">
+              Guardar
+            </button>
+          </div>
         </div>
       </div>
 
@@ -315,141 +246,96 @@
     <!-- ======================================================== -->
     <!-- VIEW 1: MENÚ SEMANAL                                     -->
     <!-- ======================================================== -->
-    <div id="view-menu-container" class="space-y-3 w-full">
+    <div id="view-menu-container" class="space-y-6 w-full">
 
-      <!-- MINI-BARRA ULTRA-COMPACTA DE HIDRATACIÓN (36px DE ALTO) -->
-      <div class="card-craft rounded-xl px-2.5 py-1.5 w-full bg-gradient-to-r from-sky-50/70 via-blue-50/40 to-slate-50/60 border border-sky-200/70 flex items-center justify-between gap-1.5 shadow-2xs">
-        <div class="flex items-center gap-1 shrink-0">
-          <span class="text-xs">💧</span>
-          <span class="text-[11px] font-extrabold text-slate-800">Agua:</span>
-          <span id="water-progress-text" class="text-[10.5px] font-black text-sky-700">0/8 (0 L)</span>
+      <!-- BARRA DE HIDRATACIÓN (Solid, no gradient) -->
+      <div class="card-clean py-3 px-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+        <div class="flex items-center gap-2">
+          <span class="text-base font-bold text-slate-900">Hidratación Diaria:</span>
+          <span id="water-progress-text" class="text-sm font-bold text-emerald-800">0 / 8 vasos (0 L)</span>
         </div>
 
-        <!-- 8 micro vasos compactos -->
-        <div class="flex items-center gap-1 shrink-0" id="water-glasses-container">
-          <!-- Inyectado por JS -->
+        <div class="flex items-center gap-1.5 flex-wrap" id="water-glasses-container">
+          <!-- Injected by JS -->
         </div>
 
-        <button type="button" onclick="resetWaterToday()" class="text-[11px] text-slate-400 hover:text-sky-700 p-0.5 cursor-pointer shrink-0 transition" title="Reiniciar vasos">
-          ↺
+        <button type="button" onclick="resetWaterToday()" class="text-sm text-slate-500 hover:text-slate-800 font-medium cursor-pointer self-end sm:self-auto" title="Reiniciar vasos">
+          Reiniciar
         </button>
       </div>
 
-
-      <!-- DAY SELECTOR DINÁMICO (DETECTA AUTOMÁTICAMENTE EL DÍA DE HOY) -->
-      <nav class="grid grid-cols-7 gap-1 sm:gap-2 w-full" id="day-selector-nav">
-        <button type="button" onclick="selectDay('lun')" id="tab-lun" class="day-tab tap-effect py-2 px-1 sm:py-3 rounded-2xl text-center border transition-all cursor-pointer min-w-0">
-          <span class="block text-[8.5px] sm:text-[9.5px] uppercase font-semibold text-slate-400">LUN</span>
-          <span class="block text-xs sm:text-sm font-bold text-slate-800 mt-0.5 tracking-tight">16</span>
-          <div class="h-1 flex items-center justify-center mt-0.5"></div>
-        </button>
-        <button type="button" onclick="selectDay('mar')" id="tab-mar" class="day-tab tap-effect py-2 px-1 sm:py-3 rounded-2xl text-center border transition-all cursor-pointer min-w-0">
-          <span class="block text-[8.5px] sm:text-[9.5px] uppercase font-semibold text-slate-400">MAR</span>
-          <span class="block text-xs sm:text-sm font-bold text-slate-800 mt-0.5 tracking-tight">17</span>
-          <div class="h-1 flex items-center justify-center mt-0.5"></div>
-        </button>
-        <button type="button" onclick="selectDay('mie')" id="tab-mie" class="day-tab tap-effect py-2 px-1 sm:py-3 rounded-2xl text-center border transition-all cursor-pointer min-w-0">
-          <span class="block text-[8.5px] sm:text-[9.5px] uppercase font-semibold text-slate-400">MIÉ</span>
-          <span class="block text-xs sm:text-sm font-bold text-slate-800 mt-0.5 tracking-tight">18</span>
-          <div class="h-1 flex items-center justify-center mt-0.5"></div>
-        </button>
-        <button type="button" onclick="selectDay('jue')" id="tab-jue" class="day-tab tap-effect py-2 px-1 sm:py-3 rounded-2xl text-center border transition-all cursor-pointer min-w-0">
-          <span class="block text-[8.5px] sm:text-[9.5px] uppercase font-semibold text-slate-400">JUE</span>
-          <span class="block text-xs sm:text-sm font-bold text-slate-800 mt-0.5 tracking-tight">19</span>
-          <div class="h-1 flex items-center justify-center mt-0.5"></div>
-        </button>
-        <button type="button" onclick="selectDay('vie')" id="tab-vie" class="day-tab tap-effect py-2 px-1 sm:py-3 rounded-2xl text-center border transition-all cursor-pointer min-w-0">
-          <span class="block text-[8.5px] sm:text-[9.5px] uppercase font-semibold text-slate-400">VIE</span>
-          <span class="block text-xs sm:text-sm font-bold text-slate-800 mt-0.5 tracking-tight">20</span>
-          <div class="h-1 flex items-center justify-center mt-0.5"></div>
-        </button>
-        <button type="button" onclick="selectDay('sab')" id="tab-sab" class="day-tab tap-effect py-2 px-1 sm:py-3 rounded-2xl text-center border transition-all cursor-pointer min-w-0">
-          <span class="block text-[8.5px] sm:text-[9.5px] uppercase font-semibold text-slate-400">SÁB</span>
-          <span class="block text-xs sm:text-sm font-bold text-slate-800 mt-0.5 tracking-tight">21</span>
-          <div class="h-1 flex items-center justify-center mt-0.5"></div>
-        </button>
-        <button type="button" onclick="selectDay('dom')" id="tab-dom" class="day-tab tap-effect py-2 px-1 sm:py-3 rounded-2xl text-center border transition-all cursor-pointer min-w-0">
-          <span class="block text-[8.5px] sm:text-[9.5px] uppercase font-semibold text-slate-400">DOM</span>
-          <span class="block text-xs sm:text-sm font-bold text-slate-800 mt-0.5 tracking-tight">22</span>
-          <div class="h-1 flex items-center justify-center mt-0.5"></div>
-        </button>
+      <!-- SELECTOR DE DÍAS -->
+      <nav class="grid grid-cols-7 gap-1.5 sm:gap-2 w-full" id="day-selector-nav" aria-label="Días de la semana">
+        <!-- Rendered by JS updateDayTabs -->
       </nav>
 
       <!-- EXERCISE STRIP -->
-      <div id="workout-banner" class="card-craft rounded-xl p-3 flex flex-col sm:flex-row sm:items-center justify-between text-xs gap-2 w-full transition-all">
+      <div id="workout-banner" class="card-clean flex flex-col sm:flex-row sm:items-center justify-between gap-3 w-full">
         <!-- Injected by JS -->
       </div>
 
       <!-- MEALS SECTION HEADER -->
-      <div class="flex items-center justify-between px-1">
-        <h2 id="active-day-heading" class="text-xs sm:text-sm font-extrabold text-slate-800 tracking-tight">
-          Menú Semanal (16 al 22 de Noviembre)
-        </h2>
-        <button type="button" onclick="toggleAllMeals()" id="toggle-all-meals-btn" class="text-[11px] font-semibold text-emerald-700 hover:text-emerald-800 bg-emerald-50 hover:bg-emerald-100/70 px-2.5 py-1 rounded-lg border border-emerald-200/60 transition cursor-pointer">
+      <div class="flex items-center justify-between pt-2">
+        <div>
+          <h2 id="active-day-heading" class="text-xl font-bold text-slate-900">
+            Menú del Día
+          </h2>
+          <p class="text-sm text-slate-600">Semana del 16 al 22 de Noviembre</p>
+        </div>
+        <button type="button" onclick="toggleAllMeals()" id="toggle-all-meals-btn" class="text-sm font-semibold text-emerald-800 bg-emerald-50 hover:bg-emerald-100 px-3 py-1.5 rounded-lg border border-emerald-200 cursor-pointer transition">
           Abrir todas ↓
         </button>
       </div>
 
-      <!-- DAILY MEAL CARDS (CERRADOS POR DEFECTO PARA VISTA LIMPIA) -->
-      <section id="meals-container" class="space-y-3 w-full">
+      <!-- DAILY MEAL CARDS -->
+      <section id="meals-container" class="space-y-4 w-full">
         <!-- Injected by JS -->
       </section>
 
-      <!-- CAJITA INTERACTIVA DE NOTAS & COMENTARIOS PARA EL CHAT -->
-      <div class="card-craft rounded-2xl p-3.5 sm:p-4 w-full bg-gradient-to-r from-emerald-50/50 via-slate-50/60 to-teal-50/40 border border-emerald-200/70 shadow-2xs space-y-2.5">
-        <div class="flex items-center justify-between pb-1.5 border-b border-emerald-100">
-          <div class="flex items-center gap-2">
-            <span class="w-6 h-6 rounded-lg bg-emerald-700 text-white flex items-center justify-center text-xs shrink-0 shadow-2xs">💬</span>
-            <div>
-              <h3 class="text-xs sm:text-sm font-extrabold text-slate-900" id="notes-card-title">
-                Comentarios
-              </h3>
-              <span class="text-[10px] text-slate-500 font-medium">Notas del día guardadas automáticamente</span>
-            </div>
+      <!-- NOTAS DEL DÍA -->
+      <div class="card-clean space-y-4">
+        <div class="flex items-center justify-between pb-2 border-b border-slate-200">
+          <div>
+            <h3 class="text-lg font-bold text-slate-900" id="notes-card-title">Comentarios y Sensaciones</h3>
+            <p class="text-sm text-slate-600">Se guardan automáticamente en tu dispositivo</p>
           </div>
-          <span id="notes-saved-status" class="text-[10px] text-emerald-700 font-semibold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
+          <span id="notes-saved-status" class="text-xs text-emerald-800 font-semibold bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-200">
             Auto-guardado
           </span>
         </div>
 
-        <!-- Chips rápidos para añadir sensaciones con 1 toque -->
-        <div class="flex items-center gap-1.5 flex-wrap text-[10.5px]">
-          <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wide">Rápido:</span>
-          <button type="button" onclick="appendTagToNote('🌱 Digestión ligera y sin pesadez')" class="px-2 py-0.5 rounded-md bg-white border border-slate-200 text-slate-700 hover:border-emerald-500 hover:text-emerald-800 transition cursor-pointer">🌱 Ligera</button>
-          <button type="button" onclick="appendTagToNote('💨 Un poco de hinchazón post-comida')" class="px-2 py-0.5 rounded-md bg-white border border-slate-200 text-slate-700 hover:border-emerald-500 hover:text-emerald-800 transition cursor-pointer">💨 Hinchazón</button>
-          <button type="button" onclick="appendTagToNote('💪 Buena energía en el entreno')" class="px-2 py-0.5 rounded-md bg-white border border-slate-200 text-slate-700 hover:border-emerald-500 hover:text-emerald-800 transition cursor-pointer">💪 Buena energía</button>
-          <button type="button" onclick="appendTagToNote('😴 Cansancio acumulado')" class="px-2 py-0.5 rounded-md bg-white border border-slate-200 text-slate-700 hover:border-emerald-500 hover:text-emerald-800 transition cursor-pointer">😴 Cansancio</button>
-          <button type="button" onclick="appendTagToNote('🩸 Spotting leve / Cólicos')" class="px-2 py-0.5 rounded-md bg-white border border-slate-200 text-slate-700 hover:border-emerald-500 hover:text-emerald-800 transition cursor-pointer">🩸 Spotting</button>
-          <button type="button" onclick="appendTagToNote('🍫 Antojo dulce por la tarde')" class="px-2 py-0.5 rounded-md bg-white border border-slate-200 text-slate-700 hover:border-emerald-500 hover:text-emerald-800 transition cursor-pointer">🍫 Antojo dulce</button>
-          <button type="button" onclick="appendTagToNote('🍽️ Comí fuera de casa')" class="px-2 py-0.5 rounded-md bg-white border border-slate-200 text-slate-700 hover:border-emerald-500 hover:text-emerald-800 transition cursor-pointer">🍽️ Comí fuera</button>
+        <div class="flex items-center gap-2 flex-wrap text-sm">
+          <span class="text-sm font-semibold text-slate-700">Etiquetas rápidas:</span>
+          <button type="button" onclick="appendTagToNote('🌱 Digestión ligera y sin pesadez')" class="px-2.5 py-1 rounded-md bg-slate-100 border border-slate-200 text-slate-700 hover:border-emerald-600 hover:text-emerald-800 cursor-pointer">🌱 Ligera</button>
+          <button type="button" onclick="appendTagToNote('💨 Un poco de hinchazón post-comida')" class="px-2.5 py-1 rounded-md bg-slate-100 border border-slate-200 text-slate-700 hover:border-emerald-600 hover:text-emerald-800 cursor-pointer">💨 Hinchazón</button>
+          <button type="button" onclick="appendTagToNote('💪 Buena energía en el entreno')" class="px-2.5 py-1 rounded-md bg-slate-100 border border-slate-200 text-slate-700 hover:border-emerald-600 hover:text-emerald-800 cursor-pointer">💪 Buena energía</button>
+          <button type="button" onclick="appendTagToNote('😴 Cansancio acumulado')" class="px-2.5 py-1 rounded-md bg-slate-100 border border-slate-200 text-slate-700 hover:border-emerald-600 hover:text-emerald-800 cursor-pointer">😴 Cansancio</button>
+          <button type="button" onclick="appendTagToNote('🩸 Spotting leve / Cólicos')" class="px-2.5 py-1 rounded-md bg-slate-100 border border-slate-200 text-slate-700 hover:border-emerald-600 hover:text-emerald-800 cursor-pointer">🩸 Spotting</button>
+          <button type="button" onclick="appendTagToNote('🍫 Antojo dulce')" class="px-2.5 py-1 rounded-md bg-slate-100 border border-slate-200 text-slate-700 hover:border-emerald-600 hover:text-emerald-800 cursor-pointer">🍫 Antojo dulce</button>
         </div>
 
-        <!-- Área de texto con auto-guardado en localStorage por día -->
         <div>
           <textarea
             id="day-user-notes"
             rows="3"
             oninput="saveCurrentDayNotes()"
-            placeholder="Escribe aquí si cambiaste alguna comida, sensaciones de estómago, energía, dudas o notas para enviarme..."
-            class="w-full p-2.5 rounded-xl border border-slate-200 text-xs bg-white text-slate-800 focus:outline-emerald-600 leading-relaxed placeholder-slate-400 shadow-2xs"
+            placeholder="Escribe aquí sensaciones de estómago, cambios de comida, dudas o notas..."
+            class="w-full p-3.5 rounded-xl border border-slate-300 text-base bg-white text-slate-900 focus:outline-emerald-600 leading-relaxed placeholder-slate-400"
           ></textarea>
         </div>
 
-        <!-- Botones de Acción -->
-        <div class="flex items-center justify-between gap-2 pt-0.5">
-          <div class="flex items-center gap-2">
-            <button type="button" onclick="clearCurrentDayNotes()" class="text-[10.5px] text-slate-400 hover:text-rose-500 transition cursor-pointer">
+        <div class="flex items-center justify-between gap-3 pt-1">
+          <div class="flex items-center gap-3">
+            <button type="button" onclick="clearCurrentDayNotes()" class="text-sm text-slate-500 hover:text-rose-600 cursor-pointer">
               Limpiar nota
             </button>
             <span class="text-slate-300">·</span>
-            <a href="https://docs.google.com/spreadsheets/d/1kRs1k1c-MIUiEbQ2Yhip2olOyaPcDFe9TGC2StThTUU/edit" target="_blank" rel="noopener" class="text-[10.5px] text-emerald-700 hover:text-emerald-900 font-semibold flex items-center gap-1 transition cursor-pointer" title="Abrir tu hoja de Google Sheets en Drive">
-              <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-              <span>Ver Google Sheet</span>
+            <a href="https://docs.google.com/spreadsheets/d/1kRs1k1c-MIUiEbQ2Yhip2olOyaPcDFe9TGC2StThTUU/edit" target="_blank" rel="noopener" class="text-sm text-emerald-800 hover:text-emerald-950 font-semibold flex items-center gap-1 cursor-pointer">
+              <span>Abrir Google Sheet</span>
             </a>
           </div>
           
-          <button type="button" onclick="sendDirectComment()" class="px-4 py-2 rounded-xl bg-emerald-800 text-white text-xs font-bold hover:bg-emerald-900 transition-all flex items-center gap-2 shadow-xs active:scale-95 cursor-pointer">
-            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+          <button type="button" onclick="sendDirectComment()" class="px-4 py-2 rounded-xl bg-emerald-800 text-white text-sm font-bold hover:bg-emerald-900 transition flex items-center gap-2 cursor-pointer">
             <span id="chat-report-btn-text">Enviar comentarios</span>
           </button>
         </div>
@@ -458,854 +344,516 @@
     </div>
 
     <!-- ======================================================== -->
-    <!-- VIEW 2: BATCH COOKING VISUAL                             -->
+    <!-- VIEW 2: BATCH COOKING                                    -->
     <!-- ======================================================== -->
-    <div id="view-batch-container" class="hidden space-y-3.5 w-full">
+    <div id="view-batch-container" class="hidden space-y-6 w-full">
       
-      <div class="card-craft rounded-2xl p-3.5 sm:p-5 w-full">
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1.5 pb-2.5 border-b border-slate-100">
-          <div>
-            <div class="flex items-center gap-2 mb-0.5">
-              <span class="text-xs font-bold text-emerald-700 uppercase tracking-wide">Estrategia Modular & Económica</span>
-              <span class="text-xs text-slate-400">·</span>
-              <span class="text-xs text-slate-600 font-medium">Aprovechar despensa y cocinar express</span>
-            </div>
-            <h3 class="text-sm sm:text-base font-bold text-slate-900">
-              Guía Visual de Batch Prep & Despensa
-            </h3>
-          </div>
-          <span class="text-xs font-semibold text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-lg border border-emerald-100 self-start sm:self-auto">
-            Tiempo: ~35 minutos
-          </span>
-        </div>
-        <p class="text-xs text-slate-600 mt-2 leading-relaxed">
-          5 módulos independientes diseñados para tu Ninja Foodi, horno y sartenes. Cada cajita cuenta con su propia fotografía real, cantidades exactas y su <strong>Paso a Paso Maestro individual</strong> para que todo te quede perfecto y sin esfuerzo.
+      <div class="card-clean space-y-2">
+        <h2 class="text-xl sm:text-2xl font-bold text-slate-900">
+          Preparación por Lotes (Batch Cooking)
+        </h2>
+        <p class="text-base text-slate-600 leading-relaxed">
+          Recetas base cocinadas con antelación para tener desayunos, comidas y cenas listas en minutos sin cocinar a diario.
         </p>
       </div>
 
-            <!-- 5 VISUAL BATCH MODULES WITH REAL PHOTOGRAPHY & INTERACTIVE CHEVRONS -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 w-full">
+      <!-- 5 RECIPES (Un-nested, real photography, clear hierarchy) -->
+      <div class="space-y-4 w-full">
 
-        <!-- MÓDULO 1: BATCH DE PANCAKES PROTEICOS MULTIDÍA (3 A 4 DÍAS) -->
-        <div class="card-craft rounded-2xl overflow-hidden flex flex-col justify-between w-full">
-          <div>
-            <div class="relative h-44 sm:h-48 w-full bg-slate-100 overflow-hidden cursor-pointer" onclick="toggleBatchCollapse('pancakes')">
-              <img src="images/pancakes_avena.jpg" alt="Pancakes proteicos de avena" class="w-full h-full object-cover" />
-              <div class="absolute top-2 left-2 bg-slate-900/80 backdrop-blur-sm text-white px-2.5 py-1 rounded-lg text-[10px] font-bold tracking-wide uppercase">
-                Módulo 1 · Desayunos Express
+        <!-- RECETA 1: PANCAKES DE AVENA Y PROTEÍNA -->
+        <article class="card-clean space-y-4">
+          <div class="flex flex-col sm:flex-row gap-4 items-start">
+            <img src="images/pancakes_avena.jpg" alt="Pancakes de avena" class="w-full sm:w-44 h-36 object-cover rounded-xl border border-slate-200 shrink-0" />
+            <div class="flex-1 space-y-1">
+              <div class="flex items-baseline justify-between gap-2">
+                <h3 class="text-lg font-bold text-slate-900">Pancakes de Avena y Proteína AMIX</h3>
+                <span class="text-sm font-semibold text-emerald-800">Batch para 3 a 4 días</span>
               </div>
-              <div class="absolute bottom-2 right-2 bg-white/95 backdrop-blur-sm text-emerald-800 px-2 py-0.5 rounded-md text-[10px] font-bold shadow-2xs">
-                Batch 3–4 Días · 12 min
+              <p class="text-base text-slate-600 leading-relaxed">
+                Cocina la torre completa en 12 minutos y guárdalos en un recipiente hermético en la nevera. Cada mañana se calientan en la tostadora en 30 segundos.
+              </p>
+              <div class="pt-2">
+                <button type="button" onclick="toggleBatchCollapse('pancakes')" class="text-sm font-bold text-emerald-700 hover:text-emerald-800 cursor-pointer">
+                  <span id="batch-btn-text-pancakes">Ver cantidades y preparación ▾</span>
+                </button>
               </div>
-            </div>
-            
-            <div class="p-3.5">
-              <div>
-                <div class="flex items-center gap-1.5 mb-0.5">
-                  <span class="text-[9.5px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-100">6 a 8 Pancakes</span>
-                  <span class="text-[9.5px] font-semibold text-slate-500">· 28g proteína / ración</span>
-                </div>
-                <h4 class="font-bold text-sm text-slate-900 cursor-pointer" onclick="toggleBatchCollapse('pancakes')">Batch Pancakes AMIX & Avena Esponjosos</h4>
-                <p class="text-[11px] text-slate-600 leading-relaxed mt-0.5">
-                  Haz la torre completa en 12 minutos. Guárdalos en tupper hermético y en las mañanas solo tardas 30 segundos en calentarlos en la tostadora.
-                </p>
-              </div>
-
-              <!-- BOTÓN FLECHA / CHEVRON PARA DESPLEGAR MÁS INFO -->
-              <button type="button" onclick="toggleBatchCollapse('pancakes')" class="tap-effect mt-2.5 w-full flex items-center justify-between p-2 rounded-xl bg-slate-50 hover:bg-emerald-50/70 border border-slate-200/80 text-xs font-semibold text-slate-700 hover:text-emerald-800 transition cursor-pointer">
-                <span class="flex items-center gap-1.5">
-                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-                  <span id="batch-btn-text-pancakes">Ver cantidades y técnica paso a paso</span>
-                </span>
-                <div class="w-6 h-6 rounded-full flex items-center justify-center bg-white border border-slate-200/80 shadow-2xs">
-                  <svg id="chevron-batch-pancakes" class="w-3.5 h-3.5 transform transition-transform duration-200 text-slate-500" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
-                </div>
-              </button>
-
-              <!-- CONTENIDO DESPLEGABLE CON MÁS INFO -->
-              <div id="batch-body-pancakes" class="hidden mt-3 space-y-2.5 pt-2.5 border-t border-slate-100">
-                <!-- Cantidades Exactas para Varios Días -->
-                <div>
-                  <span class="text-[10px] uppercase font-bold text-slate-400 block mb-1">Cantidades Exactas para el Batch (3–4 Días):</span>
-                  <div class="grid grid-cols-2 gap-1.5 text-[10.5px] text-slate-700">
-                    <span class="p-1.5 rounded-lg bg-slate-50 border border-slate-100">🌾 <strong>120 g</strong> Avena molida sin gluten</span>
-                    <span class="p-1.5 rounded-lg bg-slate-50 border border-slate-100">💪 <strong>2 cazos (60 g)</strong> AMIX CFM Isolate</span>
-                    <span class="p-1.5 rounded-lg bg-slate-50 border border-slate-100">🥚 <strong>2 huevos + 2 claras</strong> camperos</span>
-                    <span class="p-1.5 rounded-lg bg-slate-50 border border-slate-100">🥛 <strong>160–180 ml</strong> Bebida de avena</span>
-                    <span class="p-1.5 rounded-lg bg-slate-50 border border-slate-100">✨ <strong>1 cdita (4 g)</strong> Levadura química SG</span>
-                    <span class="p-1.5 rounded-lg bg-slate-50 border border-slate-100">🌿 <strong>1 cdita</strong> Canela de Ceilán + pizca sal</span>
-                  </div>
-                </div>
-
-                <!-- TÉCNICA CERO FRICCIÓN Y PASO A PASO DENTRO DEL MÓDULO -->
-                <div class="p-3 rounded-xl bg-amber-50/80 border border-amber-200/70 space-y-1.5">
-                  <div class="flex items-center gap-1.5 text-amber-900 font-extrabold text-[10px] uppercase tracking-wide">
-                    <svg class="w-3.5 h-3.5 text-amber-700 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-                    <span>Técnica Cero Fricción · Paso a Paso Maestro</span>
-                  </div>
-                  <div class="space-y-1 text-[10.5px] text-slate-700 leading-snug">
-                    <p>
-                      <strong>1. Batido express (45 seg):</strong> Pon todo en la batidora o vaso de Minipimer y tritura 45 segundos hasta obtener una crema homogénea y densa.
-                    </p>
-                    <p>
-                      <strong>2. Reposo de 3 minutos (El secreto):</strong> Deja reposar la masa mientras calientas la sartén. La avena y la proteína absorben líquido y la levadura activa microburbujas para que queden gorditas.
-                    </p>
-                    <p>
-                      <strong>3. Vuelta y vuelta (1,5 min por lado):</strong> Sartén a fuego medio (nivel 6/9) con 2 gotas de AOVE. Vierte 2-3 cdas por pancake. Cuando salgan agujeritos en la superficie, gira y dora 45 segundos.
-                    </p>
-                    <p>
-                      <strong>4. Conservación & Desayuno en 30s:</strong> Deja enfriar en un plato y guarda en tupper hermético en la nevera (duran 4–5 días). Cada mañana, saca 2 pancakes y mételos <strong>30 segundos en la tostadora</strong>: quedan crujientes por fuera y tiernos por dentro.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="p-2.5 rounded-xl bg-emerald-50 border border-emerald-200 text-[10.5px] text-emerald-900 font-semibold">
-                  Rinde: 6 a 8 pancakes (3 a 4 desayunos listos sin cocinar entre semana).
-                </div>
-              </div>
-
             </div>
           </div>
-        </div>
 
-        <!-- MÓDULO 2: LA BANDEJA DORADA DE HORNO -->
-        <div class="card-craft rounded-2xl overflow-hidden flex flex-col justify-between w-full">
-          <div>
-            <div class="relative h-44 sm:h-48 w-full bg-slate-100 overflow-hidden cursor-pointer" onclick="toggleBatchCollapse('crema')">
-              <img src="images/crema_calabaza.jpg" alt="Crema de verduras asadas" class="w-full h-full object-cover" />
-              <div class="absolute top-2 left-2 bg-slate-900/80 backdrop-blur-sm text-white px-2.5 py-1 rounded-lg text-[10px] font-bold tracking-wide uppercase">
-                Módulo 2 · Horno o Ninja
-              </div>
-              <div class="absolute bottom-2 right-2 bg-white/95 backdrop-blur-sm text-emerald-800 px-2 py-0.5 rounded-md text-[10px] font-bold shadow-2xs">
-                30 min · 200 °C
-              </div>
+          <div id="batch-body-pancakes" class="hidden pt-4 border-t border-slate-200 space-y-3">
+            <div>
+              <h4 class="text-sm font-bold text-slate-900 mb-2">Ingredientes para 6 a 8 pancakes:</h4>
+              <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-base text-slate-700">
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span> 120 g harina de avena sin gluten</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span> 60 g proteína AMIX CFM Isolate</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span> 2 huevos camperos + 2 claras</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span> 160–180 ml bebida de avena</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span> 1 cdita levadura química sin gluten</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span> Canela de Ceilán y pizca de sal</li>
+              </ul>
             </div>
-            
-            <div class="p-3.5">
-              <div>
-                <h4 class="font-bold text-sm text-slate-900 cursor-pointer" onclick="toggleBatchCollapse('crema')">Bandeja Dorada & Crema Sedosa</h4>
-                <p class="text-[11px] text-slate-600 leading-relaxed mt-0.5">
-                  Asa la calabaza, zanahorias, puerro y calabacín en bandeja única con AOVE y sal marina. Tritúralo para tener base de cremas lista.
-                </p>
-              </div>
-
-              <!-- BOTÓN FLECHA / CHEVRON PARA DESPLEGAR MÁS INFO -->
-              <button type="button" onclick="toggleBatchCollapse('crema')" class="tap-effect mt-2.5 w-full flex items-center justify-between p-2 rounded-xl bg-slate-50 hover:bg-emerald-50/70 border border-slate-200/80 text-xs font-semibold text-slate-700 hover:text-emerald-800 transition cursor-pointer">
-                <span class="flex items-center gap-1.5">
-                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-                  <span id="batch-btn-text-crema">Ver técnica y paso a paso</span>
-                </span>
-                <div class="w-6 h-6 rounded-full flex items-center justify-center bg-white border border-slate-200/80 shadow-2xs">
-                  <svg id="chevron-batch-crema" class="w-3.5 h-3.5 transform transition-transform duration-200 text-slate-500" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
-                </div>
-              </button>
-
-              <!-- CONTENIDO DESPLEGABLE CON MÁS INFO -->
-              <div id="batch-body-crema" class="hidden mt-3 space-y-2.5 pt-2.5 border-t border-slate-100">
-                <div>
-                  <span class="text-[10px] uppercase font-bold text-slate-400 block mb-1">Ingredientes:</span>
-                  <div class="flex flex-wrap gap-1">
-                    <span class="px-2 py-0.5 rounded-lg bg-slate-50 border border-slate-100 text-slate-700 text-[10px] font-medium">Calabaza</span>
-                    <span class="px-2 py-0.5 rounded-lg bg-slate-50 border border-slate-100 text-slate-700 text-[10px] font-medium">Zanahoria</span>
-                    <span class="px-2 py-0.5 rounded-lg bg-slate-50 border border-slate-100 text-slate-700 text-[10px] font-medium">Puerro</span>
-                    <span class="px-2 py-0.5 rounded-lg bg-slate-50 border border-slate-100 text-slate-700 text-[10px] font-medium">Proteína Moara Guisante</span>
-                  </div>
-                </div>
-
-                <!-- TÉCNICA CERO FRICCIÓN Y PASO A PASO DENTRO DEL MÓDULO -->
-                <div class="p-3 rounded-xl bg-emerald-50/80 border border-emerald-200/70 space-y-1">
-                  <div class="flex items-center gap-1 text-emerald-900 font-extrabold text-[10px] uppercase tracking-wide">
-                    <svg class="w-3.5 h-3.5 text-emerald-700 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-                    <span>Técnicas de Cocina Cero Fricción</span>
-                  </div>
-                  <span class="text-[10.5px] font-bold text-slate-900 block">Paso a Paso Maestro: Textura Seda sin Grumos</span>
-                  <p class="text-[10.5px] text-slate-700 leading-snug">
-                    <strong>🥣 Crema Seda + Proteína Moara Guisante:</strong> Para disolverla perfecto, mezcla en una tacita 1 cda de proteína de guisante con 2 cdas de caldo caliente hasta crear una pasta homogénea. Viértela en la crema caliente y remueve 30 seg. ¡Queda espesa, aterciopelada y sin ningún grumo!
-                  </p>
-                  <p class="text-[10.5px] text-slate-700 leading-snug mt-1">
-                    <strong>🥚 Huevo poché express al microondas:</strong> En una taza con 1/3 de agua tibia y unas gotas de vinagre, casca 1 huevo campero. Tapa con un platito y calienta 55-60 seg a 600W. Yema líquida y clara cuajada lista.
-                  </p>
-                </div>
-
-                <div class="p-2.5 rounded-xl bg-amber-50/80 border border-amber-200/60 text-[10.5px] text-amber-900 font-semibold">
-                  Rinde: 3 raciones de crema dorada listas para cenas en &lt;5 minutos.
-                </div>
-              </div>
-
+            <div class="space-y-1.5 text-base text-slate-700 pt-2">
+              <h4 class="text-sm font-bold text-slate-900">Instrucciones de cocinado:</h4>
+              <p><strong>1. Mezclado:</strong> Bate todos los ingredientes 45 segundos hasta tener una crema homogénea y densa.</p>
+              <p><strong>2. Reposo:</strong> Deja reposar 3 minutos para que la avena absorba líquido y queden esponjosos.</p>
+              <p><strong>3. Cocinado:</strong> Sartén a fuego medio con unas gotas de aceite. Vierte porciones y dora 1,5 minutos por lado.</p>
+              <p><strong>4. Conservación:</strong> Guarda en nevera (4–5 días). Cada mañana tuesta 30 segundos en la tostadora.</p>
             </div>
           </div>
-        </div>
+        </article>
 
-        <!-- MÓDULO 3: PATATA O BATATA EN AIRFRYER -->
-        <div class="card-craft rounded-2xl overflow-hidden flex flex-col justify-between w-full">
-          <div>
-            <div class="relative h-44 sm:h-48 w-full bg-slate-100 overflow-hidden cursor-pointer" onclick="toggleBatchCollapse('patata')">
-              <img src="images/pollo_boniato.jpg" alt="Dados de batata y patata" class="w-full h-full object-cover" />
-              <div class="absolute top-2 left-2 bg-slate-900/80 backdrop-blur-sm text-white px-2.5 py-1 rounded-lg text-[10px] font-bold tracking-wide uppercase">
-                Módulo 3 · Airfryer o Horno
+        <!-- RECETA 2: CREMA DORADA DE CALABAZA -->
+        <article class="card-clean space-y-4">
+          <div class="flex flex-col sm:flex-row gap-4 items-start">
+            <img src="images/crema_calabaza.jpg" alt="Crema de calabaza asada" class="w-full sm:w-44 h-36 object-cover rounded-xl border border-slate-200 shrink-0" />
+            <div class="flex-1 space-y-1">
+              <div class="flex items-baseline justify-between gap-2">
+                <h3 class="text-lg font-bold text-slate-900">Crema Dorada de Calabaza y Puerro</h3>
+                <span class="text-sm font-semibold text-emerald-800">3 raciones de cena</span>
               </div>
-              <div class="absolute bottom-2 right-2 bg-white/95 backdrop-blur-sm text-emerald-800 px-2 py-0.5 rounded-md text-[10px] font-bold shadow-2xs">
-                18 min · 195 °C
+              <p class="text-base text-slate-600 leading-relaxed">
+                Verduras asadas en bandeja única con aceite de oliva virgen extra y trituradas hasta lograr una textura aterciopelada.
+              </p>
+              <div class="pt-2">
+                <button type="button" onclick="toggleBatchCollapse('crema')" class="text-sm font-bold text-emerald-700 hover:text-emerald-800 cursor-pointer">
+                  <span id="batch-btn-text-crema">Ver cantidades y preparación ▾</span>
+                </button>
               </div>
-            </div>
-            
-            <div class="p-3.5">
-              <div>
-                <h4 class="font-bold text-sm text-slate-900 cursor-pointer" onclick="toggleBatchCollapse('patata')">Patata o Batata en Dados Crujientes</h4>
-                <p class="text-[11px] text-slate-600 leading-relaxed mt-0.5">
-                  Corta la batata o las patatitas en dados medianos (puedes dejar la piel lavada para que queden más crujientes).
-                </p>
-              </div>
-
-              <!-- BOTÓN FLECHA / CHEVRON PARA DESPLEGAR MÁS INFO -->
-              <button type="button" onclick="toggleBatchCollapse('patata')" class="tap-effect mt-2.5 w-full flex items-center justify-between p-2 rounded-xl bg-slate-50 hover:bg-emerald-50/70 border border-slate-200/80 text-xs font-semibold text-slate-700 hover:text-emerald-800 transition cursor-pointer">
-                <span class="flex items-center gap-1.5">
-                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-                  <span id="batch-btn-text-patata">Ver técnica y paso a paso</span>
-                </span>
-                <div class="w-6 h-6 rounded-full flex items-center justify-center bg-white border border-slate-200/80 shadow-2xs">
-                  <svg id="chevron-batch-patata" class="w-3.5 h-3.5 transform transition-transform duration-200 text-slate-500" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
-                </div>
-              </button>
-
-              <!-- CONTENIDO DESPLEGABLE CON MÁS INFO -->
-              <div id="batch-body-patata" class="hidden mt-3 space-y-2.5 pt-2.5 border-t border-slate-100">
-                <div>
-                  <span class="text-[10px] uppercase font-bold text-slate-400 block mb-1">Ingredientes:</span>
-                  <div class="flex flex-wrap gap-1">
-                    <span class="px-2 py-0.5 rounded-lg bg-slate-50 border border-slate-100 text-slate-700 text-[10px] font-medium">Batata</span>
-                    <span class="px-2 py-0.5 rounded-lg bg-slate-50 border border-slate-100 text-slate-700 text-[10px] font-medium">Patatas guarnición</span>
-                    <span class="px-2 py-0.5 rounded-lg bg-slate-50 border border-slate-100 text-slate-700 text-[10px] font-medium">AOVE</span>
-                    <span class="px-2 py-0.5 rounded-lg bg-slate-50 border border-slate-100 text-slate-700 text-[10px] font-medium">Romero y sal</span>
-                  </div>
-                </div>
-
-                <!-- TÉCNICA CERO FRICCIÓN Y PASO A PASO DENTRO DEL MÓDULO -->
-                <div class="p-3 rounded-xl bg-amber-50/80 border border-amber-200/70 space-y-1">
-                  <div class="flex items-center gap-1 text-amber-900 font-extrabold text-[10px] uppercase tracking-wide">
-                    <svg class="w-3.5 h-3.5 text-amber-700 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-                    <span>Técnica de Cocina Cero Fricción</span>
-                  </div>
-                  <span class="text-[10.5px] font-bold text-slate-900 block">Paso a Paso Maestro: Cómo hacer que queden perfectas</span>
-                  <p class="text-[10.5px] text-slate-700 leading-snug">
-                    <strong>🍠 Crujiente fuera, Tierna dentro:</strong> Mezcla los dados en un bowl con 1 cdita de AOVE, sal y romero usando las manos. Airfryer a 195 °C durante 18–20 min agitando la cesta a la mitad. Si las guardas en un tupper en la nevera, duran varios días y sientan genial a la digestión.
-                  </p>
-                </div>
-
-                <div class="p-2.5 rounded-xl bg-slate-100 border border-slate-200 text-[10.5px] text-slate-800 font-semibold">
-                  Rinde: Patata o batata lista para acompañar pollo o salmón en 2 minutos.
-                </div>
-              </div>
-
             </div>
           </div>
-        </div>
 
-        <!-- MÓDULO 4: AREPAS DORADAS CON CHÍA HIDRATADA -->
-        <div class="card-craft rounded-2xl overflow-hidden flex flex-col justify-between w-full">
-          <div>
-            <div class="relative h-44 sm:h-48 w-full bg-slate-100 overflow-hidden cursor-pointer" onclick="toggleBatchCollapse('arepas')">
-              <img src="images/arepas_pan.jpg" alt="Arepas doradas con chía" class="w-full h-full object-cover" />
-              <div class="absolute top-2 left-2 bg-slate-900/80 backdrop-blur-sm text-white px-2.5 py-1 rounded-lg text-[10px] font-bold tracking-wide uppercase">
-                Módulo 4 · Sartén & Plancha
-              </div>
-              <div class="absolute bottom-2 right-2 bg-white/95 backdrop-blur-sm text-emerald-800 px-2 py-0.5 rounded-md text-[10px] font-bold shadow-2xs">
-                10 min · 3 Días Nevera
-              </div>
+          <div id="batch-body-crema" class="hidden pt-4 border-t border-slate-200 space-y-3">
+            <div>
+              <h4 class="text-sm font-bold text-slate-900 mb-2">Ingredientes:</h4>
+              <p class="text-base text-slate-700">Calabaza limpia troceada, puerro, zanahorias, calabacín, aceite de oliva virgen extra y sal marina.</p>
             </div>
-            
-            <div class="p-3.5">
-              <div>
-                <div class="flex items-center gap-1.5 mb-0.5">
-                  <span class="text-[9.5px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-100">Masa Limpia 100% Maíz</span>
-                  <span class="text-[9.5px] font-semibold text-slate-500">· Sin gluten · Fibra soluble</span>
-                </div>
-                <h4 class="font-bold text-sm text-slate-900 cursor-pointer" onclick="toggleBatchCollapse('arepas')">Arepas Doradas con Chía Hidratada</h4>
-                <p class="text-[11px] text-slate-600 leading-relaxed mt-0.5">
-                  Masa elástica que nunca se rompe gracias a los mucílagos de la chía. Crujientes por fuera, suaves por dentro y listas para rellenar en caliente.
-                </p>
-              </div>
-
-              <!-- BOTÓN FLECHA / CHEVRON PARA DESPLEGAR MÁS INFO -->
-              <button type="button" onclick="toggleBatchCollapse('arepas')" class="tap-effect mt-2.5 w-full flex items-center justify-between p-2 rounded-xl bg-slate-50 hover:bg-emerald-50/70 border border-slate-200/80 text-xs font-semibold text-slate-700 hover:text-emerald-800 transition cursor-pointer">
-                <span class="flex items-center gap-1.5">
-                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-                  <span id="batch-btn-text-arepas">Ver cantidades y técnica paso a paso</span>
-                </span>
-                <div class="w-6 h-6 rounded-full flex items-center justify-center bg-white border border-slate-200/80 shadow-2xs">
-                  <svg id="chevron-batch-arepas" class="w-3.5 h-3.5 transform transition-transform duration-200 text-slate-500" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
-                </div>
-              </button>
-
-              <!-- CONTENIDO DESPLEGABLE CON MÁS INFO -->
-              <div id="batch-body-arepas" class="hidden mt-3 space-y-2.5 pt-2.5 border-t border-slate-100">
-                <div>
-                  <span class="text-[10px] uppercase font-bold text-slate-400 block mb-1">Cantidades Exactas (Por Ración / Batch):</span>
-                  <div class="grid grid-cols-2 gap-1.5 text-[10.5px] text-slate-700">
-                    <span class="p-1.5 rounded-lg bg-slate-50 border border-slate-100">🌽 <strong>1/2 taza</strong> Harina P.A.N. blanca</span>
-                    <span class="p-1.5 rounded-lg bg-slate-50 border border-slate-100">🌱 <strong>1 cdita</strong> Semillas de chía</span>
-                    <span class="p-1.5 rounded-lg bg-slate-50 border border-slate-100">💧 <strong>1/2 taza</strong> Agua tibia</span>
-                    <span class="p-1.5 rounded-lg bg-slate-50 border border-slate-100">🧂 <strong>1 pizca</strong> Sal marina fina</span>
-                    <span class="p-1.5 rounded-lg bg-slate-50 border border-slate-100 col-span-2">🫒 <strong>1 gota</strong> AOVE para pintar la sartén</span>
-                  </div>
-                </div>
-
-                <!-- TÉCNICA CERO FRICCIÓN Y PASO A PASO DENTRO DEL MÓDULO -->
-                <div class="p-3 rounded-xl bg-amber-50/80 border border-amber-200/70 space-y-1.5">
-                  <div class="flex items-center gap-1.5 text-amber-900 font-extrabold text-[10px] uppercase tracking-wide">
-                    <svg class="w-3.5 h-3.5 text-amber-700 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-                    <span>Técnica Cero Fricción · Paso a Paso Maestro</span>
-                  </div>
-                  <div class="space-y-1 text-[10.5px] text-slate-700 leading-snug">
-                    <p>
-                      <strong>1. Hidratación de la chía (2 min clave):</strong> En un bowl pon el agua tibia con la chía y sal. <em>Espera 2 minutos exactos</em> a que suelte su gel protector. Esto evita que la masa se cuartee.
-                    </p>
-                    <p>
-                      <strong>2. Amasado express (1 min):</strong> Añade la harina P.A.N. y amasa con una mano hasta formar una bola suave y elástica que no se pegue a las manos ni al bowl.
-                    </p>
-                    <p>
-                      <strong>3. Formado del disco:</strong> Aplana la bola entre tus palmas girando suavemente hasta dejar un disco parejo de 1,5 cm de grosor.
-                    </p>
-                    <p>
-                      <strong>4. Plancha dorada (5 min por lado):</strong> Sartén bien caliente a fuego medio con unas gotas de AOVE. Cocina 5 min por lado hasta que al darle toques con los nudillos <em>"suene a hueco"</em>.
-                    </p>
-                    <p>
-                      <strong>5. Relleno & Tostadora:</strong> Abre por la mitad con cuchillo de sierra y rellena con queso cottage cremoso y pollo o pavo. Si te sobran, guárdalas en nevera y caliéntalas en la tostadora 1 minuto.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="p-2.5 rounded-xl bg-emerald-50 border border-emerald-200 text-[10.5px] text-emerald-900 font-semibold">
-                  Rinde: 2 arepas medianas o 1 grande saciante (perfectas para desayuno o cena).
-                </div>
-              </div>
-
+            <div class="space-y-1.5 text-base text-slate-700 pt-2">
+              <h4 class="text-sm font-bold text-slate-900">Instrucciones de cocinado:</h4>
+              <p><strong>1. Asado:</strong> Horno a 200 °C durante 30 minutos hasta que los bordes doren ligeramente.</p>
+              <p><strong>2. Triturado:</strong> Pasa por batidora con caldo caliente o agua hasta obtener una crema sedosa.</p>
+              <p><strong>3. Proteína sin grumos:</strong> Si añades proteína de guisante Moara, disuélvela antes en una tacita con 2 cucharadas de caldo tibio y remueve.</p>
             </div>
           </div>
-        </div>
+        </article>
 
-        <!-- MÓDULO 5: SALMÓN CON PIEL HIPERCRUJIENTE -->
-        <div class="card-craft rounded-2xl overflow-hidden flex flex-col justify-between w-full">
-          <div>
-            <div class="relative h-44 sm:h-48 w-full bg-slate-100 overflow-hidden cursor-pointer" onclick="toggleBatchCollapse('salmon')">
-              <img src="images/salmon_plancha.jpg" alt="Lomo de salmón crujiente a la plancha" class="w-full h-full object-cover" />
-              <div class="absolute top-2 left-2 bg-slate-900/80 backdrop-blur-sm text-white px-2.5 py-1 rounded-lg text-[10px] font-bold tracking-wide uppercase">
-                Módulo 5 · Plancha de Alta Cocina
+        <!-- RECETA 3: PATATAS O BATATAS ASADAS -->
+        <article class="card-clean space-y-4">
+          <div class="flex flex-col sm:flex-row gap-4 items-start">
+            <img src="images/pollo_boniato.jpg" alt="Patatas y batatas" class="w-full sm:w-44 h-36 object-cover rounded-xl border border-slate-200 shrink-0" />
+            <div class="flex-1 space-y-1">
+              <div class="flex items-baseline justify-between gap-2">
+                <h3 class="text-lg font-bold text-slate-900">Patatas o Batatas Asadas</h3>
+                <span class="text-sm font-semibold text-emerald-800">Guarnición para 3 comidas</span>
               </div>
-              <div class="absolute bottom-2 right-2 bg-white/95 backdrop-blur-sm text-emerald-800 px-2 py-0.5 rounded-md text-[10px] font-bold shadow-2xs">
-                7 min · Omega-3 Puro
+              <p class="text-base text-slate-600 leading-relaxed">
+                Asadas en dados con romero y aceite de oliva. Enfriadas en nevera facilitan una digestión suave y ligera.
+              </p>
+              <div class="pt-2">
+                <button type="button" onclick="toggleBatchCollapse('patata')" class="text-sm font-bold text-emerald-700 hover:text-emerald-800 cursor-pointer">
+                  <span id="batch-btn-text-patata">Ver cantidades y preparación ▾</span>
+                </button>
               </div>
-            </div>
-            
-            <div class="p-3.5">
-              <div>
-                <div class="flex items-center gap-1.5 mb-0.5">
-                  <span class="text-[9.5px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-100">Técnica de Restaurante</span>
-                  <span class="text-[9.5px] font-semibold text-slate-500">· Piel crujiente · Centro jugoso</span>
-                </div>
-                <h4 class="font-bold text-sm text-slate-900 cursor-pointer" onclick="toggleBatchCollapse('salmon')">Salmón con Piel Hipercrujiente</h4>
-                <p class="text-[11px] text-slate-600 leading-relaxed mt-0.5">
-                  El truco profesional para que la piel quede crujiente como una galleta y el interior mantecoso y jugoso sin secarse.
-                </p>
-              </div>
-
-              <!-- BOTÓN FLECHA / CHEVRON PARA DESPLEGAR MÁS INFO -->
-              <button type="button" onclick="toggleBatchCollapse('salmon')" class="tap-effect mt-2.5 w-full flex items-center justify-between p-2 rounded-xl bg-slate-50 hover:bg-emerald-50/70 border border-slate-200/80 text-xs font-semibold text-slate-700 hover:text-emerald-800 transition cursor-pointer">
-                <span class="flex items-center gap-1.5">
-                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-                  <span id="batch-btn-text-salmon">Ver técnica y paso a paso</span>
-                </span>
-                <div class="w-6 h-6 rounded-full flex items-center justify-center bg-white border border-slate-200/80 shadow-2xs">
-                  <svg id="chevron-batch-salmon" class="w-3.5 h-3.5 transform transition-transform duration-200 text-slate-500" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
-                </div>
-              </button>
-
-              <!-- CONTENIDO DESPLEGABLE CON MÁS INFO -->
-              <div id="batch-body-salmon" class="hidden mt-3 space-y-2.5 pt-2.5 border-t border-slate-100">
-                <div>
-                  <span class="text-[10px] uppercase font-bold text-slate-400 block mb-1">Ingredientes Clave:</span>
-                  <div class="grid grid-cols-2 gap-1.5 text-[10.5px] text-slate-700">
-                    <span class="p-1.5 rounded-lg bg-slate-50 border border-slate-100">🐟 <strong>1 o 2 lomos</strong> Salmón fresco con piel</span>
-                    <span class="p-1.5 rounded-lg bg-slate-50 border border-slate-100">🧂 <strong>1 pizca</strong> Sal marina en escamas</span>
-                    <span class="p-1.5 rounded-lg bg-slate-50 border border-slate-100">🫒 <strong>1 cdita</strong> AOVE virgen extra</span>
-                    <span class="p-1.5 rounded-lg bg-slate-50 border border-slate-100">🍋 <strong>Opcional</strong> Gotas de limón / pimienta</span>
-                  </div>
-                </div>
-
-                <!-- TÉCNICA CERO FRICCIÓN Y PASO A PASO DENTRO DEL MÓDULO -->
-                <div class="p-3 rounded-xl bg-sky-50/80 border border-sky-200/70 space-y-1.5">
-                  <div class="flex items-center gap-1.5 text-sky-900 font-extrabold text-[10px] uppercase tracking-wide">
-                    <svg class="w-3.5 h-3.5 text-sky-700 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-                    <span>Técnica Cero Fricción · Paso a Paso Maestro</span>
-                  </div>
-                  <div class="space-y-1 text-[10.5px] text-slate-700 leading-snug">
-                    <p>
-                      <strong>1. Secado obsesivo (El secreto):</strong> Seca a fondo la piel y la carne del salmón con papel de cocina absorbente. La humedad es la enemiga número uno del crujiente. Espolvorea sal fina en la piel seca.
-                    </p>
-                    <p>
-                      <strong>2. Sartén humeante:</strong> Calienta la sartén antiadherente a fuego medio-alto (nivel 7 de 9) con 1 cdita de AOVE bien repartido.
-                    </p>
-                    <p>
-                      <strong>3. Presión inicial de 10 seg:</strong> Coloca el lomo con la **piel hacia abajo**. Presiona suavemente con una espátula durante los primeros 10 segundos para que no se arquee y toda la piel quede plana contra el fondo.
-                    </p>
-                    <p>
-                      <strong>4. La Regla de Oro (4–5 min SIN TOCAR):</strong> **NO muevas el salmón durante 4 a 5 minutos**. Verás cómo el color rosado sube por los laterales cocinándose y la piel se vuelve una costra rígida dorada.
-                    </p>
-                    <p>
-                      <strong>5. Vuelta express (solo 1,5 min):</strong> Gira con cuidado y cocina por el lado de la carne solo **1,5 minutos**. Retira de inmediato al plato. El centro queda jugoso y la piel hipercrocante.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="p-2.5 rounded-xl bg-slate-100 border border-slate-200 text-[10.5px] text-slate-800 font-semibold">
-                  Rinde: Cenas antiinflamatorias ricas en Omega-3 listas en 7 minutos.
-                </div>
-              </div>
-
             </div>
           </div>
-        </div>
+
+          <div id="batch-body-patata" class="hidden pt-4 border-t border-slate-200 space-y-3">
+            <div>
+              <h4 class="text-sm font-bold text-slate-900 mb-2">Ingredientes:</h4>
+              <p class="text-base text-slate-700">Batatas o patatas de guarnición, 1 cucharadita de aceite de oliva, romero seco y sal marina fina.</p>
+            </div>
+            <div class="space-y-1.5 text-base text-slate-700 pt-2">
+              <h4 class="text-sm font-bold text-slate-900">Instrucciones de cocinado:</h4>
+              <p><strong>1. Corte y aliño:</strong> Corta en dados de 2 cm y mezcla en un bol con el aceite y el romero.</p>
+              <p><strong>2. Cocinado:</strong> Airfryer a 195 °C durante 18–20 minutos agitando a mitad de tiempo (u horno a 200 °C 30 min).</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- RECETA 4: AREPAS DE MAÍZ CON CHÍA -->
+        <article class="card-clean space-y-4">
+          <div class="flex flex-col sm:flex-row gap-4 items-start">
+            <img src="images/arepas_pan.jpg" alt="Arepas doradas" class="w-full sm:w-44 h-36 object-cover rounded-xl border border-slate-200 shrink-0" />
+            <div class="flex-1 space-y-1">
+              <div class="flex items-baseline justify-between gap-2">
+                <h3 class="text-lg font-bold text-slate-900">Arepas Doradas con Chía Hidratada</h3>
+                <span class="text-sm font-semibold text-emerald-800">100% Maíz sin gluten</span>
+              </div>
+              <p class="text-base text-slate-600 leading-relaxed">
+                El mucílago de la chía aporta elasticidad natural a la masa para que no se cuartee y mejora el tránsito intestinal.
+              </p>
+              <div class="pt-2">
+                <button type="button" onclick="toggleBatchCollapse('arepas')" class="text-sm font-bold text-emerald-700 hover:text-emerald-800 cursor-pointer">
+                  <span id="batch-btn-text-arepas">Ver cantidades y preparación ▾</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div id="batch-body-arepas" class="hidden pt-4 border-t border-slate-200 space-y-3">
+            <div>
+              <h4 class="text-sm font-bold text-slate-900 mb-2">Ingredientes por ración:</h4>
+              <p class="text-base text-slate-700">1/2 taza harina P.A.N., 1 cdita semillas de chía, 1/2 taza agua tibia, sal marina y gotas de aceite.</p>
+            </div>
+            <div class="space-y-1.5 text-base text-slate-700 pt-2">
+              <h4 class="text-sm font-bold text-slate-900">Instrucciones de cocinado:</h4>
+              <p><strong>1. Hidratación:</strong> En un bol mezcla el agua tibia con la chía y la sal. Espera 2 minutos a que suelte su gel protector.</p>
+              <p><strong>2. Amasado y formado:</strong> Añade la harina P.A.N. y amasa 1 minuto. Forma un disco parejo de 1,5 cm de grosor.</p>
+              <p><strong>3. Plancha:</strong> Sartén a fuego medio con unas gotas de aceite. Cocina 5 minutos por lado hasta que suene a hueco al golpear suavemente.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- RECETA 5: SALMÓN CRUJIENTE A LA PLANCHA -->
+        <article class="card-clean space-y-4">
+          <div class="flex flex-col sm:flex-row gap-4 items-start">
+            <img src="images/salmon_plancha.jpg" alt="Lomo de salmón" class="w-full sm:w-44 h-36 object-cover rounded-xl border border-slate-200 shrink-0" />
+            <div class="flex-1 space-y-1">
+              <div class="flex items-baseline justify-between gap-2">
+                <h3 class="text-lg font-bold text-slate-900">Lomos de Salmón con Piel Crujiente</h3>
+                <span class="text-sm font-semibold text-emerald-800">Omega-3 antiinflamatorio</span>
+              </div>
+              <p class="text-base text-slate-600 leading-relaxed">
+                Técnica para que la piel quede crujiente y el interior tierno y jugoso en apenas 6 minutos.
+              </p>
+              <div class="pt-2">
+                <button type="button" onclick="toggleBatchCollapse('salmon')" class="text-sm font-bold text-emerald-700 hover:text-emerald-800 cursor-pointer">
+                  <span id="batch-btn-text-salmon">Ver técnica de plancha ▾</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div id="batch-body-salmon" class="hidden pt-4 border-t border-slate-200 space-y-3">
+            <div>
+              <h4 class="text-sm font-bold text-slate-900 mb-2">Ingredientes:</h4>
+              <p class="text-base text-slate-700">1 o 2 lomos de salmón fresco con piel, sal marina en escamas y 1 cucharadita de aceite de oliva.</p>
+            </div>
+            <div class="space-y-1.5 text-base text-slate-700 pt-2">
+              <h4 class="text-sm font-bold text-slate-900">Instrucciones de cocinado:</h4>
+              <p><strong>1. Secado:</strong> Seca muy bien la piel y carne con papel absorbente. La humedad impide que dore crujiente.</p>
+              <p><strong>2. Plancha:</strong> Sartén a fuego medio-alto. Pon el lomo con la piel hacia abajo y presiona 10 segundos con espátula.</p>
+              <p><strong>3. Cocinado sin mover:</strong> Deja 4 a 5 minutos sin moverlo hasta que la piel quede rígida y dorada. Da la vuelta solo 1,5 minutos y retira.</p>
+            </div>
+          </div>
+        </article>
 
       </div>
 
-      <!-- SECCIÓN PMS & ANTOJITOS SANOS -->
-      <div class="card-craft rounded-2xl p-4 sm:p-5 w-full bg-gradient-to-br from-rose-50/50 to-amber-50/40 border border-rose-100">
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-2 border-b border-rose-100 gap-1.5">
-          <div class="flex items-center gap-2">
-            <span class="px-2 py-0.5 rounded-full bg-rose-100 text-rose-800 text-[10px] font-extrabold uppercase tracking-wide">Fase Lútea · Día 27</span>
-            <h4 class="text-xs sm:text-sm font-extrabold text-slate-900">Antojitos Dulces Saludables Anti-PMS</h4>
-          </div>
-          <span class="text-[11px] text-rose-700 font-semibold">Cero gluten · Magnesio & Dopamina</span>
+      <!-- SECCIÓN PMS: ANTOJOS SALUDABLES (Flattened) -->
+      <section class="space-y-4 pt-4 border-t border-slate-200">
+        <div>
+          <h3 class="text-lg font-bold text-slate-900">Antojos Dulces Saludables (Fase Premenstrual)</h3>
+          <p class="text-sm text-slate-600">Opciones ricas en magnesio y cacao puro sin azúcar añadido para calmar la bajada de serotonina.</p>
         </div>
-        <p class="text-xs text-slate-600 mt-2 leading-relaxed">
-          En el día 27 de tu ciclo la caída fisiológica de estrógenos y progesterona reduce la serotonina cerebral. <strong>Tus antojos de dulce son bioquímica pura</strong>. Satisface el deseo sin inflamar con estos 3 comodines:
-        </p>
 
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 mt-3">
-          <div class="p-3 rounded-xl bg-white/90 border border-rose-100 shadow-2xs space-y-1">
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-bold text-slate-900">1. Mousse de Chocolate & AMIX</span>
-              <span class="text-[9.5px] px-1.5 py-0.2 rounded bg-rose-50 text-rose-700 font-semibold">24g Prot</span>
-            </div>
-            <p class="text-[11px] text-slate-600 leading-snug">
-              Bate <strong>1 yogur griego</strong> + <strong>1 cda de cacao puro</strong> + <strong>1/2 cazo de proteína AMIX CFM</strong> 1 min. Emulsiona como mousse belga. Enfría 10 min.
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div class="card-clean space-y-2">
+            <h4 class="text-base font-bold text-slate-900">Mousse de Chocolate & Proteína</h4>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Bate 1 yogur griego natural con 1 cda de cacao puro y 1/2 cazo de proteína AMIX. Deja enfriar 10 minutos.
             </p>
           </div>
 
-          <div class="p-3 rounded-xl bg-white/90 border border-rose-100 shadow-2xs space-y-1">
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-bold text-slate-900">2. Manzana Caramelizada & Choco</span>
-              <span class="text-[9.5px] px-1.5 py-0.2 rounded bg-amber-50 text-amber-700 font-semibold">Pectina + Magnesio</span>
-            </div>
-            <p class="text-[11px] text-slate-600 leading-snug">
-              Dados de manzana al microondas 2 min con canela. Coloca encima <strong>1 onza de chocolate negro (>85%)</strong>; se funde sola con el vapor.
+          <div class="card-clean space-y-2">
+            <h4 class="text-base font-bold text-slate-900">Manzana Asada con Canela</h4>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Dados de manzana al microondas 2 minutos con canela. Coloca encima 1 onza de chocolate negro (>85%).
             </p>
           </div>
 
-          <div class="p-3 rounded-xl bg-white/90 border border-rose-100 shadow-2xs space-y-1">
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-bold text-slate-900">3. Golden Cocoa Nocturno</span>
-              <span class="text-[9.5px] px-1.5 py-0.2 rounded bg-purple-50 text-purple-700 font-semibold">Anti-cólicos</span>
-            </div>
-            <p class="text-[11px] text-slate-600 leading-snug">
-              Taza de leche de avena sin gluten caliente con <strong>1 cdita de cacao puro</strong>, canela y cúrcuma. Tómala a las 22:00 h antes del magnesio para relajar el útero.
+          <div class="card-clean space-y-2">
+            <h4 class="text-base font-bold text-slate-900">Golden Cocoa Caliente</h4>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Taza de bebida de avena tibia con 1 cdita de cacao puro, canela y cúrcuma antes de acostarte.
             </p>
           </div>
         </div>
-      </div>
-
-      <!-- Storage guidelines -->
-      <div class="card-craft rounded-xl p-3 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 text-xs text-slate-600 w-full">
-        <div class="min-w-0">
-          <strong class="text-slate-900 block sm:inline">Despensa Activa:</strong>
-          <span> <strong>Despensa & Congelador al 100%:</strong> Tienes ternera picada congelada, frutos rojos congelados, 3 manzanas, crema dorada y despensa completa. ¡Apenas necesitas comprar nada!</span>
-        </div>
-        <button type="button" onclick="switchView('menu')" class="px-3 py-1.5 rounded-lg bg-emerald-700 text-white font-bold text-xs hover:bg-emerald-800 transition shrink-0 self-start sm:self-auto cursor-pointer">
-          Ir al Menú Diario
-        </button>
-      </div>
+      </section>
 
     </div>
 
     <!-- ======================================================== -->
-    <!-- VIEW 3: LISTA DEL SÚPER (ACTUALIZADA CON TU COMPRA DE HOY) -->
+    <!-- VIEW 3: LISTA DEL SÚPER                                  -->
     <!-- ======================================================== -->
-    <div id="view-super-container" class="hidden space-y-3 w-full">
+    <div id="view-super-container" class="hidden space-y-6 w-full">
       
-      <div class="card-craft rounded-2xl p-3 sm:p-5 w-full">
+      <div class="space-y-6">
         
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-2.5 border-b border-slate-100 gap-2">
-          <div class="min-w-0">
-            <div class="flex items-center gap-1.5 mb-0.5">
-              <span class="text-xs font-bold text-emerald-700 uppercase tracking-wide">Mercadona</span>
-              <span class="text-xs text-slate-400">·</span>
-              <span class="text-xs text-slate-500 font-medium">Orden del Recorrido (2 Pisos)</span>
-            </div>
-            <h3 class="text-sm sm:text-base font-bold text-slate-900 truncate">
-              Lista del Súper por Recorrido (26 Productos)
-            </h3>
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-3 border-b border-slate-200 gap-3">
+          <div>
+            <h2 class="text-xl sm:text-2xl font-bold text-slate-900">
+              Lista del Súper por Recorrido
+            </h2>
+            <p class="text-sm text-slate-600">Organizada según el orden de pasillos de tu Mercadona</p>
           </div>
           
-          <div class="flex items-center gap-2 self-start sm:self-auto shrink-0">
-            <span id="grocery-progress-badge" class="px-2 py-1 rounded-md bg-emerald-50 border border-emerald-100 text-emerald-800 text-xs font-bold">
+          <div class="flex items-center gap-3">
+            <span id="grocery-progress-badge" class="px-3 py-1.5 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-800 text-sm font-bold">
               0 de 26 listos
             </span>
-            <button type="button" onclick="copyGroceryToClipboard()" class="px-2.5 py-1 rounded-lg bg-slate-900 text-white text-xs font-semibold hover:bg-slate-800 transition flex items-center gap-1 active:scale-95 cursor-pointer" title="Copiar lista para ir al súper">
-              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+            <button type="button" onclick="copyGroceryToClipboard()" class="px-3.5 py-1.5 rounded-lg bg-slate-900 text-white text-sm font-semibold hover:bg-slate-800 transition cursor-pointer">
               <span id="copy-btn-text">Copiar para WhatsApp</span>
             </button>
           </div>
         </div>
 
-                <div class="mt-3 space-y-6 w-full">
+        <!-- RECORRIDO FÍSICO MERCADONA (2 PISOS) -->
+        <div class="space-y-6 w-full">
           
-          <!-- ============================================== -->
-          <!-- PLANTA 1: PRIMER PISO                          -->
-          <!-- ============================================== -->
-          <div class="space-y-3.5">
-            <div class="flex items-center justify-between p-2.5 rounded-xl bg-amber-500/10 border border-amber-500/20">
-              <div class="flex items-center gap-2">
-                <span class="w-6 h-6 rounded-lg bg-amber-600 text-white font-bold text-xs flex items-center justify-center shadow-2xs">1</span>
-                <div>
-                  <h4 class="text-xs sm:text-sm font-extrabold text-amber-950 uppercase tracking-wide">Planta Baja · Primer Piso</h4>
-                  <p class="text-[10.5px] text-amber-800 font-medium">Harinas, Aceite, Limón, Leche, Tortillas & Despensa</p>
-                </div>
+          <!-- PLANTA 1: PRIMER PISO -->
+          <div class="space-y-4">
+            <div class="p-3.5 rounded-xl bg-slate-100 border border-slate-200 flex items-center justify-between">
+              <div>
+                <h3 class="text-base font-bold text-slate-900">Planta Baja · Primer Piso</h3>
+                <p class="text-sm text-slate-600">Harinas, Aceite, Limón, Leche, Tortillas & Despensa</p>
               </div>
-              <span class="px-2 py-0.5 rounded-full bg-white/80 border border-amber-200 text-amber-900 font-bold text-[11px]">8 productos</span>
+              <span class="text-sm font-bold text-slate-700">8 productos</span>
             </div>
 
-            <!-- Pasillo: Harinas & Despensa Seca -->
-            <div>
-              <div class="flex items-center justify-between mb-1.5 px-0.5">
-                <span class="text-xs font-bold text-slate-800 flex items-center gap-1.5">
-                  <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
-                  Harinas & Despensa Seca
-                </span>
-                <span class="text-[10px] text-slate-500 font-semibold">5 productos</span>
-              </div>
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 w-full">
-              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-                <input type="checkbox" onchange="toggleItem('Harina P.A.N. blanca o amarilla (1 paquete)')" data-item="Harina P.A.N. blanca o amarilla (1 paquete)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
-                <div class="flex-1 min-w-0 text-xs">
-                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Harina P.A.N. blanca o amarilla (1 paquete)</span>
-                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Masa de maíz 100% sin gluten para arepas doradas</span>
-                </div>
-              </label>
-              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-                <input type="checkbox" onchange="toggleItem('Copos o harina de avena certificada Sin Gluten')" data-item="Copos o harina de avena certificada Sin Gluten" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
-                <div class="flex-1 min-w-0 text-xs">
-                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Copos o harina de avena certificada Sin Gluten</span>
-                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Para el batch de pancakes esponjosos de varios días</span>
-                </div>
-              </label>
-              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-                <input type="checkbox" onchange="toggleItem('Semillas de chía')" data-item="Semillas de chía" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
-                <div class="flex-1 min-w-0 text-xs">
-                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Semillas de chía</span>
-                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Mucílagos solubles clave para el tránsito y elasticidad de arepas</span>
-                </div>
-              </label>
-              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-                <input type="checkbox" onchange="toggleItem('Chocolate negro >85% (1 tableta)')" data-item="Chocolate negro >85% (1 tableta)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
-                <div class="flex-1 min-w-0 text-xs">
-                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Chocolate negro >85% (1 tableta)</span>
-                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Magnesio y dopamina para antojitos de fase lútea</span>
-                </div>
-              </label>
-              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-                <input type="checkbox" onchange="toggleItem('Tahini (pasta de sésamo) o crema de frutos secos 100%')" data-item="Tahini (pasta de sésamo) o crema de frutos secos 100%" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
-                <div class="flex-1 min-w-0 text-xs">
-                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Tahini (pasta de sésamo) o crema de frutos secos 100%</span>
-                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Calcio y grasas saludables para saciedad hormonal</span>
-                </div>
-              </label>
-              </div>
-            </div>
+            <!-- Pasillos Piso 1 -->
+            <div class="space-y-3">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                <label class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
+                  <input type="checkbox" onchange="toggleItem('Harina P.A.N. blanca o amarilla (1 paquete)')" data-item="Harina P.A.N. blanca o amarilla (1 paquete)" class="grocery-cb mt-1 w-4 h-4 rounded text-emerald-600 border-slate-300 accent-emerald-600 shrink-0" />
+                  <div class="flex-1 min-w-0">
+                    <span class="item-title font-semibold text-base text-slate-900 block">Harina P.A.N. blanca o amarilla (1 paquete)</span>
+                    <span class="text-sm text-slate-600 block mt-0.5">Masa de maíz 100% sin gluten para arepas</span>
+                  </div>
+                </label>
 
-            <!-- Pasillo: Aceite & Limón -->
-            <div>
-              <div class="flex items-center justify-between mb-1.5 px-0.5">
-                <span class="text-xs font-bold text-slate-800 flex items-center gap-1.5">
-                  <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
-                  Aceite & Limón en Botella
-                </span>
-                <span class="text-[10px] text-slate-500 font-semibold">1 producto</span>
-              </div>
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 w-full">
-              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-                <input type="checkbox" onchange="toggleItem('Zumo de limón en botella Hacendado')" data-item="Zumo de limón en botella Hacendado" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
-                <div class="flex-1 min-w-0 text-xs">
-                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Zumo de limón en botella Hacendado</span>
-                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Para aliños rápidos de verduras y cintas de calabacín</span>
-                </div>
-              </label>
-              </div>
-            </div>
+                <label class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
+                  <input type="checkbox" onchange="toggleItem('Copos o harina de avena certificada Sin Gluten')" data-item="Copos o harina de avena certificada Sin Gluten" class="grocery-cb mt-1 w-4 h-4 rounded text-emerald-600 border-slate-300 accent-emerald-600 shrink-0" />
+                  <div class="flex-1 min-w-0">
+                    <span class="item-title font-semibold text-base text-slate-900 block">Copos o harina de avena certificada Sin Gluten</span>
+                    <span class="text-sm text-slate-600 block mt-0.5">Para el batch de pancakes esponjosos</span>
+                  </div>
+                </label>
 
-            <!-- Pasillo: Leche & Bebidas Vegetales -->
-            <div>
-              <div class="flex items-center justify-between mb-1.5 px-0.5">
-                <span class="text-xs font-bold text-slate-800 flex items-center gap-1.5">
-                  <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
-                  Leche & Bebida de Avena
-                </span>
-                <span class="text-[10px] text-slate-500 font-semibold">1 producto</span>
-              </div>
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 w-full">
-              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-                <input type="checkbox" onchange="toggleItem('Bebida de avena Hacendado sin azúcares')" data-item="Bebida de avena Hacendado sin azúcares" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
-                <div class="flex-1 min-w-0 text-xs">
-                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Bebida de avena Hacendado sin azúcares</span>
-                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Para el café diario y la masa del batch de pancakes</span>
-                </div>
-              </label>
-              </div>
-            </div>
+                <label class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
+                  <input type="checkbox" onchange="toggleItem('Semillas de chía')" data-item="Semillas de chía" class="grocery-cb mt-1 w-4 h-4 rounded text-emerald-600 border-slate-300 accent-emerald-600 shrink-0" />
+                  <div class="flex-1 min-w-0">
+                    <span class="item-title font-semibold text-base text-slate-900 block">Semillas de chía</span>
+                    <span class="text-sm text-slate-600 block mt-0.5">Mucílagos solubles para motilidad y arepas</span>
+                  </div>
+                </label>
 
-            <!-- Pasillo: Tortillas -->
-            <div>
-              <div class="flex items-center justify-between mb-1.5 px-0.5">
-                <span class="text-xs font-bold text-slate-800 flex items-center gap-1.5">
-                  <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
-                  Tortillas Sin Gluten
-                </span>
-                <span class="text-[10px] text-slate-500 font-semibold">1 producto</span>
-              </div>
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 w-full">
-              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-                <input type="checkbox" onchange="toggleItem('Tortitas de maíz 100% Sin Gluten (Old El Paso o Hacendado)')" data-item="Tortitas de maíz 100% Sin Gluten (Old El Paso o Hacendado)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
-                <div class="flex-1 min-w-0 text-xs">
-                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Tortitas de maíz 100% Sin Gluten (Old El Paso o Hacendado)</span>
-                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Base crujiente y limpia para fajitas y cenas rápidas</span>
-                </div>
-              </label>
+                <label class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
+                  <input type="checkbox" onchange="toggleItem('Chocolate negro >85% (1 tableta)')" data-item="Chocolate negro >85% (1 tableta)" class="grocery-cb mt-1 w-4 h-4 rounded text-emerald-600 border-slate-300 accent-emerald-600 shrink-0" />
+                  <div class="flex-1 min-w-0">
+                    <span class="item-title font-semibold text-base text-slate-900 block">Chocolate negro >85% (1 tableta)</span>
+                    <span class="text-sm text-slate-600 block mt-0.5">Magnesio para antojitos premenstruales</span>
+                  </div>
+                </label>
+
+                <label class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
+                  <input type="checkbox" onchange="toggleItem('Tahini (pasta de sésamo) o crema de frutos secos 100%')" data-item="Tahini (pasta de sésamo) o crema de frutos secos 100%" class="grocery-cb mt-1 w-4 h-4 rounded text-emerald-600 border-slate-300 accent-emerald-600 shrink-0" />
+                  <div class="flex-1 min-w-0">
+                    <span class="item-title font-semibold text-base text-slate-900 block">Tahini o crema de frutos secos 100%</span>
+                    <span class="text-sm text-slate-600 block mt-0.5">Grasas saludables y saciedad</span>
+                  </div>
+                </label>
+
+                <label class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
+                  <input type="checkbox" onchange="toggleItem('Zumo de limón en botella Hacendado')" data-item="Zumo de limón en botella Hacendado" class="grocery-cb mt-1 w-4 h-4 rounded text-emerald-600 border-slate-300 accent-emerald-600 shrink-0" />
+                  <div class="flex-1 min-w-0">
+                    <span class="item-title font-semibold text-base text-slate-900 block">Zumo de limón en botella Hacendado</span>
+                    <span class="text-sm text-slate-600 block mt-0.5">Para aliños de verduras y cintas de calabacín</span>
+                  </div>
+                </label>
+
+                <label class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
+                  <input type="checkbox" onchange="toggleItem('Bebida de avena Hacendado sin azúcares')" data-item="Bebida de avena Hacendado sin azúcares" class="grocery-cb mt-1 w-4 h-4 rounded text-emerald-600 border-slate-300 accent-emerald-600 shrink-0" />
+                  <div class="flex-1 min-w-0">
+                    <span class="item-title font-semibold text-base text-slate-900 block">Bebida de avena Hacendado sin azúcares</span>
+                    <span class="text-sm text-slate-600 block mt-0.5">Para café matutino y masa de pancakes</span>
+                  </div>
+                </label>
+
+                <label class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
+                  <input type="checkbox" onchange="toggleItem('Tortitas de maíz 100% Sin Gluten (Old El Paso o Hacendado)')" data-item="Tortitas de maíz 100% Sin Gluten (Old El Paso o Hacendado)" class="grocery-cb mt-1 w-4 h-4 rounded text-emerald-600 border-slate-300 accent-emerald-600 shrink-0" />
+                  <div class="flex-1 min-w-0">
+                    <span class="item-title font-semibold text-base text-slate-900 block">Tortitas de maíz 100% Sin Gluten</span>
+                    <span class="text-sm text-slate-600 block mt-0.5">Para fajitas crujientes</span>
+                  </div>
+                </label>
               </div>
             </div>
           </div>
 
-          <!-- ============================================== -->
-          <!-- PLANTA 2: ARRIBA (ORDEN DEL RECORRIDO)         -->
-          <!-- ============================================== -->
-          <div class="space-y-3.5 pt-2 border-t-2 border-slate-200/60">
-            <div class="flex items-center justify-between p-2.5 rounded-xl bg-emerald-500/10 border border-emerald-500/20">
-              <div class="flex items-center gap-2">
-                <span class="w-6 h-6 rounded-lg bg-emerald-600 text-white font-bold text-xs flex items-center justify-center shadow-2xs">2</span>
-                <div>
-                  <h4 class="text-xs sm:text-sm font-extrabold text-emerald-950 uppercase tracking-wide">Planta Alta · Arriba</h4>
-                  <p class="text-[10.5px] text-emerald-800 font-medium">Recorrido: Preparados ➔ Pasta/Quinoa ➔ Lácteos ➔ Carnes ➔ Congelados ➔ Verduras y Fruta</p>
-                </div>
+          <!-- PLANTA 2: ARRIBA -->
+          <div class="space-y-4 pt-4 border-t border-slate-200">
+            <div class="p-3.5 rounded-xl bg-slate-100 border border-slate-200 flex items-center justify-between">
+              <div>
+                <h3 class="text-base font-bold text-slate-900">Planta Alta · Arriba</h3>
+                <p class="text-sm text-slate-600">Quinoa, Lácteos, Carnes, Congelados y Verduras</p>
               </div>
-              <span class="px-2 py-0.5 rounded-full bg-white/80 border border-emerald-200 text-emerald-900 font-bold text-[11px]">18 productos</span>
+              <span class="text-sm font-bold text-slate-700">18 productos</span>
             </div>
 
-            <!-- Parada 1: Platos Preparados (Informativo de ruta) -->
-            <div class="p-2.5 rounded-xl bg-slate-50 border border-slate-200/80 text-[11px] text-slate-500 flex items-center justify-between">
-              <span class="flex items-center gap-1.5 font-medium">
-                <span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span>
-                1. Platos Preparados & Frescos Rápidos
-              </span>
-              <span class="text-[10px] text-slate-400 italic">Paso libre (todo casero en menú)</span>
-            </div>
+            <!-- Recorrido planta alta -->
+            <div class="space-y-3">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                
+                <!-- Granos -->
+                <label class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
+                  <input type="checkbox" onchange="toggleItem('Quinoa (vasitos listos o paquete para cocer)')" data-item="Quinoa (vasitos listos o paquete para cocer)" class="grocery-cb mt-1 w-4 h-4 rounded text-emerald-600 border-slate-300 accent-emerald-600 shrink-0" />
+                  <div class="flex-1 min-w-0">
+                    <span class="item-title font-semibold text-base text-slate-900 block">Quinoa (vasitos o paquete)</span>
+                    <span class="text-sm text-slate-600 block mt-0.5">Para el bowl mediterráneo</span>
+                  </div>
+                </label>
 
-            <!-- Parada 2: Pasta, Arroz, Quinoa, Frascos -->
-            <div>
-              <div class="flex items-center justify-between mb-1.5 px-0.5">
-                <span class="text-xs font-bold text-slate-800 flex items-center gap-1.5">
-                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
-                  2. Pasta, Arroz, Quinoa & Frascos (Lentejas, Tomate)
-                </span>
-                <span class="text-[10px] text-slate-500 font-semibold">1 producto</span>
-              </div>
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 w-full">
-              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-                <input type="checkbox" onchange="toggleItem('Quinoa (vasitos listos o paquete para cocer)')" data-item="Quinoa (vasitos listos o paquete para cocer)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
-                <div class="flex-1 min-w-0 text-xs">
-                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Quinoa (vasitos listos o paquete para cocer)</span>
-                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Carbohidrato antiinflamatorio para el bowl mediterráneo</span>
-                </div>
-              </label>
-              </div>
-            </div>
+                <!-- Lácteos & Huevos -->
+                <label class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
+                  <input type="checkbox" onchange="toggleItem('Yogur griego natural sin azúcar (pack 4 o tarrina)')" data-item="Yogur griego natural sin azúcar (pack 4 o tarrina)" class="grocery-cb mt-1 w-4 h-4 rounded text-emerald-600 border-slate-300 accent-emerald-600 shrink-0" />
+                  <div class="flex-1 min-w-0">
+                    <span class="item-title font-semibold text-base text-slate-900 block">Yogur griego natural sin azúcar</span>
+                    <span class="text-sm text-slate-600 block mt-0.5">Para mousse de chocolate y meriendas</span>
+                  </div>
+                </label>
 
-            <!-- Parada 3: Lácteos (Yogurt, Kéfir, Cottage & Huevos) -->
-            <div>
-              <div class="flex items-center justify-between mb-1.5 px-0.5">
-                <span class="text-xs font-bold text-slate-800 flex items-center gap-1.5">
-                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
-                  3. Lácteos (Yogurt, Kéfir, Queso Cottage & Huevos)
-                </span>
-                <span class="text-[10px] text-slate-500 font-semibold">4 productos</span>
-              </div>
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 w-full">
-              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-                <input type="checkbox" onchange="toggleItem('Yogur griego natural sin azúcar (pack 4 o tarrina)')" data-item="Yogur griego natural sin azúcar (pack 4 o tarrina)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
-                <div class="flex-1 min-w-0 text-xs">
-                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Yogur griego natural sin azúcar (pack 4 o tarrina)</span>
-                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Para la mousse de chocolate y meriendas saciantes</span>
-                </div>
-              </label>
-              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-                <input type="checkbox" onchange="toggleItem('2 tarrinas de queso cottage Hacendado')" data-item="2 tarrinas de queso cottage Hacendado" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
-                <div class="flex-1 min-w-0 text-xs">
-                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">2 tarrinas de queso cottage Hacendado</span>
-                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Relleno proteico cremoso de arepas, revueltos y fajitas</span>
-                </div>
-              </label>
-              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-                <input type="checkbox" onchange="toggleItem('Claras de huevo pasteurizadas (botella Hacendado)')" data-item="Claras de huevo pasteurizadas (botella Hacendado)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
-                <div class="flex-1 min-w-0 text-xs">
-                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Claras de huevo pasteurizadas (botella Hacendado)</span>
-                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Volumen proteico limpio para revueltos y batch de pancakes</span>
-                </div>
-              </label>
-              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-                <input type="checkbox" onchange="toggleItem('Huevos camperos (docena o pack 6)')" data-item="Huevos camperos (docena o pack 6)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
-                <div class="flex-1 min-w-0 text-xs">
-                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Huevos camperos (docena o pack 6)</span>
-                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Base diaria indispensable para desayunos, arepas y cenas</span>
-                </div>
-              </label>
-              </div>
-            </div>
+                <label class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
+                  <input type="checkbox" onchange="toggleItem('2 tarrinas de queso cottage Hacendado')" data-item="2 tarrinas de queso cottage Hacendado" class="grocery-cb mt-1 w-4 h-4 rounded text-emerald-600 border-slate-300 accent-emerald-600 shrink-0" />
+                  <div class="flex-1 min-w-0">
+                    <span class="item-title font-semibold text-base text-slate-900 block">2 tarrinas de queso cottage Hacendado</span>
+                    <span class="text-sm text-slate-600 block mt-0.5">Relleno proteico de arepas y fajitas</span>
+                  </div>
+                </label>
 
-            <!-- Parada 4: Carnes, Queso & Pollo (y Pescadería) -->
-            <div>
-              <div class="flex items-center justify-between mb-1.5 px-0.5">
-                <span class="text-xs font-bold text-slate-800 flex items-center gap-1.5">
-                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
-                  4. Carnes, Queso & Pollo (y Pescadería)
-                </span>
-                <span class="text-[10px] text-slate-500 font-semibold">4 productos</span>
-              </div>
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 w-full">
-              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-                <input type="checkbox" onchange="toggleItem('Pechuga de pollo fresca en filetes (bandeja 400–500g)')" data-item="Pechuga de pollo fresca en filetes (bandeja 400–500g)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
-                <div class="flex-1 min-w-0 text-xs">
-                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Pechuga de pollo fresca en filetes (bandeja 400–500g)</span>
-                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Proteína magra para bowl mediterráneo, arepas y fajitas</span>
-                </div>
-              </label>
-              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-                <input type="checkbox" onchange="toggleItem('Hamburguesas de vacuno o carne picada limpia (2 uds)')" data-item="Hamburguesas de vacuno o carne picada limpia (2 uds)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
-                <div class="flex-1 min-w-0 text-xs">
-                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Hamburguesas de vacuno o carne picada limpia (2 uds)</span>
-                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Hierro hemo para la fase premenstrual y fuerza muscular</span>
-                </div>
-              </label>
-              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-                <input type="checkbox" onchange="toggleItem('Lonchas de queso havarti o tierno light')" data-item="Lonchas de queso havarti o tierno light" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
-                <div class="flex-1 min-w-0 text-xs">
-                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Lonchas de queso havarti o tierno light</span>
-                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Para fundir en caliente sobre la hamburguesa o arepa</span>
-                </div>
-              </label>
-              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-                <input type="checkbox" onchange="toggleItem('Lomos de salmón fresco con piel (bandeja 2 lomos)')" data-item="Lomos de salmón fresco con piel (bandeja 2 lomos)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
-                <div class="flex-1 min-w-0 text-xs">
-                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Lomos de salmón fresco con piel (bandeja 2 lomos)</span>
-                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Omega-3 antiinflamatorio para salmón crujiente y fishcakes</span>
-                </div>
-              </label>
-              </div>
-            </div>
+                <label class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
+                  <input type="checkbox" onchange="toggleItem('Claras de huevo pasteurizadas (botella Hacendado)')" data-item="Claras de huevo pasteurizadas (botella Hacendado)" class="grocery-cb mt-1 w-4 h-4 rounded text-emerald-600 border-slate-300 accent-emerald-600 shrink-0" />
+                  <div class="flex-1 min-w-0">
+                    <span class="item-title font-semibold text-base text-slate-900 block">Claras de huevo pasteurizadas</span>
+                    <span class="text-sm text-slate-600 block mt-0.5">Para revueltos y masa de pancakes</span>
+                  </div>
+                </label>
 
-            <!-- Parada 5: Congelados -->
-            <div>
-              <div class="flex items-center justify-between mb-1.5 px-0.5">
-                <span class="text-xs font-bold text-slate-800 flex items-center gap-1.5">
-                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
-                  5. Congelados
-                </span>
-                <span class="text-[10px] text-slate-500 font-semibold">1 producto</span>
-              </div>
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 w-full">
-              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-                <input type="checkbox" onchange="toggleItem('Gambas peladas congeladas Hacendado (1 bolsa)')" data-item="Gambas peladas congeladas Hacendado (1 bolsa)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
-                <div class="flex-1 min-w-0 text-xs">
-                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Gambas peladas congeladas Hacendado (1 bolsa)</span>
-                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Proteína marina limpia para las cintas de calabacín con lima</span>
-                </div>
-              </label>
-              </div>
-            </div>
+                <label class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
+                  <input type="checkbox" onchange="toggleItem('Huevos camperos (docena o pack 6)')" data-item="Huevos camperos (docena o pack 6)" class="grocery-cb mt-1 w-4 h-4 rounded text-emerald-600 border-slate-300 accent-emerald-600 shrink-0" />
+                  <div class="flex-1 min-w-0">
+                    <span class="item-title font-semibold text-base text-slate-900 block">Huevos camperos (docena o pack 6)</span>
+                    <span class="text-sm text-slate-600 block mt-0.5">Base diaria indispensable</span>
+                  </div>
+                </label>
 
-            <!-- Parada 6: Verduras, Fruta & Pan -->
-            <div>
-              <div class="flex items-center justify-between mb-1.5 px-0.5">
-                <span class="text-xs font-bold text-slate-800 flex items-center gap-1.5">
-                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
-                  6. Verduras, Fruta & Pan
-                </span>
-                <span class="text-[10px] text-slate-500 font-semibold">8 productos</span>
-              </div>
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 w-full">
-              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-                <input type="checkbox" onchange="toggleItem('Canónigos frescos (1 bolsa)')" data-item="Canónigos frescos (1 bolsa)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
-                <div class="flex-1 min-w-0 text-xs">
-                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Canónigos frescos (1 bolsa)</span>
-                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Verde digestivo para ensaladas crunch, fajitas y hamburguesa</span>
-                </div>
-              </label>
-              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-                <input type="checkbox" onchange="toggleItem('Tomates cherry dulces (1 tarrina 500g)')" data-item="Tomates cherry dulces (1 tarrina 500g)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
-                <div class="flex-1 min-w-0 text-xs">
-                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Tomates cherry dulces (1 tarrina 500g)</span>
-                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Para salteados con gambas, bowls y ensaladas</span>
-                </div>
-              </label>
-              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-                <input type="checkbox" onchange="toggleItem('Calabacines verdes frescos (2 piezas)')" data-item="Calabacines verdes frescos (2 piezas)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
-                <div class="flex-1 min-w-0 text-xs">
-                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Calabacines verdes frescos (2 piezas)</span>
-                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Para cintas con gambas de Raquel Martin y salteados</span>
-                </div>
-              </label>
-              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-                <input type="checkbox" onchange="toggleItem('Peras maduras conferencia o de agua (4 piezas)')" data-item="Peras maduras conferencia o de agua (4 piezas)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
-                <div class="flex-1 min-w-0 text-xs">
-                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Peras maduras conferencia o de agua (4 piezas)</span>
-                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Clave: Jammy Pears con cardamomo para aliviar estreñimiento</span>
-                </div>
-              </label>
-              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-                <input type="checkbox" onchange="toggleItem('Manzanas dulces Golden o Fuji (1 bolsa / 4 uds)')" data-item="Manzanas dulces Golden o Fuji (1 bolsa / 4 uds)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
-                <div class="flex-1 min-w-0 text-xs">
-                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Manzanas dulces Golden o Fuji (1 bolsa / 4 uds)</span>
-                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Pectina caliente con canela para desayunos y meriendas</span>
-                </div>
-              </label>
-              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-                <input type="checkbox" onchange="toggleItem('Batatas o boniatos (2 piezas)')" data-item="Batatas o boniatos (2 piezas)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
-                <div class="flex-1 min-w-0 text-xs">
-                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Batatas o boniatos (2 piezas)</span>
-                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Para los fishcakes de salmón y batch de airfryer</span>
-                </div>
-              </label>
-              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-                <input type="checkbox" onchange="toggleItem('Bandeja de calabaza limpia + puerro + zanahorias')" data-item="Bandeja de calabaza limpia + puerro + zanahorias" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
-                <div class="flex-1 min-w-0 text-xs">
-                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Bandeja de calabaza limpia + puerro + zanahorias</span>
-                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Base fresca para la bandeja dorada y crema sedosa</span>
-                </div>
-              </label>
-              <label class="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/80 hover:border-emerald-400 hover:bg-emerald-50/20 cursor-pointer transition-all select-none group min-w-0">
-                <input type="checkbox" onchange="toggleItem('Aguacates maduros (2 piezas)')" data-item="Aguacates maduros (2 piezas)" class="grocery-cb mt-0.5 w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 accent-emerald-600 shrink-0" />
-                <div class="flex-1 min-w-0 text-xs">
-                  <span class="item-title font-semibold text-slate-800 block leading-snug group-hover:text-emerald-800 transition break-words">Aguacates maduros (2 piezas)</span>
-                  <span class="text-[11px] text-slate-500 block mt-0.5 break-words">Grasa saludable y potasio para fajitas y ensaladas</span>
-                </div>
-              </label>
+                <!-- Carnes, Queso & Pescado -->
+                <label class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
+                  <input type="checkbox" onchange="toggleItem('Pechuga de pollo fresca en filetes (bandeja 400–500g)')" data-item="Pechuga de pollo fresca en filetes (bandeja 400–500g)" class="grocery-cb mt-1 w-4 h-4 rounded text-emerald-600 border-slate-300 accent-emerald-600 shrink-0" />
+                  <div class="flex-1 min-w-0">
+                    <span class="item-title font-semibold text-base text-slate-900 block">Pechuga de pollo en filetes (400–500g)</span>
+                    <span class="text-sm text-slate-600 block mt-0.5">Para bowls, arepas y fajitas</span>
+                  </div>
+                </label>
+
+                <label class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
+                  <input type="checkbox" onchange="toggleItem('Hamburguesas de vacuno o carne picada limpia (2 uds)')" data-item="Hamburguesas de vacuno o carne picada limpia (2 uds)" class="grocery-cb mt-1 w-4 h-4 rounded text-emerald-600 border-slate-300 accent-emerald-600 shrink-0" />
+                  <div class="flex-1 min-w-0">
+                    <span class="item-title font-semibold text-base text-slate-900 block">Hamburguesas o carne picada de vacuno limpia</span>
+                    <span class="text-sm text-slate-600 block mt-0.5">Hierro hemo premenstrual</span>
+                  </div>
+                </label>
+
+                <label class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
+                  <input type="checkbox" onchange="toggleItem('Lonchas de queso havarti o tierno light')" data-item="Lonchas de queso havarti o tierno light" class="grocery-cb mt-1 w-4 h-4 rounded text-emerald-600 border-slate-300 accent-emerald-600 shrink-0" />
+                  <div class="flex-1 min-w-0">
+                    <span class="item-title font-semibold text-base text-slate-900 block">Lonchas de queso havarti o tierno light</span>
+                    <span class="text-sm text-slate-600 block mt-0.5">Para fundir sobre la hamburguesa o arepa</span>
+                  </div>
+                </label>
+
+                <label class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
+                  <input type="checkbox" onchange="toggleItem('Lomos de salmón fresco con piel (bandeja 2 lomos)')" data-item="Lomos de salmón fresco con piel (bandeja 2 lomos)" class="grocery-cb mt-1 w-4 h-4 rounded text-emerald-600 border-slate-300 accent-emerald-600 shrink-0" />
+                  <div class="flex-1 min-w-0">
+                    <span class="item-title font-semibold text-base text-slate-900 block">Lomos de salmón fresco con piel (2 lomos)</span>
+                    <span class="text-sm text-slate-600 block mt-0.5">Omega-3 antiinflamatorio</span>
+                  </div>
+                </label>
+
+                <!-- Congelados -->
+                <label class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
+                  <input type="checkbox" onchange="toggleItem('Gambas peladas congeladas Hacendado (1 bolsa)')" data-item="Gambas peladas congeladas Hacendado (1 bolsa)" class="grocery-cb mt-1 w-4 h-4 rounded text-emerald-600 border-slate-300 accent-emerald-600 shrink-0" />
+                  <div class="flex-1 min-w-0">
+                    <span class="item-title font-semibold text-base text-slate-900 block">Gambas peladas congeladas (1 bolsa)</span>
+                    <span class="text-sm text-slate-600 block mt-0.5">Para cintas de calabacín con lima</span>
+                  </div>
+                </label>
+
+                <!-- Verduras & Fruta -->
+                <label class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
+                  <input type="checkbox" onchange="toggleItem('Canónigos frescos (1 bolsa)')" data-item="Canónigos frescos (1 bolsa)" class="grocery-cb mt-1 w-4 h-4 rounded text-emerald-600 border-slate-300 accent-emerald-600 shrink-0" />
+                  <div class="flex-1 min-w-0">
+                    <span class="item-title font-semibold text-base text-slate-900 block">Canónigos frescos (1 bolsa)</span>
+                    <span class="text-sm text-slate-600 block mt-0.5">Base digestiva para ensaladas y fajitas</span>
+                  </div>
+                </label>
+
+                <label class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
+                  <input type="checkbox" onchange="toggleItem('Tomates cherry dulces (1 tarrina 500g)')" data-item="Tomates cherry dulces (1 tarrina 500g)" class="grocery-cb mt-1 w-4 h-4 rounded text-emerald-600 border-slate-300 accent-emerald-600 shrink-0" />
+                  <div class="flex-1 min-w-0">
+                    <span class="item-title font-semibold text-base text-slate-900 block">Tomates cherry dulces (500g)</span>
+                    <span class="text-sm text-slate-600 block mt-0.5">Para salteados y ensaladas</span>
+                  </div>
+                </label>
+
+                <label class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
+                  <input type="checkbox" onchange="toggleItem('Calabacines verdes frescos (2 piezas)')" data-item="Calabacines verdes frescos (2 piezas)" class="grocery-cb mt-1 w-4 h-4 rounded text-emerald-600 border-slate-300 accent-emerald-600 shrink-0" />
+                  <div class="flex-1 min-w-0">
+                    <span class="item-title font-semibold text-base text-slate-900 block">Calabacines verdes frescos (2 piezas)</span>
+                    <span class="text-sm text-slate-600 block mt-0.5">Para cintas con gambas y salteados</span>
+                  </div>
+                </label>
+
+                <label class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
+                  <input type="checkbox" onchange="toggleItem('Peras maduras conferencia o de agua (4 piezas)')" data-item="Peras maduras conferencia o de agua (4 piezas)" class="grocery-cb mt-1 w-4 h-4 rounded text-emerald-600 border-slate-300 accent-emerald-600 shrink-0" />
+                  <div class="flex-1 min-w-0">
+                    <span class="item-title font-semibold text-base text-slate-900 block">Peras maduras (4 piezas)</span>
+                    <span class="text-sm text-slate-600 block mt-0.5">Pectina y cardamomo contra el estreñimiento</span>
+                  </div>
+                </label>
+
+                <label class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
+                  <input type="checkbox" onchange="toggleItem('Manzanas dulces Golden o Fuji (1 bolsa / 4 uds)')" data-item="Manzanas dulces Golden o Fuji (1 bolsa / 4 uds)" class="grocery-cb mt-1 w-4 h-4 rounded text-emerald-600 border-slate-300 accent-emerald-600 shrink-0" />
+                  <div class="flex-1 min-w-0">
+                    <span class="item-title font-semibold text-base text-slate-900 block">Manzanas dulces Golden o Fuji (4 piezas)</span>
+                    <span class="text-sm text-slate-600 block mt-0.5">Pectina cocinada con canela</span>
+                  </div>
+                </label>
+
+                <label class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
+                  <input type="checkbox" onchange="toggleItem('Batatas o boniatos (2 piezas)')" data-item="Batatas o boniatos (2 piezas)" class="grocery-cb mt-1 w-4 h-4 rounded text-emerald-600 border-slate-300 accent-emerald-600 shrink-0" />
+                  <div class="flex-1 min-w-0">
+                    <span class="item-title font-semibold text-base text-slate-900 block">Batatas o boniatos (2 piezas)</span>
+                    <span class="text-sm text-slate-600 block mt-0.5">Para fishcakes de salmón y guarniciones</span>
+                  </div>
+                </label>
+
+                <label class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
+                  <input type="checkbox" onchange="toggleItem('Bandeja de calabaza limpia + puerro + zanahorias')" data-item="Bandeja de calabaza limpia + puerro + zanahorias" class="grocery-cb mt-1 w-4 h-4 rounded text-emerald-600 border-slate-300 accent-emerald-600 shrink-0" />
+                  <div class="flex-1 min-w-0">
+                    <span class="item-title font-semibold text-base text-slate-900 block">Bandeja calabaza + puerro + zanahorias</span>
+                    <span class="text-sm text-slate-600 block mt-0.5">Base fresca para crema dorada</span>
+                  </div>
+                </label>
+
+                <label class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer select-none">
+                  <input type="checkbox" onchange="toggleItem('Aguacates maduros (2 piezas)')" data-item="Aguacates maduros (2 piezas)" class="grocery-cb mt-1 w-4 h-4 rounded text-emerald-600 border-slate-300 accent-emerald-600 shrink-0" />
+                  <div class="flex-1 min-w-0">
+                    <span class="item-title font-semibold text-base text-slate-900 block">Aguacates maduros (2 piezas)</span>
+                    <span class="text-sm text-slate-600 block mt-0.5">Grasas monoinsaturadas y potasio</span>
+                  </div>
+                </label>
+
               </div>
             </div>
           </div>
 
         </div>
 
-        <div class="mt-4 pt-2.5 border-t border-slate-100 flex justify-between items-center">
-          <button type="button" onclick="clearCheckedGrocery()" class="text-xs text-slate-500 hover:text-rose-600 font-medium transition cursor-pointer">
+        <div class="mt-4 pt-3 border-t border-slate-200 flex justify-between items-center">
+          <button type="button" onclick="clearCheckedGrocery()" class="text-sm text-slate-500 hover:text-rose-600 font-medium cursor-pointer">
             Desmarcar todo
           </button>
-          <button type="button" onclick="switchView('menu')" class="px-3 py-1.5 rounded-lg bg-emerald-700 text-white font-semibold text-xs hover:bg-emerald-800 transition cursor-pointer">
+          <button type="button" onclick="switchView('menu')" class="px-4 py-2 rounded-lg bg-emerald-800 text-white font-semibold text-sm hover:bg-emerald-900 cursor-pointer">
             Volver al Menú
           </button>
         </div>
@@ -1316,13 +864,13 @@
 
   </main>
 
-  <!-- APPLE FOOTER -->
-  <footer class="max-w-4xl mx-auto px-4 pt-6 pb-16 text-center text-xs text-slate-400 space-y-1">
-    <p class="font-semibold text-slate-600">Florencia Schmidt · Nutrición, Salud & Fitness</p>
-    <p class="text-[11px] text-slate-400">100% Sin Gluten · Recomposición Corporal Activa · <span class="font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200/50">Apple iOS Design v2.5</span></p>
+  <!-- FOOTER -->
+  <footer class="max-w-4xl mx-auto px-4 pt-8 pb-16 text-center text-sm text-slate-500 space-y-1">
+    <p class="font-bold text-slate-700">Florencia Schmidt · Plan de Nutrición y Salud</p>
+    <p>100% Sin Gluten · Adaptado a Tiroides y Fase Premenstrual</p>
   </footer>
 
-  <!-- DATA & LOGIC -->
+  <!-- SCRIPT -->
   <script>
     function safeGet(key, fallback = {}) {
       try {
@@ -1333,12 +881,10 @@
       }
     }
 
-    function safeSet(key, val) {
+    function safeSet(key, value) {
       try {
-        localStorage.setItem(key, JSON.stringify(val));
-      } catch (e) {
-        // safe fallback
-      }
+        localStorage.setItem(key, JSON.stringify(value));
+      } catch (e) {}
     }
 
     const foodImgs = {
@@ -1910,7 +1456,7 @@
 
     function getAutoTodayKey() {
       const now = new Date();
-      const dow = now.getDay(); // 0: dom, 1: lun, 2: mar, 3: mie, 4: jue, 5: vie, 6: sab
+      const dow = now.getDay();
       const map = { 1: 'lun', 2: 'mar', 3: 'mie', 4: 'jue', 5: 'vie', 6: 'sab', 0: 'dom' };
       return map[dow] || 'lun';
     }
@@ -1938,13 +1484,19 @@
         if (el) el.classList.toggle('hidden', v !== view);
       });
 
+      const summary = document.getElementById('progress-summary-section');
+      if (summary) {
+        summary.classList.toggle('hidden', view !== 'menu');
+      }
+
       ['menu', 'batch', 'super'].forEach(v => {
         const btn = document.getElementById('view-btn-' + v);
-        if (!btn) return;
-        if (v === view) {
-          btn.className = "tap-effect px-3 py-1.5 rounded-xl font-bold transition-all bg-white text-slate-900 shadow-[0_2px_8px_rgba(0,0,0,0.12),0_1px_2px_rgba(0,0,0,0.06)] cursor-pointer";
-        } else {
-          btn.className = "tap-effect px-3 py-1.5 rounded-xl font-medium text-slate-500 hover:text-slate-900 transition-all cursor-pointer";
+        if (btn) {
+          if (v === view) {
+            btn.className = "tap-effect px-3.5 py-1.5 rounded-lg font-bold bg-white text-slate-900 shadow-sm cursor-pointer";
+          } else {
+            btn.className = "tap-effect px-3.5 py-1.5 rounded-lg font-medium text-slate-600 hover:text-slate-900 cursor-pointer";
+          }
         }
       });
 
@@ -1964,72 +1516,71 @@
         dom: { short: 'DOM', num: '22' }
       };
 
-      dayOrder.forEach((k) => {
-        const btn = document.getElementById('tab-' + k);
-        if (!btn) return;
+      const nav = document.getElementById('day-selector-nav');
+      if (!nav) return;
+
+      nav.innerHTML = dayOrder.map(k => {
         const isActive = (k === activeKey);
         const isToday = (k === todayKey);
 
         if (isActive) {
-          btn.className = "day-tab tap-effect py-2 px-1 sm:py-3 rounded-2xl text-center transition-all bg-slate-900 text-white shadow-md shadow-slate-900/20 scale-[1.02] border border-slate-900 cursor-pointer min-w-0";
-          btn.innerHTML = `
-            <span class="block text-[8.5px] sm:text-[9.5px] font-bold uppercase tracking-wider text-white/70">${dayConfig[k].short}</span>
-            <span class="block text-xs sm:text-sm font-black text-white mt-0.5 tracking-tight">${dayConfig[k].num}</span>
-            <div class="h-1 flex items-center justify-center mt-0.5">
-              ${isToday ? '<span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>' : ''}
-            </div>
+          return `
+            <button type="button" onclick="selectDay('${k}')" id="tab-${k}" class="day-tab tap-effect py-2.5 px-1 sm:py-3 rounded-xl text-center transition bg-slate-900 text-white border border-slate-900 cursor-pointer min-w-0">
+              <span class="block text-xs font-bold uppercase tracking-wider text-slate-300">${dayConfig[k].short}</span>
+              <span class="block text-base font-bold text-white mt-0.5 tracking-tight">${dayConfig[k].num}</span>
+              <div class="h-1 flex items-center justify-center mt-1">
+                ${isToday ? '<span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>' : ''}
+              </div>
+            </button>
           `;
         } else {
-          btn.className = `day-tab tap-effect py-2 px-1 sm:py-3 rounded-2xl text-center transition-all bg-white text-slate-800 border border-slate-200/80 hover:border-slate-300 shadow-2xs hover:bg-slate-50 cursor-pointer min-w-0 ${isToday ? 'ring-2 ring-emerald-500/40' : ''}`;
-          btn.innerHTML = `
-            <span class="block text-[8.5px] sm:text-[9.5px] font-semibold uppercase tracking-wider text-slate-400">${dayConfig[k].short}</span>
-            <span class="block text-xs sm:text-sm font-bold text-slate-800 mt-0.5 tracking-tight">${dayConfig[k].num}</span>
-            <div class="h-1 flex items-center justify-center mt-0.5">
-              ${isToday ? '<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>' : ''}
-            </div>
+          return `
+            <button type="button" onclick="selectDay('${k}')" id="tab-${k}" class="day-tab tap-effect py-2.5 px-1 sm:py-3 rounded-xl text-center transition bg-white text-slate-800 border border-slate-200 hover:border-slate-300 hover:bg-slate-50 cursor-pointer min-w-0 ${isToday ? 'ring-2 ring-emerald-500/30' : ''}">
+              <span class="block text-xs font-semibold uppercase tracking-wider text-slate-500">${dayConfig[k].short}</span>
+              <span class="block text-base font-bold text-slate-900 mt-0.5 tracking-tight">${dayConfig[k].num}</span>
+              <div class="h-1 flex items-center justify-center mt-1">
+                ${isToday ? '<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>' : ''}
+              </div>
+            </button>
           `;
         }
-      });
+      }).join('');
     }
 
     function selectDay(dayKey) {
       currentDay = dayKey;
-
-      if (currentView !== 'menu') {
-        switchView('menu');
-      }
-
       updateDayTabs(dayKey);
 
       const heading = document.getElementById('active-day-heading');
       if (heading && daysData[dayKey]) {
-        heading.innerText = 'Menú de ' + daysData[dayKey].name;
+        heading.innerText = `Menú del ${daysData[dayKey].dayName}`;
       }
 
       renderWorkoutBanner();
-      renderWeeklyTrainingCard();
       renderMeals();
-      renderDayNotes();
+      renderDayNotes(dayKey);
+      renderWaterTracker();
+      renderWeeklyTrainingCard();
     }
 
-    function isDone(id) {
+    function isDone(mealId) {
       const doneState = safeGet('florencia_meals_done', {});
-      return !!doneState[id];
+      return Boolean(doneState[mealId]);
     }
 
-    function toggleMealDone(mealId, event) {
-      if (event) event.stopPropagation();
+    function toggleMealDone(mealId, e) {
+      if (e) e.stopPropagation();
       const doneState = safeGet('florencia_meals_done', {});
       doneState[mealId] = !doneState[mealId];
       safeSet('florencia_meals_done', doneState);
       renderMeals();
     }
 
-    function toggleWorkoutDone(workoutId, event) {
-      if (event) event.stopPropagation();
-      const doneState = safeGet('florencia_workout_done', {});
-      doneState[workoutId] = !doneState[workoutId];
-      safeSet('florencia_workout_done', doneState);
+    function toggleWorkoutDone(workoutId, e) {
+      if (e) e.stopPropagation();
+      const state = safeGet('florencia_workout_done', {});
+      state[workoutId] = !state[workoutId];
+      safeSet('florencia_workout_done', state);
       renderWorkoutBanner();
       renderWeeklyTrainingCard();
     }
@@ -2040,21 +1591,23 @@
       const done = !!(safeGet('florencia_workout_done', {})[w.id]);
       
       const banner = document.getElementById('workout-banner');
+      if (!banner) return;
+
       banner.innerHTML = `
-        <div class="flex items-center gap-2.5 min-w-0">
-          <div class="w-8 h-8 rounded-lg flex items-center justify-center shrink-0 ${done ? 'bg-emerald-600 text-white' : 'bg-emerald-100 text-emerald-800'}">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        <div class="flex items-center gap-3 min-w-0">
+          <div class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 ${done ? 'bg-emerald-600 text-white' : 'bg-emerald-100 text-emerald-800'}">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
           </div>
           <div class="min-w-0">
-            <div class="flex items-center gap-1.5 flex-wrap">
-              <span class="font-extrabold text-slate-900 truncate">${w.title}</span>
-              <span class="px-1.5 py-0.2 rounded text-[10px] font-semibold ${w.badge}">${w.duration}</span>
-              <span class="text-[10px] text-slate-500 font-medium">${w.center}</span>
+            <div class="flex items-center gap-2 flex-wrap">
+              <span class="font-bold text-base text-slate-900 truncate">${w.title}</span>
+              <span class="px-2 py-0.5 rounded text-xs font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200">${w.duration}</span>
+              <span class="text-sm text-slate-600 font-medium">${w.center}</span>
             </div>
-            <p class="text-[11px] text-slate-600 truncate mt-0.5">${w.note}</p>
+            <p class="text-sm text-slate-600 truncate mt-0.5">${w.note}</p>
           </div>
         </div>
-        <button type="button" onclick="toggleWorkoutDone('${w.id}', event)" class="px-3 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-1.5 shrink-0 ${done ? 'bg-emerald-600 text-white' : 'bg-white border border-slate-300 text-slate-700 hover:border-emerald-600 hover:text-emerald-700'} cursor-pointer shadow-2xs">
+        <button type="button" onclick="toggleWorkoutDone('${w.id}', event)" class="px-4 py-2 rounded-lg text-sm font-bold transition flex items-center justify-center gap-1.5 shrink-0 ${done ? 'bg-emerald-700 text-white' : 'bg-white border border-slate-300 text-slate-800 hover:border-emerald-600 hover:text-emerald-800'} cursor-pointer">
           <span>${done ? '✓ Completado' : 'Marcar realizado'}</span>
         </button>
       `;
@@ -2070,80 +1623,74 @@
         const isExpanded = expandedState[meal.id] === true;
 
         const ingHtml = meal.ingredients.map(ing => `
-          <li class="flex items-start gap-1.5 text-xs text-slate-700 leading-snug ing-item">
-            <span class="text-emerald-600 font-bold shrink-0 mt-0.5">•</span>
+          <li class="flex items-start gap-2 text-base text-slate-700 leading-snug">
+            <span class="text-emerald-700 font-bold shrink-0 mt-0.5">•</span>
             <span>${ing}</span>
           </li>
         `).join('');
 
         const badgesHtml = meal.badges.map(b => `
-          <span class="px-2 py-0.5 rounded-full bg-slate-100 text-slate-600 font-semibold text-[10px] border border-slate-200/60">
+          <span class="px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-700 font-medium text-xs border border-slate-200">
             ${b}
           </span>
         `).join('');
 
         return `
-          <article class="card-craft rounded-2xl sm:rounded-3xl overflow-hidden transition-all duration-200 ${done ? 'border-emerald-300/80 bg-emerald-50/15' : 'bg-white'}">
+          <article class="card-clean transition ${done ? 'border-emerald-300 bg-emerald-50/20' : 'bg-white'}">
             
-            <!-- HEADER DEL MEAL: APPLE RECIPE CARD STYLE -->
-            <div onclick="toggleMealCollapse('${meal.id}')" class="p-3 sm:p-4 flex items-center gap-3 sm:gap-4 cursor-pointer hover:bg-slate-50/60 select-none transition">
+            <div onclick="toggleMealCollapse('${meal.id}')" class="flex items-center gap-4 cursor-pointer select-none">
               
-              <!-- Foto Real (64px en móvil, 80px en escritorio con esquinas redondeadas iOS) -->
-              <div class="relative w-16 h-16 sm:w-20 sm:h-20 rounded-2xl overflow-hidden bg-slate-100 shrink-0 border border-slate-200/80 shadow-2xs">
-                <img src="${meal.img}" alt="${meal.title}" class="w-full h-full object-cover aspect-square transition-all duration-300 ${done ? 'opacity-70 scale-95' : ''}" loading="lazy" />
-                ${done ? '<div class="absolute inset-0 bg-emerald-900/40 backdrop-blur-2xs flex items-center justify-center text-white font-extrabold text-base">✓</div>' : ''}
+              <div class="relative w-20 h-20 rounded-xl overflow-hidden bg-slate-100 shrink-0 border border-slate-200">
+                <img src="${meal.img}" alt="${meal.title}" class="w-full h-full object-cover aspect-square ${done ? 'opacity-60' : ''}" loading="lazy" />
+                ${done ? '<div class="absolute inset-0 bg-emerald-900/50 flex items-center justify-center text-white font-extrabold text-lg">✓</div>' : ''}
               </div>
 
-              <!-- Info del Plato: Pills Apple + Título -->
-              <div class="min-w-0 flex-1">
-                <div class="flex items-center gap-1.5 flex-wrap">
-                  <span class="text-[9.5px] sm:text-[10px] font-bold uppercase tracking-wider text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200/60">
+              <div class="min-w-0 flex-1 space-y-1">
+                <div class="flex items-center gap-2 flex-wrap">
+                  <span class="text-xs font-bold uppercase tracking-wider text-emerald-800">
                     ${meal.type}
                   </span>
-                  <span class="text-[10px] text-slate-500 font-medium bg-slate-100 px-2 py-0.5 rounded-full">
+                  <span class="text-xs text-slate-500">·</span>
+                  <span class="text-xs text-slate-600 font-medium">
                     ${meal.time}
                   </span>
-                  <span class="text-[10px] font-semibold text-slate-600 bg-slate-100 px-2 py-0.5 rounded-full">
+                  <span class="text-xs text-slate-500">·</span>
+                  <span class="text-xs font-semibold text-slate-700">
                     ${meal.calories}
                   </span>
                 </div>
 
-                <h3 class="text-xs sm:text-sm font-bold text-slate-900 mt-1 leading-snug break-words ${done ? 'line-through text-slate-400' : ''}">
+                <h3 class="text-base sm:text-lg font-bold text-slate-900 leading-snug break-words ${done ? 'line-through text-slate-400' : ''}">
                   ${meal.title}
                 </h3>
               </div>
 
-              <!-- Botón iOS Circular Checkmark + Chevron -->
-              <div class="flex items-center gap-1.5 sm:gap-2 shrink-0">
-                <button type="button" onclick="toggleMealDone('${meal.id}', event)" class="tap-effect w-8 h-8 sm:w-9 sm:h-9 rounded-full flex items-center justify-center transition-all cursor-pointer ${done ? 'bg-emerald-600 border-2 border-emerald-600 text-white shadow-xs' : 'border-2 border-slate-300 hover:border-emerald-600 text-transparent hover:text-emerald-600 bg-white'}" title="${done ? 'Marcar como pendiente' : 'Marcar como completado'}">
-                  <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              <div class="flex items-center gap-2 shrink-0">
+                <button type="button" onclick="toggleMealDone('${meal.id}', event)" class="w-9 h-9 rounded-full flex items-center justify-center transition cursor-pointer ${done ? 'bg-emerald-600 text-white' : 'border-2 border-slate-300 hover:border-emerald-600 text-slate-400 hover:text-emerald-600 bg-white'}" title="${done ? 'Marcar como pendiente' : 'Marcar como completado'}">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
                 </button>
-                <div class="w-6 h-6 sm:w-7 sm:h-7 rounded-full flex items-center justify-center text-slate-400 hover:text-slate-700 bg-slate-50 transition">
-                  <svg id="chevron-${meal.id}" class="w-3.5 h-3.5 transform transition-transform duration-200 ease-out ${isExpanded ? 'rotate-180' : ''}" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                <div class="w-7 h-7 flex items-center justify-center text-slate-500 hover:text-slate-900 transition">
+                  <svg id="chevron-${meal.id}" class="w-4 h-4 transform transition-transform duration-200 ${isExpanded ? 'rotate-180' : ''}" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
                 </div>
               </div>
 
             </div>
 
-            <!-- CONTENIDO DESPLEGABLE -->
-            <div id="meal-body-${meal.id}" class="${isExpanded ? '' : 'hidden'} px-3.5 sm:px-4 pb-3.5 pt-1 border-t border-slate-100 space-y-2.5 bg-slate-50/50">
+            <div id="meal-body-${meal.id}" class="${isExpanded ? '' : 'hidden'} mt-4 pt-4 border-t border-slate-200 space-y-4">
               
-              <!-- Badges -->
-              <div class="flex flex-wrap gap-1 pt-1">
+              <div class="flex flex-wrap gap-1.5">
                 ${badgesHtml}
               </div>
 
-              <!-- Ingredientes -->
-              <div class="space-y-1">
-                <h4 class="text-[9.5px] font-bold uppercase tracking-wider text-slate-400">Ingredientes:</h4>
-                <ul class="space-y-1 pl-0.5">
+              <div class="space-y-1.5">
+                <h4 class="text-xs font-bold uppercase tracking-wider text-slate-500">Ingredientes:</h4>
+                <ul class="space-y-1">
                   ${ingHtml}
                 </ul>
               </div>
 
-              <!-- Instrucciones -->
-              <div class="p-2.5 rounded-xl bg-white border border-slate-200/80 text-xs text-slate-700 leading-relaxed shadow-2xs">
-                <strong class="text-slate-900 block mb-0.5">Preparación express:</strong> ${meal.instructions}
+              <div class="pt-2 text-base text-slate-700 leading-relaxed border-t border-slate-100">
+                <strong class="text-slate-900">Preparación express:</strong> ${meal.instructions}
               </div>
 
             </div>
@@ -2155,87 +1702,69 @@
       updateToggleAllBtn();
     }
 
-    function toggleBatchCollapse(batchId) {
-      const body = document.getElementById('batch-body-' + batchId);
-      const chevron = document.getElementById('chevron-batch-' + batchId);
-      const text = document.getElementById('batch-btn-text-' + batchId);
+    function toggleBatchCollapse(id) {
+      const body = document.getElementById('batch-body-' + id);
+      const chevron = document.getElementById('chevron-batch-' + id);
+      const btnText = document.getElementById('batch-btn-text-' + id);
       if (!body) return;
 
       const isHidden = body.classList.contains('hidden');
-      if (isHidden) {
-        body.classList.remove('hidden');
-        if (chevron) chevron.classList.add('rotate-180');
-        if (text) text.innerText = 'Menos info ▲';
-      } else {
-        body.classList.add('hidden');
-        if (chevron) chevron.classList.remove('rotate-180');
-        if (text) text.innerText = 'Ver más info y técnica ▼';
+      body.classList.toggle('hidden', !isHidden);
+      if (chevron) {
+        chevron.classList.toggle('rotate-180', isHidden);
+      }
+      if (btnText) {
+        btnText.innerText = isHidden ? 'Ocultar detalles ▴' : 'Ver cantidades y preparación ▾';
       }
     }
 
     function toggleMealCollapse(mealId) {
-      const expandedState = safeGet('florencia_expanded', {});
-      const isOpen = expandedState[mealId] === true;
-      expandedState[mealId] = !isOpen;
-      safeSet('florencia_expanded', expandedState);
-      
       const body = document.getElementById('meal-body-' + mealId);
       const chevron = document.getElementById('chevron-' + mealId);
-      if (body) {
-        if (!isOpen) {
-          body.classList.remove('hidden');
-        } else {
-          body.classList.add('hidden');
-        }
-      }
+      if (!body) return;
+
+      const isHidden = body.classList.contains('hidden');
+      body.classList.toggle('hidden', !isHidden);
       if (chevron) {
-        if (!isOpen) {
-          chevron.classList.add('rotate-180');
-        } else {
-          chevron.classList.remove('rotate-180');
-        }
+        chevron.classList.toggle('rotate-180', isHidden);
       }
+
+      const expandedState = safeGet('florencia_expanded', {});
+      expandedState[mealId] = isHidden;
+      safeSet('florencia_expanded', expandedState);
       updateToggleAllBtn();
     }
 
     function toggleAllMeals() {
       const day = daysData[currentDay];
       const expandedState = safeGet('florencia_expanded', {});
-      const anyOpen = day.meals.some(m => expandedState[m.id] === true);
-      const target = !anyOpen;
+      
+      const allOpen = day.meals.every(m => expandedState[m.id] === true);
+      const targetState = !allOpen;
 
       day.meals.forEach(m => {
-        expandedState[m.id] = target;
-        const body = document.getElementById('meal-body-' + m.id);
-        const chevron = document.getElementById('chevron-' + m.id);
-        if (body) {
-          if (target) body.classList.remove('hidden');
-          else body.classList.add('hidden');
-        }
-        if (chevron) {
-          if (target) chevron.classList.add('rotate-180');
-          else chevron.classList.remove('rotate-180');
-        }
+        expandedState[m.id] = targetState;
       });
-
       safeSet('florencia_expanded', expandedState);
-      updateToggleAllBtn();
+      renderMeals();
     }
 
     function updateToggleAllBtn() {
-      const btn = document.getElementById('toggle-all-meals-btn');
-      if (!btn) return;
       const day = daysData[currentDay];
+      const btn = document.getElementById('toggle-all-meals-btn');
+      if (!btn || !day) return;
+
       const expandedState = safeGet('florencia_expanded', {});
-      const anyOpen = day && day.meals.some(m => expandedState[m.id] === true);
-      btn.innerText = anyOpen ? 'Cerrar todas ↑' : 'Abrir todas ↓';
+      const allOpen = day.meals.every(m => expandedState[m.id] === true);
+
+      btn.innerText = allOpen ? 'Plegar todas ↑' : 'Abrir todas ↓';
     }
 
     function toggleItem(title) {
       const savedGrocery = safeGet('florencia_grocery', {});
       savedGrocery[title] = !savedGrocery[title];
       safeSet('florencia_grocery', savedGrocery);
-      
+
       document.querySelectorAll(`[data-item="${title}"]`).forEach(cb => {
         cb.checked = !!savedGrocery[title];
         const titleSpan = cb.closest('label').querySelector('.item-title');
@@ -2252,7 +1781,7 @@
     function updateGroceryBadge() {
       const savedGrocery = safeGet('florencia_grocery', {});
       const checkboxes = document.querySelectorAll('.grocery-cb');
-      const total = checkboxes.length || 28;
+      const total = checkboxes.length || 26;
       let count = 0;
       checkboxes.forEach(cb => {
         const key = cb.getAttribute('data-item');
@@ -2299,25 +1828,25 @@
         "",
         "────────────────────────────",
         "🏢 *PLANTA 2 (ARRIBA · RECORRIDO GUIADO):*",
-        "🍚 *2. Quinoa & Granos:*",
+        "🍚 *Granos:*",
         "• Quinoa (vasitos listos o paquete para cocer)",
         "",
-        "🥛 *3. Lácteos (Yogurt, Kéfir, Cottage & Huevos):*",
+        "🥛 *Lácteos & Huevos:*",
         "• Yogur griego natural sin azúcar (pack 4 o tarrina)",
         "• 2 tarrinas de queso cottage Hacendado",
         "• Claras de huevo pasteurizadas (botella Hacendado)",
         "• Huevos camperos (docena o pack 6)",
         "",
-        "🥩 *4. Carnes, Queso & Pollo (y Pescadería):*",
+        "🥩 *Carnes, Queso, Pollo & Pescadería:*",
         "• Pechuga de pollo fresca en filetes (bandeja 400–500g)",
         "• Hamburguesas de vacuno o carne picada limpia (2 uds)",
         "• Lonchas de queso havarti o tierno light",
         "• Lomos de salmón fresco con piel (bandeja 2 lomos)",
         "",
-        "🧊 *5. Congelados:*",
+        "🧊 *Congelados:*",
         "• Gambas peladas congeladas Hacendado (1 bolsa)",
         "",
-        "🥑 *6. Verduras, Fruta & Pan:*",
+        "🥑 *Verduras & Fruta:*",
         "• Canónigos frescos (1 bolsa)",
         "• Tomates cherry dulces (1 tarrina 500g)",
         "• Calabacines verdes frescos (2 piezas)",
@@ -2341,9 +1870,6 @@
       });
     }
 
-    // ==========================================
-    // NOTAS & COMENTARIOS DEL DÍA PARA EL CHAT
-    // ==========================================
     function getDayNotes(dayKey) {
       const allNotes = safeGet('florencia_daily_notes', {});
       return allNotes[dayKey] || '';
@@ -2356,31 +1882,28 @@
       allNotes[currentDay] = textarea.value;
       safeSet('florencia_daily_notes', allNotes);
 
-      const statusEl = document.getElementById('notes-saved-status');
-      if (statusEl) {
-        statusEl.innerText = '✓ Guardado';
-        statusEl.className = 'text-[10px] text-emerald-800 font-bold bg-emerald-100/80 px-2 py-0.5 rounded border border-emerald-300';
-        setTimeout(() => {
-          statusEl.innerText = 'Auto-guardado';
-          statusEl.className = 'text-[10px] text-emerald-700 font-semibold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200';
-        }, 1500);
+      const status = document.getElementById('notes-saved-status');
+      if (status) {
+        status.innerText = 'Guardado';
+        setTimeout(() => { status.innerText = 'Auto-guardado'; }, 1200);
       }
     }
 
-    function renderDayNotes() {
+    function renderDayNotes(dayKey) {
       const textarea = document.getElementById('day-user-notes');
       const title = document.getElementById('notes-card-title');
       if (textarea) {
-        textarea.value = getDayNotes(currentDay);
+        textarea.value = getDayNotes(dayKey);
       }
-      if (title) {
-        title.innerText = 'Comentarios';
+      if (title && daysData[dayKey]) {
+        title.innerText = `Comentarios · ${daysData[dayKey].dayName}`;
       }
     }
 
     function clearCurrentDayNotes() {
       const textarea = document.getElementById('day-user-notes');
-      if (textarea) {
+      if (!textarea) return;
+      if (confirm('¿Borrar las notas de este día?')) {
         textarea.value = '';
         saveCurrentDayNotes();
       }
@@ -2389,99 +1912,67 @@
     function appendTagToNote(tagText) {
       const textarea = document.getElementById('day-user-notes');
       if (!textarea) return;
-      if (textarea.value.trim().length > 0) {
-        textarea.value += '\n' + tagText;
-      } else {
-        textarea.value = tagText;
-      }
+      const current = textarea.value.trim();
+      textarea.value = current ? `${current}\n• ${tagText}` : `• ${tagText}`;
       saveCurrentDayNotes();
     }
 
     function sendDirectComment() {
+      const note = getDayNotes(currentDay);
       const day = daysData[currentDay];
-      const userNotes = getDayNotes(currentDay).trim();
       const btnText = document.getElementById('chat-report-btn-text');
 
-      if (!userNotes) {
-        alert('Escribe tus comentarios antes de enviar.');
+      if (!note.trim()) {
+        alert('Escribe una nota o toca alguna etiqueta rápida antes de enviar.');
         return;
       }
 
-      const sentLogs = safeGet('florencia_sent_comments', []);
-      const newEntry = {
-        day: day ? day.name : currentDay,
-        date: new Date().toLocaleString('es-ES'),
-        comment: userNotes
-      };
-      sentLogs.push(newEntry);
-      safeSet('florencia_sent_comments', sentLogs);
+      const doneMeals = day.meals.filter(m => isDone(m.id)).map(m => m.type);
+      const pendingMeals = day.meals.filter(m => !isDone(m.id)).map(m => m.type);
 
-      // Copiar también al portapapeles silenciosamente por si se desea pegar
-      copyDayReportForChat(true);
+      const reportText = [
+        `📝 *Comentarios del ${day.dayName} (${day.date})*`,
+        ``,
+        `💬 *Notas de Florencia:*`,
+        `${note}`,
+        ``,
+        `✅ *Comidas realizadas:* ${doneMeals.length ? doneMeals.join(', ') : 'Ninguna marcada'}`,
+        `⏳ *Pendientes:* ${pendingMeals.length ? pendingMeals.join(', ') : 'Todas listas'}`,
+        ``,
+        `💧 *Agua hoy:* ${getWaterGlassesCount()} de 8 vasos (${(getWaterGlassesCount() * 0.25).toFixed(2)} L)`
+      ].join('\n');
 
-      if (btnText) {
-        btnText.innerText = '✓ ¡Enviado y registrado!';
-        setTimeout(() => {
-          btnText.innerText = 'Enviar comentarios';
-        }, 3000);
-      }
-    }
-
-    function copyDayReportForChat(silent = false) {
-      const day = daysData[currentDay];
-      const wDone = Boolean(safeGet('florencia_workout_done', {})[day.workout.id]);
-      const mealsDone = day.meals.map(m => {
-        const done = isDone(m.id);
-        return (done ? '✅' : '⏳') + ' ' + m.type + ': ' + m.title;
-      }).join('\n');
-
-      const userNotes = getDayNotes(currentDay).trim();
-      const waterData = safeGet('florencia_water_tracker', {});
-      const waterCount = waterData[getTodayDateStr()] || 0;
-
-      let text = `📋 REPORTE DE DÍA (${day.name.toUpperCase()})\n`;
-      text += `🏃‍♀️ Entrenamiento: ${wDone ? '✅ Realizado' : '⏳ Pendiente'} (${day.workout.title})\n`;
-      text += `💧 Hidratación: ${waterCount}/8 vasos (${(waterCount * 0.25).toFixed(2)} L)\n\n`;
-      text += `🍽️ Comidas:\n${mealsDone}\n\n`;
-
-      if (userNotes) {
-        text += `💬 Mis comentarios & sensaciones:\n${userNotes}`;
-      } else {
-        text += `💬 Mis comentarios: Todo seguido con normalidad y sin incidencias.`;
-      }
-
-      navigator.clipboard.writeText(text).then(() => {
-        if (!silent) {
-          const btnText = document.getElementById('chat-report-btn-text');
-          if (btnText) {
-            btnText.innerText = '✓ ¡Copiado con tus notas! Pégalo en el chat';
-            setTimeout(() => {
-              btnText.innerText = 'Enviar comentarios';
-            }, 3500);
-          }
+      navigator.clipboard.writeText(reportText).then(() => {
+        if (btnText) {
+          btnText.innerText = '✓ ¡Copiado para el chat!';
+          setTimeout(() => { btnText.innerText = 'Enviar comentarios'; }, 2500);
         }
-      }).catch(() => {});
+        alert('¡Comentario copiado al portapapeles! Puedes pegarlo directamente en nuestro chat para que lo lea y te responda.');
+      }).catch(() => {
+        prompt('Copia este reporte para el chat:', reportText);
+      });
     }
 
-    // ==========================================
-    // SEMÁFORO DE ENTRENAMIENTO & GRÁFICA SEMANAL
-    // ==========================================
+    function copyDayReportForChat() {
+      sendDirectComment();
+    }
+
     function renderWeeklyTrainingCard() {
       const barsContainer = document.getElementById('card-training-bars');
       const countEl = document.getElementById('card-training-count');
       const subEl = document.getElementById('card-training-subtitle');
       if (!barsContainer) return;
 
-      const daysOrder = ['lun', 'mar', 'mie', 'jue', 'vie', 'sab', 'dom'];
+      const dayOrder = ['lun', 'mar', 'mie', 'jue', 'vie', 'sab', 'dom'];
       const dayLetters = ['L', 'M', 'X', 'J', 'V', 'S', 'D'];
       const doneState = safeGet('florencia_workout_done', {});
 
       let activeCount = 0;
       let activeNames = [];
 
-      barsContainer.innerHTML = daysOrder.map((key, idx) => {
+      barsContainer.innerHTML = dayOrder.map((key, idx) => {
         const day = daysData[key];
-        const isWorkout = day && day.workout && !day.workout.title.toLowerCase().startsWith('descanso');
+        const isWorkout = day && day.workout && day.workout.duration !== 'Descanso';
         const isCompleted = day && day.workout && Boolean(doneState[day.workout.id]);
         const isSelected = key === currentDay;
 
@@ -2492,62 +1983,67 @@
 
         let barClass = 'bg-slate-200';
         if (isCompleted) {
-          barClass = 'bg-emerald-500 ring-2 ring-emerald-300';
+          barClass = 'bg-emerald-600';
         } else if (isWorkout) {
-          barClass = 'bg-emerald-600 shadow-2xs';
+          barClass = 'bg-emerald-500';
         }
 
         return `
           <div class="flex-1 flex flex-col items-center cursor-pointer relative" onclick="selectDay('${key}')" title="${day ? day.workout.title : ''}">
-            ${isSelected ? '<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mb-0.5 animate-pulse" title="Día seleccionado"></span>' : '<span class="w-1.5 h-1.5 mb-0.5"></span>'}
+            ${isSelected ? '<span class="w-1.5 h-1.5 rounded-full bg-emerald-600 mb-0.5" title="Día seleccionado"></span>' : '<span class="w-1.5 h-1.5 mb-0.5"></span>'}
             <div class="w-full ${barClass} rounded-full transition-all" style="height: 10px;"></div>
-            <span class="text-[8.5px] font-bold ${isWorkout ? 'text-emerald-700 font-extrabold' : 'text-slate-400'} mt-0.5">${dayLetters[idx]}</span>
+            <span class="text-xs font-bold ${isWorkout ? 'text-emerald-800' : 'text-slate-400'} mt-0.5">${dayLetters[idx]}</span>
           </div>
         `;
       }).join('');
 
-      if (countEl) countEl.innerText = `${activeCount} días`;
+      if (countEl) countEl.innerText = `${activeCount} sesiones`;
       if (subEl) subEl.innerText = 'Lun · Mar · Jue · Sáb';
     }
 
-    // ==========================================
-    // PROTOCOLO DE BÁSCULA & REGISTRO DE PESO
-    // ==========================================
     function toggleWeightGuide() {
       const panel = document.getElementById('weight-guide-panel');
-      if (!panel) return;
-      panel.classList.toggle('hidden');
+      if (panel) {
+        panel.classList.toggle('hidden');
+        if (!panel.classList.contains('hidden')) {
+          renderWeightLogs();
+        }
+      }
     }
 
     function getWeightLogs() {
       return safeGet('florencia_weight_logs', [
-        { date: '29 Sep 2026', weight: 69.0, note: 'Bioimpedancia inicial de partida (32.9% BFM, 46.3 kg FFM)' }
+        { date: '04 Nov 2026', weight: 69.0, note: 'Bioimpedancia inicial · CS Prosperidad' }
       ]);
     }
 
     function saveWeightLog() {
-      const input = document.getElementById('input-new-weight');
-      const dateInput = document.getElementById('input-new-weight-date');
-      if (!input || !input.value) return;
-
-      const val = parseFloat(input.value.replace(',', '.'));
+      const inputVal = document.getElementById('input-new-weight').value;
+      const inputDate = document.getElementById('input-new-weight-date').value.trim() || getTodayDateStr();
+      
+      const val = parseFloat(inputVal);
       if (isNaN(val) || val < 40 || val > 120) {
         alert('Por favor introduce un peso válido en kg (ej: 68.5)');
         return;
       }
 
-      const todayStr = dateInput && dateInput.value ? dateInput.value : new Date().toLocaleDateString('es-ES', { day: 'numeric', month: 'short', year: 'numeric' });
       const logs = getWeightLogs();
-      logs.push({ date: todayStr, weight: val, note: 'Control de báscula en ayunas' });
+      logs.unshift({ date: inputDate, weight: val, note: 'Registro personal' });
       safeSet('florencia_weight_logs', logs);
-      input.value = '';
-      if (dateInput) dateInput.value = '';
+
+      const disp = document.getElementById('current-weight-display');
+      if (disp) {
+        disp.innerText = val.toFixed(1).replace('.', ',');
+      }
+
+      document.getElementById('input-new-weight').value = '';
+      document.getElementById('input-new-weight-date').value = '';
       renderWeightLogs();
     }
 
     function removeWeightLog(idx) {
       const logs = getWeightLogs();
-      if (logs.length > 1) {
+      if (confirm(`¿Eliminar este registro (${logs[idx].weight} kg del ${logs[idx].date})?`)) {
         logs.splice(idx, 1);
         safeSet('florencia_weight_logs', logs);
         renderWeightLogs();
@@ -2556,69 +2052,59 @@
 
     function renderWeightLogs() {
       const container = document.getElementById('weight-logs-history');
-      const currentDisplay = document.getElementById('current-weight-display');
       if (!container) return;
-
       const logs = getWeightLogs();
-      const latest = logs[logs.length - 1];
 
-      if (currentDisplay && latest) {
-        currentDisplay.innerHTML = `${latest.weight.toFixed(1).replace('.', ',')} <span class="text-[10px] font-medium text-slate-500">kg</span>`;
+      if (!logs.length) {
+        container.innerHTML = '<p class="text-sm text-slate-500 italic">No hay registros aún.</p>';
+        return;
       }
 
-      container.innerHTML = logs.map((log, idx) => {
-        const diff = (log.weight - 69.0).toFixed(1);
-        const diffStr = log.weight === 69.0 ? 'Base' : (diff > 0 ? `+${diff} kg` : `${diff} kg`);
-        const diffColor = diff <= 0 ? 'text-emerald-700 bg-emerald-50 border border-emerald-200' : 'text-amber-700 bg-amber-50 border border-amber-200';
-
-        return `
-          <div class="flex items-center justify-between py-1 px-2 bg-white rounded-lg border border-slate-200/70 text-xs">
-            <div class="flex items-center gap-2">
-              <span class="font-extrabold text-slate-800">${log.weight.toFixed(1).replace('.', ',')} kg</span>
-              <span class="text-[10px] text-slate-400 font-medium">${log.date}</span>
-              <span class="text-[9.5px] px-1.5 py-0.2 rounded font-bold ${diffColor}">${diffStr}</span>
-            </div>
-            ${idx > 0 ? `<button type="button" onclick="removeWeightLog(${idx})" class="text-slate-400 hover:text-rose-500 text-xs px-1 cursor-pointer font-bold" title="Eliminar">✕</button>` : '<span class="text-[9px] text-slate-400 font-medium">Inicio</span>'}
+      container.innerHTML = logs.map((log, idx) => `
+        <div class="flex items-center justify-between py-2 border-b border-amber-200/60 text-sm">
+          <div>
+            <span class="font-bold text-slate-900">${log.weight.toFixed(1).replace('.', ',')} kg</span>
+            <span class="text-xs text-slate-500 ml-2">${log.date}</span>
+            <span class="text-xs text-slate-600 block">${log.note || ''}</span>
           </div>
-        `;
-      }).join('');
+          ${idx > 0 ? `<button type="button" onclick="removeWeightLog(${idx})" class="text-xs text-slate-400 hover:text-rose-600 p-1 cursor-pointer">✕</button>` : '<span class="text-xs font-semibold text-emerald-800">Oficial</span>'}
+        </div>
+      `).join('');
     }
 
-    // Boot con auto-detección del día actual
-    
-    // WATER TRACKER LOGIC
     function getTodayDateStr() {
-      const d = new Date();
-      return `${d.getFullYear()}-${d.getMonth()+1}-${d.getDate()}`;
+      const now = new Date();
+      const m = ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'];
+      return `${now.getDate()} ${m[now.getMonth()]} ${now.getFullYear()}`;
     }
 
     function getWaterGlassesCount() {
-      const state = safeGet('florencia_water_tracker', {});
-      const today = getTodayDateStr();
-      return state[today] || 0;
+      const allWater = safeGet('florencia_water_tracker', {});
+      return allWater[currentDay] || 0;
     }
 
-    function setWaterGlassesCount(count) {
-      const state = safeGet('florencia_water_tracker', {});
-      const today = getTodayDateStr();
-      state[today] = Math.max(0, Math.min(8, count));
-      safeSet('florencia_water_tracker', state);
+    function setWaterGlassesCount(val) {
+      const allWater = safeGet('florencia_water_tracker', {});
+      allWater[currentDay] = Math.max(0, Math.min(8, val));
+      safeSet('florencia_water_tracker', allWater);
       renderWaterTracker();
-      renderWeeklyTrainingCard();
-      renderWeightLogs();
     }
 
-    function toggleWaterGlass(index) {
+    function toggleWaterGlass(glassIndex) {
       const current = getWaterGlassesCount();
-      if (index + 1 === current) {
-        setWaterGlassesCount(current - 1);
+      if (glassIndex === current) {
+        setWaterGlassesCount(glassIndex);
+      } else if (glassIndex === current - 1) {
+        setWaterGlassesCount(glassIndex);
       } else {
-        setWaterGlassesCount(index + 1);
+        setWaterGlassesCount(glassIndex);
       }
     }
 
     function resetWaterToday() {
-      setWaterGlassesCount(0);
+      if (confirm('¿Reiniciar el contador de agua de hoy a cero?')) {
+        setWaterGlassesCount(0);
+      }
     }
 
     function renderWaterTracker() {
@@ -2629,34 +2115,25 @@
 
       const liters = (count * 0.25).toFixed(2).replace('.', ',');
       if (badge) {
-        if (count >= 8) {
-          badge.innerHTML = `🎉 8/8 (${liters} L)`;
-          badge.className = "text-[10px] sm:text-[10.5px] font-extrabold text-emerald-700 bg-emerald-50 px-1.5 py-0.2 rounded border border-emerald-200";
-        } else {
-          badge.innerHTML = `${count}/8 <span class="text-slate-500 font-medium">(${liters} L)</span>`;
-          badge.className = "text-[10px] sm:text-[10.5px] font-black text-sky-700";
-        }
+        badge.innerText = `${count} / 8 vasos (${liters} L)`;
       }
 
       let html = '';
-      for (let i = 0; i < 8; i++) {
-        const filled = i < count;
+      for (let i = 1; i <= 8; i++) {
+        const isFilled = i <= count;
         html += `
-          <button type="button" onclick="toggleWaterGlass(${i})" class="w-5 h-5 sm:w-6 sm:h-6 rounded-md flex items-center justify-center text-[9px] sm:text-[9.5px] font-black transition-all cursor-pointer border ${filled ? 'bg-sky-500 text-white border-sky-600 shadow-2xs scale-105' : 'bg-white text-slate-400 border-sky-200/80 hover:border-sky-400'}" title="Vaso ${i+1} (250 ml)">
-            ${filled ? '💧' : (i + 1)}
+          <button type="button" onclick="toggleWaterGlass(${i})" class="tap-effect px-2.5 py-1 rounded-lg text-sm font-semibold transition cursor-pointer ${isFilled ? 'bg-emerald-700 text-white shadow-sm' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}" title="Vaso ${i} (250 ml)">
+            💧 ${i}
           </button>
         `;
       }
       container.innerHTML = html;
     }
 
+    // Initialization
     window.addEventListener('DOMContentLoaded', () => {
-      renderWaterTracker();
-      renderWeeklyTrainingCard();
-      renderWeightLogs();
+      selectDay(currentDay);
       initFromLocalStorage();
-      const autoDay = getAutoTodayKey();
-      selectDay(autoDay);
     });
   </script>
 </body>
