@@ -23,16 +23,21 @@ Este repositorio centraliza toda la información biométrica, clínica, logísti
 
 ## 2. PERFIL BIOMÉTRICO Y LÍNEAS ROJAS METABÓLICAS
 
-### Datos Antropométricos de Partida (Bioimpedancia - 29 de Septiembre de 2026)
-| Parámetro | Valor | Diagnóstico / Estado |
-| :--- | :--- | :--- |
-| **Estatura** | 1,65 m | — |
-| **Peso Total** | 69,0 kg | Peso base de partida |
-| **Masa Libre de Grasa (FFM)** | 46,3 kg | **Excelente base muscular previa**, activo metabólico clave |
-| **Masa Grasa Corporal (BFM)** | 22,7 kg (32,9%) | A optimizar hacia recomposición |
-| **Agua Corporal Total (TBW)** | 48,3% (33,3 kg) | Hidratación global |
-| **Agua Extracelular (ECW)** | 42,9% (14,3 kg) | **Rango HIGH**: Inflamación subclínica, estrés agudo y fase premenstrual |
-| **Tasa Metabólica Basal (BMR)** | **1.427 kcal** | **Línea roja metabólica absoluta** |
+### Datos Antropométricos de Partida & Evolución Oficial (RENPHO 20 Nov 2026)
+| Parámetro | Inicial (29 Sep / 04 Nov) | Actual (20 Nov 2026 · RENPHO) | Diagnóstico / Evolución Clínica |
+| :--- | :--- | :--- | :--- |
+| **Estatura** | 1,65 m | 1,65 m | — |
+| **Peso Total** | 69,00 kg | **67,55 kg** | **−1,45 kg** (Pérdida neta real) |
+| **Masa Muscular** | 46,30 kg (67,1%) | **46,20 kg (68,4%)** | **Blindada al 99,8%** (Calificación: **Excelente 🟢**) |
+| **Grasa Corporal (%)** | 32,9% (22,70 kg) | **27,3% (18,44 kg)** | **−5,6%** (Pérdida neta de −4,26 kg de grasa pura) |
+| **Grasa Visceral** | — | **Nivel 7** | **Saludable / Promedio** |
+| **Tasa Metabólica Basal (BMR)**| **1.427 kcal** | **1.430 kcal** | **Línea roja metabólica activa y protegida** |
+| **Proteína Corporal** | — | **11,55 kg (17,1%)** | **Por encima del promedio 🟢** |
+| **Agua Corporal** | 48,3% (33,3 kg) | **49,9% (33,71 kg)** | Hidratación óptima |
+| **Masa Libre de Grasa (FFM)**| 46,3 kg | **49,10 kg** | Estructura corporal sólida |
+| **Masa Ósea** | — | **2,95 kg (4,4%)** | Por encima del promedio |
+| **Edad Metabólica** | — | **28 años** | Estado funcional excelente |
+| **IMC** | 25,3 | **24,8** | Rango normalizado |
 
 ### Objetivos y Directrices de Peso
 * **Peso funcional de referencia:** 59,0 – 61,0 kg (recomposición real, no pérdida muscular).
