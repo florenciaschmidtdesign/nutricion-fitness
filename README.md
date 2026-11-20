@@ -56,7 +56,7 @@ Este repositorio centraliza toda la información biométrica, clínica, logísti
   | :--- | :--- | :--- | :--- | :--- |
   | **05/03/2026** | **5,99** (Elevada) | 0,98 (Normal-baja) | 13,2 g/dL (Normal) | Primer signo de fatiga tiroidea |
   | **01/07/2026** | **8,38** (Elevada) | 0,92 (Normal-baja) | — | Empeoramiento franco -> Se prescribe **Eutirox 50 mcg** (08/07/2026) |
-  | **10/11/2026** | *Cita agendada (08:15–08:45 h)* | — | — | **Control Post-tratamiento 4 meses + Ac. Antitiroideos** |
+  | **Noviembre 2026** | *Extracción realizada* | *Pendiente de informe oficial* | — | **Control Post-tratamiento 4 meses + Ac. Antitiroideos (En espera de resultados)** |
 
 > [!WARNING]
 > **REGLA DE ORO PARA EL DÍA DEL ANÁLISIS (10/11/2026 a las 08:15 h):**  
