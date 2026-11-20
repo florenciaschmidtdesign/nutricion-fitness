@@ -2,7 +2,7 @@
 
 **Atleta:** Florencia  
 **Hoja Oficial de Control & Feedback:** [Google Sheets de Florencia](https://docs.google.com/spreadsheets/d/1kRs1k1c-MIUiEbQ2Yhip2olOyaPcDFe9TGC2StThTUU/edit)  
-**Fase de Ciclo / Adaptación:** Fase Premenstrual Aguda (Pre-Regla / Lútea Tardía) | DIU Kyleena: Posición Perfecta Confirmada por Ginecólogo | Analítica Tiroidea: Pendiente de Resultados de Laboratorio (Mantener Eutirox 50 mcg) | Foco Clínico Urgente: Alivio de Estreñimiento Severo, Activación Tiroidea (T3 & Peristaltismo), Cero Gluten y Variabilidad con Nuevas Creadoras (Raquel Martin & The Anti-Inflammatory Club)  
+**Fase de Ciclo / Adaptación:** Día 39 del Ciclo Menstrual (Retraso Fisiológico por Adaptación al DIU Kyleena / Oligomenorrea) | DIU Kyleena: Posición Perfecta Confirmada por Ginecólogo | Analítica Tiroidea: Pendiente de Resultados de Laboratorio (Mantener Eutirox 50 mcg) | Foco Clínico Urgente: Alivio de Estreñimiento Severo, Activación Tiroidea (T3 & Peristaltismo), Cero Gluten y Variabilidad con Nuevas Creadoras (Raquel Martin & The Anti-Inflammatory Club)  
 **Enfoque:** Alivio mecánico y osmótico del estreñimiento (mucílagos de chía en arepas, pectina caliente con cardamomo en peras/manzanas, lubricación con AOVE/tahini y Magnesio Bisglicinato 22:30 h). Prohibido subirse a la báscula esta semana por retención de agua fisiológica premenstrual.
 
 ---
@@ -48,7 +48,7 @@
 * **¿Cómo funciona el Kyleena con tu regla y ciclo?**
   * El DIU Kyleena libera una microdosis de levonorgestrel (progestágeno) actuando de forma **local en el endometrio** (lo afina y previene la proliferación).
   * **Los ovarios siguen ovulando:** A diferencia de la píldora combinada, el Kyleena habitualmente no frena tu ritmo hormonal ovárico. Tus ovarios producen estrógenos y progesterona en sus curvas naturales.
-  * **El sangrado / spotting que ha parado:** El manchado diario los primeros 1–3 meses es la adaptación del endometrio. Que haya cesado hace 2–3 días y estés en el **día 27** indica que tus hormonas ováricas están en plena **fase lútea tardía**.
+  * **El sangrado / spotting que ha parado:** El manchado diario los primeros 1–3 meses es la adaptación del endometrio. Que haya cesado hace 2–3 días y estés en el **día 39** es la respuesta fisiológica clásica del DIU Kyleena: el progestágeno afina tanto el endometrio que el sangrado disminuye drásticamente, se retrasa o desaparece (oligomenorrea/amenorrea esperada).
 * **¿Por qué sientes PMS y antojos ahora?**
   * Justo antes de la regla, los estrógenos y la progesterona caen bruscamente.
   * Esta caída provoca un **descenso fisiológico de serotonina y dopamina** en el cerebro: tu cuerpo te pide carbohidratos y dulce para fabricar triptófano y elevar el ánimo. **No es falta de voluntad, es pura bioquímica cerebral**.
@@ -231,7 +231,7 @@
 ## 9. PROTOCOLO DE PESAJE, BÁSCULA & RESPUESTA CLÍNICA: ¿CUÁNDO ES MEJOR PESARME?
 
 ### ⚠️ Regla de Oro Inmediata: ESTA SEMANA (16 AL 22 NOV) NO SUBIRSE A LA BÁSCULA
-* **¿Por qué?** Te encuentras en el **Día 27 de tu ciclo menstrual (Fase Lútea Tardía / Premenstrual - PMS)** y en proceso de adaptación al DIU Kyleena.
+* **¿Por qué?** Te encuentras en el **Día 39 de tu ciclo menstrual (Retraso Fisiológico por DIU Kyleena)** y en proceso de adaptación al DIU Kyleena.
 * **La trampa fisiológica del agua extracelular:**
   * Justo antes de que baje la regla, la caída conjunta de progesterona y estrógenos genera una retención transitoria de sodio y líquido en el espacio intersticial.
   * Tu estudio de bioimpedancia inicial ya reflejó un **Agua Extracelular (ECW) de 42,9% (Rango HIGH)**: tu organismo retiene líquido con muchísima facilidad ante estrés, cambios hormonales o inflamación digestiva.
